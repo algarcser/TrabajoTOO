@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace prac10
+namespace LogicaModeloVehiculo
 {
-    class VehiculoDato
+    public class VehiculoDato
     {
         private String bastidor;
 

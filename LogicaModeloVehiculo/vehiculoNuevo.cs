@@ -26,5 +26,19 @@ namespace LogicaModeloVehiculo
                 return auxliar;
             }
         }
+
+        public override float PrecioRecomendado
+        {
+            get
+            {
+                float precio = base.PrecioRecomendado;
+                foreach (extra extra in this.extras)
+                {
+                    precio = precio + extra.Precio;
+                }
+                return precio;
+            }
+        }
+
     }
 }
