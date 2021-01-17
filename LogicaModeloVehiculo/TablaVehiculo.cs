@@ -25,7 +25,6 @@ namespace prac10
                 return item.getBastidor();
             }
 
-
         }
     }
 }
