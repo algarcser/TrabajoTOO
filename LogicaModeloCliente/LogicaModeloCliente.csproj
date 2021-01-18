@@ -41,10 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CategoriaCliente.cs" />
-    <Compile Include="ClienteDato.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TablaClientes.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

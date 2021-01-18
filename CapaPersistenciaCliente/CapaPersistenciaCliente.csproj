@@ -42,8 +42,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BDCliente.cs" />
+    <Compile Include="CategoriaCliente.cs" />
+    <Compile Include="ClienteDato.cs" />
     <Compile Include="PersistenciaCliente.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TablaClientes.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CapaPersistenciaVehiculo\CapaPersistenciaVehiculo.csproj">
+      <Project>{47a34438-c397-4e42-a148-0bfaded859b2}</Project>
+      <Name>CapaPersistenciaVehiculo</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
