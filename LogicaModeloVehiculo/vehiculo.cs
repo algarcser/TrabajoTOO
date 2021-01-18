@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LogicaModeloVehiculo
 {
-    public abstract class vehiculo
+    public class vehiculo
     {
 
         private string nBastidor;

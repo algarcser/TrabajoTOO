@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{47A34438-C397-4E42-A148-0BFADED859B2}</ProjectGuid>
+    <ProjectGuid>{D956EF66-3DA4-46B7-ABB7-6EC1FEF5150F}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>CapaPersistenciaVehiculo</RootNamespace>
-    <AssemblyName>CapaPersistenciaVehiculo</AssemblyName>
+    <RootNamespace>PersistenciaConversor</RootNamespace>
+    <AssemblyName>PersistenciaConversor</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -41,13 +41,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BDvehiculo.cs" />
-    <Compile Include="PersistenciaVehiculo.cs" />
+    <Compile Include="conversor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TablaVehiculo.cs" />
-    <Compile Include="vehiculoDato.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\CapaPersistenciaCliente\CapaPersistenciaCliente.csproj">
+      <Project>{d98b2f52-1f93-4638-8329-5516cc6bfd7a}</Project>
+      <Name>CapaPersistenciaCliente</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CapaPersistenciaPresupuesto\CapaPersistenciaPresupuesto.csproj">
+      <Project>{76a8e587-e493-4c0c-99f7-416f72a21f8d}</Project>
+      <Name>CapaPersistenciaPresupuesto</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CapaPersistenciaVehiculo\CapaPersistenciaVehiculo.csproj">
+      <Project>{47a34438-c397-4e42-a148-0bfaded859b2}</Project>
+      <Name>CapaPersistenciaVehiculo</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LogicaModeloCliente\LogicaModeloCliente.csproj">
+      <Project>{7e0e7efb-d584-45fa-8f3f-8009daef7e42}</Project>
+      <Name>LogicaModeloCliente</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LogicaModeloPresupuesto\LogicaModeloPresupuesto.csproj">
+      <Project>{a29193ab-3238-498b-80f8-a2f820efccff}</Project>
+      <Name>LogicaModeloPresupuesto</Name>
+    </ProjectReference>
     <ProjectReference Include="..\LogicaModeloVehiculo\LogicaModeloVehiculo.csproj">
       <Project>{ccdc62a8-8317-4b37-ba2c-b1ed4783c11a}</Project>
       <Name>LogicaModeloVehiculo</Name>

@@ -13,7 +13,7 @@ namespace CapaPersistenciaVehiculo
 
         //private static TablaExtras extras;
         private BDvehiculo() { }
-        public static TablaVehiculo Clientes
+        public static TablaVehiculo Vehiculos
         {
             get
             {
@@ -27,24 +27,26 @@ namespace CapaPersistenciaVehiculo
         /// 
         /// </summary>
         /// <param name="c"></param>
-        public static void INSERTCliente(vehiculoDato c)
+        public static void INSERTVehiculo(vehiculoDato c)
         {
-            BDvehiculo.vehiculos.Add(c);
+            BDvehiculo.Vehiculos.Add(c);
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="l"></param>
-        public static List<vehiculoDato> SELECTCliente()
-        {
-            List<vehiculoDato> lista = new List<vehiculoDato>();
-            return lista;
-        }
 
-        public static vehiculoDato SELECTVehiculo(vehiculoDato c)
+
+        public static bool SELECTVehiculo(string clave, out vehiculoDato vehiculoDato)
         {
-            return c;
+
+            if (BDvehiculo.Exists(clave))
+            {
+                vehiculoDato = BDvehiculo.Vehiculos[clave];
+                return true;
+            }
+            else
+            {
+                vehiculoDato = null;
+                return false;
+            }
         }
 
         /// <summary>
@@ -53,8 +55,8 @@ namespace CapaPersistenciaVehiculo
         /// <param name="c"></param>
         public static void UPDATEVehiculo(vehiculoDato c)
         {
-            DELETECliente(c);
-            INSERTCliente(c);
+            DELETEVehiculo(c);
+            INSERTVehiculo(c);
 
         }
 
@@ -62,9 +64,14 @@ namespace CapaPersistenciaVehiculo
         /// 
         /// </summary>
         /// <param name="c"></param>
-        public static void DELETECliente(vehiculoDato c)
+        public static void DELETEVehiculo(vehiculoDato c)
         {
-            BDvehiculo.vehiculos.Remove(c);
+            BDvehiculo.Vehiculos.Remove(c);
+        }
+
+        public static bool Exists(string clave)
+        {
+            return BDvehiculo.Vehiculos.Contains(clave);
         }
 
     }
