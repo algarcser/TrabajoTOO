@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using CapaPersistenciaVehiculo;
 
 
-namespace prac10
+namespace CapaPersistenciaCliente
 {
     class BDCliente
     {

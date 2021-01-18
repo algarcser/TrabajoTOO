@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using CapaPersistenciaVehiculo;
-//using CapaPersistenciaCliente;
+using CapaPersistenciaCliente;
 
 namespace CapaPersistenciaPresupuesto
 {
@@ -12,7 +12,7 @@ namespace CapaPersistenciaPresupuesto
     {
         private DateTime fechaRealizacion;
         private EstadoPresupuesto estado;
-        //private ClienteDato cliente;
+        private ClienteDato cliente;
         private vehiculoDato vehiculo;
 
         /// <summary>
