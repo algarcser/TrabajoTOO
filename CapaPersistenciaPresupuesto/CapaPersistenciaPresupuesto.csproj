@@ -43,7 +43,9 @@
   <ItemGroup>
     <Compile Include="BDPresupuesto.cs" />
     <Compile Include="PersistenciaPresupuesto.cs" />
+    <Compile Include="PresupuestoDato.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TablaPresupuesto.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
