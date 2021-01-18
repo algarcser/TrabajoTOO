@@ -21,7 +21,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogicaModeloVehiculo", "Log
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogicaModeloPresupuesto", "LogicaModeloPresupuesto\LogicaModeloPresupuesto.csproj", "{A29193AB-3238-498B-80F8-A2F820EFCCFF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapaPresentacion", "CapaPresentacion\CapaPresentacion.csproj", "{D88B8A92-CF67-4147-AFDD-C331DCA5B066}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapaPresentacionCliente", "CapaPresentacion\CapaPresentacionCliente.csproj", "{D88B8A92-CF67-4147-AFDD-C331DCA5B066}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Principal", "Principal\Principal.csproj", "{8342D448-359A-4B2F-A6C9-D5F926954788}"
 EndProject
