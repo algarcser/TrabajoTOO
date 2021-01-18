@@ -11,6 +11,12 @@ namespace LogicaModeloVehiculo
         private List<extra> extras;
 
 
+
+        private vehiculoNuevo(string nBastidor, string marca, string modelo, float potencia, float precioRecomendado, float iva) : base(nBastidor,marca,modelo,potencia,precioRecomendado,iva)
+        {
+            this.extras = new List<extra>();
+        }
+
         /// <summary>
         /// get: devuelve la lista de extras, hay que cambiarlo para que solo devuelvas las descripciones
         /// </summary>

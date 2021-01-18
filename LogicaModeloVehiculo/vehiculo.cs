@@ -16,6 +16,18 @@ namespace LogicaModeloVehiculo
         private float precioRecomendado;
         private float iva;
 
+
+        public vehiculo(string nBastidor, string marca, string modelo, float potencia, float precioRecomendado, float iva)
+        {
+            this.nBastidor = nBastidor;
+            this.marca = marca;
+            this.modelo = modelo;
+            this.potencia = potencia;
+            this.precioRecomendado = precioRecomendado;
+            this.iva = iva;
+        }
+
+
         /// <summary>
         /// get, devuelve el numero de bastidor
         /// </summary>
