@@ -47,5 +47,11 @@
     <Compile Include="TablaVehiculo.cs" />
     <Compile Include="vehiculoDato.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LogicaModeloVehiculo\LogicaModeloVehiculo.csproj">
+      <Project>{ccdc62a8-8317-4b37-ba2c-b1ed4783c11a}</Project>
+      <Name>LogicaModeloVehiculo</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
