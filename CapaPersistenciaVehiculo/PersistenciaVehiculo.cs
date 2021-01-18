@@ -9,5 +9,6 @@ namespace prac10
     class PersistenciaVehiculo
     {
 
+
     }
 }
