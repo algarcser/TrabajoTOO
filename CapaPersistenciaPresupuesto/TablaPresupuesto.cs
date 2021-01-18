@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace CapaPersistenciaPresupuesto
 {
-    class TablaPresupuesto : KeyedCollection<DateTime, PresupuestoDato>
+    class TablaPresupuesto : KeyedCollection<int, PresupuestoDato>
     {
         /// <summary>
         /// This is the only method that absolutely must be overridden,
@@ -17,10 +17,10 @@ namespace CapaPersistenciaPresupuesto
         /// the return value type is the first generic type argument,
         /// in this case String
         /// </summary>
-        protected override DateTime GetKeyForItem(PresupuestoDato item)
+        protected override int GetKeyForItem(PresupuestoDato item)
         {
             // In this example, the key is the hor/date the budget was established.
-            return (item.getFechaRealizacion());
+            return (item.Identificacion);
         }
 
     }

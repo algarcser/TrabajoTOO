@@ -8,7 +8,7 @@ namespace CapaPersistenciaPresupuesto
 {
     class BDPresupuesto
     {
-        private static TablaPresupuesto presupuestos;
+        private static TablaPresupuesto pres;
 
         private BDPresupuesto() { }
 
@@ -16,11 +16,11 @@ namespace CapaPersistenciaPresupuesto
         {
             get
             {
-                if (presupuestos == null)
+                if (BDPresupuesto.pres == null)
                 {
-                    presupuestos = new TablaPresupuesto();
+                    BDPresupuesto.pres = new TablaPresupuesto();
                 }
-                return (presupuestos);
+                return (BDPresupuesto.pres);
             }
         }
 
@@ -30,26 +30,26 @@ namespace CapaPersistenciaPresupuesto
         /// <param name="p"></param>
         public static void INSERTPresupuesto(PresupuestoDato p)
         {
-            BDPresupuesto.presupuestos.Add(p);
+            BDPresupuesto.Presupuestos.Add(p);
         }
 
         /// <summary>
         /// 
         /// </summary>
-        /// <param name=""></param>
-        public static List<PresupuestoDato> SELECTPresupuesto()
+        /// <param name="id"></param>
+        public static bool SELECTVehiculo(int id, out PresupuestoDato presupuestoDato)
         {
-            List<PresupuestoDato> lista = new List<PresupuestoDato>();
-            return (lista);
-        }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="p"></param>
-        public static PresupuestoDato SELECTPresupuesto(PresupuestoDato p)
-        {
-            return (p);
+            if (BDPresupuesto.EXISTPresupuesto(id) == true)
+            {
+                presupuestoDato = BDPresupuesto.Presupuestos[id];
+                return (true);
+            }
+            else
+            {
+                presupuestoDato = null;
+                return (false);
+            }
         }
 
         /// <summary>
@@ -69,16 +69,16 @@ namespace CapaPersistenciaPresupuesto
         /// <param name="p"></param>
         public static void DELETEPresupuesto(PresupuestoDato p)
         {
-            BDPresupuesto.presupuestos.Remove(p);
+            BDPresupuesto.Presupuestos.Remove(p);
         }
 
         /// <summary>
         /// 
         /// </summary>
         /// <param name="p"></param>
-        public static void EXISTSPresupuesto(PresupuestoDato p)
+        public static bool EXISTPresupuesto(int id)
         {
-
+            return (BDPresupuesto.Presupuestos.Contains(id));
         }
     }
 }

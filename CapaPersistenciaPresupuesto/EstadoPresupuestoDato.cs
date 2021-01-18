@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CapaPersistenciaPresupuesto
 {
-    enum EstadoPresupuesto
+    public enum EstadoPresupuestoDato
     {
         aceptado, desestimado, pendiente
     }
