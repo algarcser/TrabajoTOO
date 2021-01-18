@@ -4,16 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CapaPersistenciaCliente
+namespace LogicaModeloCliente
 {
-    public class ClienteDato
+    public class Cliente
     {
         private string nombre;
         private string DNI;
-        private CategoriaClienteDato categoria;
+        private CategoriaCliente categoria;
         private int tlfno;
-
-        public ClienteDato(string nombre, string DNI, CategoriaClienteDato categoria, int tlfno)
+        public Cliente(string nombre, string DNI, CategoriaCliente categoria, int tlfno)
         {
             this.nombre = nombre;
             this.DNI = DNI;
@@ -21,14 +20,13 @@ namespace CapaPersistenciaCliente
             this.tlfno = tlfno;
         }
 
-
         /// <summary>
         /// It returns the name of the client
         /// </summary>
         /// <returns></returns>
         public String getNombre()
         {
-            return this.nombre; 
+            return this.nombre;
         }
 
         /// <summary>
@@ -44,7 +42,7 @@ namespace CapaPersistenciaCliente
         /// It returns the cathegory of the client
         /// </summary>
         /// <returns></returns>
-        public CategoriaClienteDato getcategoria()
+        public CategoriaCliente getcategoria()
         {
             return this.categoria;
         }
@@ -57,6 +55,5 @@ namespace CapaPersistenciaCliente
         {
             return this.tlfno;
         }
-
     }
 }

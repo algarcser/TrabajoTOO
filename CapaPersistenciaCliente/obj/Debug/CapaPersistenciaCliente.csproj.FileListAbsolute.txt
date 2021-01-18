@@ -1,0 +1,2 @@
+C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\CapaPersistenciaCliente\obj\Debug\CapaPersistenciaCliente.csprojAssemblyReference.cache
+C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\CapaPersistenciaCliente\obj\Debug\CapaPersistenciaCliente.csproj.CoreCompileInputs.cache

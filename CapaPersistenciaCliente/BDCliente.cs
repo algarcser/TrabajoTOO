@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using CapaPersistenciaVehiculo;
 
 
 namespace CapaPersistenciaCliente
@@ -12,7 +11,6 @@ namespace CapaPersistenciaCliente
     class BDCliente
     {
         private static TablaClientes clientes;
-        private static TablaVehiculo vehiculos;
 
         //private static TablaExtras extras;
         private BDCliente() { }
@@ -45,9 +43,18 @@ namespace CapaPersistenciaCliente
             return lista;
         }
 
-        public static ClienteDato SELECTCliente(ClienteDato c)
+        public static bool SELECTCliente(string clave, out ClienteDato c)
         {
-            return c;
+            if (BDCliente.EXISTS(clave))
+            {
+                c = BDCliente.clientes[clave];
+                return true;
+            }
+            else
+            {
+                c = null;
+                return false;
+            }
         }
 
         /// <summary>
@@ -70,69 +77,20 @@ namespace CapaPersistenciaCliente
             BDCliente.clientes.Remove(c);
         }
 
+        public static bool EXISTS(string clave)
+        {
+            return BDCliente.Clientes.Contains(clave);
+            //bool existe = false;
 
+            //foreach (ClienteDato cliente in BDCliente.Clientes)
+            //{
+            //    if (cliente.Equals(c))
+            //    {
+            //        existe = true;
+            //    }
+            //}
+            //return existe;
+        }
 
-
-
-
-
-
-
-
-
-
-    //    public static TablaClientes Vehiculo
-    //    {
-    //        get
-    //        {
-    //            if (clientes == null)
-    //                clientes = new TablaClientes();
-    //            return clientes;
-    //        }
-    //    }
-
-    //    /// <summary>
-    //    /// 
-    //    /// </summary>
-    //    /// <param name="c"></param>
-    //    public static void INSERTVehiculo(ClienteDato c)
-    //    {
-    //        BDCliente.clientes.Add(c);
-    //    }
-
-    //    /// <summary>
-    //    /// 
-    //    /// </summary>
-    //    /// <param name="l"></param>
-    //    public static SELECTVehiculoe()
-    //    {
-    //        //List<ClienteDato> lista = new List<ClienteDato>();
-    //        return l;
-    //    }
-
-    //    public static ClienteDato SELECTVehiculo(ClienteDato c)
-    //    {
-    //        return c;
-    //    }
-
-    //    /// <summary>
-    //    /// 
-    //    /// </summary>
-    //    /// <param name="c"></param>
-    //    public static void UPDATEVehiculo(ClienteDato c)
-    //    {
-    //        DELETECliente(c);
-    //        INSERTCliente(c);
-
-    //    }
-
-    //    /// <summary>
-    //    /// 
-    //    /// </summary>
-    //    /// <param name="c"></param>
-    //    public static void DELETEVehiculo(ClienteDato c)
-    //    {
-    //        BDCliente.clientes.Remove(c);
-    //    }
     }
 }
