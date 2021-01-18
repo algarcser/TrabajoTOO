@@ -1,0 +1,6 @@
+C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\CapaPersistenciaPresupuesto\bin\Debug\CapaPersistenciaPresupuesto.dll
+C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\CapaPersistenciaPresupuesto\bin\Debug\CapaPersistenciaPresupuesto.pdb
+C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\CapaPersistenciaPresupuesto\obj\Debug\CapaPersistenciaPresupuesto.csprojAssemblyReference.cache
+C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\CapaPersistenciaPresupuesto\obj\Debug\CapaPersistenciaPresupuesto.csproj.CoreCompileInputs.cache
+C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\CapaPersistenciaPresupuesto\obj\Debug\CapaPersistenciaPresupuesto.dll
+C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\CapaPersistenciaPresupuesto\obj\Debug\CapaPersistenciaPresupuesto.pdb
