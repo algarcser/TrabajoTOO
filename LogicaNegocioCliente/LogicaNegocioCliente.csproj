@@ -44,5 +44,15 @@
     <Compile Include="LNCliente.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CapaPersistenciaCliente\CapaPersistenciaCliente.csproj">
+      <Project>{d98b2f52-1f93-4638-8329-5516cc6bfd7a}</Project>
+      <Name>CapaPersistenciaCliente</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LogicaModeloCliente\LogicaModeloCliente.csproj">
+      <Project>{7e0e7efb-d584-45fa-8f3f-8009daef7e42}</Project>
+      <Name>LogicaModeloCliente</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

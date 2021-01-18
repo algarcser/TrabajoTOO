@@ -1,0 +1,6 @@
+C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\LogicaModeloCliente\bin\Debug\LogicaModeloCliente.dll
+C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\LogicaModeloCliente\bin\Debug\LogicaModeloCliente.pdb
+C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\LogicaModeloCliente\obj\Debug\LogicaModeloCliente.csprojAssemblyReference.cache
+C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\LogicaModeloCliente\obj\Debug\LogicaModeloCliente.csproj.CoreCompileInputs.cache
+C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\LogicaModeloCliente\obj\Debug\LogicaModeloCliente.dll
+C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\LogicaModeloCliente\obj\Debug\LogicaModeloCliente.pdb
