@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CapaPersistenciaCliente
 {
-    class ClienteDato
+    public class ClienteDato
     {
         private string nombre;
         private string DNI;

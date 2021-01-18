@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CapaPersistenciaCliente
 {
-    enum CategoriaCliente
+    public enum CategoriaCliente
     {
         A, B, C
     }
