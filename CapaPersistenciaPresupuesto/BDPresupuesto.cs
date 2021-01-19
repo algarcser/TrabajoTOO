@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CapaPersistenciaPresupuesto
 {
-    public class BDPresupuesto
+    internal class BDPresupuesto
     {
         private static TablaPresupuesto pres;
 

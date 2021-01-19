@@ -8,6 +8,6 @@ namespace CapaPersistenciaPresupuesto
 {
     public enum EstadoPresupuestoDato
     {
-        aceptado, desestimado, pendiente
+        creado, aceptado, desestimado, pendiente
     }
 }

@@ -33,11 +33,11 @@ namespace LogicaModeloVehiculo
             }
         }
 
-        public override float PrecioRecomendado
+        public override float PVP
         {
             get
             {
-                float precio = base.PrecioRecomendado;
+                float precio = base.PVP;
                 foreach (extra extra in this.extras)
                 {
                     precio = precio + extra.Precio;

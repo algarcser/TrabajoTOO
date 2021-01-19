@@ -11,9 +11,9 @@ using LogicaModeloCliente;
 
 namespace CapaPersistenciaPresupuesto
 {
-    class PersistenciaPresupuesto
+    public static class PersistenciaPresupuesto
     {
-        public bool INSERT(Presupuesto presupuesto)
+        public static bool INSERT(Presupuesto presupuesto)
         {
             if (BDPresupuesto.EXISTPresupuesto(presupuesto.Identificacion) != true)
             {
@@ -26,19 +26,19 @@ namespace CapaPersistenciaPresupuesto
             }
         }
 
-        private void DELETE(Presupuesto presupuesto)
+        public static void DELETE(Presupuesto presupuesto)
         {
             BDPresupuesto.DELETEPresupuesto(conversor.Convertir(presupuesto));
         }
 
 
-        private void UPDATE(Presupuesto presupuesto)
+        public static void UPDATE(Presupuesto presupuesto)
         {
             BDPresupuesto.DELETEPresupuesto(conversor.Convertir(presupuesto));
             BDPresupuesto.INSERTPresupuesto(conversor.Convertir(presupuesto));
         }
 
-        private bool READ(int id, out Presupuesto presupuesto)
+        public static bool READ(int id, out Presupuesto presupuesto)
         {
             PresupuestoDato auxiliar;
             bool resultado = BDPresupuesto.SELECTPresupuesto(id, out auxiliar);
@@ -51,6 +51,11 @@ namespace CapaPersistenciaPresupuesto
                 presupuesto = null;
             }
             return (resultado);
+        }
+
+        public static bool EXIST(int id)
+        {
+            return (BDPresupuesto.EXISTPresupuesto(id));
         }
 
         public static class conversor

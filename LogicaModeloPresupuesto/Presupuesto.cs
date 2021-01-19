@@ -24,7 +24,7 @@ namespace LogicaModeloPresupuesto
         {
             this.ID = this.ID++;
             this.fechaRealizacion = fch;
-            this.estado = e;
+            this.estado = EstadoPresupuesto.creado;
             this.cliente = c;
             this.vehiculos = v;
         }

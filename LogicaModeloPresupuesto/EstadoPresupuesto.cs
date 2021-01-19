@@ -8,6 +8,6 @@ namespace LogicaModeloPresupuesto
 {
     public enum EstadoPresupuesto
     {
-        aceptado, desestimado, pendiente
+        creado, aceptado, desestimado, pendiente
     }
 }

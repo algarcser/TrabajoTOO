@@ -77,7 +77,7 @@ namespace LogicaModeloVehiculo
         /// <summary>
         /// get: devuelve el precio recomendado
         /// </summary>
-        public virtual float PrecioRecomendado
+        public virtual float PVP
         {
             get
             {
