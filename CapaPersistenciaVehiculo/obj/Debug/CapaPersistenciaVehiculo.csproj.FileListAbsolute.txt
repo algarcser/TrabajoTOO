@@ -1,0 +1,9 @@
+C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\CapaPersistenciaVehiculo\bin\Debug\CapaPersistenciaVehiculo.dll
+C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\CapaPersistenciaVehiculo\bin\Debug\CapaPersistenciaVehiculo.pdb
+C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\CapaPersistenciaVehiculo\bin\Debug\LogicaModeloVehiculo.dll
+C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\CapaPersistenciaVehiculo\bin\Debug\LogicaModeloVehiculo.pdb
+C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\CapaPersistenciaVehiculo\obj\Debug\CapaPersistenciaVehiculo.csprojAssemblyReference.cache
+C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\CapaPersistenciaVehiculo\obj\Debug\CapaPersistenciaVehiculo.csproj.CoreCompileInputs.cache
+C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\CapaPersistenciaVehiculo\obj\Debug\CapaPersistenciaVehiculo.csproj.CopyComplete
+C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\CapaPersistenciaVehiculo\obj\Debug\CapaPersistenciaVehiculo.dll
+C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\CapaPersistenciaVehiculo\obj\Debug\CapaPersistenciaVehiculo.pdb

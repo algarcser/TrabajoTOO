@@ -1,0 +1,6 @@
+C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\Principal\bin\Debug\Principal.exe.config
+C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\Principal\bin\Debug\Principal.exe
+C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\Principal\bin\Debug\Principal.pdb
+C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\Principal\obj\Debug\Principal.csproj.CoreCompileInputs.cache
+C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\Principal\obj\Debug\Principal.exe
+C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\Principal\obj\Debug\Principal.pdb
