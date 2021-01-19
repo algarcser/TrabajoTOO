@@ -58,6 +58,18 @@
     <Compile Include="AltaCliente.Designer.cs">
       <DependentUpon>AltaCliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="Baja de cliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Baja de cliente.Designer.cs">
+      <DependentUpon>Baja de cliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Datos del cliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Datos del cliente.Designer.cs">
+      <DependentUpon>Datos del cliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="Introducir DNI.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -71,6 +83,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AltaCliente.resx">
       <DependentUpon>AltaCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Baja de cliente.resx">
+      <DependentUpon>Baja de cliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Datos del cliente.resx">
+      <DependentUpon>Datos del cliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Introducir DNI.resx">
       <DependentUpon>Introducir DNI.cs</DependentUpon>
