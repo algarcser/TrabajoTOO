@@ -14,10 +14,10 @@ namespace LogicaModeloVehiculo
         private string modelo;
         private float potencia;
         private float precioRecomendado;
-        private float iva;
+        private iva iva;
 
 
-        public vehiculo(string nBastidor, string marca, string modelo, float potencia, float precioRecomendado, float iva)
+        public vehiculo(string nBastidor, string marca, string modelo, float potencia, float precioRecomendado, iva iva)
         {
             this.nBastidor = nBastidor;
             this.marca = marca;
@@ -81,14 +81,23 @@ namespace LogicaModeloVehiculo
         {
             get
             {
-                return this.precioRecomendado;
+                float precioFinal = this.precioRecomendado;
+                if ( this.Iva == iva.cocheNuevo)
+                {
+                    precioFinal = (float) (precioFinal*1.1);
+                }
+                else
+                {
+                    precioFinal = (float) (precioFinal*1.21);
+                }
+                return precioFinal;
             }
         }
 
         /// <summary>
         /// get: devuelve el iva
         /// </summary>
-        public float Iva
+        public iva Iva
         {
             get
             {

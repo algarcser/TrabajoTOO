@@ -13,10 +13,10 @@ namespace CapaPersistenciaVehiculo
         private string modelo;
         private float potencia;
         private float precioRecomendado;
-        private float iva;
+        private ivaDato iva;
 
 
-        public vehiculoDato(string nBastidor, string marca, string modelo, float potencia, float precioRecomendado, float iva)
+        public vehiculoDato(string nBastidor, string marca, string modelo, float potencia, float precioRecomendado, ivaDato iva)
         {
             this.nBastidor = nBastidor;
             this.marca = marca;
@@ -87,7 +87,7 @@ namespace CapaPersistenciaVehiculo
         /// <summary>
         /// get: devuelve el iva
         /// </summary>
-        public float Iva
+        public ivaDato Iva
         {
             get
             {

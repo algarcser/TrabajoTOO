@@ -11,7 +11,7 @@ namespace LogicaModeloVehiculo
 
         private string matricula;
         private DateTime fechaMatriculacion;
-        public vehiculo2Mano(string nBastidor, string marca, string modelo, float potencia, float precioRecomendado, float iva, string matricula, DateTime fechaMatriculacion) : base(nBastidor, marca, modelo, potencia, precioRecomendado, iva)
+        public vehiculo2Mano(string nBastidor, string marca, string modelo, float potencia, float precioRecomendado, iva iva, string matricula, DateTime fechaMatriculacion) : base(nBastidor, marca, modelo, potencia, precioRecomendado, iva)
         {
             this.matricula = matricula;
             this.fechaMatriculacion = fechaMatriculacion;
@@ -39,5 +39,6 @@ namespace LogicaModeloVehiculo
                 return this.fechaMatriculacion;
             }
         }
+
     }
 }

@@ -12,7 +12,7 @@ namespace LogicaModeloVehiculo
 
 
 
-        private vehiculoNuevo(string nBastidor, string marca, string modelo, float potencia, float precioRecomendado, float iva) : base(nBastidor,marca,modelo,potencia,precioRecomendado,iva)
+        private vehiculoNuevo(string nBastidor, string marca, string modelo, float potencia, float precioRecomendado, iva iva) : base(nBastidor,marca,modelo,potencia,precioRecomendado,iva)
         {
             this.extras = new List<extra>();
         }
