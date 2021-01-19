@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>aa26a431-8e2a-42ee-9405-9a072f8c1ba5</ProjectGuid>
+    <ProjectGuid>{AA26A431-8E2A-42EE-9405-9A072F8C1BA5}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>CapaPresentacionVehiculo</RootNamespace>
@@ -31,24 +31,58 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="System"/>
-    
-    <Reference Include="System.Core"/>
-    <Reference Include="System.Xml.Linq"/>
-    <Reference Include="System.Data.DataSetExtensions"/>
-    
-    
-    <Reference Include="Microsoft.CSharp"/>
-    
-    <Reference Include="System.Data"/>
-    
-    <Reference Include="System.Net.Http"/>
-    
-    <Reference Include="System.Xml"/>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="AnadirVehiculo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AnadirVehiculo.Designer.cs">
+      <DependentUpon>AnadirVehiculo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Datos2Mano.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Datos2Mano.Designer.cs">
+      <DependentUpon>Datos2Mano.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ObtenerNBastidor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ObtenerNBastidor.Designer.cs">
+      <DependentUpon>ObtenerNBastidor.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AnadirVehiculo.resx">
+      <DependentUpon>AnadirVehiculo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Datos2Mano.resx">
+      <DependentUpon>Datos2Mano.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ObtenerNBastidor.resx">
+      <DependentUpon>ObtenerNBastidor.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LogicaModeloVehiculo\LogicaModeloVehiculo.csproj">
+      <Project>{ccdc62a8-8317-4b37-ba2c-b1ed4783c11a}</Project>
+      <Name>LogicaModeloVehiculo</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LogicaNegocioVehiculo\LogicaNegocioVehiculo.csproj">
+      <Project>{89739b2a-34e9-4940-9528-4661ae3b2804}</Project>
+      <Name>LogicaNegocioVehiculo</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
- </Project>
+</Project>
