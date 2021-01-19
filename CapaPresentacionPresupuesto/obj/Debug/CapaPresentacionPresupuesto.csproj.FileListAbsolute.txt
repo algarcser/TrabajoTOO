@@ -1,0 +1,6 @@
+C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\CapaPresentacionPresupuesto\bin\Debug\CapaPresentacionPresupuesto.dll
+C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\CapaPresentacionPresupuesto\bin\Debug\CapaPresentacionPresupuesto.pdb
+C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\CapaPresentacionPresupuesto\obj\Debug\CapaPresentacionPresupuesto.csprojAssemblyReference.cache
+C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\CapaPresentacionPresupuesto\obj\Debug\CapaPresentacionPresupuesto.csproj.CoreCompileInputs.cache
+C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\CapaPresentacionPresupuesto\obj\Debug\CapaPresentacionPresupuesto.dll
+C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\CapaPresentacionPresupuesto\obj\Debug\CapaPresentacionPresupuesto.pdb

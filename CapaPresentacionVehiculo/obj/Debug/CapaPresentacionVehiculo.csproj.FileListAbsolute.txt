@@ -1,0 +1,6 @@
+C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\CapaPresentacionVehiculo\bin\Debug\CapaPresentacionVehiculo.dll
+C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\CapaPresentacionVehiculo\bin\Debug\CapaPresentacionVehiculo.pdb
+C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\CapaPresentacionVehiculo\obj\Debug\CapaPresentacionVehiculo.csprojAssemblyReference.cache
+C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\CapaPresentacionVehiculo\obj\Debug\CapaPresentacionVehiculo.csproj.CoreCompileInputs.cache
+C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\CapaPresentacionVehiculo\obj\Debug\CapaPresentacionVehiculo.dll
+C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\CapaPresentacionVehiculo\obj\Debug\CapaPresentacionVehiculo.pdb

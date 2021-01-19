@@ -1,0 +1,16 @@
+C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\CapaPresentacionGeneral\bin\Debug\CapaPresentacionGeneral.dll
+C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\CapaPresentacionGeneral\bin\Debug\CapaPresentacionGeneral.pdb
+C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\CapaPresentacionGeneral\bin\Debug\CapaPresentacion.exe
+C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\CapaPresentacionGeneral\bin\Debug\CapaPresentacionPresupuesto.dll
+C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\CapaPresentacionGeneral\bin\Debug\CapaPresentacionVehiculo.dll
+C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\CapaPresentacionGeneral\bin\Debug\CapaPresentacionPresupuesto.pdb
+C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\CapaPresentacionGeneral\bin\Debug\CapaPresentacionVehiculo.pdb
+C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\CapaPresentacionGeneral\bin\Debug\CapaPresentacion.pdb
+C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\CapaPresentacionGeneral\bin\Debug\CapaPresentacion.exe.config
+C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\CapaPresentacionGeneral\obj\Debug\CapaPresentacionGeneral.csprojAssemblyReference.cache
+C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\CapaPresentacionGeneral\obj\Debug\CapaPresentacionGeneral.Login.resources
+C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\CapaPresentacionGeneral\obj\Debug\CapaPresentacionGeneral.csproj.GenerateResource.cache
+C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\CapaPresentacionGeneral\obj\Debug\CapaPresentacionGeneral.csproj.CoreCompileInputs.cache
+C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\CapaPresentacionGeneral\obj\Debug\CapaPresentacionGeneral.csproj.CopyComplete
+C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\CapaPresentacionGeneral\obj\Debug\CapaPresentacionGeneral.dll
+C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\CapaPresentacionGeneral\obj\Debug\CapaPresentacionGeneral.pdb
