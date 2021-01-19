@@ -7,11 +7,11 @@ using LogicaModeloVehiculo;
 
 namespace CapaPersistenciaVehiculo
 {
-    class PersistenciaVehiculo
+    public static class PersistenciaVehiculo
     {
 
 
-        private bool INSERT(vehiculo vehiculo)
+        public static bool INSERT(vehiculo vehiculo)
         {
             if (!BDvehiculo.Exists(vehiculo.NBastidor))
             {
@@ -24,19 +24,19 @@ namespace CapaPersistenciaVehiculo
             }
         }
 
-        private void DELETE(vehiculo vehiculo)
+        public static void DELETE(vehiculo vehiculo)
         {
             BDvehiculo.DELETEVehiculo(conversor.Convertir(vehiculo));
         }
 
 
-        private void UPDATE(vehiculo vehiculo)
+        public static void UPDATE(vehiculo vehiculo)
         {
             BDvehiculo.DELETEVehiculo(conversor.Convertir(vehiculo));
             BDvehiculo.INSERTVehiculo(conversor.Convertir(vehiculo));
         }
 
-        private bool READ(string clave, out vehiculo vehiculo)
+        public static bool READ(string clave, out vehiculo vehiculo)
         {
             vehiculoDato auxiliar;
             bool resultado = BDvehiculo.SELECTVehiculo(clave, out auxiliar);
@@ -51,6 +51,11 @@ namespace CapaPersistenciaVehiculo
             return resultado;
         }
 
+
+        public static bool EXISTS(string clave)
+        {
+            return BDvehiculo.Exists(clave);
+        }
 
 
 
@@ -84,7 +89,7 @@ namespace CapaPersistenciaVehiculo
             {
                 auxiliar = ivaDato.cocheSegundaMano;
             }
-            return new vehiculoDato(vehiculo.NBastidor, vehiculo.Marca, vehiculo.Modelo, vehiculo.Potencia, vehiculo.PrecioRecomendado, auxiliar);
+            return new vehiculoDato(vehiculo.NBastidor, vehiculo.Marca, vehiculo.Modelo, vehiculo.Potencia, vehiculo.PVP, auxiliar);
         }
     }
 }

@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace CapaPersistenciaVehiculo
 {
-    class BDvehiculo
+    internal class BDvehiculo
     {
 
         private static TablaVehiculo vehiculos;
 
         //private static TablaExtras extras;
         private BDvehiculo() { }
-        public static TablaVehiculo Vehiculos
+        private static TablaVehiculo Vehiculos
         {
             get
             {
@@ -27,14 +27,14 @@ namespace CapaPersistenciaVehiculo
         /// 
         /// </summary>
         /// <param name="c"></param>
-        public static void INSERTVehiculo(vehiculoDato c)
+        internal static void INSERTVehiculo(vehiculoDato c)
         {
             BDvehiculo.Vehiculos.Add(c);
         }
 
 
 
-        public static bool SELECTVehiculo(string clave, out vehiculoDato vehiculoDato)
+        internal static bool SELECTVehiculo(string clave, out vehiculoDato vehiculoDato)
         {
 
             if (BDvehiculo.Exists(clave))
@@ -53,7 +53,7 @@ namespace CapaPersistenciaVehiculo
         /// 
         /// </summary>
         /// <param name="c"></param>
-        public static void UPDATEVehiculo(vehiculoDato c)
+        internal static void UPDATEVehiculo(vehiculoDato c)
         {
             DELETEVehiculo(c);
             INSERTVehiculo(c);
@@ -64,12 +64,12 @@ namespace CapaPersistenciaVehiculo
         /// 
         /// </summary>
         /// <param name="c"></param>
-        public static void DELETEVehiculo(vehiculoDato c)
+        internal static void DELETEVehiculo(vehiculoDato c)
         {
             BDvehiculo.Vehiculos.Remove(c);
         }
 
-        public static bool Exists(string clave)
+        internal static bool Exists(string clave)
         {
             return BDvehiculo.Vehiculos.Contains(clave);
         }

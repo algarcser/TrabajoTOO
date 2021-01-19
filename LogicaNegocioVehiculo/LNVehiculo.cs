@@ -3,10 +3,38 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using CapaPersistenciaVehiculo;
+using LogicaModeloVehiculo;
 
-namespace prac10
+namespace LogicaNegocioVehiculo
 {
     class LNVehiculo
     {
+        public static bool INSERT(vehiculo vehiculo)
+        {
+            return PersistenciaVehiculo.INSERT(vehiculo);
+        }
+
+        public static void DELETE(vehiculo vehiculo)
+        {
+            PersistenciaVehiculo.DELETE(vehiculo);
+        }
+
+
+        public static void UPDATE(vehiculo vehiculo)
+        {
+            PersistenciaVehiculo.DELETE(vehiculo);
+            PersistenciaVehiculo.INSERT(vehiculo);
+        }
+
+        public static bool READ(string clave, out vehiculo vehiculo)
+        {
+            return PersistenciaVehiculo.READ(clave, out vehiculo);
+        }
+
+        public static bool EXISTS(string clave)
+        {
+            return PersistenciaVehiculo.EXISTS(clave);
+        }
     }
 }

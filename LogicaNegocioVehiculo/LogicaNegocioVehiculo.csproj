@@ -44,5 +44,15 @@
     <Compile Include="LNVehiculo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CapaPersistenciaVehiculo\CapaPersistenciaVehiculo.csproj">
+      <Project>{47a34438-c397-4e42-a148-0bfaded859b2}</Project>
+      <Name>CapaPersistenciaVehiculo</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LogicaModeloVehiculo\LogicaModeloVehiculo.csproj">
+      <Project>{ccdc62a8-8317-4b37-ba2c-b1ed4783c11a}</Project>
+      <Name>LogicaModeloVehiculo</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
