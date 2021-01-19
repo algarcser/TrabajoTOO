@@ -1,0 +1,11 @@
+C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\LogicaNegocioCliente\bin\Debug\LogicaNegocioCliente.dll
+C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\LogicaNegocioCliente\bin\Debug\LogicaNegocioCliente.pdb
+C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\LogicaNegocioCliente\bin\Debug\CapaPersistenciaCliente.dll
+C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\LogicaNegocioCliente\bin\Debug\LogicaModeloCliente.dll
+C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\LogicaNegocioCliente\bin\Debug\CapaPersistenciaCliente.pdb
+C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\LogicaNegocioCliente\bin\Debug\LogicaModeloCliente.pdb
+C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\LogicaNegocioCliente\obj\Debug\LogicaNegocioCliente.csprojAssemblyReference.cache
+C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\LogicaNegocioCliente\obj\Debug\LogicaNegocioCliente.csproj.CoreCompileInputs.cache
+C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\LogicaNegocioCliente\obj\Debug\LogicaNegocioCliente.csproj.CopyComplete
+C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\LogicaNegocioCliente\obj\Debug\LogicaNegocioCliente.dll
+C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\LogicaNegocioCliente\obj\Debug\LogicaNegocioCliente.pdb
