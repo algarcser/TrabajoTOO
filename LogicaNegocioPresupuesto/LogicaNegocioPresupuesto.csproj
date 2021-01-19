@@ -49,9 +49,17 @@
       <Project>{76a8e587-e493-4c0c-99f7-416f72a21f8d}</Project>
       <Name>CapaPersistenciaPresupuesto</Name>
     </ProjectReference>
+    <ProjectReference Include="..\LogicaModeloCliente\LogicaModeloCliente.csproj">
+      <Project>{7e0e7efb-d584-45fa-8f3f-8009daef7e42}</Project>
+      <Name>LogicaModeloCliente</Name>
+    </ProjectReference>
     <ProjectReference Include="..\LogicaModeloPresupuesto\LogicaModeloPresupuesto.csproj">
       <Project>{a29193ab-3238-498b-80f8-a2f820efccff}</Project>
       <Name>LogicaModeloPresupuesto</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LogicaModeloVehiculo\LogicaModeloVehiculo.csproj">
+      <Project>{ccdc62a8-8317-4b37-ba2c-b1ed4783c11a}</Project>
+      <Name>LogicaModeloVehiculo</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
