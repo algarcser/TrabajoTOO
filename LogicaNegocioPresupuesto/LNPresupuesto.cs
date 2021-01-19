@@ -19,8 +19,8 @@ namespace LogicaNegocioPresupuesto
                 if(DateTime.Today.Subtract(presupuesto.FechaRealizacion).Days > 15)
                 {
                     Presupuesto auxiliar = new Presupuesto(presupuesto.FechaRealizacion, EstadoPresupuesto.desestimado, presupuesto.Cliente, presupuesto.ListaVehiculos);
-                    PersistenciaPresupuesto.DELETE(presupuesto);
-                    PersistenciaPresupuesto.INSERT(auxiliar);
+                    DELETE(presupuesto);
+                    INSERT(auxiliar);
                 }
             }
         }
@@ -28,8 +28,8 @@ namespace LogicaNegocioPresupuesto
         public void venderCoche(Presupuesto presupuesto)
         {
             Presupuesto auxiliar = new Presupuesto(presupuesto.FechaRealizacion, EstadoPresupuesto.aceptado, presupuesto.Cliente, presupuesto.ListaVehiculos);
-            PersistenciaPresupuesto.DELETE(presupuesto);
-            PersistenciaPresupuesto.INSERT(auxiliar);
+            DELETE(presupuesto);
+            INSERT(auxiliar);
         }
 
         public float calcularPresupuesto(Presupuesto presupuesto)
@@ -53,6 +53,32 @@ namespace LogicaNegocioPresupuesto
             }
             
             return ((float)(precioCoches * descuento));
+        }
+
+        public static bool INSERT(Presupuesto presupuesto)
+        {
+            return (PersistenciaPresupuesto.INSERT(presupuesto));
+        }
+
+        public static void DELETE(Presupuesto presupuesto)
+        {
+            PersistenciaPresupuesto.DELETE(presupuesto);
+        }
+
+
+        public static void UPDATE(Presupuesto presupuesto)
+        {
+            PersistenciaPresupuesto.UPDATE(presupuesto);
+        }
+
+        public static bool READ(int id, out Presupuesto presupuesto)
+        {
+            return (PersistenciaPresupuesto.READ(id, out presupuesto));
+        }
+
+        public static bool EXIST(int id)
+        {
+            return (PersistenciaPresupuesto.EXIST(id));
         }
     }
 }
