@@ -41,7 +41,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EstadoPresupuesto.cs" />
+    <Compile Include="Presupuesto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LogicaModeloCliente\LogicaModeloCliente.csproj">
+      <Project>{7e0e7efb-d584-45fa-8f3f-8009daef7e42}</Project>
+      <Name>LogicaModeloCliente</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LogicaModeloVehiculo\LogicaModeloVehiculo.csproj">
+      <Project>{ccdc62a8-8317-4b37-ba2c-b1ed4783c11a}</Project>
+      <Name>LogicaModeloVehiculo</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

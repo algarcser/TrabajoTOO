@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace CapaPersistenciaPresupuesto
 {
-    class TablaPresupuesto : KeyedCollection<int, PresupuestoDato>
+    public class TablaPresupuesto : KeyedCollection<int, PresupuestoDato>
     {
         /// <summary>
         /// This is the only method that absolutely must be overridden,
@@ -15,11 +15,11 @@ namespace CapaPersistenciaPresupuesto
         /// keys from the items. The input parameter type is the
         /// second generic type argument, in this case PresupuestoDato, and
         /// the return value type is the first generic type argument,
-        /// in this case String
+        /// in this case int.
         /// </summary>
         protected override int GetKeyForItem(PresupuestoDato item)
         {
-            // In this example, the key is the hor/date the budget was established.
+            // In this example, the key is the ID.
             return (item.Identificacion);
         }
 

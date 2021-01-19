@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace CapaPersistenciaPresupuesto
 {
-    class BDPresupuesto
+    public class BDPresupuesto
     {
         private static TablaPresupuesto pres;
 
-        private BDPresupuesto() { }
+        public BDPresupuesto() { }
 
         public static TablaPresupuesto Presupuestos
         {
@@ -37,7 +37,7 @@ namespace CapaPersistenciaPresupuesto
         /// 
         /// </summary>
         /// <param name="id"></param>
-        public static bool SELECTVehiculo(int id, out PresupuestoDato presupuestoDato)
+        public static bool SELECTPresupuesto(int id, out PresupuestoDato presupuestoDato)
         {
 
             if (BDPresupuesto.EXISTPresupuesto(id) == true)

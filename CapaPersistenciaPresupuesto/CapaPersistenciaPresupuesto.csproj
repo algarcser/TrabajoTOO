@@ -42,7 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BDPresupuesto.cs" />
-    <Compile Include="EstadoPresupuesto.cs" />
+    <Compile Include="EstadoPresupuestoDato.cs" />
     <Compile Include="PersistenciaPresupuesto.cs" />
     <Compile Include="PresupuestoDato.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -56,6 +56,10 @@
     <ProjectReference Include="..\CapaPersistenciaVehiculo\CapaPersistenciaVehiculo.csproj">
       <Project>{47a34438-c397-4e42-a148-0bfaded859b2}</Project>
       <Name>CapaPersistenciaVehiculo</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LogicaModeloPresupuesto\LogicaModeloPresupuesto.csproj">
+      <Project>{a29193ab-3238-498b-80f8-a2f820efccff}</Project>
+      <Name>LogicaModeloPresupuesto</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

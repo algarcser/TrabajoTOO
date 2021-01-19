@@ -3,25 +3,24 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using CapaPersistenciaVehiculo;
-using CapaPersistenciaCliente;
+using LogicaModeloCliente;
+using LogicaModeloVehiculo;
 
-namespace CapaPersistenciaPresupuesto
+namespace LogicaModeloPresupuesto
 {
-    public class PresupuestoDato
+    public class Presupuesto
     {
         private int ID = 0;
         private DateTime fechaRealizacion;
-        private EstadoPresupuestoDato estado;
-        private ClienteDato cliente;
-        private List<vehiculoDato> vehiculos;
-
+        private EstadoPresupuesto estado;
+        private Cliente cliente;
+        private List<vehiculo> vehiculos;
 
         /// <summary>
         /// It is the constructor of the class.
         /// </summary>
         /// <returns></returns>
-        public PresupuestoDato(DateTime fch, EstadoPresupuestoDato e, ClienteDato c, List<vehiculoDato> v)
+        public Presupuesto(DateTime fch, EstadoPresupuesto e, Cliente c, List<vehiculo> v)
         {
             this.ID = this.ID++;
             this.fechaRealizacion = fch;
@@ -51,14 +50,14 @@ namespace CapaPersistenciaPresupuesto
             get
             {
                 return (this.fechaRealizacion);
-            }       
+            }
         }
 
         /// <summary>
         /// It returns the state of the budget.
         /// </summary>
         /// <returns></returns>
-        public EstadoPresupuestoDato EstadoPresupuesto
+        public EstadoPresupuesto EstadoPresupuesto
         {
             get
             {
@@ -70,7 +69,7 @@ namespace CapaPersistenciaPresupuesto
         /// It returns the client associated with the budget.
         /// </summary>
         /// <returns></returns>
-        public ClienteDato Cliente
+        public Cliente Cliente
         {
             get
             {
@@ -82,7 +81,7 @@ namespace CapaPersistenciaPresupuesto
         /// It returns the list of vehicles associated with the budget.
         /// </summary>
         /// <returns></returns>
-        public List<vehiculoDato> ListaVehiculos
+        public List<vehiculo> ListaVehiculos
         {
             get
             {
