@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="iva.cs" />
     <Compile Include="vehiculo2Mano.cs" />
     <Compile Include="extra.cs" />
     <Compile Include="vehiculo.cs" />

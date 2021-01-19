@@ -60,12 +60,31 @@ namespace CapaPersistenciaVehiculo
     {
         public static vehiculo Convertir(vehiculoDato vehiculoDato)
         {
-            return new vehiculo(vehiculoDato.NBastidor, vehiculoDato.Marca, vehiculoDato.Modelo, vehiculoDato.Potencia, vehiculoDato.PrecioRecomendado, vehiculoDato.Iva);
+            iva auxiliar;
+            if(vehiculoDato.Iva == 0)
+            {
+                auxiliar = iva.cocheNuevo;
+            }
+            else
+            {
+                auxiliar = iva.cocheSegundaMano;
+            }
+
+            return new vehiculo(vehiculoDato.NBastidor, vehiculoDato.Marca, vehiculoDato.Modelo, vehiculoDato.Potencia, vehiculoDato.PrecioRecomendado, auxiliar);
         }
 
         public static vehiculoDato Convertir(vehiculo vehiculo)
         {
-            return new vehiculoDato(vehiculo.NBastidor, vehiculo.Marca, vehiculo.Modelo, vehiculo.Potencia, vehiculo.PrecioRecomendado, vehiculo.Iva);
+            ivaDato auxiliar;
+            if (vehiculo.Iva == 0)
+            {
+                auxiliar = ivaDato.cocheNuevo;
+            }
+            else
+            {
+                auxiliar = ivaDato.cocheSegundaMano;
+            }
+            return new vehiculoDato(vehiculo.NBastidor, vehiculo.Marca, vehiculo.Modelo, vehiculo.Potencia, vehiculo.PrecioRecomendado, auxiliar);
         }
     }
 }
