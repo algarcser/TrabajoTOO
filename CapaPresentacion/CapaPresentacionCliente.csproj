@@ -46,6 +46,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Alta de un cliente.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Alta de un cliente.Designer.cs">
+      <DependentUpon>Alta de un cliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Introducir DNI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Introducir DNI.Designer.cs">
+      <DependentUpon>Introducir DNI.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -54,6 +66,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Alta de un cliente.resx">
+      <DependentUpon>Alta de un cliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Introducir DNI.resx">
+      <DependentUpon>Introducir DNI.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
