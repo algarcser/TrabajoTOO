@@ -105,5 +105,10 @@ namespace LogicaModeloVehiculo
             }
         }
 
+        public override string ToString()
+        {
+            return this.nBastidor.ToString() + "" + this.marca.ToString() + "" + this.modelo.ToString() + "" + this.potencia.ToString() + "" + this.precioRecomendado.ToString() + "" + this.iva.ToString();
+        }
+
     }
 }

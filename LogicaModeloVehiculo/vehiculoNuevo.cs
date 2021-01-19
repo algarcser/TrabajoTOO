@@ -46,5 +46,10 @@ namespace LogicaModeloVehiculo
             }
         }
 
+
+        public void AddExtra(extra extra)
+        {
+            this.extras.Add(extra);
+        }
     }
 }
