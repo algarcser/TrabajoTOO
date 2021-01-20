@@ -13,7 +13,7 @@ namespace CapaPersistenciaVehiculo
 
         public static bool INSERT(vehiculo vehiculo)
         {
-            if (!BDvehiculo.Exists(vehiculo.NBastidor))
+            if (!BDvehiculo.Exists(conversor.Convertir(vehiculo)))
             {
                 BDvehiculo.INSERTVehiculo(conversor.Convertir(vehiculo));
                 return true;
@@ -36,10 +36,10 @@ namespace CapaPersistenciaVehiculo
             BDvehiculo.INSERTVehiculo(conversor.Convertir(vehiculo));
         }
 
-        public static bool READ(string clave, out vehiculo vehiculo)
+        public static bool READ(vehiculo referencia, out vehiculo vehiculo)
         {
             vehiculoDato auxiliar;
-            bool resultado = BDvehiculo.SELECTVehiculo(clave, out auxiliar);
+            bool resultado = BDvehiculo.SELECTVehiculo(conversor.Convertir(referencia), out auxiliar);
             if (resultado)
             {
                 vehiculo = conversor.Convertir(auxiliar);
@@ -52,9 +52,9 @@ namespace CapaPersistenciaVehiculo
         }
 
 
-        public static bool EXISTS(string clave)
+        public static bool EXISTS(vehiculo referencia)
         {
-            return BDvehiculo.Exists(clave);
+            return BDvehiculo.Exists(conversor.Convertir(referencia));
         }
 
 

@@ -51,7 +51,7 @@ namespace LogicaModeloVehiculo
 
         public override string ToString()
         {
-            return "Descripcion: " + this.Descripcion + "   Precio: " + this.Precio;
+            return this.Descripcion + "   Precio: " + this.Precio;
         }
 
         public override bool Equals(object obj)

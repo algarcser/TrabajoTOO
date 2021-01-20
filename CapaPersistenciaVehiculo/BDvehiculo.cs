@@ -34,12 +34,12 @@ namespace CapaPersistenciaVehiculo
 
 
 
-        internal static bool SELECTVehiculo(string clave, out vehiculoDato vehiculoDato)
+        internal static bool SELECTVehiculo(vehiculoDato referencia, out vehiculoDato vehiculoDato)
         {
 
-            if (BDvehiculo.Exists(clave))
+            if (BDvehiculo.Exists(referencia))
             {
-                vehiculoDato = BDvehiculo.Vehiculos[clave];
+                vehiculoDato = BDvehiculo.Vehiculos[referencia.NBastidor];
                 return true;
             }
             else
@@ -69,9 +69,9 @@ namespace CapaPersistenciaVehiculo
             BDvehiculo.Vehiculos.Remove(c);
         }
 
-        internal static bool Exists(string clave)
+        internal static bool Exists(vehiculoDato vehiculoDato)
         {
-            return BDvehiculo.Vehiculos.Contains(clave);
+            return BDvehiculo.Vehiculos.Contains(vehiculoDato.NBastidor);
         }
 
     }

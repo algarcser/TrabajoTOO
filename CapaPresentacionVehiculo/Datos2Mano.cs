@@ -16,5 +16,22 @@ namespace CapaPresentacionVehiculo
         {
             InitializeComponent();
         }
+
+
+        public string Matricula
+        {
+            get
+            {
+                return this.textBox_matricula.Text;
+            }
+        }
+
+        public string FechaMatriculacion
+        {
+            get
+            {
+                return this.textBox_fechaMatriculacion.Text;
+            }
+        }
     }
 }

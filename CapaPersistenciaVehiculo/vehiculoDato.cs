@@ -94,5 +94,22 @@ namespace CapaPersistenciaVehiculo
                 return this.iva;
             }
         }
+
+        public override bool Equals(object vehiculoDato)
+        {
+            if (vehiculoDato == null)
+            {
+                return false;
+            }
+            else
+            {
+                if (vehiculoDato is vehiculoDato)
+                {
+                    vehiculoDato auxiliar = (vehiculoDato)vehiculoDato;
+                    return this.NBastidor.Equals(auxiliar.NBastidor);
+                }
+            }
+            return false;
+        }
     }
 }
