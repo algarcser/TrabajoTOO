@@ -32,19 +32,19 @@ namespace CapaPresentacionGeneral
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPrincipal));
             this.msPrincipal = new System.Windows.Forms.MenuStrip();
             this.tsmiClientes = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiVehiculos = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiPresupuestos = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiConfiguracion = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiAltaCliente = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiBajaCliente = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiBusquedaCliente = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiVehiculos = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiAltaVehiculo = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiBusquedaVehiculo = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiPresupuestos = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiCrearPresupuesto = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiBusquedaPresupuesto = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiBPPorCliente = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiBPPorVehiculo = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiBPPorEstado = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiConfiguracion = new System.Windows.Forms.ToolStripMenuItem();
             this.msPrincipal.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -71,6 +71,27 @@ namespace CapaPresentacionGeneral
             this.tsmiClientes.Size = new System.Drawing.Size(61, 20);
             this.tsmiClientes.Text = "Clientes";
             // 
+            // tsmiAltaCliente
+            // 
+            this.tsmiAltaCliente.Name = "tsmiAltaCliente";
+            this.tsmiAltaCliente.Size = new System.Drawing.Size(180, 22);
+            this.tsmiAltaCliente.Text = "Alta";
+            this.tsmiAltaCliente.Click += new System.EventHandler(this.tsmiAltaCliente_Click);
+            // 
+            // tsmiBajaCliente
+            // 
+            this.tsmiBajaCliente.Name = "tsmiBajaCliente";
+            this.tsmiBajaCliente.Size = new System.Drawing.Size(180, 22);
+            this.tsmiBajaCliente.Text = "Baja";
+            this.tsmiBajaCliente.Click += new System.EventHandler(this.tsmiBajaCliente_Click);
+            // 
+            // tsmiBusquedaCliente
+            // 
+            this.tsmiBusquedaCliente.Name = "tsmiBusquedaCliente";
+            this.tsmiBusquedaCliente.Size = new System.Drawing.Size(180, 22);
+            this.tsmiBusquedaCliente.Text = "Búsqueda";
+            this.tsmiBusquedaCliente.Click += new System.EventHandler(this.tsmiBusquedaCliente_Click);
+            // 
             // tsmiVehiculos
             // 
             this.tsmiVehiculos.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -79,39 +100,6 @@ namespace CapaPresentacionGeneral
             this.tsmiVehiculos.Name = "tsmiVehiculos";
             this.tsmiVehiculos.Size = new System.Drawing.Size(69, 20);
             this.tsmiVehiculos.Text = "Vehículos";
-            // 
-            // tsmiPresupuestos
-            // 
-            this.tsmiPresupuestos.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsmiCrearPresupuesto,
-            this.tsmiBusquedaPresupuesto});
-            this.tsmiPresupuestos.Name = "tsmiPresupuestos";
-            this.tsmiPresupuestos.Size = new System.Drawing.Size(89, 20);
-            this.tsmiPresupuestos.Text = "Presupuestos";
-            // 
-            // tsmiConfiguracion
-            // 
-            this.tsmiConfiguracion.Name = "tsmiConfiguracion";
-            this.tsmiConfiguracion.Size = new System.Drawing.Size(95, 20);
-            this.tsmiConfiguracion.Text = "Configuración";
-            // 
-            // tsmiAltaCliente
-            // 
-            this.tsmiAltaCliente.Name = "tsmiAltaCliente";
-            this.tsmiAltaCliente.Size = new System.Drawing.Size(180, 22);
-            this.tsmiAltaCliente.Text = "Alta";
-            // 
-            // tsmiBajaCliente
-            // 
-            this.tsmiBajaCliente.Name = "tsmiBajaCliente";
-            this.tsmiBajaCliente.Size = new System.Drawing.Size(180, 22);
-            this.tsmiBajaCliente.Text = "Baja";
-            // 
-            // tsmiBusquedaCliente
-            // 
-            this.tsmiBusquedaCliente.Name = "tsmiBusquedaCliente";
-            this.tsmiBusquedaCliente.Size = new System.Drawing.Size(180, 22);
-            this.tsmiBusquedaCliente.Text = "Búsqueda";
             // 
             // tsmiAltaVehiculo
             // 
@@ -125,10 +113,19 @@ namespace CapaPresentacionGeneral
             this.tsmiBusquedaVehiculo.Size = new System.Drawing.Size(180, 22);
             this.tsmiBusquedaVehiculo.Text = "Búsqueda";
             // 
+            // tsmiPresupuestos
+            // 
+            this.tsmiPresupuestos.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmiCrearPresupuesto,
+            this.tsmiBusquedaPresupuesto});
+            this.tsmiPresupuestos.Name = "tsmiPresupuestos";
+            this.tsmiPresupuestos.Size = new System.Drawing.Size(89, 20);
+            this.tsmiPresupuestos.Text = "Presupuestos";
+            // 
             // tsmiCrearPresupuesto
             // 
             this.tsmiCrearPresupuesto.Name = "tsmiCrearPresupuesto";
-            this.tsmiCrearPresupuesto.Size = new System.Drawing.Size(180, 22);
+            this.tsmiCrearPresupuesto.Size = new System.Drawing.Size(126, 22);
             this.tsmiCrearPresupuesto.Text = "Crear";
             // 
             // tsmiBusquedaPresupuesto
@@ -138,26 +135,32 @@ namespace CapaPresentacionGeneral
             this.tsmiBPPorVehiculo,
             this.tsmiBPPorEstado});
             this.tsmiBusquedaPresupuesto.Name = "tsmiBusquedaPresupuesto";
-            this.tsmiBusquedaPresupuesto.Size = new System.Drawing.Size(180, 22);
+            this.tsmiBusquedaPresupuesto.Size = new System.Drawing.Size(126, 22);
             this.tsmiBusquedaPresupuesto.Text = "Búsqueda";
             // 
             // tsmiBPPorCliente
             // 
             this.tsmiBPPorCliente.Name = "tsmiBPPorCliente";
-            this.tsmiBPPorCliente.Size = new System.Drawing.Size(180, 22);
+            this.tsmiBPPorCliente.Size = new System.Drawing.Size(140, 22);
             this.tsmiBPPorCliente.Text = "Por cliente";
             // 
             // tsmiBPPorVehiculo
             // 
             this.tsmiBPPorVehiculo.Name = "tsmiBPPorVehiculo";
-            this.tsmiBPPorVehiculo.Size = new System.Drawing.Size(180, 22);
+            this.tsmiBPPorVehiculo.Size = new System.Drawing.Size(140, 22);
             this.tsmiBPPorVehiculo.Text = "Por vehículo";
             // 
             // tsmiBPPorEstado
             // 
             this.tsmiBPPorEstado.Name = "tsmiBPPorEstado";
-            this.tsmiBPPorEstado.Size = new System.Drawing.Size(180, 22);
+            this.tsmiBPPorEstado.Size = new System.Drawing.Size(140, 22);
             this.tsmiBPPorEstado.Text = "Por estado";
+            // 
+            // tsmiConfiguracion
+            // 
+            this.tsmiConfiguracion.Name = "tsmiConfiguracion";
+            this.tsmiConfiguracion.Size = new System.Drawing.Size(95, 20);
+            this.tsmiConfiguracion.Text = "Configuración";
             // 
             // FormPrincipal
             // 

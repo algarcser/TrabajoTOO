@@ -115,5 +115,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CapaPersistenciaCliente\CapaPersistenciaCliente.csproj">
+      <Project>{d98b2f52-1f93-4638-8329-5516cc6bfd7a}</Project>
+      <Name>CapaPersistenciaCliente</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

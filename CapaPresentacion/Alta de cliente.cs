@@ -15,6 +15,7 @@ namespace CapaPresentacion
         public Alta_de_cliente()
         {
             InitializeComponent();
+            this.alta_de_un_cliente1.DNI_readOnly(true);
         }
     }
 }
