@@ -27,14 +27,14 @@ namespace LogicaNegocioVehiculo
             PersistenciaVehiculo.INSERT(vehiculo);
         }
 
-        public static bool READ(string clave, out vehiculo vehiculo)
+        public static bool READ(vehiculo referencia, out vehiculo vehiculo)
         {
-            return PersistenciaVehiculo.READ(clave, out vehiculo);
+            return PersistenciaVehiculo.READ(referencia, out vehiculo);
         }
 
-        public static bool EXISTS(string clave)
+        public static bool EXISTS(vehiculo referencia)
         {
-            return PersistenciaVehiculo.EXISTS(clave);
+            return PersistenciaVehiculo.EXISTS(referencia);
         }
     }
 }
