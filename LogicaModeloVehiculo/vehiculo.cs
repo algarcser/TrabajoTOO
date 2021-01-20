@@ -110,5 +110,20 @@ namespace LogicaModeloVehiculo
             return this.nBastidor.ToString() + "" + this.marca.ToString() + "" + this.modelo.ToString() + "" + this.potencia.ToString() + "" + this.precioRecomendado.ToString() + "" + this.iva.ToString();
         }
 
+        public override bool Equals(object vehiculo)
+        {
+            if ( vehiculo == null) {
+                return false;
+            }
+            else
+            {
+                if(vehiculo is vehiculo) {
+                    vehiculo auxiliar = (vehiculo)vehiculo;
+                    return this.NBastidor.Equals(auxiliar.NBastidor);
+                }
+            }
+            return false;
+        }
+
     }
 }
