@@ -31,8 +31,8 @@
             this.components = new System.ComponentModel.Container();
             this.label_matricula = new System.Windows.Forms.Label();
             this.label_fechaMatriculacion = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox_matricula = new System.Windows.Forms.TextBox();
+            this.textBox_fechaMatriculacion = new System.Windows.Forms.TextBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.SuspendLayout();
             // 
@@ -54,19 +54,19 @@
             this.label_fechaMatriculacion.TabIndex = 1;
             this.label_fechaMatriculacion.Text = "Fecha de matriculacion: ";
             // 
-            // textBox1
+            // textBox_matricula
             // 
-            this.textBox1.Location = new System.Drawing.Point(143, 29);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 2;
+            this.textBox_matricula.Location = new System.Drawing.Point(143, 29);
+            this.textBox_matricula.Name = "textBox_matricula";
+            this.textBox_matricula.Size = new System.Drawing.Size(100, 20);
+            this.textBox_matricula.TabIndex = 2;
             // 
-            // textBox2
+            // textBox_fechaMatriculacion
             // 
-            this.textBox2.Location = new System.Drawing.Point(143, 68);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 3;
+            this.textBox_fechaMatriculacion.Location = new System.Drawing.Point(143, 68);
+            this.textBox_fechaMatriculacion.Name = "textBox_fechaMatriculacion";
+            this.textBox_fechaMatriculacion.Size = new System.Drawing.Size(100, 20);
+            this.textBox_fechaMatriculacion.TabIndex = 3;
             // 
             // contextMenuStrip1
             // 
@@ -77,8 +77,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBox_fechaMatriculacion);
+            this.Controls.Add(this.textBox_matricula);
             this.Controls.Add(this.label_fechaMatriculacion);
             this.Controls.Add(this.label_matricula);
             this.Name = "Datos2Mano";
@@ -92,8 +92,8 @@
 
         private System.Windows.Forms.Label label_matricula;
         private System.Windows.Forms.Label label_fechaMatriculacion;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox_matricula;
+        private System.Windows.Forms.TextBox textBox_fechaMatriculacion;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
     }
 }

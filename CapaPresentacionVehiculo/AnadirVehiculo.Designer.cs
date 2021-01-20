@@ -39,8 +39,10 @@
             this.textBox_Potencia = new System.Windows.Forms.TextBox();
             this.textBox_PrecioRecomendado = new System.Windows.Forms.TextBox();
             this.groupBox_tipo = new System.Windows.Forms.GroupBox();
-            this.radioButton_nuevo = new System.Windows.Forms.RadioButton();
             this.radioButton_2mano = new System.Windows.Forms.RadioButton();
+            this.radioButton_nuevo = new System.Windows.Forms.RadioButton();
+            this.button_aceptar = new System.Windows.Forms.Button();
+            this.button_cancelar = new System.Windows.Forms.Button();
             this.groupBox_tipo.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -135,17 +137,6 @@
             this.groupBox_tipo.TabStop = false;
             this.groupBox_tipo.Text = "Vehiculo";
             // 
-            // radioButton_nuevo
-            // 
-            this.radioButton_nuevo.AutoSize = true;
-            this.radioButton_nuevo.Location = new System.Drawing.Point(22, 46);
-            this.radioButton_nuevo.Name = "radioButton_nuevo";
-            this.radioButton_nuevo.Size = new System.Drawing.Size(57, 17);
-            this.radioButton_nuevo.TabIndex = 0;
-            this.radioButton_nuevo.TabStop = true;
-            this.radioButton_nuevo.Text = "Nuevo";
-            this.radioButton_nuevo.UseVisualStyleBackColor = true;
-            // 
             // radioButton_2mano
             // 
             this.radioButton_2mano.AutoSize = true;
@@ -157,11 +148,43 @@
             this.radioButton_2mano.Text = "Segunda mano";
             this.radioButton_2mano.UseVisualStyleBackColor = true;
             // 
+            // radioButton_nuevo
+            // 
+            this.radioButton_nuevo.AutoSize = true;
+            this.radioButton_nuevo.Location = new System.Drawing.Point(22, 46);
+            this.radioButton_nuevo.Name = "radioButton_nuevo";
+            this.radioButton_nuevo.Size = new System.Drawing.Size(57, 17);
+            this.radioButton_nuevo.TabIndex = 0;
+            this.radioButton_nuevo.TabStop = true;
+            this.radioButton_nuevo.Text = "Nuevo";
+            this.radioButton_nuevo.UseVisualStyleBackColor = true;
+            this.radioButton_nuevo.CheckedChanged += new System.EventHandler(this.radioButton_nuevo_CheckedChanged);
+            // 
+            // button_aceptar
+            // 
+            this.button_aceptar.Location = new System.Drawing.Point(209, 368);
+            this.button_aceptar.Name = "button_aceptar";
+            this.button_aceptar.Size = new System.Drawing.Size(75, 23);
+            this.button_aceptar.TabIndex = 11;
+            this.button_aceptar.Text = "Aceptar";
+            this.button_aceptar.UseVisualStyleBackColor = true;
+            // 
+            // button_cancelar
+            // 
+            this.button_cancelar.Location = new System.Drawing.Point(356, 367);
+            this.button_cancelar.Name = "button_cancelar";
+            this.button_cancelar.Size = new System.Drawing.Size(75, 23);
+            this.button_cancelar.TabIndex = 12;
+            this.button_cancelar.Text = "Cancelar";
+            this.button_cancelar.UseVisualStyleBackColor = true;
+            // 
             // AnadirVehiculo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(658, 410);
+            this.Controls.Add(this.button_cancelar);
+            this.Controls.Add(this.button_aceptar);
             this.Controls.Add(this.groupBox_tipo);
             this.Controls.Add(this.textBox_PrecioRecomendado);
             this.Controls.Add(this.textBox_Potencia);
@@ -197,5 +220,7 @@
         private System.Windows.Forms.GroupBox groupBox_tipo;
         private System.Windows.Forms.RadioButton radioButton_2mano;
         private System.Windows.Forms.RadioButton radioButton_nuevo;
+        private System.Windows.Forms.Button button_aceptar;
+        private System.Windows.Forms.Button button_cancelar;
     }
 }
