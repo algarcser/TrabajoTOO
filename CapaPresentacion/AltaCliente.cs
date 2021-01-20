@@ -16,5 +16,41 @@ namespace CapaPresentacion
         {
             InitializeComponent();
         }
+
+        public bool DNI_readOnly(bool b)
+        {
+            this.textBox1.ReadOnly = b;
+            return this.textBox1.ReadOnly;
+        }
+
+        public bool nombre_readOnly(bool b)
+        {
+            this.textBox2.ReadOnly = b;
+            return this.textBox1.ReadOnly;
+        }
+
+        public bool tfno_readOnly(bool b)
+        {
+            this.textBox3.ReadOnly = b;
+            return this.textBox1.ReadOnly;
+        }
+
+        public bool rbA_Enabled(bool b)
+        {
+            this.radioButton1.Enabled = b;
+            return this.textBox1.ReadOnly;
+        }
+
+        public bool rbB_Enabled(bool b)
+        {
+            this.radioButton1.Enabled = b;
+            return this.textBox1.ReadOnly;
+        }
+
+        public bool rbC_Enabled(bool b)
+        {
+            this.radioButton1.Enabled = b;
+            return this.textBox1.ReadOnly;
+        }
     }
 }

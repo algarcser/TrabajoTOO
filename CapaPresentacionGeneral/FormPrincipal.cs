@@ -16,5 +16,20 @@ namespace CapaPresentacionGeneral
         {
             InitializeComponent();
         }
+
+        private void tsmiAltaCliente_Click(object sender, EventArgs e)
+        {
+            Form intrDNI = new CapaPresentacion.Introducir_DNI();
+        }
+
+        private void tsmiBajaCliente_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tsmiBusquedaCliente_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
