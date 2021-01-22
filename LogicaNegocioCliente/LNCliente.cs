@@ -12,27 +12,27 @@ namespace LogicaNegocioCliente
     {
         //private Comercial comercial;
         
-        public bool altaCliente(Cliente c)
+        public static bool altaCliente(Cliente c)
         {
             PersistenciaCliente.CREATE(c);
             return true;
         }
 
-        public bool bajaCliente(Cliente c)
+        public static bool bajaCliente(Cliente c)
         {
             PersistenciaCliente.DELETE(c);
             return true;
         }
 
-        public bool readCliente(Cliente c)
+        public static bool readCliente(Cliente c)
         {
             PersistenciaCliente.READ(c.getDNI(), out c) ;
             return true;
         }
 
-        public bool existeCliente(Cliente c)
+        public static bool existeCliente(string dni)
         {
-            return PersistenciaCliente.EXISTE(c);
+            return PersistenciaCliente.EXISTE(dni);
         }
     
     }

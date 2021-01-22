@@ -97,6 +97,10 @@
       <Project>{d98b2f52-1f93-4638-8329-5516cc6bfd7a}</Project>
       <Name>CapaPersistenciaCliente</Name>
     </ProjectReference>
+    <ProjectReference Include="..\LogicaModeloCliente\LogicaModeloCliente.csproj">
+      <Project>{7e0e7efb-d584-45fa-8f3f-8009daef7e42}</Project>
+      <Name>LogicaModeloCliente</Name>
+    </ProjectReference>
     <ProjectReference Include="..\LogicaNegocioCliente\LogicaNegocioCliente.csproj">
       <Project>{1b895c4d-c824-41b5-a92f-5e2217880b6e}</Project>
       <Name>LogicaNegocioCliente</Name>

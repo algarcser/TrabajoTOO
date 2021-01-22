@@ -43,9 +43,9 @@ namespace CapaPersistenciaCliente
             return resultado;
         }
 
-        public static bool EXISTE (Cliente c)
+        public static bool EXISTE (string dni)
         {
-            return BDCliente.EXISTS(c.getDNI());
+            return BDCliente.EXISTS(dni);
         }
 
         public static class conversor

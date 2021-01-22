@@ -48,5 +48,11 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TablaClientes.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LogicaModeloCliente\LogicaModeloCliente.csproj">
+      <Project>{7e0e7efb-d584-45fa-8f3f-8009daef7e42}</Project>
+      <Name>LogicaModeloCliente</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

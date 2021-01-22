@@ -7,12 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using LogicaNegocioCliente;
+using LogicaModeloCliente;
 
 namespace CapaPresentacionCliente
 {
     public partial class Busqueda_cliente : Form
     {
-        public Busqueda_cliente()
+        public Busqueda_cliente(Cliente c)
         {
             InitializeComponent();
             this.control_datos_cliente1.DNI_readOnly(true);
@@ -21,6 +23,8 @@ namespace CapaPresentacionCliente
             this.control_datos_cliente1.rbA_Enabled(false);
             this.control_datos_cliente1.rbB_Enabled(false);
             this.control_datos_cliente1.rbC_Enabled(false);
+
+
         }
     }
 }

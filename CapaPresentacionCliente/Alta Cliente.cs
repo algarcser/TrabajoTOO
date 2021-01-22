@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using LogicaModeloCliente;
 
 namespace CapaPresentacionCliente
 {
@@ -16,6 +17,8 @@ namespace CapaPresentacionCliente
         {
             InitializeComponent();
             this.control_datos_cliente1.DNI_readOnly(true);
+            //if(this.control_datos_cliente1.)
+            Cliente c = new Cliente(this.control_datos_cliente1.getDNI(), this.control_datos_cliente1.getNombre(), this.control_datos_cliente1.getCategoria(),  int.Parse(this.control_datos_cliente1.getTelefono()));
         }
     }
 }
