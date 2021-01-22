@@ -10,9 +10,9 @@ using LogicaModeloVehiculo;
 
 namespace LogicaNegocioPresupuesto
 {
-    class LNPresupuesto
+    public class LNPresupuesto
     {
-        public void actualizarEstado(Presupuesto presupuesto)
+        public static void actualizarEstado(Presupuesto presupuesto)
         {
             if ((int)presupuesto.EstadoPresupuesto == 0)
             {
@@ -25,14 +25,14 @@ namespace LogicaNegocioPresupuesto
             }
         }
 
-        public void venderCoche(Presupuesto presupuesto)
+        public static void venderCoche(Presupuesto presupuesto)
         {
             Presupuesto auxiliar = new Presupuesto(presupuesto.FechaRealizacion, EstadoPresupuesto.aceptado, presupuesto.Cliente, presupuesto.ListaVehiculos);
             DELETE(presupuesto);
             INSERT(auxiliar);
         }
 
-        public float calcularPresupuesto(Presupuesto presupuesto)
+        public static float calcularPresupuesto(Presupuesto presupuesto)
         {
             double descuento;
             if ((int)presupuesto.Cliente.getcategoria() == 0)

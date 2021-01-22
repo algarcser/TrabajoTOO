@@ -42,7 +42,6 @@ namespace CapaPresentacionPresupuesto
             this.tbNombre = new System.Windows.Forms.TextBox();
             this.tbDNI = new System.Windows.Forms.TextBox();
             this.gbVehiculos = new System.Windows.Forms.GroupBox();
-            this.btSeleccionarVehiculo = new System.Windows.Forms.Button();
             this.lbListaVehiculos = new System.Windows.Forms.Label();
             this.lboListaVehiculos = new System.Windows.Forms.ListBox();
             this.btMostrarVehiculo = new System.Windows.Forms.Button();
@@ -138,12 +137,13 @@ namespace CapaPresentacionPresupuesto
             // btMostrarCliente
             // 
             this.btMostrarCliente.AutoSize = true;
-            this.btMostrarCliente.Location = new System.Drawing.Point(114, 46);
+            this.btMostrarCliente.Location = new System.Drawing.Point(114, 60);
             this.btMostrarCliente.Name = "btMostrarCliente";
             this.btMostrarCliente.Size = new System.Drawing.Size(86, 23);
             this.btMostrarCliente.TabIndex = 4;
             this.btMostrarCliente.Text = "Mostrar cliente";
             this.btMostrarCliente.UseVisualStyleBackColor = true;
+            this.btMostrarCliente.Click += new System.EventHandler(this.btMostrarCliente_Click);
             // 
             // lbNombre
             // 
@@ -179,7 +179,6 @@ namespace CapaPresentacionPresupuesto
             // 
             // gbVehiculos
             // 
-            this.gbVehiculos.Controls.Add(this.btSeleccionarVehiculo);
             this.gbVehiculos.Controls.Add(this.lbListaVehiculos);
             this.gbVehiculos.Controls.Add(this.lboListaVehiculos);
             this.gbVehiculos.Controls.Add(this.btMostrarVehiculo);
@@ -191,20 +190,10 @@ namespace CapaPresentacionPresupuesto
             this.gbVehiculos.TabStop = false;
             this.gbVehiculos.Text = "Vehículos";
             // 
-            // btSeleccionarVehiculo
-            // 
-            this.btSeleccionarVehiculo.AutoSize = true;
-            this.btSeleccionarVehiculo.Location = new System.Drawing.Point(44, 19);
-            this.btSeleccionarVehiculo.Name = "btSeleccionarVehiculo";
-            this.btSeleccionarVehiculo.Size = new System.Drawing.Size(116, 23);
-            this.btSeleccionarVehiculo.TabIndex = 4;
-            this.btSeleccionarVehiculo.Text = "Seleccionar vehiculo";
-            this.btSeleccionarVehiculo.UseVisualStyleBackColor = true;
-            // 
             // lbListaVehiculos
             // 
             this.lbListaVehiculos.AutoSize = true;
-            this.lbListaVehiculos.Location = new System.Drawing.Point(17, 57);
+            this.lbListaVehiculos.Location = new System.Drawing.Point(13, 57);
             this.lbListaVehiculos.Name = "lbListaVehiculos";
             this.lbListaVehiculos.Size = new System.Drawing.Size(97, 13);
             this.lbListaVehiculos.TabIndex = 3;
@@ -213,7 +202,7 @@ namespace CapaPresentacionPresupuesto
             // lboListaVehiculos
             // 
             this.lboListaVehiculos.FormattingEnabled = true;
-            this.lboListaVehiculos.Location = new System.Drawing.Point(120, 57);
+            this.lboListaVehiculos.Location = new System.Drawing.Point(116, 57);
             this.lboListaVehiculos.Name = "lboListaVehiculos";
             this.lboListaVehiculos.Size = new System.Drawing.Size(105, 95);
             this.lboListaVehiculos.TabIndex = 2;
@@ -221,7 +210,7 @@ namespace CapaPresentacionPresupuesto
             // btMostrarVehiculo
             // 
             this.btMostrarVehiculo.AutoSize = true;
-            this.btMostrarVehiculo.Location = new System.Drawing.Point(233, 93);
+            this.btMostrarVehiculo.Location = new System.Drawing.Point(229, 93);
             this.btMostrarVehiculo.Name = "btMostrarVehiculo";
             this.btMostrarVehiculo.Size = new System.Drawing.Size(97, 23);
             this.btMostrarVehiculo.TabIndex = 1;
@@ -231,7 +220,7 @@ namespace CapaPresentacionPresupuesto
             // btIntroducirVehiculo
             // 
             this.btIntroducirVehiculo.AutoSize = true;
-            this.btIntroducirVehiculo.Location = new System.Drawing.Point(188, 19);
+            this.btIntroducirVehiculo.Location = new System.Drawing.Point(116, 19);
             this.btIntroducirVehiculo.Name = "btIntroducirVehiculo";
             this.btIntroducirVehiculo.Size = new System.Drawing.Size(106, 23);
             this.btIntroducirVehiculo.TabIndex = 0;
@@ -308,7 +297,6 @@ namespace CapaPresentacionPresupuesto
         private System.Windows.Forms.ListBox lboListaVehiculos;
         private System.Windows.Forms.Button btMostrarVehiculo;
         private System.Windows.Forms.Button btIntroducirVehiculo;
-        private System.Windows.Forms.Button btSeleccionarVehiculo;
         private System.Windows.Forms.Button btAceptar;
         private System.Windows.Forms.Button btCancelar;
         private System.Windows.Forms.Label lbImporte;
