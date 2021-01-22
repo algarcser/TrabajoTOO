@@ -99,5 +99,110 @@ namespace CapaPresentacionPresupuesto
                 //mostrar cliente como en búsqueda cliente con this.cliente
             }
         }
+
+        private void btMostrarVehiculo_Click(object sender, EventArgs e)
+        {
+            if (this.lboListaVehiculos.SelectedItem == null)
+            {
+                MessageBox.Show("Seleccione un vehículo de la lista para mostrarlo.", "No ha seleccionado ningún vehículo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                vehiculo v = (vehiculo)this.lboListaVehiculos.SelectedItem;
+                //mostrar vehículo como en búsqueda vehículo
+            }
+        }
+
+        private void btIntroducirVehiculo_Click(object sender, EventArgs e)
+        {
+            //mostrar ObtenerNBastidor.cs, si existe se añade a la lista, si no se abre dar de alta vehículo
+            //JUNTO TODO SU PROCESO,tras darlo de alta se introduce en la lista
+        }
+
+        private void btAceptar_Click(object sender, EventArgs e)
+        {
+            if (this.cliente == null) //mostrar
+            {
+                this.ParentForm.Close();
+            }
+            else //crear
+            {
+                EstadoPresupuesto estado = EstadoPresupuesto.creado;
+                bool vehiculoCorrecto = true;
+
+                int i = 0;
+                foreach (RadioButton r in this.gbEstado.Controls)
+                {
+                    if (r.Checked == false)
+                    {
+                        i++;
+                    }
+                    
+                }
+
+                if (this.rbCreado.Checked == true)
+                {
+                    estado = EstadoPresupuesto.creado;
+                }
+                else if (this.rbAceptado.Checked == true)
+                {     
+                    estado = EstadoPresupuesto.aceptado;
+                }
+                else if (this.rbDesestimado.Checked == true)
+                {
+                    DialogResult result1 = MessageBox.Show("¿Esta seguro de que el estado del presupuesto es desestimado?", "Esta creando un presupuesto desestimado", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                    if (result1 == DialogResult.Yes)
+                    {
+                        estado = EstadoPresupuesto.desestimado;
+                    }else
+                    {
+                        CancelEventArgs seguir = (CancelEventArgs)e;
+                        seguir.Cancel = true; //No sé si funcionará correctamente.
+                    }
+                }
+                else if (this.rbPendiente.Checked == true)
+                {
+                    estado = EstadoPresupuesto.pendiente;
+                }
+                    
+                if (this.lboListaVehiculos.Items.Count == 0)
+                {
+                    vehiculoCorrecto = false;
+                    MessageBox.Show("Introduzca al menos un vehículo en el presupuesto.", "No ha introducido ningún vehículo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    CancelEventArgs seguir = (CancelEventArgs)e;
+                    seguir.Cancel = true; //No sé si funcionará correctamente.
+
+                }
+
+                if (i == 4)
+                {
+                    DialogResult result2 = MessageBox.Show("Se seleccionará automáticamente el estado de creado para presupuesto.", "No ha seleccionado ningún estado", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+                    if (result2 == DialogResult.Cancel)
+                    {
+                        CancelEventArgs seguir = (CancelEventArgs)e;
+                        seguir.Cancel = true; //No sé si funcionará correctamente.
+                    }
+                }
+
+                if (vehiculoCorrecto == true)
+                {
+                    List<vehiculo> listaVehiculos = new List<vehiculo>((IEnumerable<vehiculo>)this.lboListaVehiculos.Items);
+                    //si no funciona hacer un foreach
+                    //List<vehiculo> listaVehiculos = new List<vehiculo>();
+                    //foreach (Object o in this.lboListaVehiculos.Items)
+                    //{
+                    //    vehiculo v = (vehiculo)o;
+                    //    listaVehiculos.Add(v);
+                    //}
+                    Presupuesto nuevoPresupuesto = new Presupuesto(DateTime.Now, estado, this.cliente, listaVehiculos);
+                    LNPresupuesto.INSERT(nuevoPresupuesto);
+                } 
+            }
+        }
+
+        private void btCancelar_Click(object sender, EventArgs e)
+        {
+            this.ParentForm.Close();
+        }
     }
 }

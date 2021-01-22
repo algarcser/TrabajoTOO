@@ -216,6 +216,7 @@ namespace CapaPresentacionPresupuesto
             this.btMostrarVehiculo.TabIndex = 1;
             this.btMostrarVehiculo.Text = "Mostrar vehículo";
             this.btMostrarVehiculo.UseVisualStyleBackColor = true;
+            this.btMostrarVehiculo.Click += new System.EventHandler(this.btMostrarVehiculo_Click);
             // 
             // btIntroducirVehiculo
             // 
@@ -226,6 +227,7 @@ namespace CapaPresentacionPresupuesto
             this.btIntroducirVehiculo.TabIndex = 0;
             this.btIntroducirVehiculo.Text = "Introducir vehículo";
             this.btIntroducirVehiculo.UseVisualStyleBackColor = true;
+            this.btIntroducirVehiculo.Click += new System.EventHandler(this.btIntroducirVehiculo_Click);
             // 
             // btAceptar
             // 
@@ -235,6 +237,7 @@ namespace CapaPresentacionPresupuesto
             this.btAceptar.TabIndex = 14;
             this.btAceptar.Text = "Aceptar";
             this.btAceptar.UseVisualStyleBackColor = true;
+            this.btAceptar.Click += new System.EventHandler(this.btAceptar_Click);
             // 
             // btCancelar
             // 
@@ -244,6 +247,7 @@ namespace CapaPresentacionPresupuesto
             this.btCancelar.TabIndex = 15;
             this.btCancelar.Text = "Cancelar";
             this.btCancelar.UseVisualStyleBackColor = true;
+            this.btCancelar.Click += new System.EventHandler(this.btCancelar_Click);
             // 
             // lbImporte
             // 
