@@ -1,0 +1,15 @@
+C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\CapaPresentacionCliente\bin\Debug\CapaPresentacionCliente.dll
+C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\CapaPresentacionCliente\bin\Debug\CapaPresentacionCliente.pdb
+C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\CapaPresentacionCliente\obj\Debug\CapaPresentacionCliente.csprojAssemblyReference.cache
+C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\CapaPresentacionCliente\obj\Debug\CapaPresentacionCliente.Control_datos_cliente.resources
+C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\CapaPresentacionCliente\obj\Debug\CapaPresentacionCliente.Introducir_DNI.resources
+C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\CapaPresentacionCliente\obj\Debug\CapaPresentacionCliente.csproj.GenerateResource.cache
+C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\CapaPresentacionCliente\obj\Debug\CapaPresentacionCliente.csproj.CoreCompileInputs.cache
+C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\CapaPresentacionCliente\obj\Debug\CapaPresentacionCliente.dll
+C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\CapaPresentacionCliente\obj\Debug\CapaPresentacionCliente.pdb
+C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\CapaPresentacionCliente\bin\Debug\LogicaModeloCliente.dll
+C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\CapaPresentacionCliente\bin\Debug\LogicaModeloCliente.pdb
+C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\CapaPresentacionCliente\obj\Debug\CapaPresentacionCliente.Alta_Cliente.resources
+C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\CapaPresentacionCliente\obj\Debug\CapaPresentacionCliente.Baja_cliente.resources
+C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\CapaPresentacionCliente\obj\Debug\CapaPresentacionCliente.Busqueda_cliente.resources
+C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\CapaPresentacionCliente\obj\Debug\CapaPresentacionCliente.csproj.CopyComplete

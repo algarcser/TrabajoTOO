@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace CapaPresentacion
+namespace CapaPresentacionCliente
 {
-    public partial class Alta_de_un_cliente : UserControl
+    public partial class Control_datos_cliente : UserControl
     {
-        public Alta_de_un_cliente()
+        public Control_datos_cliente()
         {
             InitializeComponent();
         }

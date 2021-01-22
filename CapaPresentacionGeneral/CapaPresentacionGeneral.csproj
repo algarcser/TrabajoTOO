@@ -58,6 +58,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\CapaPresentacionCliente\CapaPresentacionCliente.csproj">
+      <Project>{77047578-2c4a-4f2e-a02d-6c9a9afbeb3b}</Project>
+      <Name>CapaPresentacionCliente</Name>
+    </ProjectReference>
     <ProjectReference Include="..\CapaPresentacionPresupuesto\CapaPresentacionPresupuesto.csproj">
       <Project>{0d2a45ab-e33d-4d6c-b39b-59ce9a1e448a}</Project>
       <Name>CapaPresentacionPresupuesto</Name>
@@ -65,10 +69,6 @@
     <ProjectReference Include="..\CapaPresentacionVehiculo\CapaPresentacionVehiculo.csproj">
       <Project>{aa26a431-8e2a-42ee-9405-9a072f8c1ba5}</Project>
       <Name>CapaPresentacionVehiculo</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\CapaPresentacion\CapaPresentacionCliente.csproj">
-      <Project>{d88b8a92-cf67-4147-afdd-c331dca5b066}</Project>
-      <Name>CapaPresentacionCliente</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

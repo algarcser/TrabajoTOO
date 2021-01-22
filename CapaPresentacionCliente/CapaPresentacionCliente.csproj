@@ -4,17 +4,16 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{D88B8A92-CF67-4147-AFDD-C331DCA5B066}</ProjectGuid>
-    <OutputType>WinExe</OutputType>
-    <RootNamespace>CapaPresentacion</RootNamespace>
-    <AssemblyName>CapaPresentacion</AssemblyName>
+    <ProjectGuid>{77047578-2C4A-4F2E-A02D-6C9A9AFBEB3B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CapaPresentacionCliente</RootNamespace>
+    <AssemblyName>CapaPresentacionCliente</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -24,7 +23,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -33,39 +31,35 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="LogicaModeloVehiculo">
-      <HintPath>..\LogicaModeloVehiculo\bin\Debug\LogicaModeloVehiculo.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Deployment" />
-    <Reference Include="System.Drawing" />
     <Reference Include="System.Net.Http" />
-    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Alta del cliente.cs">
+    <Compile Include="Alta Cliente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Alta del cliente.Designer.cs">
-      <DependentUpon>Alta del cliente.cs</DependentUpon>
+    <Compile Include="Alta Cliente.Designer.cs">
+      <DependentUpon>Alta Cliente.cs</DependentUpon>
     </Compile>
-    <Compile Include="Baja del cliente.cs">
+    <Compile Include="Baja cliente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Baja del cliente.Designer.cs">
-      <DependentUpon>Baja del cliente.cs</DependentUpon>
+    <Compile Include="Baja cliente.Designer.cs">
+      <DependentUpon>Baja cliente.cs</DependentUpon>
     </Compile>
-    <Compile Include="Busqueda del cliente.cs">
+    <Compile Include="Busqueda cliente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Busqueda del cliente.Designer.cs">
-      <DependentUpon>Busqueda del cliente.cs</DependentUpon>
+    <Compile Include="Busqueda cliente.Designer.cs">
+      <DependentUpon>Busqueda cliente.cs</DependentUpon>
     </Compile>
     <Compile Include="Control datos cliente.cs">
       <SubType>UserControl</SubType>
@@ -79,10 +73,17 @@
     <Compile Include="Introducir DNI.Designer.cs">
       <DependentUpon>Introducir DNI.cs</DependentUpon>
     </Compile>
-    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Busqueda del cliente.resx">
-      <DependentUpon>Busqueda del cliente.cs</DependentUpon>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Alta Cliente.resx">
+      <DependentUpon>Alta Cliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Baja cliente.resx">
+      <DependentUpon>Baja cliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Busqueda cliente.resx">
+      <DependentUpon>Busqueda cliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Control datos cliente.resx">
       <DependentUpon>Control datos cliente.cs</DependentUpon>
@@ -90,36 +91,15 @@
     <EmbeddedResource Include="Introducir DNI.resx">
       <DependentUpon>Introducir DNI.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
-    <None Include="Properties\Settings.settings">
-      <Generator>SettingsSingleFileGenerator</Generator>
-      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
-    </None>
-    <Compile Include="Properties\Settings.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Settings.settings</DependentUpon>
-      <DesignTimeSharedInput>True</DesignTimeSharedInput>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CapaPersistenciaCliente\CapaPersistenciaCliente.csproj">
       <Project>{d98b2f52-1f93-4638-8329-5516cc6bfd7a}</Project>
       <Name>CapaPersistenciaCliente</Name>
     </ProjectReference>
-    <ProjectReference Include="..\CapaPresentacionVehiculo\CapaPresentacionVehiculo.csproj">
-      <Project>{AA26A431-8E2A-42EE-9405-9A072F8C1BA5}</Project>
-      <Name>CapaPresentacionVehiculo</Name>
+    <ProjectReference Include="..\LogicaNegocioCliente\LogicaNegocioCliente.csproj">
+      <Project>{1b895c4d-c824-41b5-a92f-5e2217880b6e}</Project>
+      <Name>LogicaNegocioCliente</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

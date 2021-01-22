@@ -1,6 +1,6 @@
 ﻿namespace CapaPresentacion
 {
-    partial class Alta_de_cliente
+    partial class Baja_del_cliente
     {
         /// <summary>
         /// Required designer variable.
@@ -28,30 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.alta_de_un_cliente1 = new CapaPresentacion.Alta_de_un_cliente();
-            this.SuspendLayout();
-            // 
-            // alta_de_un_cliente1
-            // 
-            this.alta_de_un_cliente1.Location = new System.Drawing.Point(1, 2);
-            this.alta_de_un_cliente1.Name = "alta_de_un_cliente1";
-            this.alta_de_un_cliente1.Size = new System.Drawing.Size(301, 311);
-            this.alta_de_un_cliente1.TabIndex = 0;
-            // 
-            // Alta_de_cliente
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(304, 315);
-            this.Controls.Add(this.alta_de_un_cliente1);
-            this.Name = "Alta_de_cliente";
-            this.Text = "Alta_de_cliente";
-            this.ResumeLayout(false);
-
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Text = "Baja_del_cliente";
         }
 
         #endregion
-
-        private Alta_de_un_cliente alta_de_un_cliente1;
     }
 }

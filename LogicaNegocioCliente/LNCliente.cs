@@ -5,11 +5,13 @@ using System.Text;
 using System.Threading.Tasks;
 using CapaPersistenciaCliente;
 using LogicaModeloCliente;
+
 namespace LogicaNegocioCliente
 {
-    class LNCliente
+    public class LNCliente
     {
         //private Comercial comercial;
+        
         public bool altaCliente(Cliente c)
         {
             PersistenciaCliente.CREATE(c);
@@ -20,6 +22,17 @@ namespace LogicaNegocioCliente
         {
             PersistenciaCliente.DELETE(c);
             return true;
+        }
+
+        public bool readCliente(Cliente c)
+        {
+            PersistenciaCliente.READ(c.getDNI(), out c) ;
+            return true;
+        }
+
+        public bool existeCliente(Cliente c)
+        {
+            return PersistenciaCliente.EXISTE(c);
         }
     
     }

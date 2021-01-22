@@ -10,12 +10,11 @@ using System.Windows.Forms;
 
 namespace CapaPresentacion
 {
-    public partial class Alta_de_cliente : Form
+    public partial class Alta_del_cliente : Form
     {
-        public Alta_de_cliente()
+        public Alta_del_cliente()
         {
             InitializeComponent();
-            this.alta_de_un_cliente1.DNI_readOnly(true);
         }
     }
 }
