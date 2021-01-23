@@ -46,6 +46,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CrearMostrarPresupuesto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CrearMostrarPresupuesto.Designer.cs">
+      <DependentUpon>CrearMostrarPresupuesto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IntroducirDNIPresupuesto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IntroducirDNIPresupuesto.Designer.cs">
+      <DependentUpon>IntroducirDNIPresupuesto.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ucPresupuesto.cs">
@@ -56,6 +68,12 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="CrearMostrarPresupuesto.resx">
+      <DependentUpon>CrearMostrarPresupuesto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IntroducirDNIPresupuesto.resx">
+      <DependentUpon>IntroducirDNIPresupuesto.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ucPresupuesto.resx">
       <DependentUpon>ucPresupuesto.cs</DependentUpon>
     </EmbeddedResource>
@@ -72,6 +90,10 @@
     <ProjectReference Include="..\LogicaModeloVehiculo\LogicaModeloVehiculo.csproj">
       <Project>{ccdc62a8-8317-4b37-ba2c-b1ed4783c11a}</Project>
       <Name>LogicaModeloVehiculo</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LogicaNegocioCliente\LogicaNegocioCliente.csproj">
+      <Project>{1b895c4d-c824-41b5-a92f-5e2217880b6e}</Project>
+      <Name>LogicaNegocioCliente</Name>
     </ProjectReference>
     <ProjectReference Include="..\LogicaNegocioPresupuesto\LogicaNegocioPresupuesto.csproj">
       <Project>{7adeaa37-8f7f-40d3-97d1-bcf6eca465df}</Project>

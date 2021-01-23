@@ -7,3 +7,12 @@ C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\CapaPersistenciaCliente\bin
 C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\CapaPersistenciaCliente\obj\Debug\CapaPersistenciaCliente.csproj.CopyComplete
 C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\CapaPersistenciaCliente\obj\Debug\CapaPersistenciaCliente.dll
 C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\CapaPersistenciaCliente\obj\Debug\CapaPersistenciaCliente.pdb
+C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\CapaPersistenciaCliente\bin\Debug\CapaPersistenciaCliente.dll
+C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\CapaPersistenciaCliente\bin\Debug\CapaPersistenciaCliente.pdb
+C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\CapaPersistenciaCliente\bin\Debug\LogicaModeloCliente.dll
+C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\CapaPersistenciaCliente\bin\Debug\LogicaModeloCliente.pdb
+C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\CapaPersistenciaCliente\obj\Debug\CapaPersistenciaCliente.csprojAssemblyReference.cache
+C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\CapaPersistenciaCliente\obj\Debug\CapaPersistenciaCliente.csproj.CoreCompileInputs.cache
+C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\CapaPersistenciaCliente\obj\Debug\CapaPersistenciaCliente.csproj.CopyComplete
+C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\CapaPersistenciaCliente\obj\Debug\CapaPersistenciaCliente.dll
+C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\CapaPersistenciaCliente\obj\Debug\CapaPersistenciaCliente.pdb

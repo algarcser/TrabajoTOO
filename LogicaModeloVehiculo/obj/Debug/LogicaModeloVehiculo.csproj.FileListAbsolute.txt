@@ -3,3 +3,9 @@ C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\LogicaModeloVehiculo\bin\De
 C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\LogicaModeloVehiculo\obj\Debug\LogicaModeloVehiculo.csproj.CoreCompileInputs.cache
 C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\LogicaModeloVehiculo\obj\Debug\LogicaModeloVehiculo.dll
 C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\LogicaModeloVehiculo\obj\Debug\LogicaModeloVehiculo.pdb
+C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\LogicaModeloVehiculo\bin\Debug\LogicaModeloVehiculo.dll
+C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\LogicaModeloVehiculo\bin\Debug\LogicaModeloVehiculo.pdb
+C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\LogicaModeloVehiculo\obj\Debug\LogicaModeloVehiculo.csprojAssemblyReference.cache
+C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\LogicaModeloVehiculo\obj\Debug\LogicaModeloVehiculo.csproj.CoreCompileInputs.cache
+C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\LogicaModeloVehiculo\obj\Debug\LogicaModeloVehiculo.dll
+C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\LogicaModeloVehiculo\obj\Debug\LogicaModeloVehiculo.pdb

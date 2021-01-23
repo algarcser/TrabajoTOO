@@ -71,14 +71,14 @@ namespace LogicaNegocioPresupuesto
             PersistenciaPresupuesto.UPDATE(presupuesto);
         }
 
-        public static bool READ(int id, out Presupuesto presupuesto)
+        public static bool READ(Presupuesto referencia, out Presupuesto presupuesto)
         {
-            return (PersistenciaPresupuesto.READ(id, out presupuesto));
+            return (PersistenciaPresupuesto.READ(referencia, out presupuesto));
         }
 
-        public static bool EXIST(int id)
+        public static bool EXIST(Presupuesto referencia)
         {
-            return (PersistenciaPresupuesto.EXIST(id));
+            return (PersistenciaPresupuesto.EXIST(referencia));
         }
     }
 }

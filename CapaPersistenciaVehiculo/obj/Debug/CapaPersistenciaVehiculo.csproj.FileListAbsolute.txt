@@ -7,3 +7,12 @@ C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\CapaPersistenciaVehiculo\ob
 C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\CapaPersistenciaVehiculo\obj\Debug\CapaPersistenciaVehiculo.csproj.CopyComplete
 C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\CapaPersistenciaVehiculo\obj\Debug\CapaPersistenciaVehiculo.dll
 C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\CapaPersistenciaVehiculo\obj\Debug\CapaPersistenciaVehiculo.pdb
+C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\CapaPersistenciaVehiculo\bin\Debug\CapaPersistenciaVehiculo.dll
+C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\CapaPersistenciaVehiculo\bin\Debug\CapaPersistenciaVehiculo.pdb
+C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\CapaPersistenciaVehiculo\bin\Debug\LogicaModeloVehiculo.dll
+C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\CapaPersistenciaVehiculo\bin\Debug\LogicaModeloVehiculo.pdb
+C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\CapaPersistenciaVehiculo\obj\Debug\CapaPersistenciaVehiculo.csprojAssemblyReference.cache
+C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\CapaPersistenciaVehiculo\obj\Debug\CapaPersistenciaVehiculo.csproj.CoreCompileInputs.cache
+C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\CapaPersistenciaVehiculo\obj\Debug\CapaPersistenciaVehiculo.csproj.CopyComplete
+C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\CapaPersistenciaVehiculo\obj\Debug\CapaPersistenciaVehiculo.dll
+C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\CapaPersistenciaVehiculo\obj\Debug\CapaPersistenciaVehiculo.pdb

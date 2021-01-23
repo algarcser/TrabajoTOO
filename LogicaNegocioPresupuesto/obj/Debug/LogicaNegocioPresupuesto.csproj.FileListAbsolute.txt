@@ -17,3 +17,22 @@ C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\LogicaNegocioPresupuesto\ob
 C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\LogicaNegocioPresupuesto\obj\Debug\LogicaNegocioPresupuesto.csproj.CopyComplete
 C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\LogicaNegocioPresupuesto\obj\Debug\LogicaNegocioPresupuesto.dll
 C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\LogicaNegocioPresupuesto\obj\Debug\LogicaNegocioPresupuesto.pdb
+C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\LogicaNegocioPresupuesto\bin\Debug\LogicaNegocioPresupuesto.dll
+C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\LogicaNegocioPresupuesto\bin\Debug\LogicaNegocioPresupuesto.pdb
+C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\LogicaNegocioPresupuesto\bin\Debug\CapaPersistenciaPresupuesto.dll
+C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\LogicaNegocioPresupuesto\bin\Debug\LogicaModeloCliente.dll
+C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\LogicaNegocioPresupuesto\bin\Debug\LogicaModeloPresupuesto.dll
+C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\LogicaNegocioPresupuesto\bin\Debug\LogicaModeloVehiculo.dll
+C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\LogicaNegocioPresupuesto\bin\Debug\CapaPersistenciaVehiculo.dll
+C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\LogicaNegocioPresupuesto\bin\Debug\CapaPersistenciaCliente.dll
+C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\LogicaNegocioPresupuesto\bin\Debug\CapaPersistenciaPresupuesto.pdb
+C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\LogicaNegocioPresupuesto\bin\Debug\LogicaModeloCliente.pdb
+C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\LogicaNegocioPresupuesto\bin\Debug\LogicaModeloPresupuesto.pdb
+C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\LogicaNegocioPresupuesto\bin\Debug\LogicaModeloVehiculo.pdb
+C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\LogicaNegocioPresupuesto\bin\Debug\CapaPersistenciaVehiculo.pdb
+C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\LogicaNegocioPresupuesto\bin\Debug\CapaPersistenciaCliente.pdb
+C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\LogicaNegocioPresupuesto\obj\Debug\LogicaNegocioPresupuesto.csprojAssemblyReference.cache
+C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\LogicaNegocioPresupuesto\obj\Debug\LogicaNegocioPresupuesto.csproj.CoreCompileInputs.cache
+C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\LogicaNegocioPresupuesto\obj\Debug\LogicaNegocioPresupuesto.csproj.CopyComplete
+C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\LogicaNegocioPresupuesto\obj\Debug\LogicaNegocioPresupuesto.dll
+C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\LogicaNegocioPresupuesto\obj\Debug\LogicaNegocioPresupuesto.pdb

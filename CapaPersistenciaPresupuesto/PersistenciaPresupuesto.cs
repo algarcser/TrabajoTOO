@@ -15,7 +15,7 @@ namespace CapaPersistenciaPresupuesto
     {
         public static bool INSERT(Presupuesto presupuesto)
         {
-            if (BDPresupuesto.EXISTPresupuesto(presupuesto.Identificacion) != true)
+            if (BDPresupuesto.EXISTPresupuesto(conversor.Convertir(presupuesto)) != true)
             {
                 BDPresupuesto.INSERTPresupuesto(conversor.Convertir(presupuesto));
                 return (true);
@@ -38,10 +38,10 @@ namespace CapaPersistenciaPresupuesto
             BDPresupuesto.INSERTPresupuesto(conversor.Convertir(presupuesto));
         }
 
-        public static bool READ(int id, out Presupuesto presupuesto)
+        public static bool READ(Presupuesto referencia, out Presupuesto presupuesto)
         {
             PresupuestoDato auxiliar;
-            bool resultado = BDPresupuesto.SELECTPresupuesto(id, out auxiliar);
+            bool resultado = BDPresupuesto.SELECTPresupuesto(conversor.Convertir(referencia), out auxiliar);
             if (resultado)
             {
                 presupuesto = conversor.Convertir(auxiliar);
@@ -53,9 +53,9 @@ namespace CapaPersistenciaPresupuesto
             return (resultado);
         }
 
-        public static bool EXIST(int id)
+        public static bool EXIST(Presupuesto referencia)
         {
-            return (BDPresupuesto.EXISTPresupuesto(id));
+            return (BDPresupuesto.EXISTPresupuesto(conversor.Convertir(referencia)));
         }
 
         public static class conversor

@@ -37,12 +37,12 @@ namespace CapaPersistenciaPresupuesto
         /// 
         /// </summary>
         /// <param name="id"></param>
-        public static bool SELECTPresupuesto(int id, out PresupuestoDato presupuestoDato)
+        public static bool SELECTPresupuesto(PresupuestoDato referencia, out PresupuestoDato presupuestoDato)
         {
 
-            if (BDPresupuesto.EXISTPresupuesto(id) == true)
+            if (BDPresupuesto.EXISTPresupuesto(referencia) == true)
             {
-                presupuestoDato = BDPresupuesto.Presupuestos[id];
+                presupuestoDato = BDPresupuesto.Presupuestos[referencia.Identificacion];
                 return (true);
             }
             else
@@ -76,9 +76,9 @@ namespace CapaPersistenciaPresupuesto
         /// 
         /// </summary>
         /// <param name="p"></param>
-        public static bool EXISTPresupuesto(int id)
+        public static bool EXISTPresupuesto(PresupuestoDato presupuestoDato)
         {
-            return (BDPresupuesto.Presupuestos.Contains(id));
+            return (BDPresupuesto.Presupuestos.Contains(presupuestoDato.Identificacion));
         }
     }
 }
