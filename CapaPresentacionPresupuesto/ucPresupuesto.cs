@@ -11,6 +11,8 @@ using LogicaModeloCliente;
 using LogicaModeloPresupuesto;
 using LogicaModeloVehiculo;
 using LogicaNegocioPresupuesto;
+using CapaPresentacionCliente;
+using CapaPresentacionVehiculo;
 
 
 namespace CapaPresentacionPresupuesto
@@ -26,8 +28,8 @@ namespace CapaPresentacionPresupuesto
             
             this.lbFechaCreacion.Visible = false;
             
-            this.tbDNI.Enabled = false;
-            this.tbNombre.Enabled = false;
+            this.tbDNI.ReadOnly = true;
+            this.tbNombre.ReadOnly = true;
             this.btMostrarCliente.Visible = true;
 
             this.gbEstado.Enabled = true;
@@ -50,9 +52,9 @@ namespace CapaPresentacionPresupuesto
             this.lbFechaCreacion.Visible = true;
             this.lbFechaCreacion.Text = "Fecha de creación: " + presupuesto.FechaRealizacion.ToString();  
             
-            this.tbDNI.Enabled = false;
+            this.tbDNI.ReadOnly = true;
             this.tbDNI.Text = presupuesto.Cliente.getDNI();
-            this.tbNombre.Enabled = false;
+            this.tbNombre.ReadOnly = true;
             this.tbNombre.Text = presupuesto.Cliente.getNombre();
             this.btMostrarCliente.Visible = true;
 
@@ -79,6 +81,7 @@ namespace CapaPresentacionPresupuesto
             bindingSource.DataSource = presupuesto.ListaVehiculos;
             this.lboListaVehiculos.DataSource = bindingSource;
             this.lboListaVehiculos.SelectionMode = SelectionMode.One;
+            //this.lboListaVehiculos.DataBindings.Add(new Binding());
             this.btMostrarVehiculo.Visible = true;
 
             this.lbImporte.Visible = true;
@@ -92,11 +95,13 @@ namespace CapaPresentacionPresupuesto
         {
             if (this.cliente == null)
             {
-                //mostrar cliente como en búsqueda cliente con this.presupuesto.Cliente
+                Form mostrarCliente = new Busqueda_cliente(this.presupuesto.Cliente);
+                mostrarCliente.Show();
             }
             else
             {
-                //mostrar cliente como en búsqueda cliente con this.cliente
+                Form mostrarCliente = new Busqueda_cliente(this.cliente);
+                mostrarCliente.Show();
             }
         }
 
@@ -115,6 +120,8 @@ namespace CapaPresentacionPresupuesto
 
         private void btIntroducirVehiculo_Click(object sender, EventArgs e)
         {
+            Form introducirVehiculo = new ObtenerNBastidor();
+            introducirVehiculo.ShowDialog();
             //mostrar ObtenerNBastidor.cs, si existe se añade a la lista, si no se abre dar de alta vehículo
             //JUNTO TODO SU PROCESO,tras darlo de alta se introduce en la lista
         }

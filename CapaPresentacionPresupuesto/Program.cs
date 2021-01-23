@@ -17,7 +17,7 @@ namespace CapaPresentacionPresupuesto
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new Alta_de_cliente());
+            Application.Run(new FormIntroducirDNIPresupuesto("busqueda"));
         }
     }
 }

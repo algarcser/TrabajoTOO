@@ -79,6 +79,14 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\CapaPresentacionCliente\CapaPresentacionCliente.csproj">
+      <Project>{77047578-2c4a-4f2e-a02d-6c9a9afbeb3b}</Project>
+      <Name>CapaPresentacionCliente</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CapaPresentacionVehiculo\CapaPresentacionVehiculo.csproj">
+      <Project>{aa26a431-8e2a-42ee-9405-9a072f8c1ba5}</Project>
+      <Name>CapaPresentacionVehiculo</Name>
+    </ProjectReference>
     <ProjectReference Include="..\LogicaModeloCliente\LogicaModeloCliente.csproj">
       <Project>{7e0e7efb-d584-45fa-8f3f-8009daef7e42}</Project>
       <Name>LogicaModeloCliente</Name>

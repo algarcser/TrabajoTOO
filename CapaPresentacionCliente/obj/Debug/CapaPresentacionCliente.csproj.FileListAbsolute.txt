@@ -13,3 +13,22 @@ C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\CapaPresentacionCliente\obj
 C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\CapaPresentacionCliente\obj\Debug\CapaPresentacionCliente.Baja_cliente.resources
 C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\CapaPresentacionCliente\obj\Debug\CapaPresentacionCliente.Busqueda_cliente.resources
 C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\CapaPresentacionCliente\obj\Debug\CapaPresentacionCliente.csproj.CopyComplete
+C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\CapaPresentacionCliente\bin\Debug\CapaPresentacionCliente.dll
+C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\CapaPresentacionCliente\bin\Debug\CapaPresentacionCliente.pdb
+C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\CapaPresentacionCliente\bin\Debug\CapaPersistenciaCliente.dll
+C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\CapaPresentacionCliente\bin\Debug\LogicaModeloCliente.dll
+C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\CapaPresentacionCliente\bin\Debug\LogicaNegocioCliente.dll
+C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\CapaPresentacionCliente\bin\Debug\CapaPersistenciaCliente.pdb
+C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\CapaPresentacionCliente\bin\Debug\LogicaModeloCliente.pdb
+C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\CapaPresentacionCliente\bin\Debug\LogicaNegocioCliente.pdb
+C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\CapaPresentacionCliente\obj\Debug\CapaPresentacionCliente.csprojAssemblyReference.cache
+C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\CapaPresentacionCliente\obj\Debug\CapaPresentacionCliente.Alta_Cliente.resources
+C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\CapaPresentacionCliente\obj\Debug\CapaPresentacionCliente.Baja_cliente.resources
+C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\CapaPresentacionCliente\obj\Debug\CapaPresentacionCliente.Busqueda_cliente.resources
+C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\CapaPresentacionCliente\obj\Debug\CapaPresentacionCliente.Control_datos_cliente.resources
+C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\CapaPresentacionCliente\obj\Debug\CapaPresentacionCliente.Introducir_DNI.resources
+C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\CapaPresentacionCliente\obj\Debug\CapaPresentacionCliente.csproj.GenerateResource.cache
+C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\CapaPresentacionCliente\obj\Debug\CapaPresentacionCliente.csproj.CoreCompileInputs.cache
+C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\CapaPresentacionCliente\obj\Debug\CapaPresentacionCliente.csproj.CopyComplete
+C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\CapaPresentacionCliente\obj\Debug\CapaPresentacionCliente.dll
+C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\CapaPresentacionCliente\obj\Debug\CapaPresentacionCliente.pdb

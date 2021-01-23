@@ -42,7 +42,7 @@ namespace CapaPresentacionPresupuesto
             // 
             this.mtbDNI.Location = new System.Drawing.Point(122, 62);
             this.mtbDNI.Name = "mtbDNI";
-            this.mtbDNI.Size = new System.Drawing.Size(100, 20);
+            this.mtbDNI.Size = new System.Drawing.Size(90, 20);
             this.mtbDNI.TabIndex = 0;
             this.mtbDNI.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.mtbDNI_MaskInputRejected);
             this.mtbDNI.KeyDown += new System.Windows.Forms.KeyEventHandler(this.mtbDNI_KeyDown);
@@ -74,6 +74,7 @@ namespace CapaPresentacionPresupuesto
             this.btCancelar.TabIndex = 3;
             this.btCancelar.Text = "Cancelar";
             this.btCancelar.UseVisualStyleBackColor = true;
+            this.btCancelar.Click += new System.EventHandler(this.btCancelar_Click);
             // 
             // ttDNI
             // 

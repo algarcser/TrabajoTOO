@@ -9,3 +9,14 @@ C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\LogicaNegocioVehiculo\obj\D
 C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\LogicaNegocioVehiculo\obj\Debug\LogicaNegocioVehiculo.csproj.CopyComplete
 C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\LogicaNegocioVehiculo\obj\Debug\LogicaNegocioVehiculo.dll
 C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\LogicaNegocioVehiculo\obj\Debug\LogicaNegocioVehiculo.pdb
+C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\LogicaNegocioVehiculo\bin\Debug\LogicaNegocioVehiculo.dll
+C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\LogicaNegocioVehiculo\bin\Debug\LogicaNegocioVehiculo.pdb
+C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\LogicaNegocioVehiculo\bin\Debug\CapaPersistenciaVehiculo.dll
+C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\LogicaNegocioVehiculo\bin\Debug\LogicaModeloVehiculo.dll
+C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\LogicaNegocioVehiculo\bin\Debug\CapaPersistenciaVehiculo.pdb
+C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\LogicaNegocioVehiculo\bin\Debug\LogicaModeloVehiculo.pdb
+C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\LogicaNegocioVehiculo\obj\Debug\LogicaNegocioVehiculo.csprojAssemblyReference.cache
+C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\LogicaNegocioVehiculo\obj\Debug\LogicaNegocioVehiculo.csproj.CoreCompileInputs.cache
+C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\LogicaNegocioVehiculo\obj\Debug\LogicaNegocioVehiculo.csproj.CopyComplete
+C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\LogicaNegocioVehiculo\obj\Debug\LogicaNegocioVehiculo.dll
+C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\LogicaNegocioVehiculo\obj\Debug\LogicaNegocioVehiculo.pdb
