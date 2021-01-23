@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace LogicaModeloVehiculo
 {
-    class vehiculoNuevo : vehiculo
+    public class vehiculoNuevo : vehiculo
     {
         private List<extra> extras;
 
 
 
-        private vehiculoNuevo(string nBastidor, string marca, string modelo, float potencia, float precioRecomendado, iva iva) : base(nBastidor,marca,modelo,potencia,precioRecomendado,iva)
+        public vehiculoNuevo(string nBastidor, string marca, string modelo, float potencia, float precioRecomendado, iva iva) : base(nBastidor,marca,modelo,potencia,precioRecomendado,iva)
         {
             this.extras = new List<extra>();
         }
@@ -20,16 +20,11 @@ namespace LogicaModeloVehiculo
         /// <summary>
         /// get: devuelve la lista de extras, hay que cambiarlo para que solo devuelvas las descripciones
         /// </summary>
-        private List<string> Extras
+        public List<extra> Extras
         {
             get
             {
-                List<string> auxliar = new List<string>();
-                foreach (extra extra in this.extras)
-                {
-                    auxliar.Add(extra.Descripcion);
-                }
-                return auxliar;
+                return this.extras;
             }
         }
 

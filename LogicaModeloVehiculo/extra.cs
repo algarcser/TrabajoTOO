@@ -8,17 +8,13 @@ namespace LogicaModeloVehiculo
 {
     public class extra : IEquatable<extra>
     {
-        private int extraID;
         private string descripcion;
         private float precio;
 
-
-        public int ExtraID
+        public extra(string descripcion, float precio)
         {
-            get
-            {
-                return this.extraID;
-            }
+            this.descripcion = descripcion;
+            this.precio = precio;
         }
 
         /// <summary>
@@ -43,10 +39,6 @@ namespace LogicaModeloVehiculo
             }
         }
 
-        public override int GetHashCode()
-        {
-            return this.ExtraID;
-        }
 
 
         public override string ToString()

@@ -11,6 +11,7 @@ namespace CapaPersistenciaVehiculo
 
         private string matricula;
         private DateTime fechaMatriculacion;
+
         public vehiculo2ManoDato(string nBastidor, string marca, string modelo, float potencia, float precioRecomendado, ivaDato iva, string matricula, DateTime fechaMatriculacion) : base(nBastidor, marca, modelo, potencia, precioRecomendado, iva)
         {
             this.matricula = matricula;

@@ -20,16 +20,11 @@ namespace CapaPersistenciaVehiculo
         /// <summary>
         /// get: devuelve la lista de extras, hay que cambiarlo para que solo devuelvas las descripciones
         /// </summary>
-        private List<string> Extras
+        public List<extraDato> Extras
         {
             get
             {
-                List<string> auxliar = new List<string>();
-                foreach (extraDato extra in this.extras)
-                {
-                    auxliar.Add(extra.Descripcion);
-                }
-                return auxliar;
+                return this.extras;
             }
         }
 

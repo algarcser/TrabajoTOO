@@ -94,6 +94,14 @@ namespace LogicaModeloVehiculo
             }
         }
 
+
+        public float PrecioRecomendado
+        {
+            get
+            {
+                return this.precioRecomendado;
+            }
+        }
         /// <summary>
         /// get: devuelve el iva
         /// </summary>

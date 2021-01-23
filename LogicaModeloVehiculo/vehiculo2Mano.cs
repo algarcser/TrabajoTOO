@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LogicaModeloVehiculo
 {
-    class vehiculo2Mano : vehiculo
+    public class vehiculo2Mano : vehiculo
     {
 
         private string matricula;

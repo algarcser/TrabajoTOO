@@ -6,19 +6,15 @@ using System.Threading.Tasks;
 
 namespace CapaPersistenciaVehiculo
 {
-    class extraDato : IEquatable<extraDato>
+    public class extraDato : IEquatable<extraDato>
     {
-        private int extraID;
         private string descripcion;
         private float precio;
 
-
-        public int ExtraID
+        public extraDato(string descripcion, float precio)
         {
-            get
-            {
-                return this.extraID;
-            }
+            this.descripcion = descripcion;
+            this.precio = precio;
         }
 
         /// <summary>
@@ -41,11 +37,6 @@ namespace CapaPersistenciaVehiculo
             {
                 return this.precio;
             }
-        }
-
-        public override int GetHashCode()
-        {
-            return this.ExtraID;
         }
 
 
