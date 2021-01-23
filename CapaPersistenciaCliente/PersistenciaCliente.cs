@@ -28,19 +28,21 @@ namespace CapaPersistenciaCliente
             BDCliente.DELETECliente(conversor.Convertir(c));
             BDCliente.INSERTCliente(conversor.Convertir(c));
         }
-        public static bool READ(string clave, out Cliente c)
+        public static Cliente READ(string DNI)
         {
             ClienteDato auxiliar;
-            bool resultado = BDCliente.SELECTCliente(clave, out auxiliar);
+            bool resultado = BDCliente.SELECTCliente(DNI, out auxiliar);
+            Cliente c;
             if (resultado)
             {
+                
                 c = conversor.Convertir(auxiliar);
             }
             else
             {
                 c = null;
             }
-            return resultado;
+            return c;
         }
 
         public static bool EXISTE (string dni)

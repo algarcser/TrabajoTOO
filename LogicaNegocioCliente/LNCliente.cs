@@ -24,10 +24,9 @@ namespace LogicaNegocioCliente
             return true;
         }
 
-        public static bool readCliente(Cliente c)
-        {
-            PersistenciaCliente.READ(c.getDNI(), out c) ;
-            return true;
+        public static Cliente readCliente(string DNI)
+        {          
+            return PersistenciaCliente.READ(DNI);
         }
 
         public static bool existeCliente(string dni)

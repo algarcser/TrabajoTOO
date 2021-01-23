@@ -51,7 +51,7 @@ namespace CapaPresentacionCliente
                 if (LNCliente.existeCliente(maskedTextBox1.Text))
                 {
                     Cliente c;
-                    PersistenciaCliente.READ(maskedTextBox1.Text, out c);
+                    c = PersistenciaCliente.READ(maskedTextBox1.Text);
                     Form datosCliente = new Busqueda_cliente(c);
                 }
                 else
