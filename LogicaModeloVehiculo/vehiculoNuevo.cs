@@ -17,6 +17,11 @@ namespace LogicaModeloVehiculo
             this.extras = new List<extra>();
         }
 
+        public vehiculoNuevo(string nBastidor) : base(nBastidor, "", "", 0 , 0, iva.cocheNuevo)
+        {
+            this.extras = null;
+        }
+
         /// <summary>
         /// get: devuelve la lista de extras, hay que cambiarlo para que solo devuelvas las descripciones
         /// </summary>
