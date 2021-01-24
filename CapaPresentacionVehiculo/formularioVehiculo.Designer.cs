@@ -1,6 +1,6 @@
 ﻿namespace CapaPresentacionVehiculo
 {
-    partial class AnadirVehiculo
+    partial class formularioVehiculo
     {
         /// <summary>
         /// Required designer variable.
@@ -42,7 +42,7 @@
             this.radioButton_2mano = new System.Windows.Forms.RadioButton();
             this.radioButton_nuevo = new System.Windows.Forms.RadioButton();
             this.button_aceptar = new System.Windows.Forms.Button();
-            this.button_cancelar = new System.Windows.Forms.Button();
+            this.button_cerrar = new System.Windows.Forms.Button();
             this.groupBox_tipo.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -147,6 +147,7 @@
             this.radioButton_2mano.TabStop = true;
             this.radioButton_2mano.Text = "Segunda mano";
             this.radioButton_2mano.UseVisualStyleBackColor = true;
+            this.radioButton_2mano.CheckedChanged += new System.EventHandler(this.radioButton_2mano_CheckedChanged);
             // 
             // radioButton_nuevo
             // 
@@ -168,22 +169,24 @@
             this.button_aceptar.TabIndex = 11;
             this.button_aceptar.Text = "Aceptar";
             this.button_aceptar.UseVisualStyleBackColor = true;
+            this.button_aceptar.Click += new System.EventHandler(this.button_aceptar_Click);
             // 
-            // button_cancelar
+            // button_cerrar
             // 
-            this.button_cancelar.Location = new System.Drawing.Point(356, 367);
-            this.button_cancelar.Name = "button_cancelar";
-            this.button_cancelar.Size = new System.Drawing.Size(75, 23);
-            this.button_cancelar.TabIndex = 12;
-            this.button_cancelar.Text = "Cancelar";
-            this.button_cancelar.UseVisualStyleBackColor = true;
+            this.button_cerrar.Location = new System.Drawing.Point(356, 367);
+            this.button_cerrar.Name = "button_cerrar";
+            this.button_cerrar.Size = new System.Drawing.Size(75, 23);
+            this.button_cerrar.TabIndex = 12;
+            this.button_cerrar.Text = "Cerrar";
+            this.button_cerrar.UseVisualStyleBackColor = true;
+            this.button_cerrar.Click += new System.EventHandler(this.button_cancelar_Click);
             // 
-            // AnadirVehiculo
+            // formularioVehiculo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(658, 410);
-            this.Controls.Add(this.button_cancelar);
+            this.Controls.Add(this.button_cerrar);
             this.Controls.Add(this.button_aceptar);
             this.Controls.Add(this.groupBox_tipo);
             this.Controls.Add(this.textBox_PrecioRecomendado);
@@ -196,7 +199,7 @@
             this.Controls.Add(this.label_Modelo);
             this.Controls.Add(this.label_Marca);
             this.Controls.Add(this.label_NBastidor);
-            this.Name = "AnadirVehiculo";
+            this.Name = "formularioVehiculo";
             this.Text = "Alta de vehiculo";
             this.groupBox_tipo.ResumeLayout(false);
             this.groupBox_tipo.PerformLayout();
@@ -221,6 +224,6 @@
         private System.Windows.Forms.RadioButton radioButton_2mano;
         private System.Windows.Forms.RadioButton radioButton_nuevo;
         private System.Windows.Forms.Button button_aceptar;
-        private System.Windows.Forms.Button button_cancelar;
+        private System.Windows.Forms.Button button_cerrar;
     }
 }

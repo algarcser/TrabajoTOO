@@ -48,6 +48,7 @@
             this.button_aceptar.TabIndex = 1;
             this.button_aceptar.Text = "Aceptar";
             this.button_aceptar.UseVisualStyleBackColor = true;
+            this.button_aceptar.Click += new System.EventHandler(this.button_aceptar_Click);
             // 
             // button_cancelar
             // 
@@ -57,6 +58,7 @@
             this.button_cancelar.TabIndex = 2;
             this.button_cancelar.Text = "Cancelar";
             this.button_cancelar.UseVisualStyleBackColor = true;
+            this.button_cancelar.Click += new System.EventHandler(this.button_cancelar_Click);
             // 
             // ObtenerNBastidor
             // 

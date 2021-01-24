@@ -24,6 +24,10 @@ namespace CapaPresentacionVehiculo
             {
                 return this.textBox_matricula.Text;
             }
+            set
+            {
+                this.textBox_matricula.Text = value;
+            }
         }
 
         public string FechaMatriculacion
@@ -32,6 +36,16 @@ namespace CapaPresentacionVehiculo
             {
                 return this.textBox_fechaMatriculacion.Text;
             }
+            set
+            {
+                this.textBox_fechaMatriculacion.Text = value.ToString().Substring(0,10);
+            }
+        }
+
+        internal void cerrar_modificacion()
+        {
+            this.textBox_fechaMatriculacion.ReadOnly = true;
+            this.textBox_matricula.ReadOnly = true;
         }
     }
 }

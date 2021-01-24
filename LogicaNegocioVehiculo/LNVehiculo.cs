@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 using CapaPersistenciaVehiculo;
 using LogicaModeloVehiculo;
 
+
 namespace LogicaNegocioVehiculo
 {
-    class LNVehiculo
+    public class LNVehiculo
     {
         public static bool INSERT(vehiculo vehiculo)
         {

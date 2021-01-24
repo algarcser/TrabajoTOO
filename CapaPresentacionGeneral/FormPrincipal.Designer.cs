@@ -45,6 +45,7 @@ namespace CapaPresentacionGeneral
             this.tsmiBPPorVehiculo = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiBPPorEstado = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiConfiguracion = new System.Windows.Forms.ToolStripMenuItem();
+            this.bajaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.msPrincipal.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -74,21 +75,21 @@ namespace CapaPresentacionGeneral
             // tsmiAltaCliente
             // 
             this.tsmiAltaCliente.Name = "tsmiAltaCliente";
-            this.tsmiAltaCliente.Size = new System.Drawing.Size(180, 22);
+            this.tsmiAltaCliente.Size = new System.Drawing.Size(126, 22);
             this.tsmiAltaCliente.Text = "Alta";
             this.tsmiAltaCliente.Click += new System.EventHandler(this.tsmiAltaCliente_Click);
             // 
             // tsmiBajaCliente
             // 
             this.tsmiBajaCliente.Name = "tsmiBajaCliente";
-            this.tsmiBajaCliente.Size = new System.Drawing.Size(180, 22);
+            this.tsmiBajaCliente.Size = new System.Drawing.Size(126, 22);
             this.tsmiBajaCliente.Text = "Baja";
             this.tsmiBajaCliente.Click += new System.EventHandler(this.tsmiBajaCliente_Click);
             // 
             // tsmiBusquedaCliente
             // 
             this.tsmiBusquedaCliente.Name = "tsmiBusquedaCliente";
-            this.tsmiBusquedaCliente.Size = new System.Drawing.Size(180, 22);
+            this.tsmiBusquedaCliente.Size = new System.Drawing.Size(126, 22);
             this.tsmiBusquedaCliente.Text = "Búsqueda";
             this.tsmiBusquedaCliente.Click += new System.EventHandler(this.tsmiBusquedaCliente_Click);
             // 
@@ -96,7 +97,8 @@ namespace CapaPresentacionGeneral
             // 
             this.tsmiVehiculos.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsmiAltaVehiculo,
-            this.tsmiBusquedaVehiculo});
+            this.tsmiBusquedaVehiculo,
+            this.bajaToolStripMenuItem});
             this.tsmiVehiculos.Name = "tsmiVehiculos";
             this.tsmiVehiculos.Size = new System.Drawing.Size(69, 20);
             this.tsmiVehiculos.Text = "Vehículos";
@@ -106,12 +108,14 @@ namespace CapaPresentacionGeneral
             this.tsmiAltaVehiculo.Name = "tsmiAltaVehiculo";
             this.tsmiAltaVehiculo.Size = new System.Drawing.Size(180, 22);
             this.tsmiAltaVehiculo.Text = "Alta";
+            this.tsmiAltaVehiculo.Click += new System.EventHandler(this.tsmiAltaVehiculo_Click);
             // 
             // tsmiBusquedaVehiculo
             // 
             this.tsmiBusquedaVehiculo.Name = "tsmiBusquedaVehiculo";
             this.tsmiBusquedaVehiculo.Size = new System.Drawing.Size(180, 22);
             this.tsmiBusquedaVehiculo.Text = "Búsqueda";
+            this.tsmiBusquedaVehiculo.Click += new System.EventHandler(this.tsmiBusquedaVehiculo_Click);
             // 
             // tsmiPresupuestos
             // 
@@ -162,6 +166,13 @@ namespace CapaPresentacionGeneral
             this.tsmiConfiguracion.Size = new System.Drawing.Size(95, 20);
             this.tsmiConfiguracion.Text = "Configuración";
             // 
+            // bajaToolStripMenuItem
+            // 
+            this.bajaToolStripMenuItem.Name = "bajaToolStripMenuItem";
+            this.bajaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.bajaToolStripMenuItem.Text = "Baja";
+            this.bajaToolStripMenuItem.Click += new System.EventHandler(this.bajaToolStripMenuItem_Click);
+            // 
             // FormPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -198,5 +209,6 @@ namespace CapaPresentacionGeneral
         private System.Windows.Forms.ToolStripMenuItem tsmiBPPorCliente;
         private System.Windows.Forms.ToolStripMenuItem tsmiBPPorVehiculo;
         private System.Windows.Forms.ToolStripMenuItem tsmiBPPorEstado;
+        private System.Windows.Forms.ToolStripMenuItem bajaToolStripMenuItem;
     }
 }

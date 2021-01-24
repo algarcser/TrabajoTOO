@@ -32,7 +32,9 @@ namespace CapaPresentacionGeneral
         {
             if ((this.tbContraseña.Text == "admin") && (this.tbUsuario.Text == "admin"))
             {
-                Form nuevo = new FormPrincipal();
+                Form nuevo = new FormPrincipal( this.tbUsuario.Text);
+                nuevo.Show();
+                this.Close();
             }else
             {
                 MessageBox.Show("Introduzca el usuario y contraseña de nuevo correctamente.", "Usuario y/o contraseña incorrectos", MessageBoxButtons.OK, MessageBoxIcon.Error);
