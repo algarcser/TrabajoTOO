@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace CapaPresentacionGeneral
 {
     public partial class Login : Form
@@ -32,7 +33,7 @@ namespace CapaPresentacionGeneral
         {
             if ((this.tbContraseña.Text == "admin") && (this.tbUsuario.Text == "admin"))
             {
-                Form nuevo = new FormPrincipal( this.tbUsuario.Text);
+                Form nuevo = new FormPrincipal(this.tbUsuario.Text);
                 nuevo.Show();
                 this.Close();
             }else

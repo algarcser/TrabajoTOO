@@ -121,8 +121,8 @@ namespace CapaPresentacionPresupuesto
 
         private void btIntroducirVehiculo_Click(object sender, EventArgs e)
         {
-            Form introducirVehiculo = new ObtenerNBastidor();
-            introducirVehiculo.ShowDialog();
+            // Form introducirVehiculo = new ObtenerNBastidor();
+            // introducirVehiculo.ShowDialog();
             //mostrar ObtenerNBastidor.cs, si existe se añade a la lista, si no se abre dar de alta vehículo
             //JUNTO TODO SU PROCESO,tras darlo de alta se introduce en la lista
         }

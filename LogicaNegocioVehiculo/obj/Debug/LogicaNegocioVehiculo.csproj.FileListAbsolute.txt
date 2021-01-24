@@ -20,3 +20,14 @@ C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\LogicaNegocioVehiculo\obj\Debug
 C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\LogicaNegocioVehiculo\obj\Debug\LogicaNegocioVehiculo.csproj.CopyComplete
 C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\LogicaNegocioVehiculo\obj\Debug\LogicaNegocioVehiculo.dll
 C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\LogicaNegocioVehiculo\obj\Debug\LogicaNegocioVehiculo.pdb
+C:\Users\zonia\Desktop\TrabajoTOO\LogicaNegocioVehiculo\bin\Debug\LogicaNegocioVehiculo.dll
+C:\Users\zonia\Desktop\TrabajoTOO\LogicaNegocioVehiculo\bin\Debug\LogicaNegocioVehiculo.pdb
+C:\Users\zonia\Desktop\TrabajoTOO\LogicaNegocioVehiculo\bin\Debug\CapaPersistenciaVehiculo.dll
+C:\Users\zonia\Desktop\TrabajoTOO\LogicaNegocioVehiculo\bin\Debug\LogicaModeloVehiculo.dll
+C:\Users\zonia\Desktop\TrabajoTOO\LogicaNegocioVehiculo\bin\Debug\CapaPersistenciaVehiculo.pdb
+C:\Users\zonia\Desktop\TrabajoTOO\LogicaNegocioVehiculo\bin\Debug\LogicaModeloVehiculo.pdb
+C:\Users\zonia\Desktop\TrabajoTOO\LogicaNegocioVehiculo\obj\Debug\LogicaNegocioVehiculo.csprojAssemblyReference.cache
+C:\Users\zonia\Desktop\TrabajoTOO\LogicaNegocioVehiculo\obj\Debug\LogicaNegocioVehiculo.csproj.CoreCompileInputs.cache
+C:\Users\zonia\Desktop\TrabajoTOO\LogicaNegocioVehiculo\obj\Debug\LogicaNegocioVehiculo.csproj.CopyComplete
+C:\Users\zonia\Desktop\TrabajoTOO\LogicaNegocioVehiculo\obj\Debug\LogicaNegocioVehiculo.dll
+C:\Users\zonia\Desktop\TrabajoTOO\LogicaNegocioVehiculo\obj\Debug\LogicaNegocioVehiculo.pdb

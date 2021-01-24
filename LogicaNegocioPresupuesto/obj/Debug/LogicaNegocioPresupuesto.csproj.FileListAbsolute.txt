@@ -36,3 +36,22 @@ C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\LogicaNegocioPresupuesto\obj\De
 C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\LogicaNegocioPresupuesto\obj\Debug\LogicaNegocioPresupuesto.csproj.CopyComplete
 C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\LogicaNegocioPresupuesto\obj\Debug\LogicaNegocioPresupuesto.dll
 C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\LogicaNegocioPresupuesto\obj\Debug\LogicaNegocioPresupuesto.pdb
+C:\Users\zonia\Desktop\TrabajoTOO\LogicaNegocioPresupuesto\bin\Debug\LogicaNegocioPresupuesto.dll
+C:\Users\zonia\Desktop\TrabajoTOO\LogicaNegocioPresupuesto\bin\Debug\LogicaNegocioPresupuesto.pdb
+C:\Users\zonia\Desktop\TrabajoTOO\LogicaNegocioPresupuesto\bin\Debug\CapaPersistenciaPresupuesto.dll
+C:\Users\zonia\Desktop\TrabajoTOO\LogicaNegocioPresupuesto\bin\Debug\LogicaModeloCliente.dll
+C:\Users\zonia\Desktop\TrabajoTOO\LogicaNegocioPresupuesto\bin\Debug\LogicaModeloPresupuesto.dll
+C:\Users\zonia\Desktop\TrabajoTOO\LogicaNegocioPresupuesto\bin\Debug\LogicaModeloVehiculo.dll
+C:\Users\zonia\Desktop\TrabajoTOO\LogicaNegocioPresupuesto\bin\Debug\CapaPersistenciaVehiculo.dll
+C:\Users\zonia\Desktop\TrabajoTOO\LogicaNegocioPresupuesto\bin\Debug\CapaPersistenciaCliente.dll
+C:\Users\zonia\Desktop\TrabajoTOO\LogicaNegocioPresupuesto\bin\Debug\CapaPersistenciaPresupuesto.pdb
+C:\Users\zonia\Desktop\TrabajoTOO\LogicaNegocioPresupuesto\bin\Debug\LogicaModeloCliente.pdb
+C:\Users\zonia\Desktop\TrabajoTOO\LogicaNegocioPresupuesto\bin\Debug\LogicaModeloPresupuesto.pdb
+C:\Users\zonia\Desktop\TrabajoTOO\LogicaNegocioPresupuesto\bin\Debug\LogicaModeloVehiculo.pdb
+C:\Users\zonia\Desktop\TrabajoTOO\LogicaNegocioPresupuesto\bin\Debug\CapaPersistenciaVehiculo.pdb
+C:\Users\zonia\Desktop\TrabajoTOO\LogicaNegocioPresupuesto\bin\Debug\CapaPersistenciaCliente.pdb
+C:\Users\zonia\Desktop\TrabajoTOO\LogicaNegocioPresupuesto\obj\Debug\LogicaNegocioPresupuesto.csprojAssemblyReference.cache
+C:\Users\zonia\Desktop\TrabajoTOO\LogicaNegocioPresupuesto\obj\Debug\LogicaNegocioPresupuesto.csproj.CoreCompileInputs.cache
+C:\Users\zonia\Desktop\TrabajoTOO\LogicaNegocioPresupuesto\obj\Debug\LogicaNegocioPresupuesto.csproj.CopyComplete
+C:\Users\zonia\Desktop\TrabajoTOO\LogicaNegocioPresupuesto\obj\Debug\LogicaNegocioPresupuesto.dll
+C:\Users\zonia\Desktop\TrabajoTOO\LogicaNegocioPresupuesto\obj\Debug\LogicaNegocioPresupuesto.pdb

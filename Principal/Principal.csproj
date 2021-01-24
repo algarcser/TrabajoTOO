@@ -32,6 +32,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -54,6 +57,10 @@
     <ProjectReference Include="..\CapaPresentacionGeneral\CapaPresentacionGeneral.csproj">
       <Project>{1b2046ff-1604-4221-ad6e-a5bcefa7af15}</Project>
       <Name>CapaPresentacionGeneral</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CapaPresentacionVehiculo\CapaPresentacionVehiculo.csproj">
+      <Project>{aa26a431-8e2a-42ee-9405-9a072f8c1ba5}</Project>
+      <Name>CapaPresentacionVehiculo</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

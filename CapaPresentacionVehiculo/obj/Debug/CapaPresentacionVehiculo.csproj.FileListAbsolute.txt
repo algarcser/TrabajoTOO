@@ -32,3 +32,20 @@ C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\CapaPresentacionVehiculo\obj\De
 C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\CapaPresentacionVehiculo\obj\Debug\CapaPresentacionVehiculo.csproj.CopyComplete
 C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\CapaPresentacionVehiculo\obj\Debug\CapaPresentacionVehiculo.dll
 C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\CapaPresentacionVehiculo\obj\Debug\CapaPresentacionVehiculo.pdb
+C:\Users\zonia\Desktop\TrabajoTOO\CapaPresentacionVehiculo\obj\Debug\CapaPresentacionVehiculo.csprojAssemblyReference.cache
+C:\Users\zonia\Desktop\TrabajoTOO\CapaPresentacionVehiculo\obj\Debug\CapaPresentacionVehiculo.formularioVehiculo.resources
+C:\Users\zonia\Desktop\TrabajoTOO\CapaPresentacionVehiculo\obj\Debug\CapaPresentacionVehiculo.Datos2Mano.resources
+C:\Users\zonia\Desktop\TrabajoTOO\CapaPresentacionVehiculo\obj\Debug\CapaPresentacionVehiculo.ObtenerNBastidor.resources
+C:\Users\zonia\Desktop\TrabajoTOO\CapaPresentacionVehiculo\obj\Debug\CapaPresentacionVehiculo.csproj.GenerateResource.cache
+C:\Users\zonia\Desktop\TrabajoTOO\CapaPresentacionVehiculo\obj\Debug\CapaPresentacionVehiculo.csproj.CoreCompileInputs.cache
+C:\Users\zonia\Desktop\TrabajoTOO\CapaPresentacionVehiculo\obj\Debug\CapaPresentacionVehiculo.dll
+C:\Users\zonia\Desktop\TrabajoTOO\CapaPresentacionVehiculo\obj\Debug\CapaPresentacionVehiculo.pdb
+C:\Users\zonia\Desktop\TrabajoTOO\CapaPresentacionVehiculo\bin\Debug\CapaPresentacionVehiculo.dll
+C:\Users\zonia\Desktop\TrabajoTOO\CapaPresentacionVehiculo\bin\Debug\CapaPresentacionVehiculo.pdb
+C:\Users\zonia\Desktop\TrabajoTOO\CapaPresentacionVehiculo\bin\Debug\LogicaModeloVehiculo.dll
+C:\Users\zonia\Desktop\TrabajoTOO\CapaPresentacionVehiculo\bin\Debug\LogicaNegocioVehiculo.dll
+C:\Users\zonia\Desktop\TrabajoTOO\CapaPresentacionVehiculo\bin\Debug\CapaPersistenciaVehiculo.dll
+C:\Users\zonia\Desktop\TrabajoTOO\CapaPresentacionVehiculo\bin\Debug\LogicaModeloVehiculo.pdb
+C:\Users\zonia\Desktop\TrabajoTOO\CapaPresentacionVehiculo\bin\Debug\LogicaNegocioVehiculo.pdb
+C:\Users\zonia\Desktop\TrabajoTOO\CapaPresentacionVehiculo\bin\Debug\CapaPersistenciaVehiculo.pdb
+C:\Users\zonia\Desktop\TrabajoTOO\CapaPresentacionVehiculo\obj\Debug\CapaPresentacionVehiculo.csproj.CopyComplete

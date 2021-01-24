@@ -32,12 +32,12 @@ namespace CapaPresentacionVehiculo
             }else if ( this.objetivo == enumObjetivo.Baja)
             {
                 this.cargar_Vehiculo();
-                LNVehiculo.DELETE( new vehiculoNuevo(this.textBox_NBastidor.Text));
+                LNVehiculo.DELETE( new vehiculoNuevo(this.textBox_NBastidor.Text.ToString() ));
             }else if ( this.objetivo == enumObjetivo.Ver)
             {
                 this.cargar_Vehiculo();
             }
-            
+
             
         }
 
@@ -78,17 +78,35 @@ namespace CapaPresentacionVehiculo
                     
                 }
 
-                LNVehiculo.INSERT(auxiliar_vehiculo_nuevo);
+
+                if (LNVehiculo.INSERT(auxiliar_vehiculo_nuevo))
+                {
+                    MessageBox.Show("operacion con exito");
+                }
+                this.Close();
+
+
+
 
             }
             else if ( this.radioButton_2mano.Checked == true)
             {
                 vehiculo2Mano auxiliar_vehiculo_2mano = new vehiculo2Mano(this.textBox_NBastidor.Text, this.textBox_Marca.Text, this.textBox_Modelo.Text, float.Parse(this.textBox_Potencia.Text), float.Parse(this.textBox_PrecioRecomendado.Text), iva.cocheSegundaMano, this.datos_2mano.Matricula, DateTime.Parse(this.datos_2mano.FechaMatriculacion));
+
+                if (LNVehiculo.INSERT(auxiliar_vehiculo_2mano))
+                {
+                    MessageBox.Show("operacion con exito");
+                }
+
+                
+                this.Close();
             }
             else
             {
                 MessageBox.Show("Ha de seleccionar un tipo de coche");
             }
+
+            
         }
 
         private void button_cancelar_Click(object sender, EventArgs e)

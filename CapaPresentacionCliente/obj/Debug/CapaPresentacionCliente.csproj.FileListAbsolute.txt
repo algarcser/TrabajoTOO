@@ -32,3 +32,22 @@ C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\CapaPresentacionCliente\obj\Deb
 C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\CapaPresentacionCliente\obj\Debug\CapaPresentacionCliente.csproj.CopyComplete
 C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\CapaPresentacionCliente\obj\Debug\CapaPresentacionCliente.dll
 C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\CapaPresentacionCliente\obj\Debug\CapaPresentacionCliente.pdb
+C:\Users\zonia\Desktop\TrabajoTOO\CapaPresentacionCliente\bin\Debug\CapaPresentacionCliente.dll
+C:\Users\zonia\Desktop\TrabajoTOO\CapaPresentacionCliente\bin\Debug\CapaPresentacionCliente.pdb
+C:\Users\zonia\Desktop\TrabajoTOO\CapaPresentacionCliente\bin\Debug\CapaPersistenciaCliente.dll
+C:\Users\zonia\Desktop\TrabajoTOO\CapaPresentacionCliente\bin\Debug\LogicaModeloCliente.dll
+C:\Users\zonia\Desktop\TrabajoTOO\CapaPresentacionCliente\bin\Debug\LogicaNegocioCliente.dll
+C:\Users\zonia\Desktop\TrabajoTOO\CapaPresentacionCliente\bin\Debug\CapaPersistenciaCliente.pdb
+C:\Users\zonia\Desktop\TrabajoTOO\CapaPresentacionCliente\bin\Debug\LogicaModeloCliente.pdb
+C:\Users\zonia\Desktop\TrabajoTOO\CapaPresentacionCliente\bin\Debug\LogicaNegocioCliente.pdb
+C:\Users\zonia\Desktop\TrabajoTOO\CapaPresentacionCliente\obj\Debug\CapaPresentacionCliente.csprojAssemblyReference.cache
+C:\Users\zonia\Desktop\TrabajoTOO\CapaPresentacionCliente\obj\Debug\CapaPresentacionCliente.Alta_Cliente.resources
+C:\Users\zonia\Desktop\TrabajoTOO\CapaPresentacionCliente\obj\Debug\CapaPresentacionCliente.Baja_cliente.resources
+C:\Users\zonia\Desktop\TrabajoTOO\CapaPresentacionCliente\obj\Debug\CapaPresentacionCliente.Busqueda_cliente.resources
+C:\Users\zonia\Desktop\TrabajoTOO\CapaPresentacionCliente\obj\Debug\CapaPresentacionCliente.Control_datos_cliente.resources
+C:\Users\zonia\Desktop\TrabajoTOO\CapaPresentacionCliente\obj\Debug\CapaPresentacionCliente.Introducir_DNI.resources
+C:\Users\zonia\Desktop\TrabajoTOO\CapaPresentacionCliente\obj\Debug\CapaPresentacionCliente.csproj.GenerateResource.cache
+C:\Users\zonia\Desktop\TrabajoTOO\CapaPresentacionCliente\obj\Debug\CapaPresentacionCliente.csproj.CoreCompileInputs.cache
+C:\Users\zonia\Desktop\TrabajoTOO\CapaPresentacionCliente\obj\Debug\CapaPresentacionCliente.csproj.CopyComplete
+C:\Users\zonia\Desktop\TrabajoTOO\CapaPresentacionCliente\obj\Debug\CapaPresentacionCliente.dll
+C:\Users\zonia\Desktop\TrabajoTOO\CapaPresentacionCliente\obj\Debug\CapaPresentacionCliente.pdb

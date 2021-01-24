@@ -16,8 +16,9 @@ namespace CapaPresentacionGeneral
         private string usuario;
         public FormPrincipal(string usuario)
         {
-            InitializeComponent();
             this.usuario = usuario;
+            InitializeComponent();
+            
         }
 
         private void tsmiAltaCliente_Click(object sender, EventArgs e)
@@ -37,17 +38,20 @@ namespace CapaPresentacionGeneral
 
         private void tsmiAltaVehiculo_Click(object sender, EventArgs e)
         {
-            CapaPresentacionVehiculo.ObtenerNBastidor obtenerNBastidor = new CapaPresentacionVehiculo.ObtenerNBastidor(enumObjetivo.Alta);
+            Form obtenerNBastidor = new ObtenerNBastidor( enumObjetivo.Alta );
+            obtenerNBastidor.Show();
         }
 
         private void tsmiBusquedaVehiculo_Click(object sender, EventArgs e)
         {
-            CapaPresentacionVehiculo.ObtenerNBastidor obtenerNBastidor = new CapaPresentacionVehiculo.ObtenerNBastidor(enumObjetivo.Ver);
+            Form obtenerNBastidor = new ObtenerNBastidor( enumObjetivo.Ver );
+            obtenerNBastidor.Show();
         }
 
         private void bajaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            CapaPresentacionVehiculo.ObtenerNBastidor obtenerNBastidor = new CapaPresentacionVehiculo.ObtenerNBastidor(enumObjetivo.Baja);
+            Form obtenerNBastidor = new ObtenerNBastidor( enumObjetivo.Baja );
+            obtenerNBastidor.Show();
         }
     }
 }

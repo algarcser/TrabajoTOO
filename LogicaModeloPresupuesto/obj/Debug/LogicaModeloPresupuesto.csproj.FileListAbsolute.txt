@@ -20,3 +20,14 @@ C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\LogicaModeloPresupuesto\obj\Deb
 C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\LogicaModeloPresupuesto\obj\Debug\LogicaModeloPresupuesto.csproj.CopyComplete
 C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\LogicaModeloPresupuesto\obj\Debug\LogicaModeloPresupuesto.dll
 C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\LogicaModeloPresupuesto\obj\Debug\LogicaModeloPresupuesto.pdb
+C:\Users\zonia\Desktop\TrabajoTOO\LogicaModeloPresupuesto\bin\Debug\LogicaModeloPresupuesto.dll
+C:\Users\zonia\Desktop\TrabajoTOO\LogicaModeloPresupuesto\bin\Debug\LogicaModeloPresupuesto.pdb
+C:\Users\zonia\Desktop\TrabajoTOO\LogicaModeloPresupuesto\bin\Debug\LogicaModeloCliente.dll
+C:\Users\zonia\Desktop\TrabajoTOO\LogicaModeloPresupuesto\bin\Debug\LogicaModeloVehiculo.dll
+C:\Users\zonia\Desktop\TrabajoTOO\LogicaModeloPresupuesto\bin\Debug\LogicaModeloCliente.pdb
+C:\Users\zonia\Desktop\TrabajoTOO\LogicaModeloPresupuesto\bin\Debug\LogicaModeloVehiculo.pdb
+C:\Users\zonia\Desktop\TrabajoTOO\LogicaModeloPresupuesto\obj\Debug\LogicaModeloPresupuesto.csprojAssemblyReference.cache
+C:\Users\zonia\Desktop\TrabajoTOO\LogicaModeloPresupuesto\obj\Debug\LogicaModeloPresupuesto.csproj.CoreCompileInputs.cache
+C:\Users\zonia\Desktop\TrabajoTOO\LogicaModeloPresupuesto\obj\Debug\LogicaModeloPresupuesto.csproj.CopyComplete
+C:\Users\zonia\Desktop\TrabajoTOO\LogicaModeloPresupuesto\obj\Debug\LogicaModeloPresupuesto.dll
+C:\Users\zonia\Desktop\TrabajoTOO\LogicaModeloPresupuesto\obj\Debug\LogicaModeloPresupuesto.pdb

@@ -28,6 +28,11 @@ namespace CapaPersistenciaVehiculo
             }
         }
 
+        public override int GetHashCode()
+        {
+            return 0;
+        }
+
         /// <summary>
         /// get: devuelve precio
         /// </summary>

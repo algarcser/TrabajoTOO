@@ -5,15 +5,18 @@ using System.Text;
 using System.Threading.Tasks;
 using CapaPresentacionGeneral;
 using System.Windows.Forms;
+using CapaPresentacionVehiculo;
 
 namespace Principal
 {
-    class Program
+    static class Program
     {
-        static void Main(string[] args)
+        [STAThread]
+        static void Main()
         {
-            Login login = new Login();
-            login.Show();
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(new ObtenerNBastidor(enumObjetivo.Alta) );
         }
     }
 }

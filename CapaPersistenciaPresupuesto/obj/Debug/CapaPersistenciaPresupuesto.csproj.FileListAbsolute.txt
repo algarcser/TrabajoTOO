@@ -32,3 +32,20 @@ C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\CapaPersistenciaPresupuesto\bin
 C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\CapaPersistenciaPresupuesto\bin\Debug\LogicaModeloPresupuesto.pdb
 C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\CapaPersistenciaPresupuesto\bin\Debug\LogicaModeloVehiculo.pdb
 C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\CapaPersistenciaPresupuesto\obj\Debug\CapaPersistenciaPresupuesto.csproj.CopyComplete
+C:\Users\zonia\Desktop\TrabajoTOO\CapaPersistenciaPresupuesto\bin\Debug\CapaPersistenciaPresupuesto.dll
+C:\Users\zonia\Desktop\TrabajoTOO\CapaPersistenciaPresupuesto\bin\Debug\CapaPersistenciaPresupuesto.pdb
+C:\Users\zonia\Desktop\TrabajoTOO\CapaPersistenciaPresupuesto\bin\Debug\CapaPersistenciaCliente.dll
+C:\Users\zonia\Desktop\TrabajoTOO\CapaPersistenciaPresupuesto\bin\Debug\CapaPersistenciaVehiculo.dll
+C:\Users\zonia\Desktop\TrabajoTOO\CapaPersistenciaPresupuesto\bin\Debug\LogicaModeloCliente.dll
+C:\Users\zonia\Desktop\TrabajoTOO\CapaPersistenciaPresupuesto\bin\Debug\LogicaModeloPresupuesto.dll
+C:\Users\zonia\Desktop\TrabajoTOO\CapaPersistenciaPresupuesto\bin\Debug\LogicaModeloVehiculo.dll
+C:\Users\zonia\Desktop\TrabajoTOO\CapaPersistenciaPresupuesto\bin\Debug\CapaPersistenciaCliente.pdb
+C:\Users\zonia\Desktop\TrabajoTOO\CapaPersistenciaPresupuesto\bin\Debug\CapaPersistenciaVehiculo.pdb
+C:\Users\zonia\Desktop\TrabajoTOO\CapaPersistenciaPresupuesto\bin\Debug\LogicaModeloCliente.pdb
+C:\Users\zonia\Desktop\TrabajoTOO\CapaPersistenciaPresupuesto\bin\Debug\LogicaModeloPresupuesto.pdb
+C:\Users\zonia\Desktop\TrabajoTOO\CapaPersistenciaPresupuesto\bin\Debug\LogicaModeloVehiculo.pdb
+C:\Users\zonia\Desktop\TrabajoTOO\CapaPersistenciaPresupuesto\obj\Debug\CapaPersistenciaPresupuesto.csprojAssemblyReference.cache
+C:\Users\zonia\Desktop\TrabajoTOO\CapaPersistenciaPresupuesto\obj\Debug\CapaPersistenciaPresupuesto.csproj.CoreCompileInputs.cache
+C:\Users\zonia\Desktop\TrabajoTOO\CapaPersistenciaPresupuesto\obj\Debug\CapaPersistenciaPresupuesto.csproj.CopyComplete
+C:\Users\zonia\Desktop\TrabajoTOO\CapaPersistenciaPresupuesto\obj\Debug\CapaPersistenciaPresupuesto.dll
+C:\Users\zonia\Desktop\TrabajoTOO\CapaPersistenciaPresupuesto\obj\Debug\CapaPersistenciaPresupuesto.pdb

@@ -27,6 +27,15 @@ namespace LogicaModeloVehiculo
             this.iva = iva;
         }
 
+        public vehiculo(string nBastidor)
+        {
+            this.nBastidor = nBastidor;
+            this.marca = "";
+            this.modelo = "";
+            this.potencia = 0;
+            this.precioRecomendado = 0;
+            this.iva = iva.cocheNuevo;
+        }
 
         /// <summary>
         /// get, devuelve el numero de bastidor
