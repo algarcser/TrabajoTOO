@@ -41,7 +41,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BDExtras.cs" />
     <Compile Include="BDvehiculo.cs" />
+    <Compile Include="BDVehiculo_Extras.cs" />
     <Compile Include="ivaDato.cs" />
     <Compile Include="PersistenciaVehiculo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
