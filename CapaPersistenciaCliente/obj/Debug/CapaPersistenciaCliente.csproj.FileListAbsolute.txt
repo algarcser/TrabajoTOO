@@ -16,3 +16,12 @@ C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\CapaPersistenciaCliente\obj\Deb
 C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\CapaPersistenciaCliente\obj\Debug\CapaPersistenciaCliente.csproj.CopyComplete
 C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\CapaPersistenciaCliente\obj\Debug\CapaPersistenciaCliente.dll
 C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\CapaPersistenciaCliente\obj\Debug\CapaPersistenciaCliente.pdb
+C:\Users\zonia\Desktop\TrabajoTOO\CapaPersistenciaCliente\bin\Debug\CapaPersistenciaCliente.dll
+C:\Users\zonia\Desktop\TrabajoTOO\CapaPersistenciaCliente\bin\Debug\CapaPersistenciaCliente.pdb
+C:\Users\zonia\Desktop\TrabajoTOO\CapaPersistenciaCliente\bin\Debug\LogicaModeloCliente.dll
+C:\Users\zonia\Desktop\TrabajoTOO\CapaPersistenciaCliente\bin\Debug\LogicaModeloCliente.pdb
+C:\Users\zonia\Desktop\TrabajoTOO\CapaPersistenciaCliente\obj\Debug\CapaPersistenciaCliente.csprojAssemblyReference.cache
+C:\Users\zonia\Desktop\TrabajoTOO\CapaPersistenciaCliente\obj\Debug\CapaPersistenciaCliente.csproj.CoreCompileInputs.cache
+C:\Users\zonia\Desktop\TrabajoTOO\CapaPersistenciaCliente\obj\Debug\CapaPersistenciaCliente.csproj.CopyComplete
+C:\Users\zonia\Desktop\TrabajoTOO\CapaPersistenciaCliente\obj\Debug\CapaPersistenciaCliente.dll
+C:\Users\zonia\Desktop\TrabajoTOO\CapaPersistenciaCliente\obj\Debug\CapaPersistenciaCliente.pdb
