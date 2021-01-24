@@ -58,6 +58,12 @@
     <Compile Include="IntroducirDNIPresupuesto.Designer.cs">
       <DependentUpon>IntroducirDNIPresupuesto.cs</DependentUpon>
     </Compile>
+    <Compile Include="ListadoOrdenadoPresupuestos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListadoOrdenadoPresupuestos.Designer.cs">
+      <DependentUpon>ListadoOrdenadoPresupuestos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ucPresupuesto.cs">
@@ -73,6 +79,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="IntroducirDNIPresupuesto.resx">
       <DependentUpon>IntroducirDNIPresupuesto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListadoOrdenadoPresupuestos.resx">
+      <DependentUpon>ListadoOrdenadoPresupuestos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ucPresupuesto.resx">
       <DependentUpon>ucPresupuesto.cs</DependentUpon>

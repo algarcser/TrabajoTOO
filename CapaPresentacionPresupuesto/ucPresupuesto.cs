@@ -80,12 +80,13 @@ namespace CapaPresentacionPresupuesto
             BindingSource bindingSource = new BindingSource();
             bindingSource.DataSource = presupuesto.ListaVehiculos;
             this.lboListaVehiculos.DataSource = bindingSource;
+            // (?) this.lboListaVehiculos.DataBindings.Add(new Binding("DisplayMember", bindingSource, ""))
             this.lboListaVehiculos.SelectionMode = SelectionMode.One;
-            //this.lboListaVehiculos.DataBindings.Add(new Binding());
+            this.lboListaVehiculos.DisplayMember = "nBastidor";
             this.btMostrarVehiculo.Visible = true;
 
             this.lbImporte.Visible = true;
-            this.lbImporte.Text = "Importe: " + LNPresupuesto.calcularPresupuesto(presupuesto).ToString();
+            this.lbImporte.Text = "Importe: " + LNPresupuesto.calcularPresupuesto(presupuesto).ToString() + " €";
             this.btAceptar.Visible = true;
             this.btCancelar.Visible = false;
             InitializeComponent();

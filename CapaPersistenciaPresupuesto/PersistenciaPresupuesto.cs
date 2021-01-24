@@ -57,6 +57,19 @@ namespace CapaPersistenciaPresupuesto
         {
             return (BDPresupuesto.EXISTPresupuesto(conversor.Convertir(referencia)));
         }
+        
+        public static List<Presupuesto> SELECTALL()
+        {
+            List<PresupuestoDato> listaPD = new List<PresupuestoDato>();
+            listaPD = BDPresupuesto.SELECTALLPresupuesto();
+            List<Presupuesto> listaP = new List<Presupuesto>();
+            foreach (PresupuestoDato p in listaPD)
+            {
+                listaP.Add(conversor.Convertir(p));
+            }
+
+            return (listaPD);
+        }
 
         public static class conversor
         {

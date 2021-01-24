@@ -25,54 +25,62 @@ namespace CapaPresentacionPresupuesto
 
         private void btAceptar_Click(object sender, EventArgs e)
         {
-            if (this.accion.Equals("crear"))
+            if (mtbDNI.MaskFull)
             {
-                if (LNCliente.existeCliente(mtbDNI.Text) == true)
+                if (this.accion.Equals("crear"))
                 {
-                    Form crearPresupuesto = new CrearMostrarPresupuesto(LNCliente.readCliente(mtbDNI.Text));
-                    crearPresupuesto.Show();
-                    this.Close();
-                }
-                else
-                {
-                    DialogResult result = MessageBox.Show("¿Quieres darlo de alta?", "No existe un cliente con ese DNI", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                    if(result == DialogResult.Yes)
+                    if (LNCliente.existeCliente(mtbDNI.Text) == true)
                     {
-                        Form crearCliente = new Alta_Cliente();
-                        crearCliente.ShowDialog();
-                        if (LNCliente.existeCliente(mtbDNI.Text) == true)
+                        Form crearPresupuesto = new CrearMostrarPresupuesto(LNCliente.readCliente(mtbDNI.Text));
+                        crearPresupuesto.Show();
+                        this.Close();
+                    }
+                    else
+                    {
+                        DialogResult result = MessageBox.Show("¿Quieres darlo de alta?", "No existe un cliente con ese DNI", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                        if (result == DialogResult.Yes)
                         {
-                            Form crearPresupuesto = new CrearMostrarPresupuesto(LNCliente.readCliente(mtbDNI.Text));
-                            crearPresupuesto.Show();
+                            Form crearCliente = new Alta_Cliente();
+                            crearCliente.ShowDialog();
+                            if (LNCliente.existeCliente(mtbDNI.Text) == true)
+                            {
+                                Form crearPresupuesto = new CrearMostrarPresupuesto(LNCliente.readCliente(mtbDNI.Text));
+                                crearPresupuesto.Show();
+                                this.Close();
+                            }
+                        }
+                        else
+                        {
                             this.Close();
                         }
                     }
+                }
+                else if (this.accion.Equals("busqueda"))
+                {
+                    if (LNCliente.existeCliente(mtbDNI.Text) == true)
+                    {
+                        LNCliente.readCliente(mtbDNI.Text);
+
+                        //COMPLETAR con listado ordenado de presupuestos
+
+                    }
                     else
                     {
-                        this.Close();
+                        DialogResult result = MessageBox.Show("    ¿Quieres introducir otro?    ", "No existe un cliente con ese DNI", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                        if (result == DialogResult.Yes)
+                        {
+                            this.mtbDNI.Text = "";
+                        }
+                        else
+                        {
+                            this.Close();
+                        }
                     }
                 }
-            }else if (this.accion.Equals("busqueda"))
+            }
+            else
             {
-                if (LNCliente.existeCliente(mtbDNI.Text) == true)
-                {
-                    LNCliente.readCliente(mtbDNI.Text);
-
-                    //COMPLETAR con listado ordenado de presupuestos
-
-                }
-                else
-                {
-                    DialogResult result = MessageBox.Show("¿Quieres introducir otro?", "No existe un cliente con ese DNI", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                    if (result == DialogResult.Yes)
-                    {
-                        this.mtbDNI.Text = "";
-                    }
-                    else
-                    {
-                        this.Close();
-                    }
-                }
+                MessageBox.Show("Introduce un DNI válido.", "No se ha introducido un DNI", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

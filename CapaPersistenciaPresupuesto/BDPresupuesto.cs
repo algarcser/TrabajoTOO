@@ -80,5 +80,24 @@ namespace CapaPersistenciaPresupuesto
         {
             return (BDPresupuesto.Presupuestos.Contains(presupuestoDato.Identificacion));
         }
+        public static List<PresupuestoDato> SELECTALLPresupuesto()
+        {
+            /*
+            List<ICloneable> oldList = new List<ICloneable>();
+            List<ICloneable> newList = new List<ICloneable>(oldList.Count);
+
+            oldList.ForEach((item) =>
+            {
+                newList.Add((ICloneable)item.Clone());
+            });
+            */
+
+            List<PresupuestoDato> lista = new List<PresupuestoDato>();
+            List<PresupuestoDato> nuevalista = new List<PresupuestoDato>(lista.Count);
+            lista = BDPresupuesto.pres.ToList();
+
+            return (lista);
+        }
+
     }
 }

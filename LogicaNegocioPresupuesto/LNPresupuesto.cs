@@ -80,5 +80,9 @@ namespace LogicaNegocioPresupuesto
         {
             return (PersistenciaPresupuesto.EXIST(referencia));
         }
+        public static List<Presupuesto> SELECTALL()
+        {
+            return (PersistenciaPresupuesto.SELECTALL());
+        }
     }
 }

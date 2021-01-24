@@ -29,3 +29,4 @@ C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\CapaPresentacionPresupuesto\bin
 C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\CapaPresentacionPresupuesto\bin\Debug\CapaPresentacionVehiculo.pdb
 C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\CapaPresentacionPresupuesto\bin\Debug\LogicaNegocioCliente.pdb
 C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\CapaPresentacionPresupuesto\obj\Debug\CapaPresentacionPresupuesto.CrearMostrarPresupuesto.resources
+C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\CapaPresentacionPresupuesto\obj\Debug\CapaPresentacionPresupuesto.ListadoOrdenadoPresupuestos.resources
