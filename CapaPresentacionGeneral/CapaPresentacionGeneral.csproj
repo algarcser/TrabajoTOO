@@ -80,6 +80,14 @@
       <Project>{aa26a431-8e2a-42ee-9405-9a072f8c1ba5}</Project>
       <Name>CapaPresentacionVehiculo</Name>
     </ProjectReference>
+    <ProjectReference Include="..\LogicaModeloPresupuesto\LogicaModeloPresupuesto.csproj">
+      <Project>{a29193ab-3238-498b-80f8-a2f820efccff}</Project>
+      <Name>LogicaModeloPresupuesto</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LogicaNegocioPresupuesto\LogicaNegocioPresupuesto.csproj">
+      <Project>{7adeaa37-8f7f-40d3-97d1-bcf6eca465df}</Project>
+      <Name>LogicaNegocioPresupuesto</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Coche.ico" />

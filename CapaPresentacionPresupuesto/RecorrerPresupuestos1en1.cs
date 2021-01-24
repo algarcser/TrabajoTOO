@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace CapaPresentacionPresupuesto
 {
-    public partial class PasarPresupuestos1en1 : Form
+    public partial class FormRecorrerPresupuestos1en1 : Form
     {
-        public PasarPresupuestos1en1()
+        public FormRecorrerPresupuestos1en1()
         {
             InitializeComponent();
         }

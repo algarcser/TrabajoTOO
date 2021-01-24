@@ -1,7 +1,7 @@
 ﻿
 namespace CapaPresentacionPresupuesto
 {
-    partial class CrearMostrarPresupuesto
+    partial class FormCrearMostrarPresupuesto
     {
         /// <summary>
         /// Required designer variable.
@@ -29,10 +29,10 @@ namespace CapaPresentacionPresupuesto
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CrearMostrarPresupuesto));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCrearMostrarPresupuesto));
             this.SuspendLayout();
             // 
-            // CrearMostrarPresupuesto
+            // FormCrearMostrarPresupuesto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -40,7 +40,7 @@ namespace CapaPresentacionPresupuesto
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(298, 285);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "CrearMostrarPresupuesto";
+            this.Name = "FormCrearMostrarPresupuesto";
             this.Text = "CrearMostrarPresupuesto";
             this.Load += new System.EventHandler(this.FormCrearMostrarPresupuesto_Load);
             this.ResumeLayout(false);

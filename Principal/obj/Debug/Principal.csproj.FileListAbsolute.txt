@@ -72,3 +72,11 @@ C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\Principal\obj\Debug\Principal.c
 C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\Principal\obj\Debug\Principal.csproj.CopyComplete
 C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\Principal\obj\Debug\Principal.exe
 C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\Principal\obj\Debug\Principal.pdb
+C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\Principal\bin\Debug\CapaPresentacionPresupuesto.exe
+C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\Principal\bin\Debug\LogicaNegocioPresupuesto.dll
+C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\Principal\bin\Debug\LogicaModeloPresupuesto.dll
+C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\Principal\bin\Debug\CapaPersistenciaPresupuesto.dll
+C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\Principal\bin\Debug\CapaPresentacionPresupuesto.pdb
+C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\Principal\bin\Debug\LogicaNegocioPresupuesto.pdb
+C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\Principal\bin\Debug\LogicaModeloPresupuesto.pdb
+C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\Principal\bin\Debug\CapaPersistenciaPresupuesto.pdb

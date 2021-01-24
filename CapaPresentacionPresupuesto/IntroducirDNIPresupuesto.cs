@@ -34,7 +34,7 @@ namespace CapaPresentacionPresupuesto
                     Cliente c1 = new Cliente(mtbDNI.Text);
                     if (LNCliente.existeCliente(c1) == true)
                     {
-                        Form crearPresupuesto = new CrearMostrarPresupuesto(LNCliente.readCliente(c1));
+                        Form crearPresupuesto = new FormCrearMostrarPresupuesto(LNCliente.readCliente(c1));
                         crearPresupuesto.Show();
                         this.Close();
                     }
@@ -48,7 +48,7 @@ namespace CapaPresentacionPresupuesto
                             crearCliente.ShowDialog();
                             if (LNCliente.existeCliente(c2) == true)
                             {
-                                Form crearPresupuesto = new CrearMostrarPresupuesto(LNCliente.readCliente(c2));
+                                Form crearPresupuesto = new FormCrearMostrarPresupuesto(LNCliente.readCliente(c2));
                                 crearPresupuesto.Show();
                                 this.Close();
                             }
@@ -75,7 +75,7 @@ namespace CapaPresentacionPresupuesto
                             }
                         }
 
-                        Form busquedaPresupuestoPorDNI = new ListadoOrdenadoPresupuestos(listaCribadaDNI);
+                        Form busquedaPresupuestoPorDNI = new FormListadoOrdenadoPresupuestos(listaCribadaDNI);
                         busquedaPresupuestoPorDNI.Show();
                         this.Close();
                         //COMPLETAR con listado ordenado de presupuestos

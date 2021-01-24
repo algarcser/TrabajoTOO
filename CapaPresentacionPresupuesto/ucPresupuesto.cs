@@ -126,7 +126,7 @@ namespace CapaPresentacionPresupuesto
 
         private void btIntroducirVehiculo_Click(object sender, EventArgs e)
         {
-            IntroducirNBastidorPresupuesto introducirVehiculo = new IntroducirNBastidorPresupuesto("introducir");
+            FormIntroducirNBastidorPresupuesto introducirVehiculo = new FormIntroducirNBastidorPresupuesto("introducir");
             introducirVehiculo.ShowDialog();
             vehiculo v = introducirVehiculo.Vehiculo;
             if (v != null)

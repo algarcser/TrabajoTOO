@@ -12,11 +12,11 @@ using CapaPresentacionVehiculo;
 
 namespace CapaPresentacionPresupuesto
 {
-    public partial class MostrarListaVehiculosPresupuesto : Form
+    public partial class FormMostrarListaVehiculosPresupuesto : Form
     {
         List<vehiculo> listaVehiculos;
 
-        public MostrarListaVehiculosPresupuesto(List<vehiculo> lv)
+        public FormMostrarListaVehiculosPresupuesto(List<vehiculo> lv)
         {
             this.listaVehiculos = lv;
             BindingSource bindingSource = new BindingSource();

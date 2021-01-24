@@ -12,19 +12,19 @@ using LogicaModeloPresupuesto;
 
 namespace CapaPresentacionPresupuesto
 {
-    public partial class CrearMostrarPresupuesto : Form
+    public partial class FormCrearMostrarPresupuesto : Form
     {
         private Cliente cliente;
         private Presupuesto presupuesto;
 
-        public CrearMostrarPresupuesto(Cliente c) //crear
+        public FormCrearMostrarPresupuesto(Cliente c) //crear
         {
             this.cliente = c;
             this.Text = "Crear presupuesto";
             InitializeComponent();
         }
 
-        public CrearMostrarPresupuesto(Presupuesto p) //mostrar
+        public FormCrearMostrarPresupuesto(Presupuesto p) //mostrar
         {
             this.presupuesto = p;
             this.Text = "Mostrar presupuesto";

@@ -1,7 +1,7 @@
 ﻿
 namespace CapaPresentacionPresupuesto
 {
-    partial class IntroducirNBastidorPresupuesto
+    partial class FormIntroducirNBastidorPresupuesto
     {
         /// <summary>
         /// Required designer variable.
@@ -30,7 +30,7 @@ namespace CapaPresentacionPresupuesto
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(IntroducirNBastidorPresupuesto));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormIntroducirNBastidorPresupuesto));
             this.mtbNBastidor = new System.Windows.Forms.MaskedTextBox();
             this.lbNbastidor = new System.Windows.Forms.Label();
             this.btAceptar = new System.Windows.Forms.Button();
@@ -80,7 +80,7 @@ namespace CapaPresentacionPresupuesto
             // 
             this.ttNBastidor.IsBalloon = true;
             // 
-            // IntroducirNBastidorPresupuesto
+            // FormIntroducirNBastidorPresupuesto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -90,7 +90,7 @@ namespace CapaPresentacionPresupuesto
             this.Controls.Add(this.lbNbastidor);
             this.Controls.Add(this.mtbNBastidor);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "IntroducirNBastidorPresupuesto";
+            this.Name = "FormIntroducirNBastidorPresupuesto";
             this.Text = "Introducir Nº de bastidor";
             this.Load += new System.EventHandler(this.IntroducirNBastidorPresupuesto_Load);
             this.ResumeLayout(false);

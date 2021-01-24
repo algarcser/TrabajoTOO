@@ -1,7 +1,7 @@
 ﻿
 namespace CapaPresentacionPresupuesto
 {
-    partial class ListadoOrdenadoPresupuestos
+    partial class FormListadoOrdenadoPresupuestos
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace CapaPresentacionPresupuesto
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ListadoOrdenadoPresupuestos));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormListadoOrdenadoPresupuestos));
             this.lboFechaCreacion = new System.Windows.Forms.ListBox();
             this.lboCliente = new System.Windows.Forms.ListBox();
             this.lboEstado = new System.Windows.Forms.ListBox();
@@ -41,7 +41,7 @@ namespace CapaPresentacionPresupuesto
             this.btOrdenarNVehiculos = new System.Windows.Forms.Button();
             this.btOrdenarImporte = new System.Windows.Forms.Button();
             this.btMostrarPresupuesto = new System.Windows.Forms.Button();
-            this.btPasarP1en1 = new System.Windows.Forms.Button();
+            this.btRecorrerP1en1 = new System.Windows.Forms.Button();
             this.btMostrarCliente = new System.Windows.Forms.Button();
             this.btMostrarListaVehiculos = new System.Windows.Forms.Button();
             this.btCerrar = new System.Windows.Forms.Button();
@@ -144,15 +144,16 @@ namespace CapaPresentacionPresupuesto
             this.btMostrarPresupuesto.Text = "Mostrar presupuesto";
             this.btMostrarPresupuesto.UseVisualStyleBackColor = true;
             // 
-            // btPasarP1en1
+            // btRecorrerP1en1
             // 
-            this.btPasarP1en1.AutoSize = true;
-            this.btPasarP1en1.Location = new System.Drawing.Point(553, 269);
-            this.btPasarP1en1.Name = "btPasarP1en1";
-            this.btPasarP1en1.Size = new System.Drawing.Size(158, 23);
-            this.btPasarP1en1.TabIndex = 11;
-            this.btPasarP1en1.Text = "Pasar presupuestos de 1 en 1";
-            this.btPasarP1en1.UseVisualStyleBackColor = true;
+            this.btRecorrerP1en1.AutoSize = true;
+            this.btRecorrerP1en1.Location = new System.Drawing.Point(553, 269);
+            this.btRecorrerP1en1.Name = "btRecorrerP1en1";
+            this.btRecorrerP1en1.Size = new System.Drawing.Size(172, 23);
+            this.btRecorrerP1en1.TabIndex = 11;
+            this.btRecorrerP1en1.Text = "Recorrer presupuestos de 1 en 1";
+            this.btRecorrerP1en1.UseVisualStyleBackColor = true;
+            this.btRecorrerP1en1.Click += new System.EventHandler(this.btRecorrerP1en1_Click);
             // 
             // btMostrarCliente
             // 
@@ -186,7 +187,7 @@ namespace CapaPresentacionPresupuesto
             this.btCerrar.UseVisualStyleBackColor = true;
             this.btCerrar.Click += new System.EventHandler(this.btCerrar_Click);
             // 
-            // ListadoOrdenadoPresupuestos
+            // FormListadoOrdenadoPresupuestos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -194,7 +195,7 @@ namespace CapaPresentacionPresupuesto
             this.Controls.Add(this.btCerrar);
             this.Controls.Add(this.btMostrarListaVehiculos);
             this.Controls.Add(this.btMostrarCliente);
-            this.Controls.Add(this.btPasarP1en1);
+            this.Controls.Add(this.btRecorrerP1en1);
             this.Controls.Add(this.btMostrarPresupuesto);
             this.Controls.Add(this.btOrdenarImporte);
             this.Controls.Add(this.btOrdenarNVehiculos);
@@ -207,7 +208,7 @@ namespace CapaPresentacionPresupuesto
             this.Controls.Add(this.lboCliente);
             this.Controls.Add(this.lboFechaCreacion);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "ListadoOrdenadoPresupuestos";
+            this.Name = "FormListadoOrdenadoPresupuestos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Listado de presupuestos";
             this.ResumeLayout(false);
@@ -228,7 +229,7 @@ namespace CapaPresentacionPresupuesto
         private System.Windows.Forms.Button btOrdenarNVehiculos;
         private System.Windows.Forms.Button btOrdenarImporte;
         private System.Windows.Forms.Button btMostrarPresupuesto;
-        private System.Windows.Forms.Button btPasarP1en1;
+        private System.Windows.Forms.Button btRecorrerP1en1;
         private System.Windows.Forms.Button btMostrarCliente;
         private System.Windows.Forms.Button btMostrarListaVehiculos;
         private System.Windows.Forms.Button btCerrar;

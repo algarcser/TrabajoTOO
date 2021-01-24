@@ -13,12 +13,12 @@ using LogicaModeloVehiculo;
 
 namespace CapaPresentacionPresupuesto
 {
-    public partial class IntroducirNBastidorPresupuesto : Form
+    public partial class FormIntroducirNBastidorPresupuesto : Form
     {
         private string accion; //acciones busqueda(mostrar) por vehículo e introducir(crear) vehiculo
         private vehiculo vehiculo;
 
-        public IntroducirNBastidorPresupuesto(string ac)
+        public FormIntroducirNBastidorPresupuesto(string ac)
         {
             this.accion = ac;
             InitializeComponent();

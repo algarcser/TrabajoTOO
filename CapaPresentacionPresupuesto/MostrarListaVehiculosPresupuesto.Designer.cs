@@ -1,7 +1,7 @@
 ﻿
 namespace CapaPresentacionPresupuesto
 {
-    partial class MostrarListaVehiculosPresupuesto
+    partial class FormMostrarListaVehiculosPresupuesto
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace CapaPresentacionPresupuesto
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MostrarListaVehiculosPresupuesto));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMostrarListaVehiculosPresupuesto));
             this.lboVehiculos = new System.Windows.Forms.ListBox();
             this.btMostrarVehiculo = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -64,7 +64,7 @@ namespace CapaPresentacionPresupuesto
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // MostrarListaVehiculosPresupuesto
+            // FormMostrarListaVehiculosPresupuesto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -73,7 +73,7 @@ namespace CapaPresentacionPresupuesto
             this.Controls.Add(this.btMostrarVehiculo);
             this.Controls.Add(this.lboVehiculos);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "MostrarListaVehiculosPresupuesto";
+            this.Name = "FormMostrarListaVehiculosPresupuesto";
             this.Text = "Lista de vehículos";
             this.ResumeLayout(false);
             this.PerformLayout();

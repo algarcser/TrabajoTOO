@@ -8,6 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using CapaPresentacionVehiculo;
+using CapaPresentacionPresupuesto;
+using LogicaNegocioPresupuesto;
+using LogicaModeloPresupuesto;
 
 namespace CapaPresentacionGeneral
 {
@@ -52,6 +55,24 @@ namespace CapaPresentacionGeneral
         {
             Form obtenerNBastidor = new ObtenerNBastidor( enumObjetivo.Baja );
             obtenerNBastidor.Show();
+        }
+
+        private void tsmiCrearPresupuesto_Click(object sender, EventArgs e)
+        {
+            Form crearPresupuesto = new FormIntroducirDNIPresupuesto("crear");
+            crearPresupuesto.Show();
+        }
+
+        private void tsmiBPPorCliente_Click(object sender, EventArgs e)
+        {
+            Form busquedaPresupuestosCliente = new FormIntroducirDNIPresupuesto("busqueda");
+            busquedaPresupuestosCliente.Show();
+        }
+
+        private void tsmiMostrarTodos_Click(object sender, EventArgs e)
+        {
+            Form mostrarTodosPresupuestos = new FormListadoOrdenadoPresupuestos(LNPresupuesto.SELECTALL());
+            mostrarTodosPresupuestos.Show();
         }
     }
 }

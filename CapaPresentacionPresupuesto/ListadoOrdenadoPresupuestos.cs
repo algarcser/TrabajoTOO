@@ -15,11 +15,11 @@ using CapaPresentacionCliente;
 
 namespace CapaPresentacionPresupuesto
 {
-    public partial class ListadoOrdenadoPresupuestos : Form
+    public partial class FormListadoOrdenadoPresupuestos : Form
     {
         List<Presupuesto> listaPresupuestos;
 
-        public ListadoOrdenadoPresupuestos(List<Presupuesto> lp)
+        public FormListadoOrdenadoPresupuestos(List<Presupuesto> lp)
         {
             this.listaPresupuestos = lp;
             BindingSource bindingSource = new BindingSource();
@@ -62,7 +62,7 @@ namespace CapaPresentacionPresupuesto
             }
             else
             {
-                Form mostrarListaVehiculos = new MostrarListaVehiculosPresupuesto((List<vehiculo>)this.lboNVehiculos.SelectedItem);
+                Form mostrarListaVehiculos = new FormMostrarListaVehiculosPresupuesto((List<vehiculo>)this.lboNVehiculos.SelectedItem);
                 mostrarListaVehiculos.Show();
             }     
         }
@@ -70,6 +70,12 @@ namespace CapaPresentacionPresupuesto
         private void btCerrar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btRecorrerP1en1_Click(object sender, EventArgs e)
+        {
+            Form recorrerPresupuestos = new FormRecorrerPresupuestos1en1();
+            recorrerPresupuestos.Show();
         }
     }
 }
