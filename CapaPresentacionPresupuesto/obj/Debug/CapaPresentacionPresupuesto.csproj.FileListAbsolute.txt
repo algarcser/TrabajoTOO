@@ -64,3 +64,6 @@ C:\Users\zonia\Desktop\TrabajoTOO\CapaPresentacionPresupuesto\bin\Debug\CapaPers
 C:\Users\zonia\Desktop\TrabajoTOO\CapaPresentacionPresupuesto\obj\Debug\CapaPresentacionPresupuesto.csproj.CopyComplete
 C:\Users\zonia\Desktop\TrabajoTOO\CapaPresentacionPresupuesto\bin\Debug\LogicaNegocioVehiculo.dll
 C:\Users\zonia\Desktop\TrabajoTOO\CapaPresentacionPresupuesto\bin\Debug\LogicaNegocioVehiculo.pdb
+C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\CapaPresentacionPresupuesto\obj\Debug\CapaPresentacionPresupuesto.IntroducirNBastidorPresupuesto.resources
+C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\CapaPresentacionPresupuesto\bin\Debug\LogicaNegocioVehiculo.dll
+C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\CapaPresentacionPresupuesto\bin\Debug\LogicaNegocioVehiculo.pdb

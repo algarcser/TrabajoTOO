@@ -80,6 +80,7 @@ namespace CapaPersistenciaPresupuesto
         {
             return (BDPresupuesto.Presupuestos.Contains(presupuestoDato.Identificacion));
         }
+
         public static List<PresupuestoDato> SELECTALLPresupuesto()
         {
             /*

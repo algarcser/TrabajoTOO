@@ -20,6 +20,7 @@ namespace CapaPresentacionPresupuesto
     public partial class ucPresupuesto : UserControl
     {
         private Cliente cliente;
+        private List<vehiculo> listaVehiculosCrear;
         private Presupuesto presupuesto;
 
         public ucPresupuesto(Cliente c) //crear
@@ -36,6 +37,9 @@ namespace CapaPresentacionPresupuesto
 
             this.btIntroducirVehiculo.Visible = true;
             this.lboListaVehiculos.Enabled = true;
+            BindingSource bindingSource = new BindingSource();
+            bindingSource.DataSource = this.listaVehiculosCrear;
+            this.lboListaVehiculos.DataSource = bindingSource;
             this.btMostrarVehiculo.Visible = true;
 
             this.lbImporte.Visible = false;
@@ -121,8 +125,13 @@ namespace CapaPresentacionPresupuesto
 
         private void btIntroducirVehiculo_Click(object sender, EventArgs e)
         {
-            // Form introducirVehiculo = new ObtenerNBastidor();
-            // introducirVehiculo.ShowDialog();
+            IntroducirNBastidorPresupuesto introducirVehiculo = new IntroducirNBastidorPresupuesto("introducir");
+            introducirVehiculo.ShowDialog();
+            vehiculo v = introducirVehiculo.Vehiculo;
+            if (v != null)
+            {
+                this.listaVehiculosCrear.Add(v);
+            }
             //mostrar ObtenerNBastidor.cs, si existe se añade a la lista, si no se abre dar de alta vehículo
             //JUNTO TODO SU PROCESO,tras darlo de alta se introduce en la lista
         }
@@ -204,13 +213,31 @@ namespace CapaPresentacionPresupuesto
                     //}
                     Presupuesto nuevoPresupuesto = new Presupuesto(DateTime.Now, estado, this.cliente, listaVehiculos);
                     LNPresupuesto.INSERT(nuevoPresupuesto);
+                    this.ParentForm.Close();
                 } 
             }
         }
 
         private void btCancelar_Click(object sender, EventArgs e)
         {
+            this.ParentForm.FormClosing += ParentForm_FormClosing;
             this.ParentForm.Close();
+        }
+
+        private void ParentForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (this.presupuesto == null) //crear //COMPLETAR con si el presupuesto de ha creado no mostrar lo siguiente
+                                                  //es decir, hacer existe por cliente en presupuesto (cambiar BD) para busqueda por cliente
+                                                  //hacer existe por nbastidor en presupuesto (cambiar BD) para busqueda por vehiculo
+                                                  //hacer existe por esatdo en presupuesto (cmabiar BD) para busqueda por estado
+            {
+                DialogResult result = MessageBox.Show("¿Quieres salir sin terminar el presupuesto?", "No se ha completado el presupuesto", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result == DialogResult.No)
+                {
+                    e.Cancel = true;
+                }
+            }
+            throw new NotImplementedException();
         }
     }
 }

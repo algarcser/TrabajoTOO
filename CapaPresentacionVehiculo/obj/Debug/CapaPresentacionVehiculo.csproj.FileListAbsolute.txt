@@ -24,7 +24,6 @@ C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\CapaPresentacionVehiculo\bin\De
 C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\CapaPresentacionVehiculo\bin\Debug\LogicaNegocioVehiculo.pdb
 C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\CapaPresentacionVehiculo\bin\Debug\CapaPersistenciaVehiculo.pdb
 C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\CapaPresentacionVehiculo\obj\Debug\CapaPresentacionVehiculo.csprojAssemblyReference.cache
-C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\CapaPresentacionVehiculo\obj\Debug\CapaPresentacionVehiculo.AnadirVehiculo.resources
 C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\CapaPresentacionVehiculo\obj\Debug\CapaPresentacionVehiculo.Datos2Mano.resources
 C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\CapaPresentacionVehiculo\obj\Debug\CapaPresentacionVehiculo.ObtenerNBastidor.resources
 C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\CapaPresentacionVehiculo\obj\Debug\CapaPresentacionVehiculo.csproj.GenerateResource.cache
@@ -49,3 +48,4 @@ C:\Users\zonia\Desktop\TrabajoTOO\CapaPresentacionVehiculo\bin\Debug\LogicaModel
 C:\Users\zonia\Desktop\TrabajoTOO\CapaPresentacionVehiculo\bin\Debug\LogicaNegocioVehiculo.pdb
 C:\Users\zonia\Desktop\TrabajoTOO\CapaPresentacionVehiculo\bin\Debug\CapaPersistenciaVehiculo.pdb
 C:\Users\zonia\Desktop\TrabajoTOO\CapaPresentacionVehiculo\obj\Debug\CapaPresentacionVehiculo.csproj.CopyComplete
+C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\CapaPresentacionVehiculo\obj\Debug\CapaPresentacionVehiculo.formularioVehiculo.resources

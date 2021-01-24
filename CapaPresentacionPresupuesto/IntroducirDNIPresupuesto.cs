@@ -107,7 +107,7 @@ namespace CapaPresentacionPresupuesto
             else
             {
                 ttDNI.ToolTipTitle = "DNI rechazado";
-                ttDNI.Show("Solo puede introducir ocho caracteres numéricos (0-9) seguidos de una letra [a-zA-Z] en el campo DNI.", mtbDNI, 120, 10, 5000);
+                ttDNI.Show("Solo pueden introducir ocho caracteres numéricos (0-9) seguidos de una letra [a-zA-Z] en el campo DNI.", mtbDNI, 120, 10, 5000);
             }
         }
 

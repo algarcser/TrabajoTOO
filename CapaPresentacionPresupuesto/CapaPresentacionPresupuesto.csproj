@@ -58,6 +58,12 @@
     <Compile Include="IntroducirDNIPresupuesto.Designer.cs">
       <DependentUpon>IntroducirDNIPresupuesto.cs</DependentUpon>
     </Compile>
+    <Compile Include="IntroducirNBastidorPresupuesto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IntroducirNBastidorPresupuesto.Designer.cs">
+      <DependentUpon>IntroducirNBastidorPresupuesto.cs</DependentUpon>
+    </Compile>
     <Compile Include="ListadoOrdenadoPresupuestos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -79,6 +85,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="IntroducirDNIPresupuesto.resx">
       <DependentUpon>IntroducirDNIPresupuesto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IntroducirNBastidorPresupuesto.resx">
+      <DependentUpon>IntroducirNBastidorPresupuesto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ListadoOrdenadoPresupuestos.resx">
       <DependentUpon>ListadoOrdenadoPresupuestos.cs</DependentUpon>
@@ -115,6 +124,10 @@
     <ProjectReference Include="..\LogicaNegocioPresupuesto\LogicaNegocioPresupuesto.csproj">
       <Project>{7adeaa37-8f7f-40d3-97d1-bcf6eca465df}</Project>
       <Name>LogicaNegocioPresupuesto</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LogicaNegocioVehiculo\LogicaNegocioVehiculo.csproj">
+      <Project>{89739b2a-34e9-4940-9528-4661ae3b2804}</Project>
+      <Name>LogicaNegocioVehiculo</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -29,6 +29,19 @@ namespace LogicaModeloPresupuesto
             this.vehiculos = v;
         }
 
+        public Presupuesto(Cliente c)
+        {
+            this.cliente = c;
+        }
+        public Presupuesto(vehiculo v)
+        {
+            this.vehiculos.Add(v);
+        }
+        public Presupuesto(EstadoPresupuesto e)
+        {
+            this.estado = e;
+        }
+
         /// <summary>
         /// It returns the ID.
         /// </summary>

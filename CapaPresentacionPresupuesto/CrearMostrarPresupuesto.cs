@@ -20,12 +20,14 @@ namespace CapaPresentacionPresupuesto
         public CrearMostrarPresupuesto(Cliente c) //crear
         {
             this.cliente = c;
+            this.Text = "Crear presupuesto";
             InitializeComponent();
         }
 
         public CrearMostrarPresupuesto(Presupuesto p) //mostrar
         {
             this.presupuesto = p;
+            this.Text = "Mostrar presupuesto";
             InitializeComponent();
         }
 
@@ -40,8 +42,7 @@ namespace CapaPresentacionPresupuesto
             {
                 ucPresupuesto mostrarPresupuesto = new ucPresupuesto(this.presupuesto);
                 this.Controls.Add(mostrarPresupuesto);
-            }
-                
+            }    
         }
     }
 }
