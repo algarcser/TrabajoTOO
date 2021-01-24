@@ -82,5 +82,20 @@ namespace CapaPersistenciaVehiculo
             }
             return lista;
         }
+
+        internal static List<extraDato> Obtain_All_Extras(List<int> ids)
+        {
+            List<extraDato> extras = new List<extraDato>();
+            foreach (int id in ids)
+            {
+                extraDato auxiliar;
+                if(BDExtras.Exists(new extraDato(id)))
+                {
+                    BDExtras.SELECT(new extraDato(id), out auxiliar);
+                    extras.Add(auxiliar);
+                }
+            }
+            return extras;
+        }
     }
 }

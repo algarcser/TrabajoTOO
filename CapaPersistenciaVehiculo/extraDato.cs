@@ -19,6 +19,13 @@ namespace CapaPersistenciaVehiculo
             this.precio = precio;
         }
 
+        public extraDato(int id)
+        {
+            this.id = id;
+            this.descripcion = "";
+            this.precio = 0;
+        }
+
         /// <summary>
         /// get: devuelve descripcion
         /// </summary>
@@ -37,6 +44,7 @@ namespace CapaPersistenciaVehiculo
                 return this.id;
             }
         }
+
 
         public override int GetHashCode()
         {

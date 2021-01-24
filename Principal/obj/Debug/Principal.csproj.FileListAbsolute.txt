@@ -80,3 +80,11 @@ C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\Principal\bin\Debug\CapaPresent
 C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\Principal\bin\Debug\LogicaNegocioPresupuesto.pdb
 C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\Principal\bin\Debug\LogicaModeloPresupuesto.pdb
 C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\Principal\bin\Debug\CapaPersistenciaPresupuesto.pdb
+C:\Users\zonia\Desktop\TrabajoTOO\Principal\bin\Debug\CapaPresentacionPresupuesto.exe
+C:\Users\zonia\Desktop\TrabajoTOO\Principal\bin\Debug\LogicaNegocioPresupuesto.dll
+C:\Users\zonia\Desktop\TrabajoTOO\Principal\bin\Debug\LogicaModeloPresupuesto.dll
+C:\Users\zonia\Desktop\TrabajoTOO\Principal\bin\Debug\CapaPersistenciaPresupuesto.dll
+C:\Users\zonia\Desktop\TrabajoTOO\Principal\bin\Debug\CapaPresentacionPresupuesto.pdb
+C:\Users\zonia\Desktop\TrabajoTOO\Principal\bin\Debug\LogicaNegocioPresupuesto.pdb
+C:\Users\zonia\Desktop\TrabajoTOO\Principal\bin\Debug\LogicaModeloPresupuesto.pdb
+C:\Users\zonia\Desktop\TrabajoTOO\Principal\bin\Debug\CapaPersistenciaPresupuesto.pdb

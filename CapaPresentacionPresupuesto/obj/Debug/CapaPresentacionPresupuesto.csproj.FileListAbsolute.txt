@@ -31,9 +31,7 @@ C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\CapaPresentacionPresupuesto\bin
 C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\CapaPresentacionPresupuesto\obj\Debug\CapaPresentacionPresupuesto.CrearMostrarPresupuesto.resources
 C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\CapaPresentacionPresupuesto\obj\Debug\CapaPresentacionPresupuesto.ListadoOrdenadoPresupuestos.resources
 C:\Users\zonia\Desktop\TrabajoTOO\CapaPresentacionPresupuesto\obj\Debug\CapaPresentacionPresupuesto.csprojAssemblyReference.cache
-C:\Users\zonia\Desktop\TrabajoTOO\CapaPresentacionPresupuesto\obj\Debug\CapaPresentacionPresupuesto.CrearMostrarPresupuesto.resources
 C:\Users\zonia\Desktop\TrabajoTOO\CapaPresentacionPresupuesto\obj\Debug\CapaPresentacionPresupuesto.FormIntroducirDNIPresupuesto.resources
-C:\Users\zonia\Desktop\TrabajoTOO\CapaPresentacionPresupuesto\obj\Debug\CapaPresentacionPresupuesto.ListadoOrdenadoPresupuestos.resources
 C:\Users\zonia\Desktop\TrabajoTOO\CapaPresentacionPresupuesto\obj\Debug\CapaPresentacionPresupuesto.ucPresupuesto.resources
 C:\Users\zonia\Desktop\TrabajoTOO\CapaPresentacionPresupuesto\obj\Debug\CapaPresentacionPresupuesto.csproj.GenerateResource.cache
 C:\Users\zonia\Desktop\TrabajoTOO\CapaPresentacionPresupuesto\obj\Debug\CapaPresentacionPresupuesto.csproj.CoreCompileInputs.cache
@@ -79,6 +77,8 @@ C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\CapaPresentacionPresupuesto
 C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\CapaPresentacionPresupuesto\obj\Debug\CapaPresentacionPresupuesto.pdb
 C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\CapaPresentacionPresupuesto\obj\Debug\CapaPresentacionPresupuesto.MostrarListaVehiculosPresupuesto.resources
 C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\CapaPresentacionPresupuesto\obj\Debug\CapaPresentacionPresupuesto.PasarPresupuestos1en1.resources
-C:\Users\zonia\Desktop\TrabajoTOO\CapaPresentacionPresupuesto\obj\Debug\CapaPresentacionPresupuesto.IntroducirNBastidorPresupuesto.resources
-C:\Users\zonia\Desktop\TrabajoTOO\CapaPresentacionPresupuesto\obj\Debug\CapaPresentacionPresupuesto.MostrarListaVehiculosPresupuesto.resources
-C:\Users\zonia\Desktop\TrabajoTOO\CapaPresentacionPresupuesto\obj\Debug\CapaPresentacionPresupuesto.PasarPresupuestos1en1.resources
+C:\Users\zonia\Desktop\TrabajoTOO\CapaPresentacionPresupuesto\obj\Debug\CapaPresentacionPresupuesto.FormCrearMostrarPresupuesto.resources
+C:\Users\zonia\Desktop\TrabajoTOO\CapaPresentacionPresupuesto\obj\Debug\CapaPresentacionPresupuesto.FormIntroducirNBastidorPresupuesto.resources
+C:\Users\zonia\Desktop\TrabajoTOO\CapaPresentacionPresupuesto\obj\Debug\CapaPresentacionPresupuesto.FormListadoOrdenadoPresupuestos.resources
+C:\Users\zonia\Desktop\TrabajoTOO\CapaPresentacionPresupuesto\obj\Debug\CapaPresentacionPresupuesto.FormMostrarListaVehiculosPresupuesto.resources
+C:\Users\zonia\Desktop\TrabajoTOO\CapaPresentacionPresupuesto\obj\Debug\CapaPresentacionPresupuesto.FormRecorrerPresupuestos1en1.resources

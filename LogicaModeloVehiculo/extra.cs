@@ -8,15 +8,32 @@ namespace LogicaModeloVehiculo
 {
     public class extra : IEquatable<extra>
     {
+        private int id;
         private string descripcion;
         private float precio;
+        private static int contador = 1;
+
+        public extra(int id, string descripcion, float precio)
+        {
+            this.id = id;
+            this.descripcion = descripcion;
+            this.precio = precio;
+            contador = contador + 1;
+        }
 
         public extra(string descripcion, float precio)
         {
+            this.id = contador;
             this.descripcion = descripcion;
             this.precio = precio;
+            contador = contador + 1;
         }
 
+
+        public override int GetHashCode()
+        {
+            return 0;
+        }
         /// <summary>
         /// get: devuelve descripcion
         /// </summary>
@@ -28,6 +45,13 @@ namespace LogicaModeloVehiculo
             }
         }
 
+        public int Id
+        {
+            get
+            {
+                return this.id;
+            }
+        }
         /// <summary>
         /// get: devuelve precio
         /// </summary>

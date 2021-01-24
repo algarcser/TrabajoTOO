@@ -58,7 +58,16 @@ namespace CapaPersistenciaVehiculo
             return BDvehiculo.Exists(conversor.Convertir(referencia));
         }
 
-
+        public static List<vehiculo> SELECT_ALL()
+        {
+            List<vehiculo> vehiculos = new List<vehiculo>();
+            foreach(vehiculoDato vehiculoDato in BDvehiculo.SELECT_ALL())
+            {
+                vehiculo auxiliar = conversor.Convertir(vehiculoDato);
+                vehiculos.Add(auxiliar);
+            }
+            return vehiculos;
+        }
 
     }
 
@@ -140,7 +149,7 @@ namespace CapaPersistenciaVehiculo
 
         public static extraDato Convertir(extra extra)
         {
-            return new extraDato(extra.Descripcion, extra.Precio);
+            return new extraDato(extra.Id, extra.Descripcion, extra.Precio);
         }
     }
 }

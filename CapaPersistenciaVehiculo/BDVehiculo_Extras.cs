@@ -81,5 +81,19 @@ namespace CapaPersistenciaVehiculo
             return lista;
         }
 
+        internal static List<int> Obtain_All_Extras(vehiculoDato vehiculoDato)
+        {
+            List<int> lista_id = new List<int>();
+            foreach(vehiculoNuevo_Extra_Dato auxiliar in BDVehiculo_Extras.Tabla_vehiculoNuevo_extras)
+            {
+                if(auxiliar.NBastidor == vehiculoDato.NBastidor)
+                {
+                    lista_id.Add(auxiliar.Id_extra);
+                }
+            }
+
+            return lista_id;
+        }
+
     }
 }

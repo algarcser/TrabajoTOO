@@ -8,13 +8,12 @@ namespace CapaPersistenciaVehiculo
 {
     internal class vehiculoNuevoDato : vehiculoDato
     {
-        private List<extraDato> extras;
 
 
 
         internal vehiculoNuevoDato(string nBastidor, string marca, string modelo, float potencia, float precioRecomendado, ivaDato iva) : base(nBastidor, marca, modelo, potencia, precioRecomendado, iva)
         {
-            this.extras = new List<extraDato>();
+           
         }
 
         /// <summary>
@@ -24,7 +23,7 @@ namespace CapaPersistenciaVehiculo
         {
             get
             {
-                return this.extras;
+                return BDExtras.Obtain_All_Extras( BDVehiculo_Extras.Obtain_All_Extras(this));
             }
         }
 
@@ -33,7 +32,15 @@ namespace CapaPersistenciaVehiculo
 
         internal void AddExtra(extraDato extra)
         {
-            this.extras.Add(extra);
+            if (! BDExtras.Exists(extra))
+            {
+                BDExtras.INSERT(extra);
+            }
+            vehiculoNuevo_Extra_Dato vehiculo_dato = new vehiculoNuevo_Extra_Dato(this.NBastidor, extra.Id);
+            if(!BDVehiculo_Extras.Exists(vehiculo_dato))
+            {
+                BDVehiculo_Extras.INSERT(vehiculo_dato);
+            }
         }
     }
 }
