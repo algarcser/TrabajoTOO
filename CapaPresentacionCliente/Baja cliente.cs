@@ -40,6 +40,7 @@ namespace CapaPresentacionCliente
             if (result == DialogResult.Yes)
             {
                 LNCliente.bajaCliente(clBuscado);
+                MessageBox.Show("Cliente eliminado", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
