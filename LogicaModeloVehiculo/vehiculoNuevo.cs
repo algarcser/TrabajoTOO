@@ -19,7 +19,7 @@ namespace LogicaModeloVehiculo
 
         public vehiculoNuevo(string nBastidor) : base(nBastidor)
         {
-            this.extras = null;
+            this.extras = new List<extra>();
         }
 
         /// <summary>

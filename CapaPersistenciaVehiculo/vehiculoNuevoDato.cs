@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace CapaPersistenciaVehiculo
 {
-    class vehiculoNuevoDato : vehiculoDato
+    internal class vehiculoNuevoDato : vehiculoDato
     {
         private List<extraDato> extras;
 
 
 
-        private vehiculoNuevoDato(string nBastidor, string marca, string modelo, float potencia, float precioRecomendado, ivaDato iva) : base(nBastidor, marca, modelo, potencia, precioRecomendado, iva)
+        internal vehiculoNuevoDato(string nBastidor, string marca, string modelo, float potencia, float precioRecomendado, ivaDato iva) : base(nBastidor, marca, modelo, potencia, precioRecomendado, iva)
         {
             this.extras = new List<extraDato>();
         }

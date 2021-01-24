@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using LogicaModeloVehiculo;
 
+
 namespace CapaPersistenciaVehiculo
 {
     public static class PersistenciaVehiculo
@@ -66,7 +67,6 @@ namespace CapaPersistenciaVehiculo
         public static vehiculo Convertir(vehiculoDato vehiculoDato)
         {
 
-
             iva auxiliarIva;
             if(vehiculoDato.Iva == 0)
             {
@@ -83,7 +83,7 @@ namespace CapaPersistenciaVehiculo
                 vehiculo2ManoDato auxiliarVehiculo = vehiculoDato as vehiculo2ManoDato;
                 return new vehiculo2Mano(auxiliarVehiculo.NBastidor, auxiliarVehiculo.Modelo, auxiliarVehiculo.Marca, auxiliarVehiculo.Potencia, auxiliarVehiculo.PrecioRecomendado, auxiliarIva, auxiliarVehiculo.Matricula, auxiliarVehiculo.FechaMatriculacion);
             }
-            else
+            else if(vehiculoDato is vehiculoNuevoDato)
             {
                 vehiculoNuevoDato auxiliarVehiculo = vehiculoDato as vehiculoNuevoDato;
                 vehiculoNuevo auxiliarVehiculoNuevo = new vehiculoNuevo(auxiliarVehiculo.NBastidor, auxiliarVehiculo.Modelo, auxiliarVehiculo.Marca, auxiliarVehiculo.Potencia, auxiliarVehiculo.PrecioRecomendado, auxiliarIva);
@@ -94,21 +94,43 @@ namespace CapaPersistenciaVehiculo
                 
                 return auxiliarVehiculoNuevo;
             }
+
+            return null;
             
         }
 
         public static vehiculoDato Convertir(vehiculo vehiculo)
         {
-            ivaDato auxiliar;
+            ivaDato auxiliar_iva_dato;
             if (vehiculo.Iva == 0)
             {
-                auxiliar = ivaDato.cocheNuevo;
+                auxiliar_iva_dato = ivaDato.cocheNuevo;
             }
             else
             {
-                auxiliar = ivaDato.cocheSegundaMano;
+                auxiliar_iva_dato = ivaDato.cocheSegundaMano;
             }
-            return new vehiculoDato(vehiculo.NBastidor, vehiculo.Marca, vehiculo.Modelo, vehiculo.Potencia, vehiculo.PVP, auxiliar);
+            
+
+            if (vehiculo is vehiculo2Mano)
+            {
+                vehiculo2Mano auxiliarVehiculo = vehiculo as vehiculo2Mano;
+                return new vehiculo2ManoDato(auxiliarVehiculo.NBastidor, auxiliarVehiculo.Modelo, auxiliarVehiculo.Marca, auxiliarVehiculo.Potencia, auxiliarVehiculo.PrecioRecomendado, auxiliar_iva_dato, auxiliarVehiculo.Matricula, auxiliarVehiculo.FechaMatriculacion);
+            }
+            else if (vehiculo is vehiculoNuevo)
+            {
+                vehiculoNuevo auxiliarVehiculo = vehiculo as vehiculoNuevo;
+                vehiculoNuevoDato auxiliarVehiculoNuevo = new vehiculoNuevoDato(auxiliarVehiculo.NBastidor, auxiliarVehiculo.Modelo, auxiliarVehiculo.Marca, auxiliarVehiculo.Potencia, auxiliarVehiculo.PrecioRecomendado, auxiliar_iva_dato);
+                foreach (extra extra in auxiliarVehiculo.Extras)
+                {
+                    auxiliarVehiculoNuevo.AddExtra(conversor.Convertir(extra));
+                }
+
+                return auxiliarVehiculoNuevo;
+            }
+
+            return null;
+
         }
 
         public static extra Convertir(extraDato extraDato)

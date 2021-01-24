@@ -28,13 +28,15 @@ namespace CapaPresentacionVehiculo
 
             if ( this.objetivo == enumObjetivo.Alta)
             {
-
+                this.Text = "Dar de alta";
             }else if ( this.objetivo == enumObjetivo.Baja)
             {
+                this.Text = "Dar de baja";
                 this.cargar_Vehiculo();
                 LNVehiculo.DELETE( new vehiculoNuevo(this.textBox_NBastidor.Text.ToString() ));
             }else if ( this.objetivo == enumObjetivo.Ver)
             {
+                this.Text = "Consultar vehiculo";
                 this.cargar_Vehiculo();
             }
 

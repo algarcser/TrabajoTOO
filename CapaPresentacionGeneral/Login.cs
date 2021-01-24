@@ -34,6 +34,7 @@ namespace CapaPresentacionGeneral
             if ((this.tbContraseña.Text == "admin") && (this.tbUsuario.Text == "admin"))
             {
                 Form nuevo = new FormPrincipal(this.tbUsuario.Text);
+                this.Hide();
                 nuevo.Show();
                 this.Close();
             }else
