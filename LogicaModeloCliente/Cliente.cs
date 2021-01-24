@@ -19,6 +19,13 @@ namespace LogicaModeloCliente
             this.categoria = categoria;
             this.tlfno = tlfno;
         }
+        public Cliente(string DNI)
+        {
+            this.nombre = "";
+            this.DNI = DNI;
+            this.categoria = CategoriaCliente.A;
+            this.tlfno = 0;
+        }
 
         /// <summary>
         /// It returns the name of the client

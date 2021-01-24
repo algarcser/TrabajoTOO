@@ -7,7 +7,6 @@ C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\CapaPresentacionVehiculo\bi
 C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\CapaPresentacionVehiculo\bin\Debug\LogicaNegocioVehiculo.pdb
 C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\CapaPresentacionVehiculo\bin\Debug\CapaPersistenciaVehiculo.pdb
 C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\CapaPresentacionVehiculo\obj\Debug\CapaPresentacionVehiculo.csprojAssemblyReference.cache
-C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\CapaPresentacionVehiculo\obj\Debug\CapaPresentacionVehiculo.AnadirVehiculo.resources
 C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\CapaPresentacionVehiculo\obj\Debug\CapaPresentacionVehiculo.Datos2Mano.resources
 C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\CapaPresentacionVehiculo\obj\Debug\CapaPresentacionVehiculo.ObtenerNBastidor.resources
 C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\CapaPresentacionVehiculo\obj\Debug\CapaPresentacionVehiculo.csproj.GenerateResource.cache
@@ -49,3 +48,4 @@ C:\Users\zonia\Desktop\TrabajoTOO\CapaPresentacionVehiculo\bin\Debug\LogicaNegoc
 C:\Users\zonia\Desktop\TrabajoTOO\CapaPresentacionVehiculo\bin\Debug\CapaPersistenciaVehiculo.pdb
 C:\Users\zonia\Desktop\TrabajoTOO\CapaPresentacionVehiculo\obj\Debug\CapaPresentacionVehiculo.csproj.CopyComplete
 C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\CapaPresentacionVehiculo\obj\Debug\CapaPresentacionVehiculo.formularioVehiculo.resources
+C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\CapaPresentacionVehiculo\obj\Debug\CapaPresentacionVehiculo.formularioVehiculo.resources

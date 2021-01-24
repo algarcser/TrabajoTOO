@@ -51,3 +51,7 @@ C:\Users\zonia\Desktop\TrabajoTOO\CapaPresentacionCliente\obj\Debug\CapaPresenta
 C:\Users\zonia\Desktop\TrabajoTOO\CapaPresentacionCliente\obj\Debug\CapaPresentacionCliente.csproj.CopyComplete
 C:\Users\zonia\Desktop\TrabajoTOO\CapaPresentacionCliente\obj\Debug\CapaPresentacionCliente.dll
 C:\Users\zonia\Desktop\TrabajoTOO\CapaPresentacionCliente\obj\Debug\CapaPresentacionCliente.pdb
+C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\CapaPresentacionCliente\bin\Debug\CapaPersistenciaCliente.dll
+C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\CapaPresentacionCliente\bin\Debug\LogicaNegocioCliente.dll
+C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\CapaPresentacionCliente\bin\Debug\CapaPersistenciaCliente.pdb
+C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\CapaPresentacionCliente\bin\Debug\LogicaNegocioCliente.pdb

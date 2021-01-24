@@ -43,17 +43,15 @@ namespace CapaPersistenciaCliente
             return lista;
         }
 
-        public static bool SELECTCliente(string clave, out ClienteDato c)
+        public static ClienteDato SELECTCliente(ClienteDato c)
         {
-            if (BDCliente.EXISTS(clave))
+            if (BDCliente.EXISTS(c))
             {
-                c = BDCliente.clientes[clave];
-                return true;
+                return c = BDCliente.clientes[c.getDNI()];
             }
             else
             {
-                c = null;
-                return false;
+                return c = null;
             }
         }
 
@@ -77,19 +75,9 @@ namespace CapaPersistenciaCliente
             BDCliente.clientes.Remove(c);
         }
 
-        public static bool EXISTS(string clave)
+        public static bool EXISTS(ClienteDato c)
         {
-            return BDCliente.Clientes.Contains(clave);
-            //bool existe = false;
-
-            //foreach (ClienteDato cliente in BDCliente.Clientes)
-            //{
-            //    if (cliente.Equals(c))
-            //    {
-            //        existe = true;
-            //    }
-            //}
-            //return existe;
+            return BDCliente.Clientes.Contains(c.getDNI());
         }
 
     }

@@ -13,15 +13,24 @@ namespace CapaPresentacionCliente
 {
     public partial class Control_datos_cliente : UserControl
     {
-        
+
         public String getDNI()
         {
             return this.textBox1.Text;
         }
 
+        public void setDNI(string DNI)
+        {
+            this.textBox1.Text = DNI;
+        }
+
         public String getNombre()
         {
             return this.textBox2.Text;
+        }
+        public void setNombre(string nom)
+        {
+            this.textBox2.Text = nom;
         }
 
         public String getTelefono()
@@ -29,13 +38,18 @@ namespace CapaPresentacionCliente
             return this.textBox3.Text;
         }
 
+        public void setTfno(string tfno)
+        {
+            this.textBox3.Text = tfno;
+        }
+
         public CategoriaCliente getCategoria()
         {
-            if(this.radioButton1.Checked == true)
+            if (this.radioButton1.Checked == true)
             {
                 return CategoriaCliente.A;
             }
-            else if(this.radioButton2.Checked == true)
+            else if (this.radioButton2.Checked == true)
             {
                 return CategoriaCliente.B;
             }
@@ -43,6 +57,38 @@ namespace CapaPresentacionCliente
             {
                 return CategoriaCliente.C;
             }
+        }
+
+        public void setCategoria(CategoriaCliente cat)
+        {
+            if (cat.Equals(CategoriaCliente.A))
+            {
+                this.radioButton1.Checked = true;
+            }
+            if (cat.Equals(CategoriaCliente.B))
+            {
+                this.radioButton2.Checked = true;
+            }
+            if (cat.Equals(CategoriaCliente.C))
+            {
+                this.radioButton3.Checked = true;
+            }
+
+        }
+
+        public bool getAchecked()
+        {
+            return this.radioButton1.Checked;
+        }
+
+        public bool getBchecked()
+        {
+            return this.radioButton2.Checked;
+        }
+
+        public bool getCchecked()
+        {
+            return this.radioButton3.Checked;
         }
 
         public Control_datos_cliente()
@@ -84,11 +130,6 @@ namespace CapaPresentacionCliente
         {
             this.radioButton1.Enabled = b;
             return this.textBox1.ReadOnly;
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            
         }
     }
 }

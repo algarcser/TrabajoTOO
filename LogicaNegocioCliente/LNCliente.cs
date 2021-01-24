@@ -11,7 +11,7 @@ namespace LogicaNegocioCliente
     public class LNCliente
     {
         //private Comercial comercial;
-        
+
         public static bool altaCliente(Cliente c)
         {
             PersistenciaCliente.CREATE(c);
@@ -24,15 +24,15 @@ namespace LogicaNegocioCliente
             return true;
         }
 
-        public static Cliente readCliente(string DNI)
-        {          
-            return PersistenciaCliente.READ(DNI);
+        public static Cliente readCliente(Cliente c)
+        {
+            return PersistenciaCliente.READ(c);
         }
 
-        public static bool existeCliente(string dni)
+        public static bool existeCliente(Cliente c)
         {
-            return PersistenciaCliente.EXISTE(dni);
+            return PersistenciaCliente.EXISTE(c);
         }
-    
+
     }
 }

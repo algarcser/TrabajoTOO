@@ -12,7 +12,7 @@ namespace CapaPersistenciaCliente
         public static String conex;
         public static void CREATE(Cliente c)
         {
-            if (!BDCliente.EXISTS(c.getDNI()))
+            if (!BDCliente.EXISTS(conversor.Convertir(c)))
             {
                 BDCliente.INSERTCliente(conversor.Convertir(c));
             }
@@ -28,38 +28,27 @@ namespace CapaPersistenciaCliente
             BDCliente.DELETECliente(conversor.Convertir(c));
             BDCliente.INSERTCliente(conversor.Convertir(c));
         }
-        public static Cliente READ(string DNI)
+        public static Cliente READ(Cliente c)
         {
-            ClienteDato auxiliar;
-            bool resultado = BDCliente.SELECTCliente(DNI, out auxiliar);
-            Cliente c;
-            if (resultado)
-            {
-                
-                c = conversor.Convertir(auxiliar);
-            }
-            else
-            {
-                c = null;
-            }
-            return c;
+            ClienteDato aux = BDCliente.SELECTCliente(conversor.Convertir(c));
+            return c = conversor.Convertir(aux);
         }
 
-        public static bool EXISTE (string dni)
+        public static bool EXISTE(Cliente c)
         {
-            return BDCliente.EXISTS(dni);
+            return BDCliente.EXISTS(conversor.Convertir(c));
         }
 
         public static class conversor
         {
             public static Cliente Convertir(ClienteDato clienteDato)
             {
-                return new Cliente(clienteDato.getNombre(), clienteDato.getDNI(), (CategoriaCliente) clienteDato.getcategoria(), clienteDato.getTlfno());
+                return new Cliente(clienteDato.getNombre(), clienteDato.getDNI(), (CategoriaCliente)clienteDato.getcategoria(), clienteDato.getTlfno());
             }
 
             public static ClienteDato Convertir(Cliente cliente)
             {
-                return new ClienteDato(cliente.getNombre(), cliente.getDNI(), (CategoriaClienteDato) cliente.getcategoria(), cliente.getTlfno());           
+                return new ClienteDato(cliente.getNombre(), cliente.getDNI(), (CategoriaClienteDato)cliente.getcategoria(), cliente.getTlfno());
             }
         }
     }
