@@ -47,5 +47,6 @@ namespace CapaPresentacionVehiculo
             this.textBox_fechaMatriculacion.ReadOnly = true;
             this.textBox_matricula.ReadOnly = true;
         }
+
     }
 }

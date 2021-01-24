@@ -122,7 +122,7 @@ namespace CapaPresentacionVehiculo
             if ( this.radioButton_2mano.Checked == true)
             {
                 this.datos_2mano = new Datos2Mano();
-                this.datos_2mano.Location = new Point(450, 184);
+                this.datos_2mano.Location = new System.Drawing.Point(374, 181);
                 this.Controls.Add(this.datos_2mano);
             }
             else
@@ -140,6 +140,10 @@ namespace CapaPresentacionVehiculo
 
             if (auxiliar is vehiculoNuevo)
             {
+                this.radioButton_nuevo.Checked = true;
+                this.radioButton_nuevo.AutoCheck = false;
+                this.radioButton_2mano.AutoCheck = false;
+
                 vehiculoNuevo auxiliar_nuevo = auxiliar as vehiculoNuevo;
                 this.textBox_Marca.Text = auxiliar_nuevo.Marca;
                 this.textBox_Marca.ReadOnly = true;
@@ -170,6 +174,11 @@ namespace CapaPresentacionVehiculo
             }
             else if(auxiliar is vehiculo2Mano)
             {
+
+                this.radioButton_2mano.Checked = true;
+                this.radioButton_nuevo.AutoCheck = false;
+                this.radioButton_nuevo.AutoCheck = false;
+
                 vehiculo2Mano auxiliar_2mano = auxiliar as vehiculo2Mano;
                 this.textBox_Marca.Text = auxiliar_2mano.Marca;
                 this.textBox_Marca.ReadOnly = true;
@@ -182,10 +191,6 @@ namespace CapaPresentacionVehiculo
 
                 this.textBox_PrecioRecomendado.Text = auxiliar_2mano.PrecioRecomendado.ToString();
                 this.textBox_PrecioRecomendado.ReadOnly = true;
-
-                this.datos_2mano = new Datos2Mano();
-                this.datos_2mano.Location = new Point(450, 184);
-                this.Controls.Add(this.datos_2mano);
 
                 this.datos_2mano.Matricula = auxiliar_2mano.Matricula;
                 this.datos_2mano.FechaMatriculacion = auxiliar_2mano.FechaMatriculacion.Date.ToString();
