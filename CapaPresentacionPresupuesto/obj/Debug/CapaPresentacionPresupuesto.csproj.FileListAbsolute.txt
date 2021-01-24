@@ -77,3 +77,5 @@ C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\CapaPresentacionPresupuesto
 C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\CapaPresentacionPresupuesto\obj\Debug\CapaPresentacionPresupuesto.csproj.CoreCompileInputs.cache
 C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\CapaPresentacionPresupuesto\obj\Debug\CapaPresentacionPresupuesto.exe
 C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\CapaPresentacionPresupuesto\obj\Debug\CapaPresentacionPresupuesto.pdb
+C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\CapaPresentacionPresupuesto\obj\Debug\CapaPresentacionPresupuesto.MostrarListaVehiculosPresupuesto.resources
+C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\CapaPresentacionPresupuesto\obj\Debug\CapaPresentacionPresupuesto.PasarPresupuestos1en1.resources

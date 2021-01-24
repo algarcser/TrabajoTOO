@@ -35,11 +35,11 @@ namespace CapaPresentacionPresupuesto
             this.lboEstado = new System.Windows.Forms.ListBox();
             this.lboNVehiculos = new System.Windows.Forms.ListBox();
             this.lboImporte = new System.Windows.Forms.ListBox();
-            this.btFechaCreacion = new System.Windows.Forms.Button();
-            this.btCliente = new System.Windows.Forms.Button();
-            this.btEstado = new System.Windows.Forms.Button();
-            this.btNVehiculos = new System.Windows.Forms.Button();
-            this.btImporte = new System.Windows.Forms.Button();
+            this.btOrdenarFechaCreacion = new System.Windows.Forms.Button();
+            this.btOrdenarCliente = new System.Windows.Forms.Button();
+            this.btOrdenarEstado = new System.Windows.Forms.Button();
+            this.btOrdenarNVehiculos = new System.Windows.Forms.Button();
+            this.btOrdenarImporte = new System.Windows.Forms.Button();
             this.btMostrarPresupuesto = new System.Windows.Forms.Button();
             this.btPasarP1en1 = new System.Windows.Forms.Button();
             this.btMostrarCliente = new System.Windows.Forms.Button();
@@ -87,52 +87,52 @@ namespace CapaPresentacionPresupuesto
             this.lboImporte.Size = new System.Drawing.Size(120, 95);
             this.lboImporte.TabIndex = 4;
             // 
-            // btFechaCreacion
+            // btOrdenarFechaCreacion
             // 
-            this.btFechaCreacion.AutoSize = true;
-            this.btFechaCreacion.Location = new System.Drawing.Point(32, 38);
-            this.btFechaCreacion.Name = "btFechaCreacion";
-            this.btFechaCreacion.Size = new System.Drawing.Size(106, 23);
-            this.btFechaCreacion.TabIndex = 5;
-            this.btFechaCreacion.Text = "Fecha de creación";
-            this.btFechaCreacion.UseVisualStyleBackColor = true;
+            this.btOrdenarFechaCreacion.AutoSize = true;
+            this.btOrdenarFechaCreacion.Location = new System.Drawing.Point(32, 38);
+            this.btOrdenarFechaCreacion.Name = "btOrdenarFechaCreacion";
+            this.btOrdenarFechaCreacion.Size = new System.Drawing.Size(106, 23);
+            this.btOrdenarFechaCreacion.TabIndex = 5;
+            this.btOrdenarFechaCreacion.Text = "Fecha de creación";
+            this.btOrdenarFechaCreacion.UseVisualStyleBackColor = true;
             // 
-            // btCliente
+            // btOrdenarCliente
             // 
-            this.btCliente.Location = new System.Drawing.Point(195, 38);
-            this.btCliente.Name = "btCliente";
-            this.btCliente.Size = new System.Drawing.Size(75, 23);
-            this.btCliente.TabIndex = 6;
-            this.btCliente.Text = "Cliente";
-            this.btCliente.UseVisualStyleBackColor = true;
+            this.btOrdenarCliente.Location = new System.Drawing.Point(195, 38);
+            this.btOrdenarCliente.Name = "btOrdenarCliente";
+            this.btOrdenarCliente.Size = new System.Drawing.Size(75, 23);
+            this.btOrdenarCliente.TabIndex = 6;
+            this.btOrdenarCliente.Text = "Cliente";
+            this.btOrdenarCliente.UseVisualStyleBackColor = true;
             // 
-            // btEstado
+            // btOrdenarEstado
             // 
-            this.btEstado.Location = new System.Drawing.Point(342, 38);
-            this.btEstado.Name = "btEstado";
-            this.btEstado.Size = new System.Drawing.Size(75, 23);
-            this.btEstado.TabIndex = 7;
-            this.btEstado.Text = "Estado";
-            this.btEstado.UseVisualStyleBackColor = true;
+            this.btOrdenarEstado.Location = new System.Drawing.Point(342, 38);
+            this.btOrdenarEstado.Name = "btOrdenarEstado";
+            this.btOrdenarEstado.Size = new System.Drawing.Size(75, 23);
+            this.btOrdenarEstado.TabIndex = 7;
+            this.btOrdenarEstado.Text = "Estado";
+            this.btOrdenarEstado.UseVisualStyleBackColor = true;
             // 
-            // btNVehiculos
+            // btOrdenarNVehiculos
             // 
-            this.btNVehiculos.AutoSize = true;
-            this.btNVehiculos.Location = new System.Drawing.Point(479, 38);
-            this.btNVehiculos.Name = "btNVehiculos";
-            this.btNVehiculos.Size = new System.Drawing.Size(94, 23);
-            this.btNVehiculos.TabIndex = 8;
-            this.btNVehiculos.Text = "Nº de vehículos";
-            this.btNVehiculos.UseVisualStyleBackColor = true;
+            this.btOrdenarNVehiculos.AutoSize = true;
+            this.btOrdenarNVehiculos.Location = new System.Drawing.Point(479, 38);
+            this.btOrdenarNVehiculos.Name = "btOrdenarNVehiculos";
+            this.btOrdenarNVehiculos.Size = new System.Drawing.Size(94, 23);
+            this.btOrdenarNVehiculos.TabIndex = 8;
+            this.btOrdenarNVehiculos.Text = "Nº de vehículos";
+            this.btOrdenarNVehiculos.UseVisualStyleBackColor = true;
             // 
-            // btImporte
+            // btOrdenarImporte
             // 
-            this.btImporte.Location = new System.Drawing.Point(636, 38);
-            this.btImporte.Name = "btImporte";
-            this.btImporte.Size = new System.Drawing.Size(75, 23);
-            this.btImporte.TabIndex = 9;
-            this.btImporte.Text = "Importe";
-            this.btImporte.UseVisualStyleBackColor = true;
+            this.btOrdenarImporte.Location = new System.Drawing.Point(636, 38);
+            this.btOrdenarImporte.Name = "btOrdenarImporte";
+            this.btOrdenarImporte.Size = new System.Drawing.Size(75, 23);
+            this.btOrdenarImporte.TabIndex = 9;
+            this.btOrdenarImporte.Text = "Importe";
+            this.btOrdenarImporte.UseVisualStyleBackColor = true;
             // 
             // btMostrarPresupuesto
             // 
@@ -163,6 +163,7 @@ namespace CapaPresentacionPresupuesto
             this.btMostrarCliente.TabIndex = 13;
             this.btMostrarCliente.Text = "Mostrar cliente";
             this.btMostrarCliente.UseVisualStyleBackColor = true;
+            this.btMostrarCliente.Click += new System.EventHandler(this.btMostrarCliente_Click);
             // 
             // btMostrarListaVehiculos
             // 
@@ -173,6 +174,7 @@ namespace CapaPresentacionPresupuesto
             this.btMostrarListaVehiculos.TabIndex = 15;
             this.btMostrarListaVehiculos.Text = "Mostrar lista de vehículos";
             this.btMostrarListaVehiculos.UseVisualStyleBackColor = true;
+            this.btMostrarListaVehiculos.Click += new System.EventHandler(this.btMostrarListaVehiculos_Click);
             // 
             // btCerrar
             // 
@@ -182,6 +184,7 @@ namespace CapaPresentacionPresupuesto
             this.btCerrar.TabIndex = 16;
             this.btCerrar.Text = "Cerrar";
             this.btCerrar.UseVisualStyleBackColor = true;
+            this.btCerrar.Click += new System.EventHandler(this.btCerrar_Click);
             // 
             // ListadoOrdenadoPresupuestos
             // 
@@ -193,11 +196,11 @@ namespace CapaPresentacionPresupuesto
             this.Controls.Add(this.btMostrarCliente);
             this.Controls.Add(this.btPasarP1en1);
             this.Controls.Add(this.btMostrarPresupuesto);
-            this.Controls.Add(this.btImporte);
-            this.Controls.Add(this.btNVehiculos);
-            this.Controls.Add(this.btEstado);
-            this.Controls.Add(this.btCliente);
-            this.Controls.Add(this.btFechaCreacion);
+            this.Controls.Add(this.btOrdenarImporte);
+            this.Controls.Add(this.btOrdenarNVehiculos);
+            this.Controls.Add(this.btOrdenarEstado);
+            this.Controls.Add(this.btOrdenarCliente);
+            this.Controls.Add(this.btOrdenarFechaCreacion);
             this.Controls.Add(this.lboImporte);
             this.Controls.Add(this.lboNVehiculos);
             this.Controls.Add(this.lboEstado);
@@ -219,11 +222,11 @@ namespace CapaPresentacionPresupuesto
         private System.Windows.Forms.ListBox lboEstado;
         private System.Windows.Forms.ListBox lboNVehiculos;
         private System.Windows.Forms.ListBox lboImporte;
-        private System.Windows.Forms.Button btFechaCreacion;
-        private System.Windows.Forms.Button btCliente;
-        private System.Windows.Forms.Button btEstado;
-        private System.Windows.Forms.Button btNVehiculos;
-        private System.Windows.Forms.Button btImporte;
+        private System.Windows.Forms.Button btOrdenarFechaCreacion;
+        private System.Windows.Forms.Button btOrdenarCliente;
+        private System.Windows.Forms.Button btOrdenarEstado;
+        private System.Windows.Forms.Button btOrdenarNVehiculos;
+        private System.Windows.Forms.Button btOrdenarImporte;
         private System.Windows.Forms.Button btMostrarPresupuesto;
         private System.Windows.Forms.Button btPasarP1en1;
         private System.Windows.Forms.Button btMostrarCliente;

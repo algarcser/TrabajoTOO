@@ -8,8 +8,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using LogicaModeloCliente;
+using LogicaModeloPresupuesto;
 using LogicaNegocioCliente;
 using CapaPresentacionCliente;
+using LogicaNegocioPresupuesto;
 
 namespace CapaPresentacionPresupuesto
 {
@@ -29,9 +31,10 @@ namespace CapaPresentacionPresupuesto
             {
                 if (this.accion.Equals("crear"))
                 {
-                    if (LNCliente.existeCliente(mtbDNI.Text) == true)
+                    Cliente c1 = new Cliente(mtbDNI.Text);
+                    if (LNCliente.existeCliente(c1) == true)
                     {
-                        Form crearPresupuesto = new CrearMostrarPresupuesto(LNCliente.readCliente(mtbDNI.Text));
+                        Form crearPresupuesto = new CrearMostrarPresupuesto(LNCliente.readCliente(c1));
                         crearPresupuesto.Show();
                         this.Close();
                     }
@@ -40,11 +43,12 @@ namespace CapaPresentacionPresupuesto
                         DialogResult result = MessageBox.Show("¿Quieres darlo de alta?", "No existe un cliente con ese DNI", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                         if (result == DialogResult.Yes)
                         {
-                            Form crearCliente = new Alta_Cliente();
+                            Cliente c2 = new Cliente(mtbDNI.Text);
+                            Form crearCliente = new Alta_Cliente(c2);
                             crearCliente.ShowDialog();
-                            if (LNCliente.existeCliente(mtbDNI.Text) == true)
+                            if (LNCliente.existeCliente(c2) == true)
                             {
-                                Form crearPresupuesto = new CrearMostrarPresupuesto(LNCliente.readCliente(mtbDNI.Text));
+                                Form crearPresupuesto = new CrearMostrarPresupuesto(LNCliente.readCliente(c2));
                                 crearPresupuesto.Show();
                                 this.Close();
                             }
@@ -57,12 +61,24 @@ namespace CapaPresentacionPresupuesto
                 }
                 else if (this.accion.Equals("busqueda"))
                 {
-                    if (LNCliente.existeCliente(mtbDNI.Text) == true)
+                    Cliente c3 = new Cliente(mtbDNI.Text);
+                    if (LNCliente.existeCliente(c3) == true)
                     {
-                        LNCliente.readCliente(mtbDNI.Text);
+                        LNCliente.readCliente(c3);
+                        List<Presupuesto> listaCribaDNI = LNPresupuesto.SELECTALL();
+                        List<Presupuesto> listaCribadaDNI = new List<Presupuesto>();
+                        foreach (Presupuesto p in listaCribaDNI)
+                        {
+                            if (p.Cliente.getDNI().Equals(mtbDNI.Text) == true)
+                            {
+                                listaCribadaDNI.Add(p);
+                            }
+                        }
 
+                        Form busquedaPresupuestoPorDNI = new ListadoOrdenadoPresupuestos(listaCribadaDNI);
+                        busquedaPresupuestoPorDNI.Show();
+                        this.Close();
                         //COMPLETAR con listado ordenado de presupuestos
-
                     }
                     else
                     {
