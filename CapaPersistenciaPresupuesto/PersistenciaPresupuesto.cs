@@ -68,7 +68,7 @@ namespace CapaPersistenciaPresupuesto
                 listaP.Add(conversor.Convertir(p));
             }
 
-            return (listaPD);
+            return (listaP);
         }
 
         public static class conversor
