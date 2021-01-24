@@ -15,12 +15,14 @@ namespace CapaPresentacionPresupuesto
     {
         public ListadoOrdenadoPresupuestos()
         {
+            /*
             Presupuesto presupuesto;
             BindingSource bindingSource = new BindingSource();
             bindingSource.DataSource = presupuesto.FechaRealizacion;
             this.lboFechaCreacion.DataSource = bindingSource;
             this.lboFechaCreacion.DataBindings.Add(new Binding("DisplayMember", bindingSource, "Date"));
             InitializeComponent();
+            */
         }
     }
 }
