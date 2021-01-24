@@ -37,5 +37,10 @@ namespace LogicaNegocioVehiculo
         {
             return PersistenciaVehiculo.EXISTS(referencia);
         }
+
+        public static List<vehiculo> SELECT_ALL()
+        {
+            return PersistenciaVehiculo.SELECT_ALL();
+        }
     }
 }

@@ -74,5 +74,15 @@ namespace CapaPersistenciaVehiculo
             return BDvehiculo.Vehiculos.Contains(vehiculoDato.NBastidor);
         }
 
+        internal static List<vehiculoDato> SELECT_ALL()
+        {
+            List<vehiculoDato> lista = new List<vehiculoDato>();
+            foreach ( vehiculoDato vehiculo in BDvehiculo.Vehiculos)
+            {
+                lista.Add(vehiculo);
+            }
+            return lista;
+        }
+
     }
 }

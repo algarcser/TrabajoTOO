@@ -20,7 +20,7 @@ namespace CapaPersistenciaVehiculo
         /// <summary>
         /// get: devuelve la lista de extras, hay que cambiarlo para que solo devuelvas las descripciones
         /// </summary>
-        public List<extraDato> Extras
+        internal List<extraDato> Extras
         {
             get
             {
@@ -31,7 +31,7 @@ namespace CapaPersistenciaVehiculo
 
 
 
-        public void AddExtra(extraDato extra)
+        internal void AddExtra(extraDato extra)
         {
             this.extras.Add(extra);
         }

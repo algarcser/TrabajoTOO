@@ -50,6 +50,7 @@
     <Compile Include="vehiculoDato.cs" />
     <Compile Include="vehiculoNuevoDato.cs" />
     <Compile Include="extraDato.cs" />
+    <Compile Include="vehiculoNuevo_Extra_Dato.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\LogicaModeloVehiculo\LogicaModeloVehiculo.csproj">
