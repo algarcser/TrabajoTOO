@@ -45,7 +45,9 @@
     <Compile Include="ivaDato.cs" />
     <Compile Include="PersistenciaVehiculo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TablaExtras.cs" />
     <Compile Include="TablaVehiculo.cs" />
+    <Compile Include="Tabla_VehiculoNuevo_Extras.cs" />
     <Compile Include="vehiculo2ManoDato.cs" />
     <Compile Include="vehiculoDato.cs" />
     <Compile Include="vehiculoNuevoDato.cs" />

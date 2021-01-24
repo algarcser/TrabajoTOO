@@ -8,11 +8,13 @@ namespace CapaPersistenciaVehiculo
 {
     public class extraDato : IEquatable<extraDato>
     {
+        private int id;
         private string descripcion;
         private float precio;
 
-        public extraDato(string descripcion, float precio)
+        public extraDato(int id, string descripcion, float precio)
         {
+            this.id = id;
             this.descripcion = descripcion;
             this.precio = precio;
         }
@@ -25,6 +27,14 @@ namespace CapaPersistenciaVehiculo
             get
             {
                 return this.descripcion;
+            }
+        }
+
+        public int Id
+        {
+            get
+            {
+                return this.id;
             }
         }
 
