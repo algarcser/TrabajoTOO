@@ -88,3 +88,15 @@ C:\Users\zonia\Desktop\TrabajoTOO\Principal\bin\Debug\CapaPresentacionPresupuest
 C:\Users\zonia\Desktop\TrabajoTOO\Principal\bin\Debug\LogicaNegocioPresupuesto.pdb
 C:\Users\zonia\Desktop\TrabajoTOO\Principal\bin\Debug\LogicaModeloPresupuesto.pdb
 C:\Users\zonia\Desktop\TrabajoTOO\Principal\bin\Debug\CapaPersistenciaPresupuesto.pdb
+C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\Principal\bin\Debug\CapaPresentacionPresupuesto.exe
+C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\Principal\bin\Debug\LogicaNegocioPresupuesto.dll
+C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\Principal\bin\Debug\LogicaModeloPresupuesto.dll
+C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\Principal\bin\Debug\LogicaNegocioCliente.dll
+C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\Principal\bin\Debug\CapaPersistenciaCliente.dll
+C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\Principal\bin\Debug\CapaPersistenciaPresupuesto.dll
+C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\Principal\bin\Debug\CapaPresentacionPresupuesto.pdb
+C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\Principal\bin\Debug\LogicaNegocioPresupuesto.pdb
+C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\Principal\bin\Debug\LogicaModeloPresupuesto.pdb
+C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\Principal\bin\Debug\LogicaNegocioCliente.pdb
+C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\Principal\bin\Debug\CapaPersistenciaCliente.pdb
+C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\Principal\bin\Debug\CapaPersistenciaPresupuesto.pdb

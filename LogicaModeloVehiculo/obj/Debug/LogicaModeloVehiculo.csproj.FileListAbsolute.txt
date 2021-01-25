@@ -15,3 +15,4 @@ C:\Users\zonia\Desktop\TrabajoTOO\LogicaModeloVehiculo\obj\Debug\LogicaModeloVeh
 C:\Users\zonia\Desktop\TrabajoTOO\LogicaModeloVehiculo\obj\Debug\LogicaModeloVehiculo.csproj.CoreCompileInputs.cache
 C:\Users\zonia\Desktop\TrabajoTOO\LogicaModeloVehiculo\obj\Debug\LogicaModeloVehiculo.dll
 C:\Users\zonia\Desktop\TrabajoTOO\LogicaModeloVehiculo\obj\Debug\LogicaModeloVehiculo.pdb
+C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\LogicaModeloVehiculo\obj\Debug\LogicaModeloVehiculo.csprojAssemblyReference.cache

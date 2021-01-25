@@ -27,6 +27,7 @@ namespace CapaPresentacionGeneral
         private void tsmiAltaCliente_Click(object sender, EventArgs e)
         {
             Form intrDNI = new CapaPresentacionCliente.Introducir_DNI("alta");
+            intrDNI.Show();
         }
 
         private void tsmiBajaCliente_Click(object sender, EventArgs e)

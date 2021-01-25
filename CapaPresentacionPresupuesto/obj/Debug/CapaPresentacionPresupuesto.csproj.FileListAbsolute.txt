@@ -66,10 +66,7 @@ C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\CapaPresentacionPresupuesto\obj
 C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\CapaPresentacionPresupuesto\bin\Debug\LogicaNegocioVehiculo.dll
 C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\CapaPresentacionPresupuesto\bin\Debug\LogicaNegocioVehiculo.pdb
 C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\CapaPresentacionPresupuesto\obj\Debug\CapaPresentacionPresupuesto.csprojAssemblyReference.cache
-C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\CapaPresentacionPresupuesto\obj\Debug\CapaPresentacionPresupuesto.CrearMostrarPresupuesto.resources
 C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\CapaPresentacionPresupuesto\obj\Debug\CapaPresentacionPresupuesto.FormIntroducirDNIPresupuesto.resources
-C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\CapaPresentacionPresupuesto\obj\Debug\CapaPresentacionPresupuesto.IntroducirNBastidorPresupuesto.resources
-C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\CapaPresentacionPresupuesto\obj\Debug\CapaPresentacionPresupuesto.ListadoOrdenadoPresupuestos.resources
 C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\CapaPresentacionPresupuesto\obj\Debug\CapaPresentacionPresupuesto.ucPresupuesto.resources
 C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\CapaPresentacionPresupuesto\obj\Debug\CapaPresentacionPresupuesto.csproj.GenerateResource.cache
 C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\CapaPresentacionPresupuesto\obj\Debug\CapaPresentacionPresupuesto.csproj.CoreCompileInputs.cache
@@ -82,3 +79,33 @@ C:\Users\zonia\Desktop\TrabajoTOO\CapaPresentacionPresupuesto\obj\Debug\CapaPres
 C:\Users\zonia\Desktop\TrabajoTOO\CapaPresentacionPresupuesto\obj\Debug\CapaPresentacionPresupuesto.FormListadoOrdenadoPresupuestos.resources
 C:\Users\zonia\Desktop\TrabajoTOO\CapaPresentacionPresupuesto\obj\Debug\CapaPresentacionPresupuesto.FormMostrarListaVehiculosPresupuesto.resources
 C:\Users\zonia\Desktop\TrabajoTOO\CapaPresentacionPresupuesto\obj\Debug\CapaPresentacionPresupuesto.FormRecorrerPresupuestos1en1.resources
+C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\CapaPresentacionPresupuesto\bin\Debug\CapaPresentacionPresupuesto.exe
+C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\CapaPresentacionPresupuesto\bin\Debug\CapaPresentacionPresupuesto.pdb
+C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\CapaPresentacionPresupuesto\bin\Debug\CapaPresentacionCliente.dll
+C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\CapaPresentacionPresupuesto\bin\Debug\CapaPresentacionVehiculo.dll
+C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\CapaPresentacionPresupuesto\bin\Debug\LogicaModeloCliente.dll
+C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\CapaPresentacionPresupuesto\bin\Debug\LogicaModeloPresupuesto.dll
+C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\CapaPresentacionPresupuesto\bin\Debug\LogicaModeloVehiculo.dll
+C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\CapaPresentacionPresupuesto\bin\Debug\LogicaNegocioCliente.dll
+C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\CapaPresentacionPresupuesto\bin\Debug\LogicaNegocioPresupuesto.dll
+C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\CapaPresentacionPresupuesto\bin\Debug\LogicaNegocioVehiculo.dll
+C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\CapaPresentacionPresupuesto\bin\Debug\CapaPersistenciaCliente.dll
+C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\CapaPresentacionPresupuesto\bin\Debug\CapaPersistenciaPresupuesto.dll
+C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\CapaPresentacionPresupuesto\bin\Debug\CapaPersistenciaVehiculo.dll
+C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\CapaPresentacionPresupuesto\bin\Debug\CapaPresentacionCliente.pdb
+C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\CapaPresentacionPresupuesto\bin\Debug\CapaPresentacionVehiculo.pdb
+C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\CapaPresentacionPresupuesto\bin\Debug\LogicaModeloCliente.pdb
+C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\CapaPresentacionPresupuesto\bin\Debug\LogicaModeloPresupuesto.pdb
+C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\CapaPresentacionPresupuesto\bin\Debug\LogicaModeloVehiculo.pdb
+C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\CapaPresentacionPresupuesto\bin\Debug\LogicaNegocioCliente.pdb
+C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\CapaPresentacionPresupuesto\bin\Debug\LogicaNegocioPresupuesto.pdb
+C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\CapaPresentacionPresupuesto\bin\Debug\LogicaNegocioVehiculo.pdb
+C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\CapaPresentacionPresupuesto\bin\Debug\CapaPersistenciaCliente.pdb
+C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\CapaPresentacionPresupuesto\bin\Debug\CapaPersistenciaPresupuesto.pdb
+C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\CapaPresentacionPresupuesto\bin\Debug\CapaPersistenciaVehiculo.pdb
+C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\CapaPresentacionPresupuesto\obj\Debug\CapaPresentacionPresupuesto.FormCrearMostrarPresupuesto.resources
+C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\CapaPresentacionPresupuesto\obj\Debug\CapaPresentacionPresupuesto.FormIntroducirNBastidorPresupuesto.resources
+C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\CapaPresentacionPresupuesto\obj\Debug\CapaPresentacionPresupuesto.FormListadoOrdenadoPresupuestos.resources
+C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\CapaPresentacionPresupuesto\obj\Debug\CapaPresentacionPresupuesto.FormMostrarListaVehiculosPresupuesto.resources
+C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\CapaPresentacionPresupuesto\obj\Debug\CapaPresentacionPresupuesto.FormRecorrerPresupuestos1en1.resources
+C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\CapaPresentacionPresupuesto\obj\Debug\CapaPresentacionPresupuesto.csproj.CopyComplete

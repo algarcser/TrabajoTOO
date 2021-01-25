@@ -24,7 +24,7 @@ namespace CapaPresentacionCliente
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if ((this.control_datos_cliente1.getDNI() == "") || (this.control_datos_cliente1.getNombre() == "") || (this.control_datos_cliente1.getTelefono() == "") || ((!this.control_datos_cliente1.getAchecked()) && (!this.control_datos_cliente1.getBchecked()) && (!this.control_datos_cliente1.getCchecked())))
+            if ((this.control_datos_cliente1.getNombre() == "") || (this.control_datos_cliente1.getTelefono() == "") || ((!this.control_datos_cliente1.getAchecked()) && (!this.control_datos_cliente1.getBchecked()) && (!this.control_datos_cliente1.getCchecked())))
             {
                 MessageBox.Show("Debes rellenar todos los campos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
