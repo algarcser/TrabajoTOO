@@ -45,13 +45,13 @@ namespace CapaPresentacionVehiculo
 
         private void radioButton_nuevo_CheckedChanged(object sender, EventArgs e)
         {
-            if (this.radioButton_nuevo.Checked == true)
+            if ((this.radioButton_nuevo.Checked == true) && (this.objetivo == enumObjetivo.Alta))
             {
                 BindingSource bindingSourceExtras = new BindingSource();
 
                 this.lista_extras = new ListBox();
                 lista_extras.Location = new Point(450, 184);
-                bindingSourceExtras.DataSource = listaExtras.Extras;
+                bindingSourceExtras.DataSource = LNExtras.SELECT_ALL();
                 lista_extras.DataSource = bindingSourceExtras;
                 lista_extras.SelectionMode = SelectionMode.MultiSimple;
 
@@ -61,7 +61,11 @@ namespace CapaPresentacionVehiculo
             }
             else
             {
-                this.lista_extras.Visible = false;
+                if (this.lista_extras != null)
+                {
+                       this.lista_extras.Visible = false;
+                }
+                
             }
             
 
@@ -145,6 +149,7 @@ namespace CapaPresentacionVehiculo
                 this.radioButton_2mano.AutoCheck = false;
 
                 vehiculoNuevo auxiliar_nuevo = auxiliar as vehiculoNuevo;
+
                 this.textBox_Marca.Text = auxiliar_nuevo.Marca;
                 this.textBox_Marca.ReadOnly = true;
 

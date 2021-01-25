@@ -71,8 +71,23 @@ namespace CapaPresentacionGeneral
 
         private void tsmiMostrarTodos_Click(object sender, EventArgs e)
         {
-            Form mostrarTodosPresupuestos = new FormListadoOrdenadoPresupuestos(LNPresupuesto.SELECTALL());
-            mostrarTodosPresupuestos.Show();
+            if (LNPresupuesto.SELECTALL().Count != 0)
+            {
+                Form mostrarTodosPresupuestos = new FormListadoOrdenadoPresupuestos(LNPresupuesto.SELECTALL());
+                mostrarTodosPresupuestos.Show();
+            }
+            else
+            {
+                MessageBox.Show("Introduce al menos 1 presupuesto para poder usar \"Mostrar presupuestos\"", "No hay ningun presupuesto", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            
+            
+        }
+
+        private void anadirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Gestionar_Extra alta_extra = new Gestionar_Extra();
+            alta_extra.Show();
         }
     }
 }

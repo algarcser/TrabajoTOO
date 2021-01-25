@@ -45,8 +45,10 @@ namespace CapaPresentacionGeneral
             this.tsmiBPPorCliente = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiBPPorVehiculo = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiBPPorEstado = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiConfiguracion = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiMostrarTodos = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiConfiguracion = new System.Windows.Forms.ToolStripMenuItem();
+            this.extrasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.anadirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.msPrincipal.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -56,7 +58,8 @@ namespace CapaPresentacionGeneral
             this.tsmiClientes,
             this.tsmiVehiculos,
             this.tsmiPresupuestos,
-            this.tsmiConfiguracion});
+            this.tsmiConfiguracion,
+            this.extrasToolStripMenuItem});
             this.msPrincipal.Location = new System.Drawing.Point(0, 0);
             this.msPrincipal.Name = "msPrincipal";
             this.msPrincipal.Size = new System.Drawing.Size(706, 24);
@@ -155,27 +158,21 @@ namespace CapaPresentacionGeneral
             // tsmiBPPorCliente
             // 
             this.tsmiBPPorCliente.Name = "tsmiBPPorCliente";
-            this.tsmiBPPorCliente.Size = new System.Drawing.Size(180, 22);
+            this.tsmiBPPorCliente.Size = new System.Drawing.Size(140, 22);
             this.tsmiBPPorCliente.Text = "Por cliente";
             this.tsmiBPPorCliente.Click += new System.EventHandler(this.tsmiBPPorCliente_Click);
             // 
             // tsmiBPPorVehiculo
             // 
             this.tsmiBPPorVehiculo.Name = "tsmiBPPorVehiculo";
-            this.tsmiBPPorVehiculo.Size = new System.Drawing.Size(180, 22);
+            this.tsmiBPPorVehiculo.Size = new System.Drawing.Size(140, 22);
             this.tsmiBPPorVehiculo.Text = "Por vehículo";
             // 
             // tsmiBPPorEstado
             // 
             this.tsmiBPPorEstado.Name = "tsmiBPPorEstado";
-            this.tsmiBPPorEstado.Size = new System.Drawing.Size(180, 22);
+            this.tsmiBPPorEstado.Size = new System.Drawing.Size(140, 22);
             this.tsmiBPPorEstado.Text = "Por estado";
-            // 
-            // tsmiConfiguracion
-            // 
-            this.tsmiConfiguracion.Name = "tsmiConfiguracion";
-            this.tsmiConfiguracion.Size = new System.Drawing.Size(95, 20);
-            this.tsmiConfiguracion.Text = "Configuración";
             // 
             // tsmiMostrarTodos
             // 
@@ -183,6 +180,27 @@ namespace CapaPresentacionGeneral
             this.tsmiMostrarTodos.Size = new System.Drawing.Size(180, 22);
             this.tsmiMostrarTodos.Text = "Mostrar todos";
             this.tsmiMostrarTodos.Click += new System.EventHandler(this.tsmiMostrarTodos_Click);
+            // 
+            // tsmiConfiguracion
+            // 
+            this.tsmiConfiguracion.Name = "tsmiConfiguracion";
+            this.tsmiConfiguracion.Size = new System.Drawing.Size(95, 20);
+            this.tsmiConfiguracion.Text = "Configuración";
+            // 
+            // extrasToolStripMenuItem
+            // 
+            this.extrasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.anadirToolStripMenuItem});
+            this.extrasToolStripMenuItem.Name = "extrasToolStripMenuItem";
+            this.extrasToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
+            this.extrasToolStripMenuItem.Text = "Extras";
+            // 
+            // anadirToolStripMenuItem
+            // 
+            this.anadirToolStripMenuItem.Name = "anadirToolStripMenuItem";
+            this.anadirToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.anadirToolStripMenuItem.Text = "Anadir";
+            this.anadirToolStripMenuItem.Click += new System.EventHandler(this.anadirToolStripMenuItem_Click);
             // 
             // FormPrincipal
             // 
@@ -222,5 +240,7 @@ namespace CapaPresentacionGeneral
         private System.Windows.Forms.ToolStripMenuItem tsmiBPPorEstado;
         private System.Windows.Forms.ToolStripMenuItem bajaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tsmiMostrarTodos;
+        private System.Windows.Forms.ToolStripMenuItem extrasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem anadirToolStripMenuItem;
     }
 }

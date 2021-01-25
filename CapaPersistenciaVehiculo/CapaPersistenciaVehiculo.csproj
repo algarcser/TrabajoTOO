@@ -45,6 +45,7 @@
     <Compile Include="BDvehiculo.cs" />
     <Compile Include="BDVehiculo_Extras.cs" />
     <Compile Include="ivaDato.cs" />
+    <Compile Include="PersistenciaExtras.cs" />
     <Compile Include="PersistenciaVehiculo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TablaExtras.cs" />

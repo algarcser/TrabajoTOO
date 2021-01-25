@@ -56,6 +56,12 @@
       <DependentUpon>Datos2Mano.cs</DependentUpon>
     </Compile>
     <Compile Include="enumObjetivo.cs" />
+    <Compile Include="Gestionar_Extra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gestionar_Extra.Designer.cs">
+      <DependentUpon>Gestionar_Extra.cs</DependentUpon>
+    </Compile>
     <Compile Include="ObtenerNBastidor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -70,6 +76,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Datos2Mano.resx">
       <DependentUpon>Datos2Mano.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gestionar_Extra.resx">
+      <DependentUpon>Gestionar_Extra.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ObtenerNBastidor.resx">
       <DependentUpon>ObtenerNBastidor.cs</DependentUpon>

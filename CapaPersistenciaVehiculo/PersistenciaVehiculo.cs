@@ -144,7 +144,7 @@ namespace CapaPersistenciaVehiculo
 
         public static extra Convertir(extraDato extraDato)
         {
-            return new extra(extraDato.Descripcion, extraDato.Precio);
+            return new extra(extraDato.Id, extraDato.Descripcion, extraDato.Precio);
         }
 
         public static extraDato Convertir(extra extra)
