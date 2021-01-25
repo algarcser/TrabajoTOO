@@ -30,8 +30,8 @@
         {
             this.label_NBastidor = new System.Windows.Forms.Label();
             this.label_Modelo = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.label_Marca = new System.Windows.Forms.Label();
+            this.label_Potencia = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -62,23 +62,23 @@
             this.label_Modelo.TabIndex = 1;
             this.label_Modelo.Text = "Modelo";
             // 
-            // label3
+            // label_Marca
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(280, 62);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(35, 13);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "label3";
+            this.label_Marca.AutoSize = true;
+            this.label_Marca.Location = new System.Drawing.Point(280, 62);
+            this.label_Marca.Name = "label_Marca";
+            this.label_Marca.Size = new System.Drawing.Size(37, 13);
+            this.label_Marca.TabIndex = 2;
+            this.label_Marca.Text = "Marca";
             // 
-            // label4
+            // label_Potencia
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(411, 62);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(35, 13);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "label4";
+            this.label_Potencia.AutoSize = true;
+            this.label_Potencia.Location = new System.Drawing.Point(411, 62);
+            this.label_Potencia.Name = "label_Potencia";
+            this.label_Potencia.Size = new System.Drawing.Size(49, 13);
+            this.label_Potencia.TabIndex = 3;
+            this.label_Potencia.Text = "Potencia";
             // 
             // label5
             // 
@@ -110,7 +110,7 @@
             // listBox1
             // 
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(29, 352);
+            this.listBox1.Location = new System.Drawing.Point(12, 198);
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(120, 95);
             this.listBox1.TabIndex = 7;
@@ -178,8 +178,8 @@
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label_Potencia);
+            this.Controls.Add(this.label_Marca);
             this.Controls.Add(this.label_Modelo);
             this.Controls.Add(this.label_NBastidor);
             this.Name = "Motrar_Todos_Vehiculos";
@@ -193,8 +193,8 @@
 
         private System.Windows.Forms.Label label_NBastidor;
         private System.Windows.Forms.Label label_Modelo;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label_Marca;
+        private System.Windows.Forms.Label label_Potencia;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
