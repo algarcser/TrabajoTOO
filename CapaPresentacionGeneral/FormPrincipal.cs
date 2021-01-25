@@ -89,5 +89,11 @@ namespace CapaPresentacionGeneral
             Gestionar_Extra alta_extra = new Gestionar_Extra();
             alta_extra.Show();
         }
+
+        private void verTodosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form_mostar_all_Vehicles motrar_todos = new Form_mostar_all_Vehicles();
+            motrar_todos.Show();
+        }
     }
 }

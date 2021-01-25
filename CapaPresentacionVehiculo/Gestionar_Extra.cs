@@ -29,7 +29,7 @@ namespace CapaPresentacionVehiculo
 
         private void button_aceptar_Click(object sender, EventArgs e)
         {
-            LNExtras.INSERT(new extra(this.textBox_descripcion.Text, float.Parse(this.textBox_precio.Text)));
+            LNExtras.INSERT(new extra( LNExtras.COUNT() + 1, this.textBox_descripcion.Text, float.Parse(this.textBox_precio.Text)));
             this.Close();
         }
     }

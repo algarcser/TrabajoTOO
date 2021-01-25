@@ -8,6 +8,6 @@ namespace LogicaModeloVehiculo
 {
     public enum iva
     {
-        cocheNuevo, cocheSegundaMano
+        cocheNuevo = 10, cocheSegundaMano = 21
     }
 }

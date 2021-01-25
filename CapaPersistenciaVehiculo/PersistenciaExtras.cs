@@ -65,5 +65,10 @@ namespace CapaPersistenciaVehiculo
             }
             return extras;
         }
+
+        public static int COUNT()
+        {
+            return BDExtras.COUNT();
+        }
     }
 }

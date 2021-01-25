@@ -90,16 +90,7 @@ namespace LogicaModeloVehiculo
         {
             get
             {
-                float precioFinal = this.precioRecomendado;
-                if ( this.Iva == iva.cocheNuevo)
-                {
-                    precioFinal = (float) (precioFinal*1.1);
-                }
-                else
-                {
-                    precioFinal = (float) (precioFinal*1.21);
-                }
-                return precioFinal;
+                return (float)(this.PrecioRecomendado * (1 + (int)this.Iva) / 100); ;
             }
         }
 
@@ -119,6 +110,21 @@ namespace LogicaModeloVehiculo
             get
             {
                 return this.iva;
+            }
+        }
+
+        public string Tipo
+        {
+            get
+            {
+                if(this is vehiculoNuevo)
+                {
+                    return "vehiculo nuevo";
+                }else if ( this is vehiculo2Mano)
+                {
+                    return "vehiculo 2 mano";
+                }
+                return "not found";
             }
         }
 

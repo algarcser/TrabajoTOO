@@ -11,22 +11,12 @@ namespace LogicaModeloVehiculo
         private int id;
         private string descripcion;
         private float precio;
-        private static int contador = 1;
 
         public extra(int id, string descripcion, float precio)
         {
             this.id = id;
             this.descripcion = descripcion;
             this.precio = precio;
-            contador = contador + 1;
-        }
-
-        public extra(string descripcion, float precio)
-        {
-            this.id = contador;
-            this.descripcion = descripcion;
-            this.precio = precio;
-            contador = contador + 1;
         }
 
 

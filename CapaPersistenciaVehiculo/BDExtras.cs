@@ -97,5 +97,10 @@ namespace CapaPersistenciaVehiculo
             }
             return extras;
         }
+
+        internal static int COUNT()
+        {
+            return BDExtras.TablaExtras.Count();
+        }
     }
 }

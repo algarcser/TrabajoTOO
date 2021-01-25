@@ -41,5 +41,10 @@ namespace LogicaNegocioVehiculo
         {
             return PersistenciaExtras.SELECT_ALL();
         }
+
+        public static int COUNT()
+        {
+            return PersistenciaExtras.COUNT();
+        }
     }
 }
