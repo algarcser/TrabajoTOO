@@ -51,7 +51,24 @@ namespace CapaPresentacionCliente
             }
             else if (this.accion.Equals("baja"))
             {
+                if (LNCliente.existeCliente(new Cliente(maskedTextBox1.Text)))
+                {
+                    Cliente c = new Cliente(maskedTextBox1.Text);
+                    Form bajaCliente = new Baja_cliente(c);
 
+                }
+                else
+                {
+                    DialogResult result = MessageBox.Show("Quieres introducir otro?", "No existe un cliente con ese DNI", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                    if (result == DialogResult.Yes)
+                    {
+                        this.maskedTextBox1.Text = "";
+                    }
+                    else
+                    {
+                        this.Close();
+                    }
+                }
             }
             else if (this.accion.Equals("busqueda"))
             {
@@ -63,7 +80,15 @@ namespace CapaPresentacionCliente
                 }
                 else
                 {
-
+                    DialogResult result = MessageBox.Show("Quieres introducir otro?", "No existe un cliente con ese DNI", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                    if (result == DialogResult.Yes)
+                    {
+                        this.maskedTextBox1.Text = "";
+                    }
+                    else
+                    {
+                        this.Close();
+                    }
                 }
             }
             else { }
