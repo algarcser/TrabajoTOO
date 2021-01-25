@@ -90,7 +90,7 @@ namespace LogicaModeloVehiculo
         {
             get
             {
-                return (float)(this.PrecioRecomendado * (1 + (int)this.Iva) / 100); ;
+                return (float) ( (this.PrecioRecomendado) + (float)(this.PrecioRecomendado * (int)this.Iva)/100 ) ;
             }
         }
 
