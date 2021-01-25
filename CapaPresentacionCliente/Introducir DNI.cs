@@ -34,6 +34,8 @@ namespace CapaPresentacionCliente
                 {
                     Cliente c = new Cliente(maskedTextBox1.Text);
                     Form altaCliente = new Alta_Cliente(c);
+                    altaCliente.Show();
+                    this.Close();
 
                 }
                 else
@@ -55,7 +57,8 @@ namespace CapaPresentacionCliente
                 {
                     Cliente c = new Cliente(maskedTextBox1.Text);
                     Form bajaCliente = new Baja_cliente(c);
-
+                    bajaCliente.Show();
+                    this.Close();
                 }
                 else
                 {
@@ -77,6 +80,8 @@ namespace CapaPresentacionCliente
                     Cliente c;
                     c = PersistenciaCliente.READ(new Cliente(maskedTextBox1.Text));
                     Form datosCliente = new Busqueda_cliente(c);
+                    datosCliente.Show();
+                    this.Close();
                 }
                 else
                 {
