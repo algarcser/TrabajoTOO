@@ -48,6 +48,7 @@ namespace CapaPresentacionVehiculo
             this.listBox_Tipo.SelectionMode = SelectionMode.None;
             this.listBox_Tipo.DisplayMember = "Tipo";
 
+
         }
     }
 }
