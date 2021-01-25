@@ -52,3 +52,4 @@ C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\CapaPresentacionVehiculo\ob
 C:\Users\zonia\Desktop\TrabajoTOO\CapaPresentacionVehiculo\obj\Debug\CapaPresentacionVehiculo.Gestionar_Extra.resources
 C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\CapaPresentacionVehiculo\obj\Debug\CapaPresentacionVehiculo.Gestionar_Extra.resources
 C:\Users\zonia\Desktop\TrabajoTOO\CapaPresentacionVehiculo\obj\Debug\CapaPresentacionVehiculo.Motrar_Todos_Vehiculos.resources
+C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\CapaPresentacionVehiculo\obj\Debug\CapaPresentacionVehiculo.Motrar_Todos_Vehiculos.resources

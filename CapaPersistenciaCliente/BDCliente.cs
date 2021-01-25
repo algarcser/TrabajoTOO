@@ -31,6 +31,7 @@ namespace CapaPersistenciaCliente
         public static void INSERTCliente(ClienteDato c)
         {
             BDCliente.clientes.Add(c);
+            Console.WriteLine("He llegado hasta el insert");
         }
 
         /// <summary>
@@ -77,7 +78,8 @@ namespace CapaPersistenciaCliente
 
         public static bool EXISTS(ClienteDato c)
         {
-            return BDCliente.Clientes.Contains(c.getDNI());
+            Console.WriteLine("He llegado hasta el existe");
+            return BDCliente.Clientes.Contains(c.getDNI());  
         }
 
     }

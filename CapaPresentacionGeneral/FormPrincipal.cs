@@ -32,12 +32,14 @@ namespace CapaPresentacionGeneral
 
         private void tsmiBajaCliente_Click(object sender, EventArgs e)
         {
-
+            Form intrDNI = new CapaPresentacionCliente.Introducir_DNI("baja");
+            intrDNI.Show();
         }
 
         private void tsmiBusquedaCliente_Click(object sender, EventArgs e)
         {
-
+            Form intrDNI = new CapaPresentacionCliente.Introducir_DNI("busqueda");
+            intrDNI.Show();
         }
 
         private void tsmiAltaVehiculo_Click(object sender, EventArgs e)
