@@ -32,7 +32,8 @@ namespace CapaPresentacionCliente
             {
                 Cliente c = new Cliente(this.control_datos_cliente1.getDNI(), this.control_datos_cliente1.getNombre(), this.control_datos_cliente1.getCategoria(), int.Parse(this.control_datos_cliente1.getTelefono()));
                 LNCliente.altaCliente(c);
-                
+                MessageBox.Show("Alta de cliente confirmado");
+                this.Close();
             }
         }
 

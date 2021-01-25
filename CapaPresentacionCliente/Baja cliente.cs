@@ -41,6 +41,7 @@ namespace CapaPresentacionCliente
             {
                 LNCliente.bajaCliente(clBuscado);
                 MessageBox.Show("Cliente eliminado", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Close();
             }
             else
             {
