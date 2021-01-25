@@ -18,7 +18,7 @@ namespace CapaPresentacionVehiculo
             InitializeComponent();
 
             BindingSource bindingSource_Vehiculos= new BindingSource();
-            bindingSource_Vehiculos.DataSource = LNExtras.SELECT_ALL();
+            bindingSource_Vehiculos.DataSource = LNVehiculo.SELECT_ALL();
 
             this.listBox_Marca.DataSource = bindingSource_Vehiculos;
             this.listBox_Marca.SelectionMode = SelectionMode.None;
