@@ -22,13 +22,14 @@ namespace CapaPresentacionPresupuesto
         public FormListadoOrdenadoPresupuestos(List<Presupuesto> lp)
         {
             this.listaPresupuestos = lp;
+            
             BindingSource bindingSource = new BindingSource();
             bindingSource.DataSource = this.listaPresupuestos;
             this.lboFechaCreacion.DataSource = bindingSource;
             this.lboFechaCreacion.DisplayMember = "FechaRealizacion";
             this.lboCliente.DataSource = bindingSource;
             this.lboCliente.DisplayMember = "Cliente.DNI";
-            this.lboEstado.DataSource = bindingSource; 
+            this.lboEstado.DataSource = bindingSource;
             this.lboEstado.DisplayMember = "EstadoPresupuesto";
             this.lboNVehiculos.DataSource = bindingSource;
             this.lboEstado.DisplayMember = "ListaVehiculos.Count";
@@ -36,9 +37,10 @@ namespace CapaPresentacionPresupuesto
             {
                 this.lboImporte.Items.Add(LNPresupuesto.calcularPresupuesto(p));
             }
+            
+            InitializeComponent();
             //this.lboFechaCreacion.DataBindings.Add(new Binding("Text", bindingSource, "Date"));
             //this.lboCliente.DataBindings.Add(new Binding("Text", bindingSource, ""));
-            InitializeComponent();
         }
 
         private void btMostrarCliente_Click(object sender, EventArgs e)

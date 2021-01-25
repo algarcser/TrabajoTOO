@@ -60,14 +60,16 @@ namespace CapaPersistenciaPresupuesto
         
         public static List<Presupuesto> SELECTALL()
         {
-            List<PresupuestoDato> listaPD = new List<PresupuestoDato>();
-            listaPD = BDPresupuesto.SELECTALLPresupuesto();
+            List<PresupuestoDato> listaPD = BDPresupuesto.SELECTALLPresupuesto();
             List<Presupuesto> listaP = new List<Presupuesto>();
-            foreach (PresupuestoDato p in listaPD)
+            if (listaPD != null)
             {
-                listaP.Add(conversor.Convertir(p));
+                foreach (PresupuestoDato p in listaPD)
+                {
+                    listaP.Add(conversor.Convertir(p));
+                }
             }
-
+            
             return (listaP);
         }
 

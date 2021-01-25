@@ -75,9 +75,26 @@ namespace CapaPresentacionPresupuesto
                             }
                         }
 
-                        Form busquedaPresupuestoPorDNI = new FormListadoOrdenadoPresupuestos(listaCribadaDNI);
-                        busquedaPresupuestoPorDNI.Show();
-                        this.Close();
+                        if (listaCribadaDNI.Count != 0)
+                        {
+                            Form busquedaPresupuestoPorDNI = new FormListadoOrdenadoPresupuestos(listaCribadaDNI);
+                            busquedaPresupuestoPorDNI.Show();
+                            this.Close();
+                        }else
+                        {
+                            DialogResult result = MessageBox.Show("    ¿Quieres crear uno?    ", "No existe ningún presupuesto para un cliente con ese DNI", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                            if (result == DialogResult.Yes)
+                            {
+                                Form crearPresupuesto = new FormCrearMostrarPresupuesto(LNCliente.readCliente(c3));
+                                crearPresupuesto.Show();
+                                this.Close();
+                            }
+                            else
+                            {
+                                this.Close();
+                            }
+                        }
+                        
                         //COMPLETAR con listado ordenado de presupuestos
                     }
                     else
