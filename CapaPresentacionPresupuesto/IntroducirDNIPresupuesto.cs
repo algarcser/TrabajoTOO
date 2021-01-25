@@ -40,7 +40,7 @@ namespace CapaPresentacionPresupuesto
                     }
                     else
                     {
-                        DialogResult result = MessageBox.Show("¿Quieres darlo de alta?", "No existe un cliente con ese DNI", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                        DialogResult result = MessageBox.Show("    ¿Quieres darlo de alta?    ", "No existe un cliente con ese DNI", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                         if (result == DialogResult.Yes)
                         {
                             Cliente c2 = new Cliente(mtbDNI.Text);
