@@ -10,11 +10,17 @@ namespace CapaPersistenciaCliente
     public class PersistenciaCliente
     {
         public static String conex;
-        public static void CREATE(Cliente c)
+        public static bool CREATE(Cliente c)
         {
             if (!BDCliente.EXISTS(conversor.Convertir(c)))
             {
                 BDCliente.INSERTCliente(conversor.Convertir(c));
+                Console.WriteLine("La PersistenciaCliente ha metido un cliente con el dni " + c.getDNI);
+                return true;
+            }
+            else
+            {
+                return false;
             }
         }
 
@@ -39,16 +45,27 @@ namespace CapaPersistenciaCliente
             return BDCliente.EXISTS(conversor.Convertir(c));
         }
 
+        public static List<Cliente> SELECT_ALL()
+        {
+            List<Cliente> vehiculos = new List<Cliente>();
+            foreach (ClienteDato clienteDato in BDCliente.SELECT_ALL())
+            {
+                Cliente auxiliar = conversor.Convertir(clienteDato);
+                vehiculos.Add(auxiliar);
+            }
+            return vehiculos;
+        }
+
         public static class conversor
         {
             public static Cliente Convertir(ClienteDato clienteDato)
             {
-                return new Cliente(clienteDato.getNombre(), clienteDato.getDNI(), (CategoriaCliente)clienteDato.getcategoria(), clienteDato.getTlfno());
+                return new Cliente(clienteDato.getNombre, clienteDato.getDNI, (CategoriaCliente)clienteDato.getcategoria, clienteDato.getTlfno);
             }
 
             public static ClienteDato Convertir(Cliente cliente)
             {
-                return new ClienteDato(cliente.getNombre(), cliente.getDNI(), (CategoriaClienteDato)cliente.getcategoria(), cliente.getTlfno());
+                return new ClienteDato(cliente.getNombre, cliente.getDNI, (CategoriaClienteDato)cliente.getcategoria, cliente.getTlfno);
             }
         }
     }

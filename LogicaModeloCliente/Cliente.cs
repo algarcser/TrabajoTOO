@@ -31,36 +31,68 @@ namespace LogicaModeloCliente
         /// It returns the name of the client
         /// </summary>
         /// <returns></returns>
-        public String getNombre()
+        public String getNombre
         {
-            return this.nombre;
+            get
+            {
+                return this.nombre;
+            }
+            
         }
 
         /// <summary>
         /// It returns the DNI of the client
         /// </summary>
         /// <returns></returns>
-        public String getDNI()
+        public String getDNI
         {
-            return this.DNI;
+            get{
+                return this.DNI;
+            }
         }
 
         /// <summary>
         /// It returns the cathegory of the client
         /// </summary>
         /// <returns></returns>
-        public CategoriaCliente getcategoria()
+        public CategoriaCliente getcategoria
         {
-            return this.categoria;
+            get
+            {
+                return this.categoria;
+            }
+            
         }
 
         /// <summary>
         /// It returns the telephone number of the client
         /// </summary>
         /// <returns></returns>
-        public int getTlfno()
+        public int getTlfno
         {
-            return this.tlfno;
+            get
+            {
+                return this.tlfno;
+            }
+            
         }
+
+        public override bool Equals(object cliente)
+        {
+            if (cliente == null)
+            {
+                return false;
+            }
+            else
+            {
+                if (cliente is Cliente)
+                {
+                    Cliente auxiliar = (Cliente) cliente;
+                    return this.getDNI.Equals(auxiliar.getDNI);
+                }
+            }
+            return false;
+        }
+
     }
 }

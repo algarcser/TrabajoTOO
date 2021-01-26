@@ -18,7 +18,7 @@ namespace CapaPresentacionCliente
         {
             InitializeComponent();
             this.control_datos_cliente1.DNI_readOnly(true);
-            this.control_datos_cliente1.setDNI(c.getDNI());
+            this.control_datos_cliente1.setDNI(c.getDNI);
 
         }
 
@@ -30,9 +30,14 @@ namespace CapaPresentacionCliente
             }
             else
             {
-                Cliente c = new Cliente(this.control_datos_cliente1.getDNI(), this.control_datos_cliente1.getNombre(), this.control_datos_cliente1.getCategoria(), int.Parse(this.control_datos_cliente1.getTelefono()));
-                LNCliente.altaCliente(c);
-                MessageBox.Show("Alta de cliente confirmado");
+                Cliente cl = new Cliente(this.control_datos_cliente1.getNombre(), this.control_datos_cliente1.getDNI(), this.control_datos_cliente1.getCategoria(), int.Parse(this.control_datos_cliente1.getTelefono()));
+                Console.WriteLine("El AltaCliente justo despues de crear el cliente tiene el dni " + this.control_datos_cliente1.getDNI());
+                Console.WriteLine("El cl tiene dni " + cl.getDNI);
+                if (LNCliente.altaCliente(cl))
+                {
+                    MessageBox.Show("Alta de cliente confirmado  " + this.control_datos_cliente1.getDNI());
+                }
+                
                 this.Close();
             }
         }

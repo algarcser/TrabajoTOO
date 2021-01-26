@@ -8,13 +8,13 @@ using System.Threading.Tasks;
 
 namespace CapaPersistenciaCliente
 {
-    class BDCliente
+    internal class BDCliente
     {
         private static TablaClientes clientes;
 
         //private static TablaExtras extras;
         private BDCliente() { }
-        public static TablaClientes Clientes
+        private static TablaClientes Clientes
         {
             get
             {
@@ -28,27 +28,17 @@ namespace CapaPersistenciaCliente
         /// 
         /// </summary>
         /// <param name="c"></param>
-        public static void INSERTCliente(ClienteDato c)
+        internal static void INSERTCliente(ClienteDato c)
         {
-            BDCliente.clientes.Add(c);
-            Console.WriteLine("He llegado hasta el insert");
+            BDCliente.Clientes.Add(c);
+            Console.WriteLine("La BDCliente ha metido un cliente con el dni " + c.getDNI);
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="l"></param>
-        public static List<ClienteDato> SELECTCliente()
-        {
-            List<ClienteDato> lista = new List<ClienteDato>();
-            return lista;
-        }
-
-        public static ClienteDato SELECTCliente(ClienteDato c)
+        internal static ClienteDato SELECTCliente(ClienteDato c)
         {
             if (BDCliente.EXISTS(c))
             {
-                return c = BDCliente.clientes[c.getDNI()];
+                return c = BDCliente.Clientes[c.getDNI];
             }
             else
             {
@@ -60,7 +50,7 @@ namespace CapaPersistenciaCliente
         /// 
         /// </summary>
         /// <param name="c"></param>
-        public static void UPDATECliente(ClienteDato c)
+        internal static void UPDATECliente(ClienteDato c)
         {
             DELETECliente(c);
             INSERTCliente(c);
@@ -71,15 +61,25 @@ namespace CapaPersistenciaCliente
         /// 
         /// </summary>
         /// <param name="c"></param>
-        public static void DELETECliente(ClienteDato c)
+        internal static void DELETECliente(ClienteDato c)
         {
             BDCliente.clientes.Remove(c);
         }
 
-        public static bool EXISTS(ClienteDato c)
+        internal static bool EXISTS(ClienteDato c)
         {
-            Console.WriteLine("He llegado hasta el existe");
-            return BDCliente.Clientes.Contains(c.getDNI());  
+            Console.WriteLine("llega aqui");
+            return BDCliente.Clientes.Contains(c.getDNI);  
+        }
+
+        internal static List<ClienteDato> SELECT_ALL()
+        {
+            List<ClienteDato> lista = new List<ClienteDato>();
+            foreach (ClienteDato cliente in BDCliente.Clientes)
+            {
+                lista.Add(cliente);
+            }
+            return lista;
         }
 
     }

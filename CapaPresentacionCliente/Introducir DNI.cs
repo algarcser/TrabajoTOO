@@ -30,15 +30,16 @@ namespace CapaPresentacionCliente
 
             if (this.accion.Equals("alta"))
             {
-                if (!LNCliente.existeCliente(new Cliente(maskedTextBox1.Text)))
+                if (!LogicaNegocioCliente.LNCliente.existeCliente(new LogicaModeloCliente.Cliente(this.maskedTextBox1.Text)))
                 {
-                    Cliente c = new Cliente(maskedTextBox1.Text);
+                    Cliente c = new Cliente(this.maskedTextBox1.Text);
+                    Console.WriteLine(this.maskedTextBox1.Text);
                     Form altaCliente = new Alta_Cliente(c);
                     altaCliente.Show();
                     this.Close();
 
                 }
-                else
+                else if(LogicaNegocioCliente.LNCliente.existeCliente(new LogicaModeloCliente.Cliente(this.maskedTextBox1.Text)))
                 {
                     DialogResult result = MessageBox.Show("Quieres introducir otro?", "Ya existe un cliente con ese DNI", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
                     if (result == DialogResult.Yes)
@@ -50,18 +51,23 @@ namespace CapaPresentacionCliente
                         this.Close();
                     }
                 }
+                else
+                {
+                    MessageBox.Show("error");
+                }
             }
             else if (this.accion.Equals("baja"))
             {
-                if (LNCliente.existeCliente(new Cliente(maskedTextBox1.Text)))
+                if (LogicaNegocioCliente.LNCliente.existeCliente(new LogicaModeloCliente.Cliente(this.maskedTextBox1.Text)))
                 {
-                    Cliente c = new Cliente(maskedTextBox1.Text);
+                    Cliente c = new Cliente(this.maskedTextBox1.Text);
                     Form bajaCliente = new Baja_cliente(c);
                     bajaCliente.Show();
                     this.Close();
                 }
-                else
+                else if (!LogicaNegocioCliente.LNCliente.existeCliente(new LogicaModeloCliente.Cliente(this.maskedTextBox1.Text)))
                 {
+                    Console.WriteLine(this.maskedTextBox1.Text);
                     DialogResult result = MessageBox.Show("Quieres introducir otro?", "No existe un cliente con ese DNI", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
                     if (result == DialogResult.Yes)
                     {
@@ -71,19 +77,23 @@ namespace CapaPresentacionCliente
                     {
                         this.Close();
                     }
+                }
+                else
+                {
+                    MessageBox.Show("error");
                 }
             }
             else if (this.accion.Equals("busqueda"))
             {
-                if (LNCliente.existeCliente(new Cliente(maskedTextBox1.Text)))
+                if (LogicaNegocioCliente.LNCliente.existeCliente(new LogicaModeloCliente.Cliente(this.maskedTextBox1.Text)))
                 {
                     Cliente c;
-                    c = PersistenciaCliente.READ(new Cliente(maskedTextBox1.Text));
+                    c = CapaPersistenciaCliente.PersistenciaCliente.READ(new LogicaModeloCliente.Cliente(this.maskedTextBox1.Text));
                     Form datosCliente = new Busqueda_cliente(c);
                     datosCliente.Show();
                     this.Close();
                 }
-                else
+                else if (!LogicaNegocioCliente.LNCliente.existeCliente(new LogicaModeloCliente.Cliente(this.maskedTextBox1.Text)))
                 {
                     DialogResult result = MessageBox.Show("Quieres introducir otro?", "No existe un cliente con ese DNI", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
                     if (result == DialogResult.Yes)
@@ -94,6 +104,10 @@ namespace CapaPresentacionCliente
                     {
                         this.Close();
                     }
+                }
+                else
+                {
+                    MessageBox.Show("error");
                 }
             }
             else { }

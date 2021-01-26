@@ -26,10 +26,10 @@ namespace CapaPresentacionCliente
 
             Cliente clBuscado = LNCliente.readCliente(c);
 
-            this.control_datos_cliente1.setDNI(clBuscado.getDNI());
-            this.control_datos_cliente1.setNombre(clBuscado.getNombre());
-            this.control_datos_cliente1.setCategoria(clBuscado.getcategoria());
-            this.control_datos_cliente1.setTfno(clBuscado.getTlfno().ToString());
+            this.control_datos_cliente1.setDNI(clBuscado.getDNI);
+            this.control_datos_cliente1.setNombre(clBuscado.getNombre);
+            this.control_datos_cliente1.setCategoria(clBuscado.getcategoria);
+            this.control_datos_cliente1.setTfno(clBuscado.getTlfno.ToString());
 
 
         }

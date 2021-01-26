@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace CapaPersistenciaCliente
 {
    
-    class TablaClientes : KeyedCollection<string, ClienteDato>
+    public class TablaClientes : KeyedCollection<string, ClienteDato>
     {
         /// <summary>
         /// This is the only method that absolutely must be overridden,
@@ -21,7 +21,7 @@ namespace CapaPersistenciaCliente
         protected override string GetKeyForItem(ClienteDato item)
         {
             // In this example, the key is the DNI
-            return item.getDNI();
+            return item.getDNI;
         }
 
         

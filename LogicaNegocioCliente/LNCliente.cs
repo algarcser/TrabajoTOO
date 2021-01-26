@@ -14,14 +14,19 @@ namespace LogicaNegocioCliente
 
         public static bool altaCliente(Cliente c)
         {
-            PersistenciaCliente.CREATE(c);
-            return true;
+            Console.WriteLine("La LNCliente ha metido un cliente con el dni " + c.getDNI);
+            return PersistenciaCliente.CREATE(c);
         }
 
-        public static bool bajaCliente(Cliente c)
+        public static void bajaCliente(Cliente c)
         {
             PersistenciaCliente.DELETE(c);
-            return true;
+        }
+
+        public static void updateCliente(Cliente c)
+        {
+            PersistenciaCliente.DELETE(c);
+            PersistenciaCliente.CREATE(c);
         }
 
         public static Cliente readCliente(Cliente c)
@@ -32,6 +37,11 @@ namespace LogicaNegocioCliente
         public static bool existeCliente(Cliente c)
         {
             return PersistenciaCliente.EXISTE(c);
+        }
+
+        public static List<Cliente> SELECT_ALL()
+        {
+            return PersistenciaCliente.SELECT_ALL();
         }
 
     }

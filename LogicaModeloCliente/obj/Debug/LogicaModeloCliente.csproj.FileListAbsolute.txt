@@ -9,3 +9,4 @@ C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\LogicaModeloCliente\obj\Debug\L
 C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\LogicaModeloCliente\obj\Debug\LogicaModeloCliente.csproj.CoreCompileInputs.cache
 C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\LogicaModeloCliente\obj\Debug\LogicaModeloCliente.dll
 C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\LogicaModeloCliente\obj\Debug\LogicaModeloCliente.pdb
+C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\LogicaModeloCliente\obj\Debug\LogicaModeloCliente.csprojAssemblyReference.cache
