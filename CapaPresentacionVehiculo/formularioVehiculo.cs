@@ -91,7 +91,7 @@ namespace CapaPresentacionVehiculo
                     }
                     this.Close();
                 }
-                else if (this.radioButton_2mano.Checked == true)
+                else if ( (this.radioButton_2mano.Checked == true) && (this.datos_2mano.Lectura_Correcta()) )
                 {
                     vehiculo2Mano auxiliar_vehiculo_2mano = new vehiculo2Mano(this.textBox_NBastidor.Text, this.textBox_Marca.Text, this.textBox_Modelo.Text, float.Parse(this.textBox_Potencia.Text), float.Parse(this.textBox_PrecioRecomendado.Text), iva.cocheSegundaMano, this.datos_2mano.Matricula, DateTime.Parse(this.datos_2mano.FechaMatriculacion));
 
@@ -135,7 +135,7 @@ namespace CapaPresentacionVehiculo
 
         private bool Lectura_Correcta()
         {
-            return ( this.textBox_Modelo.Text != "") && (this.textBox_Marca.Text != "") && (this.textBox_Potencia.Text != "") && (this.textBox_PrecioRecomendado.Text != "") && (this.datos_2mano.Lectura_Correcta());
+            return ( this.textBox_Modelo.Text != "") && (this.textBox_Marca.Text != "") && (this.textBox_Potencia.Text != "") && (this.textBox_PrecioRecomendado.Text != "");
         }
 
         private void cargar_Vehiculo()
