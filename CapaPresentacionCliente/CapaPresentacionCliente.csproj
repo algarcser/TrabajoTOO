@@ -67,6 +67,12 @@
     <Compile Include="Busqueda cliente.Designer.cs">
       <DependentUpon>Busqueda cliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="Control alternativo datos cliente.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control alternativo datos cliente.Designer.cs">
+      <DependentUpon>Control alternativo datos cliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="Control datos cliente.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -86,6 +92,11 @@
       <DependentUpon>Listado de clientes.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Alta Cliente.resx">
@@ -94,8 +105,14 @@
     <EmbeddedResource Include="Baja cliente.resx">
       <DependentUpon>Baja cliente.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Busqueda alternativa cliente.resx">
+      <DependentUpon>Busqueda alternativa cliente.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Busqueda cliente.resx">
       <DependentUpon>Busqueda cliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control alternativo datos cliente.resx">
+      <DependentUpon>Control alternativo datos cliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Control datos cliente.resx">
       <DependentUpon>Control datos cliente.cs</DependentUpon>
@@ -105,6 +122,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Listado de clientes.resx">
       <DependentUpon>Listado de clientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
