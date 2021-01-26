@@ -60,12 +60,12 @@ namespace CapaPersistenciaCliente
         {
             public static Cliente Convertir(ClienteDato clienteDato)
             {
-                return new Cliente(clienteDato.getNombre, clienteDato.getDNI, (CategoriaCliente)clienteDato.getcategoria, clienteDato.getTlfno);
+                return new Cliente(clienteDato.getNombre, clienteDato.getApellidos, clienteDato.getDNI, (CategoriaCliente)clienteDato.getcategoria, clienteDato.getTlfno);
             }
 
             public static ClienteDato Convertir(Cliente cliente)
             {
-                return new ClienteDato(cliente.getNombre, cliente.getDNI, (CategoriaClienteDato)cliente.getcategoria, cliente.getTlfno);
+                return new ClienteDato(cliente.getNombre, cliente.getApellidos, cliente.getDNI, (CategoriaClienteDato)cliente.getcategoria, cliente.getTlfno);
             }
         }
     }

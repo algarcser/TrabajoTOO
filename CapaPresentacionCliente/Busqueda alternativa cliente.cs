@@ -16,5 +16,10 @@ namespace CapaPresentacionCliente
         {
             InitializeComponent();
         }
+
+        private void btCerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

@@ -8,11 +8,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using LogicaModeloCliente;
+using LogicaNegocioCliente;
 
 namespace CapaPresentacionCliente
 {
-    public partial class Control_datos_cliente : UserControl
+    public partial class Control_alternativo_datos_cliente : UserControl
     {
+        public Control_alternativo_datos_cliente()
+        {
+            InitializeComponent();
+        }
 
         public String getDNI()
         {
@@ -31,6 +36,15 @@ namespace CapaPresentacionCliente
         public void setNombre(string nom)
         {
             this.textBox2.Text = nom;
+        }
+
+        public String getApellidos()
+        {
+            return this.textBox4.Text;
+        }
+        public void setApellidos(string nom)
+        {
+            this.textBox4.Text = nom;
         }
 
         public String getTelefono()
@@ -99,6 +113,11 @@ namespace CapaPresentacionCliente
         public void nombre_readOnly(bool b)
         {
             this.textBox2.ReadOnly = b;
+        }
+
+        public void apellidos_readOnly(bool b)
+        {
+            this.textBox4.ReadOnly = b;
         }
 
         public void tfno_readOnly(bool b)
