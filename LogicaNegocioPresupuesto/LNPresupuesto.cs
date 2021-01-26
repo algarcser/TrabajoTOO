@@ -32,13 +32,14 @@ namespace LogicaNegocioPresupuesto
             INSERT(auxiliar);
         }
 
+        
         public static float calcularPresupuesto(Presupuesto presupuesto)
         {
             double descuento;
-            if ((int)presupuesto.Cliente.getcategoria() == 0)
+            if ((int)presupuesto.Cliente.getcategoria == 0)
             {
                 descuento = 1 - 0.05;
-            }else if ((int)presupuesto.Cliente.getcategoria() == 1)
+            }else if ((int)presupuesto.Cliente.getcategoria == 1)
             {
                 descuento = 1 - 0.1;
             }else

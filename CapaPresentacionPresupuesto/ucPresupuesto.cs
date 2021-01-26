@@ -57,9 +57,9 @@ namespace CapaPresentacionPresupuesto
             this.lbFechaCreacion.Text = "Fecha de creación: " + presupuesto.FechaRealizacion.ToString();  
             
             this.tbDNI.ReadOnly = true;
-            this.tbDNI.Text = presupuesto.Cliente.getDNI();
+            this.tbDNI.Text = presupuesto.Cliente.getDNI;
             this.tbNombre.ReadOnly = true;
-            this.tbNombre.Text = presupuesto.Cliente.getNombre();
+            this.tbNombre.Text = presupuesto.Cliente.getNombre;
             this.btMostrarCliente.Visible = true;
 
             this.gbEstado.Enabled = false;

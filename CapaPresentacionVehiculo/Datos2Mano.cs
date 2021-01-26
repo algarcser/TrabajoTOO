@@ -22,11 +22,11 @@ namespace CapaPresentacionVehiculo
         {
             get
             {
-                return this.textBox_matricula.Text;
+                return this.maskedTextBox_Matricula.Text;
             }
             set
             {
-                this.textBox_matricula.Text = value;
+                this.maskedTextBox_Matricula.Text = value;
             }
         }
 
@@ -34,19 +34,25 @@ namespace CapaPresentacionVehiculo
         {
             get
             {
-                return this.textBox_fechaMatriculacion.Text;
+                return this.dateTimePicker_FechaMatriculacion.Text;
             }
             set
             {
-                this.textBox_fechaMatriculacion.Text = value.ToString().Substring(0,10);
+                this.dateTimePicker_FechaMatriculacion.Text = value.ToString().Substring(0,10);
             }
         }
 
         internal void cerrar_modificacion()
         {
-            this.textBox_fechaMatriculacion.ReadOnly = true;
-            this.textBox_matricula.ReadOnly = true;
+            this.maskedTextBox_Matricula.ReadOnly = true;
+            this.dateTimePicker_FechaMatriculacion.Enabled = false;
         }
+
+        public bool Lectura_Correcta()
+        {
+            return ( this.maskedTextBox_Matricula.Text != "") ;
+        }
+
 
     }
 }

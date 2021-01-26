@@ -118,6 +118,7 @@
             this.textBox_Potencia.Name = "textBox_Potencia";
             this.textBox_Potencia.Size = new System.Drawing.Size(100, 20);
             this.textBox_Potencia.TabIndex = 8;
+            this.textBox_Potencia.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_Potencia_KeyPress);
             // 
             // textBox_PrecioRecomendado
             // 
@@ -125,6 +126,7 @@
             this.textBox_PrecioRecomendado.Name = "textBox_PrecioRecomendado";
             this.textBox_PrecioRecomendado.Size = new System.Drawing.Size(100, 20);
             this.textBox_PrecioRecomendado.TabIndex = 9;
+            this.textBox_PrecioRecomendado.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_PrecioRecomendado_KeyPress);
             // 
             // groupBox_tipo
             // 

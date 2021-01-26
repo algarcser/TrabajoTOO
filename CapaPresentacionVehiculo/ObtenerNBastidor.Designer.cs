@@ -28,17 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox_NBastidor = new System.Windows.Forms.TextBox();
+            this.components = new System.ComponentModel.Container();
             this.button_aceptar = new System.Windows.Forms.Button();
             this.button_cancelar = new System.Windows.Forms.Button();
+            this.maskedTextBox_NBastidor = new System.Windows.Forms.MaskedTextBox();
+            this.toolTip_NBastidor = new System.Windows.Forms.ToolTip(this.components);
             this.SuspendLayout();
-            // 
-            // textBox_NBastidor
-            // 
-            this.textBox_NBastidor.Location = new System.Drawing.Point(116, 83);
-            this.textBox_NBastidor.Name = "textBox_NBastidor";
-            this.textBox_NBastidor.Size = new System.Drawing.Size(100, 20);
-            this.textBox_NBastidor.TabIndex = 0;
             // 
             // button_aceptar
             // 
@@ -60,6 +55,19 @@
             this.button_cancelar.UseVisualStyleBackColor = true;
             this.button_cancelar.Click += new System.EventHandler(this.button_cancelar_Click);
             // 
+            // maskedTextBox_NBastidor
+            // 
+            this.maskedTextBox_NBastidor.Location = new System.Drawing.Point(110, 83);
+            this.maskedTextBox_NBastidor.Name = "maskedTextBox_NBastidor";
+            this.maskedTextBox_NBastidor.Size = new System.Drawing.Size(100, 20);
+            this.maskedTextBox_NBastidor.TabIndex = 3;
+            this.maskedTextBox_NBastidor.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBox_NBastidor_MaskInputRejected);
+            this.maskedTextBox_NBastidor.KeyDown += new System.Windows.Forms.KeyEventHandler(this.maskedTextBox_NBastidor_KeyDown);
+            // 
+            // toolTip_NBastidor
+            // 
+            this.toolTip_NBastidor.IsBalloon = true;
+            // 
             // ObtenerNBastidor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -67,9 +75,10 @@
             this.ClientSize = new System.Drawing.Size(338, 242);
             this.Controls.Add(this.button_cancelar);
             this.Controls.Add(this.button_aceptar);
-            this.Controls.Add(this.textBox_NBastidor);
+            this.Controls.Add(this.maskedTextBox_NBastidor);
             this.Name = "ObtenerNBastidor";
             this.Text = "Introducir el numero de bastidor";
+            this.Load += new System.EventHandler(this.ObtenerNBastidor_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -77,8 +86,9 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox_NBastidor;
         private System.Windows.Forms.Button button_aceptar;
         private System.Windows.Forms.Button button_cancelar;
+        private System.Windows.Forms.MaskedTextBox maskedTextBox_NBastidor;
+        private System.Windows.Forms.ToolTip toolTip_NBastidor;
     }
 }

@@ -31,9 +31,9 @@
             this.components = new System.ComponentModel.Container();
             this.label_matricula = new System.Windows.Forms.Label();
             this.label_fechaMatriculacion = new System.Windows.Forms.Label();
-            this.textBox_matricula = new System.Windows.Forms.TextBox();
-            this.textBox_fechaMatriculacion = new System.Windows.Forms.TextBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.maskedTextBox_Matricula = new System.Windows.Forms.MaskedTextBox();
+            this.dateTimePicker_FechaMatriculacion = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
             // label_matricula
@@ -54,31 +54,32 @@
             this.label_fechaMatriculacion.TabIndex = 1;
             this.label_fechaMatriculacion.Text = "Fecha de matriculacion: ";
             // 
-            // textBox_matricula
-            // 
-            this.textBox_matricula.Location = new System.Drawing.Point(143, 29);
-            this.textBox_matricula.Name = "textBox_matricula";
-            this.textBox_matricula.Size = new System.Drawing.Size(100, 20);
-            this.textBox_matricula.TabIndex = 2;
-            // 
-            // textBox_fechaMatriculacion
-            // 
-            this.textBox_fechaMatriculacion.Location = new System.Drawing.Point(143, 68);
-            this.textBox_fechaMatriculacion.Name = "textBox_fechaMatriculacion";
-            this.textBox_fechaMatriculacion.Size = new System.Drawing.Size(100, 20);
-            this.textBox_fechaMatriculacion.TabIndex = 3;
-            // 
             // contextMenuStrip1
             // 
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
+            // maskedTextBox_Matricula
+            // 
+            this.maskedTextBox_Matricula.Location = new System.Drawing.Point(143, 33);
+            this.maskedTextBox_Matricula.Name = "maskedTextBox_Matricula";
+            this.maskedTextBox_Matricula.Size = new System.Drawing.Size(100, 20);
+            this.maskedTextBox_Matricula.TabIndex = 4;
+            // 
+            // dateTimePicker_FechaMatriculacion
+            // 
+            this.dateTimePicker_FechaMatriculacion.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker_FechaMatriculacion.Location = new System.Drawing.Point(157, 68);
+            this.dateTimePicker_FechaMatriculacion.Name = "dateTimePicker_FechaMatriculacion";
+            this.dateTimePicker_FechaMatriculacion.Size = new System.Drawing.Size(86, 20);
+            this.dateTimePicker_FechaMatriculacion.TabIndex = 6;
+            // 
             // Datos2Mano
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.textBox_fechaMatriculacion);
-            this.Controls.Add(this.textBox_matricula);
+            this.Controls.Add(this.dateTimePicker_FechaMatriculacion);
+            this.Controls.Add(this.maskedTextBox_Matricula);
             this.Controls.Add(this.label_fechaMatriculacion);
             this.Controls.Add(this.label_matricula);
             this.Name = "Datos2Mano";
@@ -92,8 +93,8 @@
 
         private System.Windows.Forms.Label label_matricula;
         private System.Windows.Forms.Label label_fechaMatriculacion;
-        private System.Windows.Forms.TextBox textBox_matricula;
-        private System.Windows.Forms.TextBox textBox_fechaMatriculacion;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.MaskedTextBox maskedTextBox_Matricula;
+        private System.Windows.Forms.DateTimePicker dateTimePicker_FechaMatriculacion;
     }
 }

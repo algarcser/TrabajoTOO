@@ -73,46 +73,43 @@ namespace CapaPresentacionVehiculo
 
         private void button_aceptar_Click(object sender, EventArgs e)
         {
-            if ( this.radioButton_nuevo.Checked == true)
+            if (this.Lectura_Correcta())  // comprobamos que todos los campos han sido rellenados correctamente
             {
-
-                vehiculoNuevo auxiliar_vehiculo_nuevo = new vehiculoNuevo(this.textBox_NBastidor.Text, this.textBox_Marca.Text, this.textBox_Modelo.Text, float.Parse(this.textBox_Potencia.Text), float.Parse(this.textBox_PrecioRecomendado.Text), iva.cocheNuevo);
-                foreach(object object_extra in this.lista_extras.SelectedItems)
+                if (this.radioButton_nuevo.Checked == true)
                 {
-                    extra extra = object_extra as extra;
-                    auxiliar_vehiculo_nuevo.AddExtra(extra);
-                    
+
+                    vehiculoNuevo auxiliar_vehiculo_nuevo = new vehiculoNuevo(this.textBox_NBastidor.Text, this.textBox_Marca.Text, this.textBox_Modelo.Text, float.Parse(this.textBox_Potencia.Text), float.Parse(this.textBox_PrecioRecomendado.Text), iva.cocheNuevo);
+                    foreach (object object_extra in this.lista_extras.SelectedItems)
+                    {
+                        extra extra = object_extra as extra;
+                        auxiliar_vehiculo_nuevo.AddExtra(extra);
+
+                    }
+                    if (LNVehiculo.INSERT(auxiliar_vehiculo_nuevo))
+                    {
+                        MessageBox.Show("operacion con exito");
+                    }
+                    this.Close();
                 }
-
-
-                if (LNVehiculo.INSERT(auxiliar_vehiculo_nuevo))
+                else if (this.radioButton_2mano.Checked == true)
                 {
-                    MessageBox.Show("operacion con exito");
+                    vehiculo2Mano auxiliar_vehiculo_2mano = new vehiculo2Mano(this.textBox_NBastidor.Text, this.textBox_Marca.Text, this.textBox_Modelo.Text, float.Parse(this.textBox_Potencia.Text), float.Parse(this.textBox_PrecioRecomendado.Text), iva.cocheSegundaMano, this.datos_2mano.Matricula, DateTime.Parse(this.datos_2mano.FechaMatriculacion));
+
+                    if (LNVehiculo.INSERT(auxiliar_vehiculo_2mano))
+                    {
+                        MessageBox.Show("operacion con exito");
+                    }
+                    this.Close();
                 }
-                this.Close();
-
-
-
-
-            }
-            else if ( this.radioButton_2mano.Checked == true)
-            {
-                vehiculo2Mano auxiliar_vehiculo_2mano = new vehiculo2Mano(this.textBox_NBastidor.Text, this.textBox_Marca.Text, this.textBox_Modelo.Text, float.Parse(this.textBox_Potencia.Text), float.Parse(this.textBox_PrecioRecomendado.Text), iva.cocheSegundaMano, this.datos_2mano.Matricula, DateTime.Parse(this.datos_2mano.FechaMatriculacion));
-
-                if (LNVehiculo.INSERT(auxiliar_vehiculo_2mano))
+                else
                 {
-                    MessageBox.Show("operacion con exito");
+                    MessageBox.Show("Ha de seleccionar un tipo de coche");
                 }
-
-                
-                this.Close();
             }
             else
             {
-                MessageBox.Show("Ha de seleccionar un tipo de coche");
+                MessageBox.Show("Faltan campos sin rellenar");
             }
-
-            
         }
 
         private void button_cancelar_Click(object sender, EventArgs e)
@@ -136,6 +133,10 @@ namespace CapaPresentacionVehiculo
             
         }
 
+        private bool Lectura_Correcta()
+        {
+            return ( this.textBox_Modelo.Text != "") && (this.textBox_Marca.Text != "") && (this.textBox_Potencia.Text != "") && (this.textBox_PrecioRecomendado.Text != "") && (this.datos_2mano.Lectura_Correcta());
+        }
 
         private void cargar_Vehiculo()
         {
@@ -205,6 +206,34 @@ namespace CapaPresentacionVehiculo
             }
 
             this.button_aceptar.Visible = false;
+        }
+
+        private void textBox_PrecioRecomendado_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // allows 0-9, backspace, and decimal
+            if (((e.KeyChar < 48 || e.KeyChar > 57) && e.KeyChar != 8 && e.KeyChar != 46))
+            {
+                e.Handled = true;
+                return;
+            }
+
+            // checks to make sure only 1 decimal is allowed
+            if (e.KeyChar == 46)
+            {
+                if ((sender as TextBox).Text.IndexOf(e.KeyChar) != -1)
+                    e.Handled = true;
+            }
+        }
+
+        private void textBox_Potencia_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // allows 0-9, backspace
+            if (((e.KeyChar < 48 || e.KeyChar > 57) && e.KeyChar != 8))
+            {
+                e.Handled = true;
+                return;
+            }
+
         }
     }
 }
