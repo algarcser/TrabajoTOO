@@ -45,9 +45,6 @@ namespace CapaPresentacionPresupuesto
 
             this.btIntroducirVehiculo.Visible = true;
             this.lboListaVehiculos.Enabled = true;
-            BindingSource bindingSource = new BindingSource();
-            bindingSource.DataSource = this.listaVehiculosCrear;
-            this.lboListaVehiculos.DataSource = bindingSource;
             this.btMostrarVehiculo.Visible = true;
 
             this.lbImporte.Visible = false;
@@ -128,7 +125,8 @@ namespace CapaPresentacionPresupuesto
             }
             else
             {
-                vehiculo v = (vehiculo)this.lboListaVehiculos.SelectedItem;
+                vehiculo v = this.lboListaVehiculos.SelectedItem as vehiculo;
+                Console.WriteLine(v.NBastidor);
                 Form mostrarVehiculo = new formularioVehiculo(v.NBastidor, enumObjetivo.Ver);
                 //mostrar vehículo como en búsqueda vehículo
             }
@@ -136,12 +134,17 @@ namespace CapaPresentacionPresupuesto
 
         private void btIntroducirVehiculo_Click(object sender, EventArgs e)
         {
+            BindingSource bindingSource = new BindingSource();
+
             FormIntroducirNBastidorPresupuesto introducirVehiculo = new FormIntroducirNBastidorPresupuesto("introducir");
             introducirVehiculo.ShowDialog();
             vehiculo v = introducirVehiculo.Vehiculo;
             if (v != null)
             {
                 this.listaVehiculosCrear.Add(v);
+                bindingSource.DataSource = this.listaVehiculosCrear;
+                this.lboListaVehiculos.DataSource = bindingSource;
+                this.lboListaVehiculos.DisplayMember = "NBastidor";
             }
             //mostrar ObtenerNBastidor.cs, si existe se añade a la lista, si no se abre dar de alta vehículo
             //JUNTO TODO SU PROCESO,tras darlo de alta se introduce en la lista

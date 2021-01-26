@@ -32,9 +32,9 @@ namespace CapaPresentacionPresupuesto
             this.lbFechaCreacion = new System.Windows.Forms.Label();
             this.gbEstado = new System.Windows.Forms.GroupBox();
             this.rbDesestimado = new System.Windows.Forms.RadioButton();
+            this.rbCreado = new System.Windows.Forms.RadioButton();
             this.rbAceptado = new System.Windows.Forms.RadioButton();
             this.rbPendiente = new System.Windows.Forms.RadioButton();
-            this.rbCreado = new System.Windows.Forms.RadioButton();
             this.gbCliente = new System.Windows.Forms.GroupBox();
             this.btMostrarCliente = new System.Windows.Forms.Button();
             this.lbNombre = new System.Windows.Forms.Label();
@@ -87,6 +87,17 @@ namespace CapaPresentacionPresupuesto
             this.rbDesestimado.UseVisualStyleBackColor = true;
             this.rbDesestimado.CheckedChanged += new System.EventHandler(this.rbDesestimado_CheckedChanged);
             // 
+            // rbCreado
+            // 
+            this.rbCreado.AutoCheck = false;
+            this.rbCreado.AutoSize = true;
+            this.rbCreado.Location = new System.Drawing.Point(22, 15);
+            this.rbCreado.Name = "rbCreado";
+            this.rbCreado.Size = new System.Drawing.Size(59, 17);
+            this.rbCreado.TabIndex = 0;
+            this.rbCreado.Text = "Creado";
+            this.rbCreado.UseVisualStyleBackColor = true;
+            // 
             // rbAceptado
             // 
             this.rbAceptado.AutoSize = true;
@@ -106,17 +117,6 @@ namespace CapaPresentacionPresupuesto
             this.rbPendiente.TabIndex = 1;
             this.rbPendiente.Text = "Pendiente";
             this.rbPendiente.UseVisualStyleBackColor = true;
-            // 
-            // rbCreado
-            // 
-            this.rbCreado.AutoCheck = false;
-            this.rbCreado.AutoSize = true;
-            this.rbCreado.Location = new System.Drawing.Point(22, 15);
-            this.rbCreado.Name = "rbCreado";
-            this.rbCreado.Size = new System.Drawing.Size(59, 17);
-            this.rbCreado.TabIndex = 0;
-            this.rbCreado.Text = "Creado";
-            this.rbCreado.UseVisualStyleBackColor = true;
             // 
             // gbCliente
             // 
@@ -181,9 +181,9 @@ namespace CapaPresentacionPresupuesto
             this.gbVehiculos.Controls.Add(this.lboListaVehiculos);
             this.gbVehiculos.Controls.Add(this.btMostrarVehiculo);
             this.gbVehiculos.Controls.Add(this.btIntroducirVehiculo);
-            this.gbVehiculos.Location = new System.Drawing.Point(21, 216);
+            this.gbVehiculos.Location = new System.Drawing.Point(49, 216);
             this.gbVehiculos.Name = "gbVehiculos";
-            this.gbVehiculos.Size = new System.Drawing.Size(339, 164);
+            this.gbVehiculos.Size = new System.Drawing.Size(276, 194);
             this.gbVehiculos.TabIndex = 13;
             this.gbVehiculos.TabStop = false;
             this.gbVehiculos.Text = "Vehículos";
@@ -191,7 +191,7 @@ namespace CapaPresentacionPresupuesto
             // lbListaVehiculos
             // 
             this.lbListaVehiculos.AutoSize = true;
-            this.lbListaVehiculos.Location = new System.Drawing.Point(13, 57);
+            this.lbListaVehiculos.Location = new System.Drawing.Point(13, 59);
             this.lbListaVehiculos.Name = "lbListaVehiculos";
             this.lbListaVehiculos.Size = new System.Drawing.Size(97, 13);
             this.lbListaVehiculos.TabIndex = 3;
@@ -200,15 +200,15 @@ namespace CapaPresentacionPresupuesto
             // lboListaVehiculos
             // 
             this.lboListaVehiculos.FormattingEnabled = true;
-            this.lboListaVehiculos.Location = new System.Drawing.Point(116, 57);
+            this.lboListaVehiculos.Location = new System.Drawing.Point(116, 59);
             this.lboListaVehiculos.Name = "lboListaVehiculos";
-            this.lboListaVehiculos.Size = new System.Drawing.Size(105, 95);
+            this.lboListaVehiculos.Size = new System.Drawing.Size(140, 82);
             this.lboListaVehiculos.TabIndex = 2;
             // 
             // btMostrarVehiculo
             // 
             this.btMostrarVehiculo.AutoSize = true;
-            this.btMostrarVehiculo.Location = new System.Drawing.Point(229, 93);
+            this.btMostrarVehiculo.Location = new System.Drawing.Point(138, 158);
             this.btMostrarVehiculo.Name = "btMostrarVehiculo";
             this.btMostrarVehiculo.Size = new System.Drawing.Size(97, 23);
             this.btMostrarVehiculo.TabIndex = 1;
@@ -219,7 +219,7 @@ namespace CapaPresentacionPresupuesto
             // btIntroducirVehiculo
             // 
             this.btIntroducirVehiculo.AutoSize = true;
-            this.btIntroducirVehiculo.Location = new System.Drawing.Point(116, 19);
+            this.btIntroducirVehiculo.Location = new System.Drawing.Point(133, 19);
             this.btIntroducirVehiculo.Name = "btIntroducirVehiculo";
             this.btIntroducirVehiculo.Size = new System.Drawing.Size(106, 23);
             this.btIntroducirVehiculo.TabIndex = 0;
@@ -229,7 +229,7 @@ namespace CapaPresentacionPresupuesto
             // 
             // btAceptar
             // 
-            this.btAceptar.Location = new System.Drawing.Point(78, 424);
+            this.btAceptar.Location = new System.Drawing.Point(78, 452);
             this.btAceptar.Name = "btAceptar";
             this.btAceptar.Size = new System.Drawing.Size(75, 23);
             this.btAceptar.TabIndex = 14;
@@ -239,7 +239,7 @@ namespace CapaPresentacionPresupuesto
             // 
             // btCancelar
             // 
-            this.btCancelar.Location = new System.Drawing.Point(222, 424);
+            this.btCancelar.Location = new System.Drawing.Point(222, 452);
             this.btCancelar.Name = "btCancelar";
             this.btCancelar.Size = new System.Drawing.Size(75, 23);
             this.btCancelar.TabIndex = 15;
@@ -251,7 +251,7 @@ namespace CapaPresentacionPresupuesto
             // 
             this.lbImporte.AutoSize = true;
             this.lbImporte.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbImporte.Location = new System.Drawing.Point(95, 393);
+            this.lbImporte.Location = new System.Drawing.Point(95, 423);
             this.lbImporte.Name = "lbImporte";
             this.lbImporte.Size = new System.Drawing.Size(64, 16);
             this.lbImporte.TabIndex = 16;
@@ -269,7 +269,7 @@ namespace CapaPresentacionPresupuesto
             this.Controls.Add(this.gbEstado);
             this.Controls.Add(this.lbFechaCreacion);
             this.Name = "ucPresupuesto";
-            this.Size = new System.Drawing.Size(374, 465);
+            this.Size = new System.Drawing.Size(374, 495);
             this.gbEstado.ResumeLayout(false);
             this.gbEstado.PerformLayout();
             this.gbCliente.ResumeLayout(false);
