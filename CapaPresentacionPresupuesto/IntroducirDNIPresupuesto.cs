@@ -69,7 +69,7 @@ namespace CapaPresentacionPresupuesto
                         List<Presupuesto> listaCribadaDNI = new List<Presupuesto>();
                         foreach (Presupuesto p in listaCribaDNI)
                         {
-                            if (p.Cliente.getDNI().Equals(mtbDNI.Text) == true)
+                            if (p.Cliente.getDNI.Equals(mtbDNI.Text) == true)
                             {
                                 listaCribadaDNI.Add(p);
                             }
@@ -119,7 +119,7 @@ namespace CapaPresentacionPresupuesto
 
         private void FormIntroducirDNIPresupuesto_Load(object sender, EventArgs e)
         {
-            mtbDNI.Mask = "00000000L";
+            mtbDNI.Mask = ">00000000L";
 
             mtbDNI.MaskInputRejected += new MaskInputRejectedEventHandler(mtbDNI_MaskInputRejected);
             mtbDNI.KeyDown += new KeyEventHandler(mtbDNI_KeyDown);

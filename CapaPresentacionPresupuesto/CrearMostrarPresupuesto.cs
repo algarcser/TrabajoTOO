@@ -20,18 +20,22 @@ namespace CapaPresentacionPresupuesto
         public FormCrearMostrarPresupuesto(Cliente c) //crear
         {
             this.cliente = c;
-            this.Text = "Crear presupuesto";
+            ucPresupuesto crearPresupuesto = new ucPresupuesto(this.cliente);
+            this.Controls.Add(crearPresupuesto);
             InitializeComponent();
+            this.Text = "Crear presupuesto";
         }
 
         public FormCrearMostrarPresupuesto(Presupuesto p) //mostrar
         {
             this.presupuesto = p;
-            this.Text = "Mostrar presupuesto";
+            ucPresupuesto mostrarPresupuesto = new ucPresupuesto(this.presupuesto);
+            this.Controls.Add(mostrarPresupuesto);
             InitializeComponent();
+            this.Text = "Mostrar presupuesto";
         }
 
-        private void FormCrearMostrarPresupuesto_Load(object sender, EventArgs e)
+        /*private void FormCrearMostrarPresupuesto_Load(object sender, EventArgs e)
         {
             if (this.presupuesto == null) //crear cliente != null
             {
@@ -43,6 +47,6 @@ namespace CapaPresentacionPresupuesto
                 ucPresupuesto mostrarPresupuesto = new ucPresupuesto(this.presupuesto);
                 this.Controls.Add(mostrarPresupuesto);
             }    
-        }
+        }*/
     }
 }

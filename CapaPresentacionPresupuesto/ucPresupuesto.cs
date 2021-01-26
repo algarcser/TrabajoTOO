@@ -20,20 +20,28 @@ namespace CapaPresentacionPresupuesto
     public partial class ucPresupuesto : UserControl
     {
         private Cliente cliente;
-        private List<vehiculo> listaVehiculosCrear;
+        private List<vehiculo> listaVehiculosCrear = new List<vehiculo>();
         private Presupuesto presupuesto;
 
         public ucPresupuesto(Cliente c) //crear
         {
             this.cliente = c;
             
+            InitializeComponent();
+
             this.lbFechaCreacion.Visible = false;
-            
+
             this.tbDNI.ReadOnly = true;
+            this.tbDNI.Text = this.cliente.getDNI;
             this.tbNombre.ReadOnly = true;
+            this.tbNombre.Text = this.cliente.getNombre;
             this.btMostrarCliente.Visible = true;
 
             this.gbEstado.Enabled = true;
+            this.rbCreado.AutoCheck = true;
+            this.rbAceptado.AutoCheck = true;
+            this.rbPendiente.AutoCheck = true;
+            this.rbDesestimado.AutoCheck = true;
 
             this.btIntroducirVehiculo.Visible = true;
             this.lboListaVehiculos.Enabled = true;
@@ -46,20 +54,21 @@ namespace CapaPresentacionPresupuesto
 
             this.btAceptar.Visible = true;
             this.btCancelar.Visible = true;
-            InitializeComponent();
         }
 
         public ucPresupuesto(Presupuesto p) //mostrar
         {
             this.presupuesto = p;
             
+            InitializeComponent();
+
             this.lbFechaCreacion.Visible = true;
-            this.lbFechaCreacion.Text = "Fecha de creación: " + presupuesto.FechaRealizacion.ToString();  
-            
+            this.lbFechaCreacion.Text = "Fecha de creación: " + presupuesto.FechaRealizacion.ToString();
+
             this.tbDNI.ReadOnly = true;
-            this.tbDNI.Text = presupuesto.Cliente.getDNI();
+            this.tbDNI.Text = presupuesto.Cliente.getDNI;
             this.tbNombre.ReadOnly = true;
-            this.tbNombre.Text = presupuesto.Cliente.getNombre();
+            this.tbNombre.Text = presupuesto.Cliente.getNombre;
             this.btMostrarCliente.Visible = true;
 
             this.gbEstado.Enabled = false;
@@ -67,10 +76,12 @@ namespace CapaPresentacionPresupuesto
             if ((int)presupuesto.EstadoPresupuesto == 0)
             {
                 this.rbCreado.Checked = true;
-            }else if ((int)presupuesto.EstadoPresupuesto == 1)
+            }
+            else if ((int)presupuesto.EstadoPresupuesto == 1)
             {
                 this.rbAceptado.Checked = true;
-            }else if ((int)presupuesto.EstadoPresupuesto == 2)
+            }
+            else if ((int)presupuesto.EstadoPresupuesto == 2)
             {
                 this.rbDesestimado.Checked = true;
             }
@@ -93,7 +104,6 @@ namespace CapaPresentacionPresupuesto
             this.lbImporte.Text = "Importe: " + LNPresupuesto.calcularPresupuesto(presupuesto).ToString() + " €";
             this.btAceptar.Visible = true;
             this.btCancelar.Visible = false;
-            InitializeComponent();
         } 
         
         private void btMostrarCliente_Click(object sender, EventArgs e)
@@ -147,16 +157,7 @@ namespace CapaPresentacionPresupuesto
             {
                 EstadoPresupuesto estado = EstadoPresupuesto.creado;
                 bool vehiculoCorrecto = true;
-
-                int i = 0;
-                foreach (RadioButton r in this.gbEstado.Controls)
-                {
-                    if (r.Checked == false)
-                    {
-                        i++;
-                    }
-                    
-                }
+                bool continuar = true;
 
                 if (this.rbCreado.Checked == true)
                 {
@@ -167,28 +168,21 @@ namespace CapaPresentacionPresupuesto
                     estado = EstadoPresupuesto.aceptado;
                 }
                 else if (this.rbDesestimado.Checked == true)
-                {
-                    DialogResult result1 = MessageBox.Show("¿Esta seguro de que el estado del presupuesto es desestimado?", "Esta creando un presupuesto desestimado", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-                    if (result1 == DialogResult.Yes)
-                    {
-                        estado = EstadoPresupuesto.desestimado;
-                    }else
-                    {
-                        CancelEventArgs seguir = (CancelEventArgs)e;
-                        seguir.Cancel = true; //No sé si funcionará correctamente.
-                    }
+                {         
+                    estado = EstadoPresupuesto.desestimado; 
                 }
                 else if (this.rbPendiente.Checked == true)
                 {
                     estado = EstadoPresupuesto.pendiente;
                 }
-                    
-                if (this.lboListaVehiculos.Items.Count == 0)
+
+                int i = 0;
+                foreach (RadioButton r in this.gbEstado.Controls)
                 {
-                    vehiculoCorrecto = false;
-                    MessageBox.Show("Introduzca al menos un vehículo en el presupuesto.", "No ha introducido ningún vehículo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    CancelEventArgs seguir = (CancelEventArgs)e;
-                    seguir.Cancel = true; //No sé si funcionará correctamente.
+                    if (r.Checked == false)
+                    {
+                        i++;
+                    }
 
                 }
 
@@ -197,12 +191,17 @@ namespace CapaPresentacionPresupuesto
                     DialogResult result2 = MessageBox.Show("Se seleccionará automáticamente el estado de creado para presupuesto.", "No ha seleccionado ningún estado", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
                     if (result2 == DialogResult.Cancel)
                     {
-                        CancelEventArgs seguir = (CancelEventArgs)e;
-                        seguir.Cancel = true; //No sé si funcionará correctamente.
+                        continuar = false;
                     }
                 }
 
-                if (vehiculoCorrecto == true)
+                if ((this.lboListaVehiculos.Items.Count == 0) && (continuar == true))
+                {
+                    vehiculoCorrecto = false;
+                    MessageBox.Show("Introduzca al menos un vehículo en el presupuesto.", "No ha introducido ningún vehículo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+                if ((vehiculoCorrecto == true) && (continuar ==true))
                 {
                     List<vehiculo> listaVehiculos = new List<vehiculo>((IEnumerable<vehiculo>)this.lboListaVehiculos.Items);
                     //si no funciona hacer un foreach
@@ -214,6 +213,7 @@ namespace CapaPresentacionPresupuesto
                     //}
                     Presupuesto nuevoPresupuesto = new Presupuesto(DateTime.Now, estado, this.cliente, listaVehiculos);
                     LNPresupuesto.INSERT(nuevoPresupuesto);
+                    this.presupuesto = nuevoPresupuesto;
                     this.ParentForm.Close();
                 } 
             }
@@ -227,7 +227,7 @@ namespace CapaPresentacionPresupuesto
 
         private void ParentForm_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (this.presupuesto == null) //crear //COMPLETAR con si el presupuesto de ha creado no mostrar lo siguiente
+            if (LNPresupuesto.EXIST(this.presupuesto) == false) //crear //COMPLETAR con si el presupuesto de ha creado no mostrar lo siguiente
                                                   //es decir, hacer existe por cliente en presupuesto (cambiar BD) para busqueda por cliente
                                                   //hacer existe por nbastidor en presupuesto (cambiar BD) para busqueda por vehiculo
                                                   //hacer existe por esatdo en presupuesto (cmabiar BD) para busqueda por estado
@@ -239,6 +239,18 @@ namespace CapaPresentacionPresupuesto
                 }
             }
             throw new NotImplementedException();
+        }
+
+        private void rbDesestimado_CheckedChanged(object sender, EventArgs e)
+        {
+            if (this.rbDesestimado.Checked == true)
+            {
+                DialogResult result1 = MessageBox.Show("¿Esta seguro de que el estado del presupuesto es desestimado?", "Esta creando un presupuesto desestimado", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (result1 == DialogResult.No)
+                {
+                    this.rbDesestimado.Checked = false;
+                }
+            }
         }
     }
 }

@@ -102,7 +102,7 @@ namespace CapaPresentacionPresupuesto
 
         private void IntroducirNBastidorPresupuesto_Load(object sender, EventArgs e)
         {
-            mtbNBastidor.Mask = "UnUnUnUnUnUnUnUnUnUnUnUnUnUnUnUnUn";
+            mtbNBastidor.Mask = ">AAAAAAAAAAAAAAAAA";
 
             mtbNBastidor.MaskInputRejected += new MaskInputRejectedEventHandler(mtbNBastidor_MaskInputRejected);
             mtbNBastidor.KeyDown += new KeyEventHandler(mtbNBastidor_KeyDown);

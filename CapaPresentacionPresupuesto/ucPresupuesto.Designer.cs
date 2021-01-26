@@ -66,9 +66,9 @@ namespace CapaPresentacionPresupuesto
             // gbEstado
             // 
             this.gbEstado.Controls.Add(this.rbDesestimado);
+            this.gbEstado.Controls.Add(this.rbCreado);
             this.gbEstado.Controls.Add(this.rbAceptado);
             this.gbEstado.Controls.Add(this.rbPendiente);
-            this.gbEstado.Controls.Add(this.rbCreado);
             this.gbEstado.Location = new System.Drawing.Point(75, 131);
             this.gbEstado.Name = "gbEstado";
             this.gbEstado.Size = new System.Drawing.Size(225, 79);
@@ -83,9 +83,9 @@ namespace CapaPresentacionPresupuesto
             this.rbDesestimado.Name = "rbDesestimado";
             this.rbDesestimado.Size = new System.Drawing.Size(86, 17);
             this.rbDesestimado.TabIndex = 3;
-            this.rbDesestimado.TabStop = true;
             this.rbDesestimado.Text = "Desestimado";
             this.rbDesestimado.UseVisualStyleBackColor = true;
+            this.rbDesestimado.CheckedChanged += new System.EventHandler(this.rbDesestimado_CheckedChanged);
             // 
             // rbAceptado
             // 
@@ -94,7 +94,6 @@ namespace CapaPresentacionPresupuesto
             this.rbAceptado.Name = "rbAceptado";
             this.rbAceptado.Size = new System.Drawing.Size(71, 17);
             this.rbAceptado.TabIndex = 2;
-            this.rbAceptado.TabStop = true;
             this.rbAceptado.Text = "Aceptado";
             this.rbAceptado.UseVisualStyleBackColor = true;
             // 
@@ -105,18 +104,17 @@ namespace CapaPresentacionPresupuesto
             this.rbPendiente.Name = "rbPendiente";
             this.rbPendiente.Size = new System.Drawing.Size(73, 17);
             this.rbPendiente.TabIndex = 1;
-            this.rbPendiente.TabStop = true;
             this.rbPendiente.Text = "Pendiente";
             this.rbPendiente.UseVisualStyleBackColor = true;
             // 
             // rbCreado
             // 
+            this.rbCreado.AutoCheck = false;
             this.rbCreado.AutoSize = true;
             this.rbCreado.Location = new System.Drawing.Point(22, 15);
             this.rbCreado.Name = "rbCreado";
             this.rbCreado.Size = new System.Drawing.Size(59, 17);
             this.rbCreado.TabIndex = 0;
-            this.rbCreado.TabStop = true;
             this.rbCreado.Text = "Creado";
             this.rbCreado.UseVisualStyleBackColor = true;
             // 

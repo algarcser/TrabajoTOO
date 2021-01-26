@@ -42,7 +42,6 @@ namespace CapaPresentacionPresupuesto
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormCrearMostrarPresupuesto";
             this.Text = "CrearMostrarPresupuesto";
-            this.Load += new System.EventHandler(this.FormCrearMostrarPresupuesto_Load);
             this.ResumeLayout(false);
 
         }
