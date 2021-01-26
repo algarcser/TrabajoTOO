@@ -78,29 +78,38 @@ namespace CapaPersistenciaPresupuesto
             public static Presupuesto Convertir(PresupuestoDato presupuestoDato)
             {
                 List<vehiculo> vehiculos = new List<vehiculo>();
-                if (presupuestoDato.ListaVehiculos.Count != 0)
+                if (presupuestoDato != null)
                 {
                     foreach (vehiculoDato v in presupuestoDato.ListaVehiculos)
                     {
                         vehiculos.Add(CapaPersistenciaVehiculo.conversor.Convertir(v));
                     }
+                    return (new Presupuesto(presupuestoDato.FechaRealizacion, (EstadoPresupuesto)(int)presupuestoDato.EstadoPresupuesto, CapaPersistenciaCliente.PersistenciaCliente.conversor.Convertir(presupuestoDato.Cliente), vehiculos));
+                }else
+                {
+                    return (null);
                 }
 
-                return (new Presupuesto(presupuestoDato.FechaRealizacion, (EstadoPresupuesto)(int)presupuestoDato.EstadoPresupuesto, CapaPersistenciaCliente.PersistenciaCliente.conversor.Convertir(presupuestoDato.Cliente), vehiculos));
+                
             }
 
             public static PresupuestoDato Convertir(Presupuesto presupuesto)
             {
                 List<vehiculoDato> vehiculos = new List<vehiculoDato>();
-                if (presupuesto.ListaVehiculos.Count != 0)
+                if (presupuesto != null)
                 {
                     foreach (vehiculo v in presupuesto.ListaVehiculos)
                     {
                         vehiculos.Add(CapaPersistenciaVehiculo.conversor.Convertir(v));
                     }
+                    return (new PresupuestoDato(presupuesto.FechaRealizacion, (EstadoPresupuestoDato)(int)presupuesto.EstadoPresupuesto, CapaPersistenciaCliente.PersistenciaCliente.conversor.Convertir(presupuesto.Cliente), vehiculos));
+                }
+                else
+                {
+                    return (null);
                 }
 
-                return (new PresupuestoDato(presupuesto.FechaRealizacion, (EstadoPresupuestoDato)(int)presupuesto.EstadoPresupuesto, CapaPersistenciaCliente.PersistenciaCliente.conversor.Convertir(presupuesto.Cliente), vehiculos));
+                
             }
         }
     }

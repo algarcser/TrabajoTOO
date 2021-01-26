@@ -183,7 +183,6 @@ namespace CapaPresentacionPresupuesto
                     {
                         i++;
                     }
-
                 }
 
                 if (i == 4)
@@ -192,6 +191,9 @@ namespace CapaPresentacionPresupuesto
                     if (result2 == DialogResult.Cancel)
                     {
                         continuar = false;
+                    }else
+                    {
+                        this.rbCreado.Checked = true;
                     }
                 }
 
