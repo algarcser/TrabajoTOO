@@ -31,10 +31,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBoxNombre = new System.Windows.Forms.TextBox();
             this.textBoxApellidos = new System.Windows.Forms.TextBox();
+            this.textBoxNombre = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.btCerrar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -54,6 +54,7 @@
             this.comboBox1.Location = new System.Drawing.Point(143, 58);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(130, 21);
+            this.comboBox1.Sorted = true;
             this.comboBox1.TabIndex = 1;
             // 
             // groupBox1
@@ -68,14 +69,21 @@
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             // 
-            // label2
+            // textBoxApellidos
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(19, 45);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(44, 13);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Nombre";
+            this.textBoxApellidos.Location = new System.Drawing.Point(115, 93);
+            this.textBoxApellidos.Name = "textBoxApellidos";
+            this.textBoxApellidos.ReadOnly = true;
+            this.textBoxApellidos.Size = new System.Drawing.Size(100, 20);
+            this.textBoxApellidos.TabIndex = 3;
+            // 
+            // textBoxNombre
+            // 
+            this.textBoxNombre.Location = new System.Drawing.Point(115, 42);
+            this.textBoxNombre.Name = "textBoxNombre";
+            this.textBoxNombre.ReadOnly = true;
+            this.textBoxNombre.Size = new System.Drawing.Size(100, 20);
+            this.textBoxNombre.TabIndex = 2;
             // 
             // label3
             // 
@@ -86,19 +94,14 @@
             this.label3.TabIndex = 1;
             this.label3.Text = "Apellidos";
             // 
-            // textBoxNombre
+            // label2
             // 
-            this.textBoxNombre.Location = new System.Drawing.Point(115, 42);
-            this.textBoxNombre.Name = "textBoxNombre";
-            this.textBoxNombre.Size = new System.Drawing.Size(100, 20);
-            this.textBoxNombre.TabIndex = 2;
-            // 
-            // textBoxApellidos
-            // 
-            this.textBoxApellidos.Location = new System.Drawing.Point(115, 93);
-            this.textBoxApellidos.Name = "textBoxApellidos";
-            this.textBoxApellidos.Size = new System.Drawing.Size(100, 20);
-            this.textBoxApellidos.TabIndex = 3;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(19, 45);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(44, 13);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Nombre";
             // 
             // btCerrar
             // 

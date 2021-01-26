@@ -91,6 +91,10 @@ namespace CapaPresentacionCliente
                     c = CapaPersistenciaCliente.PersistenciaCliente.READ(new LogicaModeloCliente.Cliente(this.maskedTextBox1.Text));
                     Form datosCliente = new Busqueda_cliente(c);
                     datosCliente.Show();
+
+                    //Form datosAlternativoCliente = new Busqueda_alternativa_cliente(c);
+                    //datosAlternativoCliente.Show();
+
                     this.Close();
                 }
                 else if (!LogicaNegocioCliente.LNCliente.existeCliente(new LogicaModeloCliente.Cliente(this.maskedTextBox1.Text)))

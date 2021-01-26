@@ -32,7 +32,7 @@ namespace CapaPresentacionCliente
             else
             {
                 //Cliente cl = new Cliente(this.control_alternativo_datos_cliente1.getNombre(), this.control_alternativo_datos_cliente1.getApellidos(), this.control_alternativo_datos_cliente1.getDNI(), this.control_alternativo_datos_cliente1.getCategoria(), int.Parse(this.control_alternativo_datos_cliente1.getTelefono()));
-                Cliente cl = new Cliente(this.control_datos_cliente1.getNombre(), this.control_datos_cliente1.getDNI(), this.control_datos_cliente1.getCategoria(), int.Parse(this.control_datos_cliente1.getTelefono()));
+                Cliente cl = new Cliente(this.control_datos_cliente1.getDNI());//new Cliente(this.control_datos_cliente1.getNombre(), this.control_datos_cliente1.getDNI(), this.control_datos_cliente1.getCategoria(), int.Parse(this.control_datos_cliente1.getTelefono()));
                 Console.WriteLine("El AltaCliente justo despues de crear el cliente tiene el dni " + this.control_datos_cliente1.getDNI());
                 Console.WriteLine("El cl tiene dni " + cl.getDNI);
                 if (LNCliente.altaCliente(cl))
