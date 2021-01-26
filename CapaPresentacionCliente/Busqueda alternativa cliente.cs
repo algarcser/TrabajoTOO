@@ -21,7 +21,7 @@ namespace CapaPresentacionCliente
             Cliente clBuscado = LNCliente.readCliente(c);
 
             this.textBoxNombre.Text = clBuscado.getNombre;
-            this.textBoxApellidos.Text = clBuscado.getApellidos;
+            //this.textBoxApellidos.Text = clBuscado.getApellidos;
         }
 
         private void btCerrar_Click(object sender, EventArgs e)

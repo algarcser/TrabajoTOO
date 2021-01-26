@@ -47,13 +47,13 @@ namespace LogicaModeloCliente
         /// It returns the surnames of the client
         /// </summary>
         /// <returns></returns>
-        public String getApellidos
-        {
-            get
-            {
-                return this.apellidos;
-            }
-        }
+        //public String getApellidos
+        //{
+        //    get
+        //    {
+        //        return this.apellidos;
+        //    }
+        //}
 
         /// <summary>
         /// It returns the DNI of the client
