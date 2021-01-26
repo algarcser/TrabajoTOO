@@ -9,14 +9,15 @@ namespace LogicaModeloCliente
     public class Cliente
     {
         private string nombre;
-        private string apellidos;
+        //private string apellidos;
         private string DNI;
         private CategoriaCliente categoria;
         private int tlfno;
-        public Cliente(string nombre, string apellidos, string DNI, CategoriaCliente categoria, int tlfno)
+        //public Cliente(string nombre, string apellidos, string DNI, CategoriaCliente categoria, int tlfno)
+        public Cliente(string nombre, string DNI, CategoriaCliente categoria, int tlfno)
         {
             this.nombre = nombre;
-            this.apellidos = apellidos;
+            //this.apellidos = apellidos;
             this.DNI = DNI;
             this.categoria = categoria;
             this.tlfno = tlfno;
