@@ -122,13 +122,13 @@ namespace CapaPresentacionCliente
 
         public bool rbB_Enabled(bool b)
         {
-            this.radioButton1.Enabled = b;
+            this.radioButton2.Enabled = b;
             return this.textBox1.ReadOnly;
         }
 
         public bool rbC_Enabled(bool b)
         {
-            this.radioButton1.Enabled = b;
+            this.radioButton3.Enabled = b;
             return this.textBox1.ReadOnly;
         }
     }

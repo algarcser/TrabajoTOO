@@ -55,6 +55,12 @@
     <Compile Include="Baja cliente.Designer.cs">
       <DependentUpon>Baja cliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="Busqueda alternativa cliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Busqueda alternativa cliente.Designer.cs">
+      <DependentUpon>Busqueda alternativa cliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="Busqueda cliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -73,6 +79,12 @@
     <Compile Include="Introducir DNI.Designer.cs">
       <DependentUpon>Introducir DNI.cs</DependentUpon>
     </Compile>
+    <Compile Include="Listado de clientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Listado de clientes.Designer.cs">
+      <DependentUpon>Listado de clientes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -90,6 +102,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Introducir DNI.resx">
       <DependentUpon>Introducir DNI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Listado de clientes.resx">
+      <DependentUpon>Listado de clientes.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
