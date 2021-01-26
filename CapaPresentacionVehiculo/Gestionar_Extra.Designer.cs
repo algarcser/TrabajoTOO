@@ -31,9 +31,9 @@
             this.label_descripcion = new System.Windows.Forms.Label();
             this.label_precio = new System.Windows.Forms.Label();
             this.textBox_descripcion = new System.Windows.Forms.TextBox();
-            this.textBox_precio = new System.Windows.Forms.TextBox();
             this.button_aceptar = new System.Windows.Forms.Button();
             this.button_cancelar = new System.Windows.Forms.Button();
+            this.TextBox_Precio = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label_descripcion
@@ -61,13 +61,6 @@
             this.textBox_descripcion.Size = new System.Drawing.Size(195, 20);
             this.textBox_descripcion.TabIndex = 2;
             // 
-            // textBox_precio
-            // 
-            this.textBox_precio.Location = new System.Drawing.Point(119, 119);
-            this.textBox_precio.Name = "textBox_precio";
-            this.textBox_precio.Size = new System.Drawing.Size(100, 20);
-            this.textBox_precio.TabIndex = 3;
-            // 
             // button_aceptar
             // 
             this.button_aceptar.Location = new System.Drawing.Point(93, 163);
@@ -88,6 +81,14 @@
             this.button_cancelar.UseVisualStyleBackColor = true;
             this.button_cancelar.Click += new System.EventHandler(this.button_cancelar_Click);
             // 
+            // TextBox_Precio
+            // 
+            this.TextBox_Precio.Location = new System.Drawing.Point(119, 115);
+            this.TextBox_Precio.Name = "TextBox_Precio";
+            this.TextBox_Precio.Size = new System.Drawing.Size(100, 20);
+            this.TextBox_Precio.TabIndex = 7;
+            this.TextBox_Precio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_precio_KeyPress);
+            // 
             // Gestionar_Extra
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -95,7 +96,7 @@
             this.ClientSize = new System.Drawing.Size(374, 202);
             this.Controls.Add(this.button_cancelar);
             this.Controls.Add(this.button_aceptar);
-            this.Controls.Add(this.textBox_precio);
+            this.Controls.Add(this.TextBox_Precio);
             this.Controls.Add(this.textBox_descripcion);
             this.Controls.Add(this.label_precio);
             this.Controls.Add(this.label_descripcion);
@@ -111,8 +112,8 @@
         private System.Windows.Forms.Label label_descripcion;
         private System.Windows.Forms.Label label_precio;
         private System.Windows.Forms.TextBox textBox_descripcion;
-        private System.Windows.Forms.TextBox textBox_precio;
         private System.Windows.Forms.Button button_aceptar;
         private System.Windows.Forms.Button button_cancelar;
+        private System.Windows.Forms.TextBox TextBox_Precio;
     }
 }

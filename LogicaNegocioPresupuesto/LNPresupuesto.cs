@@ -32,6 +32,7 @@ namespace LogicaNegocioPresupuesto
             INSERT(auxiliar);
         }
 
+        
         public static float calcularPresupuesto(Presupuesto presupuesto)
         {
             double descuento;
