@@ -42,3 +42,14 @@ C:\Users\jugarcca\Desktop\TrabajoTOO\LogicaModeloPresupuesto\obj\Debug\LogicaMod
 C:\Users\jugarcca\Desktop\TrabajoTOO\LogicaModeloPresupuesto\obj\Debug\LogicaModeloPresupuesto.csproj.CopyComplete
 C:\Users\jugarcca\Desktop\TrabajoTOO\LogicaModeloPresupuesto\obj\Debug\LogicaModeloPresupuesto.dll
 C:\Users\jugarcca\Desktop\TrabajoTOO\LogicaModeloPresupuesto\obj\Debug\LogicaModeloPresupuesto.pdb
+C:\TrabajoTOO\LogicaModeloPresupuesto\bin\Debug\LogicaModeloPresupuesto.dll
+C:\TrabajoTOO\LogicaModeloPresupuesto\bin\Debug\LogicaModeloPresupuesto.pdb
+C:\TrabajoTOO\LogicaModeloPresupuesto\bin\Debug\LogicaModeloCliente.dll
+C:\TrabajoTOO\LogicaModeloPresupuesto\bin\Debug\LogicaModeloVehiculo.dll
+C:\TrabajoTOO\LogicaModeloPresupuesto\bin\Debug\LogicaModeloCliente.pdb
+C:\TrabajoTOO\LogicaModeloPresupuesto\bin\Debug\LogicaModeloVehiculo.pdb
+C:\TrabajoTOO\LogicaModeloPresupuesto\obj\Debug\LogicaModeloPresupuesto.csprojAssemblyReference.cache
+C:\TrabajoTOO\LogicaModeloPresupuesto\obj\Debug\LogicaModeloPresupuesto.csproj.CoreCompileInputs.cache
+C:\TrabajoTOO\LogicaModeloPresupuesto\obj\Debug\LogicaModeloPresupuesto.csproj.CopyComplete
+C:\TrabajoTOO\LogicaModeloPresupuesto\obj\Debug\LogicaModeloPresupuesto.dll
+C:\TrabajoTOO\LogicaModeloPresupuesto\obj\Debug\LogicaModeloPresupuesto.pdb

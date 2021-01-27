@@ -38,8 +38,11 @@ namespace CapaPresentacionGeneral
 
         private void tsmiBusquedaCliente_Click(object sender, EventArgs e)
         {
-            Form intrDNI = new CapaPresentacionCliente.Introducir_DNI("busqueda");
-            intrDNI.Show();
+            //Form intrDNI = new CapaPresentacionCliente.Introducir_DNI("busqueda");
+            //intrDNI.Show();
+
+            Form busquedaCliente = new CapaPresentacionCliente.Busqueda_alternativa_cliente();
+            busquedaCliente.Show();
         }
 
         private void tsmiAltaVehiculo_Click(object sender, EventArgs e)

@@ -34,3 +34,12 @@ C:\Users\jugarcca\Desktop\TrabajoTOO\CapaPersistenciaVehiculo\obj\Debug\CapaPers
 C:\Users\jugarcca\Desktop\TrabajoTOO\CapaPersistenciaVehiculo\obj\Debug\CapaPersistenciaVehiculo.csproj.CopyComplete
 C:\Users\jugarcca\Desktop\TrabajoTOO\CapaPersistenciaVehiculo\obj\Debug\CapaPersistenciaVehiculo.dll
 C:\Users\jugarcca\Desktop\TrabajoTOO\CapaPersistenciaVehiculo\obj\Debug\CapaPersistenciaVehiculo.pdb
+C:\TrabajoTOO\CapaPersistenciaVehiculo\bin\Debug\CapaPersistenciaVehiculo.dll
+C:\TrabajoTOO\CapaPersistenciaVehiculo\bin\Debug\CapaPersistenciaVehiculo.pdb
+C:\TrabajoTOO\CapaPersistenciaVehiculo\bin\Debug\LogicaModeloVehiculo.dll
+C:\TrabajoTOO\CapaPersistenciaVehiculo\bin\Debug\LogicaModeloVehiculo.pdb
+C:\TrabajoTOO\CapaPersistenciaVehiculo\obj\Debug\CapaPersistenciaVehiculo.csprojAssemblyReference.cache
+C:\TrabajoTOO\CapaPersistenciaVehiculo\obj\Debug\CapaPersistenciaVehiculo.csproj.CoreCompileInputs.cache
+C:\TrabajoTOO\CapaPersistenciaVehiculo\obj\Debug\CapaPersistenciaVehiculo.csproj.CopyComplete
+C:\TrabajoTOO\CapaPersistenciaVehiculo\obj\Debug\CapaPersistenciaVehiculo.dll
+C:\TrabajoTOO\CapaPersistenciaVehiculo\obj\Debug\CapaPersistenciaVehiculo.pdb

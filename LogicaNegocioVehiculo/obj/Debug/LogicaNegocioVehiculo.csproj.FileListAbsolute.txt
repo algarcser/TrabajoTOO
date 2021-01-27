@@ -42,3 +42,14 @@ C:\Users\jugarcca\Desktop\TrabajoTOO\LogicaNegocioVehiculo\obj\Debug\LogicaNegoc
 C:\Users\jugarcca\Desktop\TrabajoTOO\LogicaNegocioVehiculo\obj\Debug\LogicaNegocioVehiculo.csproj.CopyComplete
 C:\Users\jugarcca\Desktop\TrabajoTOO\LogicaNegocioVehiculo\obj\Debug\LogicaNegocioVehiculo.dll
 C:\Users\jugarcca\Desktop\TrabajoTOO\LogicaNegocioVehiculo\obj\Debug\LogicaNegocioVehiculo.pdb
+C:\TrabajoTOO\LogicaNegocioVehiculo\bin\Debug\LogicaNegocioVehiculo.dll
+C:\TrabajoTOO\LogicaNegocioVehiculo\bin\Debug\LogicaNegocioVehiculo.pdb
+C:\TrabajoTOO\LogicaNegocioVehiculo\bin\Debug\CapaPersistenciaVehiculo.dll
+C:\TrabajoTOO\LogicaNegocioVehiculo\bin\Debug\LogicaModeloVehiculo.dll
+C:\TrabajoTOO\LogicaNegocioVehiculo\bin\Debug\CapaPersistenciaVehiculo.pdb
+C:\TrabajoTOO\LogicaNegocioVehiculo\bin\Debug\LogicaModeloVehiculo.pdb
+C:\TrabajoTOO\LogicaNegocioVehiculo\obj\Debug\LogicaNegocioVehiculo.csprojAssemblyReference.cache
+C:\TrabajoTOO\LogicaNegocioVehiculo\obj\Debug\LogicaNegocioVehiculo.csproj.CoreCompileInputs.cache
+C:\TrabajoTOO\LogicaNegocioVehiculo\obj\Debug\LogicaNegocioVehiculo.csproj.CopyComplete
+C:\TrabajoTOO\LogicaNegocioVehiculo\obj\Debug\LogicaNegocioVehiculo.dll
+C:\TrabajoTOO\LogicaNegocioVehiculo\obj\Debug\LogicaNegocioVehiculo.pdb

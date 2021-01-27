@@ -31,3 +31,14 @@ C:\Users\zonia\Desktop\TrabajoTOO\LogicaNegocioCliente\obj\Debug\LogicaNegocioCl
 C:\Users\zonia\Desktop\TrabajoTOO\LogicaNegocioCliente\obj\Debug\LogicaNegocioCliente.csproj.CopyComplete
 C:\Users\zonia\Desktop\TrabajoTOO\LogicaNegocioCliente\obj\Debug\LogicaNegocioCliente.dll
 C:\Users\zonia\Desktop\TrabajoTOO\LogicaNegocioCliente\obj\Debug\LogicaNegocioCliente.pdb
+C:\TrabajoTOO\LogicaNegocioCliente\bin\Debug\LogicaNegocioCliente.dll
+C:\TrabajoTOO\LogicaNegocioCliente\bin\Debug\LogicaNegocioCliente.pdb
+C:\TrabajoTOO\LogicaNegocioCliente\bin\Debug\CapaPersistenciaCliente.dll
+C:\TrabajoTOO\LogicaNegocioCliente\bin\Debug\LogicaModeloCliente.dll
+C:\TrabajoTOO\LogicaNegocioCliente\bin\Debug\CapaPersistenciaCliente.pdb
+C:\TrabajoTOO\LogicaNegocioCliente\bin\Debug\LogicaModeloCliente.pdb
+C:\TrabajoTOO\LogicaNegocioCliente\obj\Debug\LogicaNegocioCliente.csprojAssemblyReference.cache
+C:\TrabajoTOO\LogicaNegocioCliente\obj\Debug\LogicaNegocioCliente.csproj.CoreCompileInputs.cache
+C:\TrabajoTOO\LogicaNegocioCliente\obj\Debug\LogicaNegocioCliente.csproj.CopyComplete
+C:\TrabajoTOO\LogicaNegocioCliente\obj\Debug\LogicaNegocioCliente.dll
+C:\TrabajoTOO\LogicaNegocioCliente\obj\Debug\LogicaNegocioCliente.pdb

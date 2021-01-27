@@ -10,14 +10,14 @@ namespace CapaPersistenciaCliente
     {
         private string nombre;
         private string DNI;
-        //private string apellidos;
+        private string apellidos;
         private CategoriaClienteDato categoria;
         private int tlfno;
-        //public ClienteDato(string nombre, string apellidos, string DNI, CategoriaClienteDato categoria, int tlfno)
-        public ClienteDato(string nombre, string DNI, CategoriaClienteDato categoria, int tlfno)
+
+        public ClienteDato(string nombre, string apellidos, string DNI, CategoriaClienteDato categoria, int tlfno)      
         {
             this.nombre = nombre;
-            //this.apellidos = apellidos;
+            this.apellidos = apellidos;
             this.DNI = DNI;
             this.categoria = categoria;
             this.tlfno = tlfno;
@@ -41,13 +41,13 @@ namespace CapaPersistenciaCliente
         /// It returns the surnames of the client
         /// </summary>
         /// <returns></returns>
-        //public String getApellidos
-        //{
-        //    get
-        //    {
-        //        return this.apellidos;
-        //    }
-        //}
+        public String getApellidos
+        {
+            get
+            {
+                return this.apellidos;
+            }
+        }
 
         /// <summary>
         /// It returns the DNI of the client

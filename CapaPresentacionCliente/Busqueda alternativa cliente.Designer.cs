@@ -57,6 +57,7 @@
             this.comboBox1.Size = new System.Drawing.Size(130, 21);
             this.comboBox1.Sorted = true;
             this.comboBox1.TabIndex = 1;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // groupBox1
             // 

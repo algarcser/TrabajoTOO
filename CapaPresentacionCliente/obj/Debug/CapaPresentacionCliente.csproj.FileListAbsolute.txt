@@ -1,79 +1,23 @@
 C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\CapaPresentacionCliente\bin\Debug\CapaPresentacionCliente.dll
 C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\CapaPresentacionCliente\bin\Debug\CapaPresentacionCliente.pdb
-C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\CapaPresentacionCliente\obj\Debug\CapaPresentacionCliente.csprojAssemblyReference.cache
-C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\CapaPresentacionCliente\obj\Debug\CapaPresentacionCliente.Control_datos_cliente.resources
-C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\CapaPresentacionCliente\obj\Debug\CapaPresentacionCliente.Introducir_DNI.resources
-C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\CapaPresentacionCliente\obj\Debug\CapaPresentacionCliente.csproj.GenerateResource.cache
-C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\CapaPresentacionCliente\obj\Debug\CapaPresentacionCliente.csproj.CoreCompileInputs.cache
-C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\CapaPresentacionCliente\obj\Debug\CapaPresentacionCliente.dll
-C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\CapaPresentacionCliente\obj\Debug\CapaPresentacionCliente.pdb
-C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\CapaPresentacionCliente\bin\Debug\LogicaModeloCliente.dll
-C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\CapaPresentacionCliente\bin\Debug\LogicaModeloCliente.pdb
-C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\CapaPresentacionCliente\obj\Debug\CapaPresentacionCliente.Alta_Cliente.resources
-C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\CapaPresentacionCliente\obj\Debug\CapaPresentacionCliente.Baja_cliente.resources
-C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\CapaPresentacionCliente\obj\Debug\CapaPresentacionCliente.Busqueda_cliente.resources
-C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\CapaPresentacionCliente\obj\Debug\CapaPresentacionCliente.csproj.CopyComplete
-C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\CapaPresentacionCliente\bin\Debug\CapaPresentacionCliente.dll
-C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\CapaPresentacionCliente\bin\Debug\CapaPresentacionCliente.pdb
-C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\CapaPresentacionCliente\bin\Debug\CapaPersistenciaCliente.dll
-C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\CapaPresentacionCliente\bin\Debug\LogicaModeloCliente.dll
-C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\CapaPresentacionCliente\bin\Debug\LogicaNegocioCliente.dll
-C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\CapaPresentacionCliente\bin\Debug\CapaPersistenciaCliente.pdb
-C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\CapaPresentacionCliente\bin\Debug\LogicaModeloCliente.pdb
-C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\CapaPresentacionCliente\bin\Debug\LogicaNegocioCliente.pdb
-C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\CapaPresentacionCliente\obj\Debug\CapaPresentacionCliente.csprojAssemblyReference.cache
-C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\CapaPresentacionCliente\obj\Debug\CapaPresentacionCliente.Alta_Cliente.resources
-C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\CapaPresentacionCliente\obj\Debug\CapaPresentacionCliente.Baja_cliente.resources
-C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\CapaPresentacionCliente\obj\Debug\CapaPresentacionCliente.Busqueda_cliente.resources
-C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\CapaPresentacionCliente\obj\Debug\CapaPresentacionCliente.Control_datos_cliente.resources
-C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\CapaPresentacionCliente\obj\Debug\CapaPresentacionCliente.Introducir_DNI.resources
-C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\CapaPresentacionCliente\obj\Debug\CapaPresentacionCliente.csproj.GenerateResource.cache
-C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\CapaPresentacionCliente\obj\Debug\CapaPresentacionCliente.csproj.CoreCompileInputs.cache
-C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\CapaPresentacionCliente\obj\Debug\CapaPresentacionCliente.csproj.CopyComplete
-C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\CapaPresentacionCliente\obj\Debug\CapaPresentacionCliente.dll
-C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\CapaPresentacionCliente\obj\Debug\CapaPresentacionCliente.pdb
-C:\Users\zonia\Desktop\TrabajoTOO\CapaPresentacionCliente\bin\Debug\CapaPresentacionCliente.dll
-C:\Users\zonia\Desktop\TrabajoTOO\CapaPresentacionCliente\bin\Debug\CapaPresentacionCliente.pdb
-C:\Users\zonia\Desktop\TrabajoTOO\CapaPresentacionCliente\bin\Debug\CapaPersistenciaCliente.dll
-C:\Users\zonia\Desktop\TrabajoTOO\CapaPresentacionCliente\bin\Debug\LogicaModeloCliente.dll
-C:\Users\zonia\Desktop\TrabajoTOO\CapaPresentacionCliente\bin\Debug\LogicaNegocioCliente.dll
-C:\Users\zonia\Desktop\TrabajoTOO\CapaPresentacionCliente\bin\Debug\CapaPersistenciaCliente.pdb
-C:\Users\zonia\Desktop\TrabajoTOO\CapaPresentacionCliente\bin\Debug\LogicaModeloCliente.pdb
-C:\Users\zonia\Desktop\TrabajoTOO\CapaPresentacionCliente\bin\Debug\LogicaNegocioCliente.pdb
-C:\Users\zonia\Desktop\TrabajoTOO\CapaPresentacionCliente\obj\Debug\CapaPresentacionCliente.csprojAssemblyReference.cache
-C:\Users\zonia\Desktop\TrabajoTOO\CapaPresentacionCliente\obj\Debug\CapaPresentacionCliente.Alta_Cliente.resources
-C:\Users\zonia\Desktop\TrabajoTOO\CapaPresentacionCliente\obj\Debug\CapaPresentacionCliente.Baja_cliente.resources
-C:\Users\zonia\Desktop\TrabajoTOO\CapaPresentacionCliente\obj\Debug\CapaPresentacionCliente.Busqueda_cliente.resources
-C:\Users\zonia\Desktop\TrabajoTOO\CapaPresentacionCliente\obj\Debug\CapaPresentacionCliente.Control_datos_cliente.resources
-C:\Users\zonia\Desktop\TrabajoTOO\CapaPresentacionCliente\obj\Debug\CapaPresentacionCliente.Introducir_DNI.resources
-C:\Users\zonia\Desktop\TrabajoTOO\CapaPresentacionCliente\obj\Debug\CapaPresentacionCliente.csproj.GenerateResource.cache
-C:\Users\zonia\Desktop\TrabajoTOO\CapaPresentacionCliente\obj\Debug\CapaPresentacionCliente.csproj.CoreCompileInputs.cache
-C:\Users\zonia\Desktop\TrabajoTOO\CapaPresentacionCliente\obj\Debug\CapaPresentacionCliente.csproj.CopyComplete
-C:\Users\zonia\Desktop\TrabajoTOO\CapaPresentacionCliente\obj\Debug\CapaPresentacionCliente.dll
-C:\Users\zonia\Desktop\TrabajoTOO\CapaPresentacionCliente\obj\Debug\CapaPresentacionCliente.pdb
 C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\CapaPresentacionCliente\bin\Debug\CapaPersistenciaCliente.dll
+C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\CapaPresentacionCliente\bin\Debug\LogicaModeloCliente.dll
 C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\CapaPresentacionCliente\bin\Debug\LogicaNegocioCliente.dll
 C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\CapaPresentacionCliente\bin\Debug\CapaPersistenciaCliente.pdb
+C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\CapaPresentacionCliente\bin\Debug\LogicaModeloCliente.pdb
 C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\CapaPresentacionCliente\bin\Debug\LogicaNegocioCliente.pdb
-<<<<<<< Updated upstream
-C:\Users\zonia\Desktop\TrabajoTOO\CapaPresentacionCliente\obj\Debug\CapaPresentacionCliente.Listado_de_clientes.resources
-=======
+C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\CapaPresentacionCliente\obj\Debug\CapaPresentacionCliente.csprojAssemblyReference.cache
+C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\CapaPresentacionCliente\obj\Debug\CapaPresentacionCliente.Alta_Cliente.resources
+C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\CapaPresentacionCliente\obj\Debug\CapaPresentacionCliente.Baja_cliente.resources
 C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\CapaPresentacionCliente\obj\Debug\CapaPresentacionCliente.Busqueda_alternativa_cliente.resources
+C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\CapaPresentacionCliente\obj\Debug\CapaPresentacionCliente.Busqueda_cliente.resources
 C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\CapaPresentacionCliente\obj\Debug\CapaPresentacionCliente.Control_alternativo_datos_cliente.resources
+C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\CapaPresentacionCliente\obj\Debug\CapaPresentacionCliente.Control_datos_cliente.resources
+C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\CapaPresentacionCliente\obj\Debug\CapaPresentacionCliente.Introducir_DNI.resources
 C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\CapaPresentacionCliente\obj\Debug\CapaPresentacionCliente.Listado_de_clientes.resources
 C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\CapaPresentacionCliente\obj\Debug\CapaPresentacionCliente.Properties.Resources.resources
->>>>>>> Stashed changes
-C:\Users\jugarcca\Desktop\TrabajoTOO\CapaPresentacionCliente\obj\Debug\CapaPresentacionCliente.csprojAssemblyReference.cache
-C:\Users\jugarcca\Desktop\TrabajoTOO\CapaPresentacionCliente\obj\Debug\CapaPresentacionCliente.Alta_Cliente.resources
-C:\Users\jugarcca\Desktop\TrabajoTOO\CapaPresentacionCliente\obj\Debug\CapaPresentacionCliente.Baja_cliente.resources
-C:\Users\jugarcca\Desktop\TrabajoTOO\CapaPresentacionCliente\obj\Debug\CapaPresentacionCliente.Busqueda_alternativa_cliente.resources
-C:\Users\jugarcca\Desktop\TrabajoTOO\CapaPresentacionCliente\obj\Debug\CapaPresentacionCliente.Busqueda_cliente.resources
-C:\Users\jugarcca\Desktop\TrabajoTOO\CapaPresentacionCliente\obj\Debug\CapaPresentacionCliente.Control_alternativo_datos_cliente.resources
-C:\Users\jugarcca\Desktop\TrabajoTOO\CapaPresentacionCliente\obj\Debug\CapaPresentacionCliente.Control_datos_cliente.resources
-C:\Users\jugarcca\Desktop\TrabajoTOO\CapaPresentacionCliente\obj\Debug\CapaPresentacionCliente.Introducir_DNI.resources
-C:\Users\jugarcca\Desktop\TrabajoTOO\CapaPresentacionCliente\obj\Debug\CapaPresentacionCliente.Listado_de_clientes.resources
-C:\Users\jugarcca\Desktop\TrabajoTOO\CapaPresentacionCliente\obj\Debug\CapaPresentacionCliente.Properties.Resources.resources
-C:\Users\jugarcca\Desktop\TrabajoTOO\CapaPresentacionCliente\obj\Debug\CapaPresentacionCliente.csproj.GenerateResource.cache
-C:\Users\jugarcca\Desktop\TrabajoTOO\CapaPresentacionCliente\obj\Debug\CapaPresentacionCliente.csproj.CoreCompileInputs.cache
-C:\Users\jugarcca\Desktop\TrabajoTOO\CapaPresentacionCliente\obj\Debug\CapaPresentacionCliente.dll
-C:\Users\jugarcca\Desktop\TrabajoTOO\CapaPresentacionCliente\obj\Debug\CapaPresentacionCliente.pdb
+C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\CapaPresentacionCliente\obj\Debug\CapaPresentacionCliente.csproj.GenerateResource.cache
+C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\CapaPresentacionCliente\obj\Debug\CapaPresentacionCliente.csproj.CoreCompileInputs.cache
+C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\CapaPresentacionCliente\obj\Debug\CapaPresentacionCliente.csproj.CopyComplete
+C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\CapaPresentacionCliente\obj\Debug\CapaPresentacionCliente.dll
+C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\CapaPresentacionCliente\obj\Debug\CapaPresentacionCliente.pdb

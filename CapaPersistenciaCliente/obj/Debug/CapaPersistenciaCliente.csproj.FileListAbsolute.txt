@@ -29,3 +29,12 @@ C:\Users\jugarcca\Desktop\TrabajoTOO\CapaPersistenciaCliente\obj\Debug\CapaPersi
 C:\Users\jugarcca\Desktop\TrabajoTOO\CapaPersistenciaCliente\obj\Debug\CapaPersistenciaCliente.csproj.CoreCompileInputs.cache
 C:\Users\jugarcca\Desktop\TrabajoTOO\CapaPersistenciaCliente\obj\Debug\CapaPersistenciaCliente.dll
 C:\Users\jugarcca\Desktop\TrabajoTOO\CapaPersistenciaCliente\obj\Debug\CapaPersistenciaCliente.pdb
+C:\TrabajoTOO\CapaPersistenciaCliente\obj\Debug\CapaPersistenciaCliente.csprojAssemblyReference.cache
+C:\TrabajoTOO\CapaPersistenciaCliente\obj\Debug\CapaPersistenciaCliente.csproj.CoreCompileInputs.cache
+C:\TrabajoTOO\CapaPersistenciaCliente\obj\Debug\CapaPersistenciaCliente.dll
+C:\TrabajoTOO\CapaPersistenciaCliente\obj\Debug\CapaPersistenciaCliente.pdb
+C:\TrabajoTOO\CapaPersistenciaCliente\bin\Debug\CapaPersistenciaCliente.dll
+C:\TrabajoTOO\CapaPersistenciaCliente\bin\Debug\CapaPersistenciaCliente.pdb
+C:\TrabajoTOO\CapaPersistenciaCliente\bin\Debug\LogicaModeloCliente.dll
+C:\TrabajoTOO\CapaPersistenciaCliente\bin\Debug\LogicaModeloCliente.pdb
+C:\TrabajoTOO\CapaPersistenciaCliente\obj\Debug\CapaPersistenciaCliente.csproj.CopyComplete

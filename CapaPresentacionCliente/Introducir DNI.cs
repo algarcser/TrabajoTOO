@@ -83,37 +83,35 @@ namespace CapaPresentacionCliente
                     MessageBox.Show("error");
                 }
             }
-            else if (this.accion.Equals("busqueda"))
-            {
-                if (LogicaNegocioCliente.LNCliente.existeCliente(new LogicaModeloCliente.Cliente(this.maskedTextBox1.Text)))
-                {
-                    Cliente c;
-                    c = CapaPersistenciaCliente.PersistenciaCliente.READ(new LogicaModeloCliente.Cliente(this.maskedTextBox1.Text));
-                    Form datosCliente = new Busqueda_cliente(c);
-                    datosCliente.Show();
+            //else if (this.accion.Equals("busqueda"))
+            //{
+            //    if (LogicaNegocioCliente.LNCliente.existeCliente(new LogicaModeloCliente.Cliente(this.maskedTextBox1.Text)))
+            //    {
+            //        Cliente c;
+            //        c = CapaPersistenciaCliente.PersistenciaCliente.READ(new LogicaModeloCliente.Cliente(this.maskedTextBox1.Text));
 
-                    //Form datosAlternativoCliente = new Busqueda_alternativa_cliente(c);
-                    //datosAlternativoCliente.Show();
+            //        Form datosAlternativoCliente = new Busqueda_alternativa_cliente(c);
+            //        datosAlternativoCliente.Show();
 
-                    this.Close();
-                }
-                else if (!LogicaNegocioCliente.LNCliente.existeCliente(new LogicaModeloCliente.Cliente(this.maskedTextBox1.Text)))
-                {
-                    DialogResult result = MessageBox.Show("Quieres introducir otro?", "No existe un cliente con ese DNI", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
-                    if (result == DialogResult.Yes)
-                    {
-                        this.maskedTextBox1.Text = "";
-                    }
-                    else
-                    {
-                        this.Close();
-                    }
-                }
-                else
-                {
-                    MessageBox.Show("error");
-                }
-            }
+            //        this.Close();
+            //    }
+            //    else if (!LogicaNegocioCliente.LNCliente.existeCliente(new LogicaModeloCliente.Cliente(this.maskedTextBox1.Text)))
+            //    {
+            //        DialogResult result = MessageBox.Show("Quieres introducir otro?", "No existe un cliente con ese DNI", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+            //        if (result == DialogResult.Yes)
+            //        {
+            //            this.maskedTextBox1.Text = "";
+            //        }
+            //        else
+            //        {
+            //            this.Close();
+            //        }
+            //    }
+            //    else
+            //    {
+            //        MessageBox.Show("error");
+            //    }
+            //}
             else { }
         }
 
