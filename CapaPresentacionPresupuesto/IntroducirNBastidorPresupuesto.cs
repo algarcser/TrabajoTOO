@@ -73,38 +73,30 @@ namespace CapaPresentacionPresupuesto
                         LNVehiculo.READ(v, out this.vehiculo);
                         List<Presupuesto> listaCribaNBastidor = LNPresupuesto.SELECTALL();
                         List<Presupuesto> listaCribadaNBastidor = new List<Presupuesto>();
-                        /*
+                        
                         foreach (Presupuesto p in listaCribaNBastidor)
                         {
-                            if (p.Cliente.getDNI.Equals(mtbDNI.Text) == true)
+                            foreach (vehiculo v1 in p.ListaVehiculos)
                             {
-                                listaCribadaDNI.Add(p);
+                                if (v1.NBastidor.Equals(mtbNBastidor.Text) == true)
+                                {
+                                    listaCribadaNBastidor.Add(p);
+                                }
                             }
+                            
                         }
 
-                        if (listaCribadaDNI.Count != 0)
+                        if (listaCribadaNBastidor.Count != 0)
                         {
-                            Form busquedaPresupuestoPorDNI = new FormListadoOrdenadoPresupuestos(listaCribadaDNI);
-                            busquedaPresupuestoPorDNI.Show();
+                            Form busquedaPresupuestoPorNBastidor = new FormListadoOrdenadoPresupuestos(listaCribadaNBastidor);
+                            busquedaPresupuestoPorNBastidor.Show();
                             this.Close();
                         }
                         else
                         {
-                            DialogResult result = MessageBox.Show("    ¿Quieres crear uno?    ", "No existe ningún presupuesto para un cliente con ese DNI", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
-                            if (result == DialogResult.Yes)
-                            {
-                                Form crearPresupuesto = new FormCrearMostrarPresupuesto(LNCliente.readCliente(c3));
-                                crearPresupuesto.Show();
-                                this.Close();
-                            }
-                            else
-                            {
-                                this.Close();
-                            }
-                        }*/
-
-                        //COMPLETAR con listado ordenado de presupuestos
-
+                            DialogResult result = MessageBox.Show("No existe ningún presupuesto para cliente con un vehículo con ese Nº de bastidor.", "No existe ningún presupuesto para ese Nº de bastidor", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            this.Close();
+                        }
                     }
                     else
                     {

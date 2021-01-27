@@ -101,5 +101,11 @@ namespace CapaPresentacionGeneral
             Motrar_Todos_Vehiculos mostrar_todos_vehiculos = new Motrar_Todos_Vehiculos();
             mostrar_todos_vehiculos.Show();
         }
+
+        private void tsmiBPPorVehiculo_Click(object sender, EventArgs e)
+        {
+            Form busquedaPresupuestosVehiculo = new FormIntroducirNBastidorPresupuesto("busqueda");
+            busquedaPresupuestosVehiculo.Show();
+        }
     }
 }

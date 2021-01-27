@@ -35,11 +35,6 @@ namespace CapaPresentacionPresupuesto
             this.lboEstado = new System.Windows.Forms.ListBox();
             this.lboNVehiculos = new System.Windows.Forms.ListBox();
             this.lboImporte = new System.Windows.Forms.ListBox();
-            this.btOrdenarFechaCreacion = new System.Windows.Forms.Button();
-            this.btOrdenarCliente = new System.Windows.Forms.Button();
-            this.btOrdenarEstado = new System.Windows.Forms.Button();
-            this.btOrdenarNVehiculos = new System.Windows.Forms.Button();
-            this.btOrdenarImporte = new System.Windows.Forms.Button();
             this.btMostrarPresupuesto = new System.Windows.Forms.Button();
             this.btRecorrerP1en1 = new System.Windows.Forms.Button();
             this.btMostrarCliente = new System.Windows.Forms.Button();
@@ -86,53 +81,6 @@ namespace CapaPresentacionPresupuesto
             this.lboImporte.Name = "lboImporte";
             this.lboImporte.Size = new System.Drawing.Size(120, 95);
             this.lboImporte.TabIndex = 4;
-            // 
-            // btOrdenarFechaCreacion
-            // 
-            this.btOrdenarFechaCreacion.AutoSize = true;
-            this.btOrdenarFechaCreacion.Location = new System.Drawing.Point(32, 38);
-            this.btOrdenarFechaCreacion.Name = "btOrdenarFechaCreacion";
-            this.btOrdenarFechaCreacion.Size = new System.Drawing.Size(106, 23);
-            this.btOrdenarFechaCreacion.TabIndex = 5;
-            this.btOrdenarFechaCreacion.Text = "Fecha de creación";
-            this.btOrdenarFechaCreacion.UseVisualStyleBackColor = true;
-            // 
-            // btOrdenarCliente
-            // 
-            this.btOrdenarCliente.Location = new System.Drawing.Point(195, 38);
-            this.btOrdenarCliente.Name = "btOrdenarCliente";
-            this.btOrdenarCliente.Size = new System.Drawing.Size(75, 23);
-            this.btOrdenarCliente.TabIndex = 6;
-            this.btOrdenarCliente.Text = "Cliente";
-            this.btOrdenarCliente.UseVisualStyleBackColor = true;
-            // 
-            // btOrdenarEstado
-            // 
-            this.btOrdenarEstado.Location = new System.Drawing.Point(342, 38);
-            this.btOrdenarEstado.Name = "btOrdenarEstado";
-            this.btOrdenarEstado.Size = new System.Drawing.Size(75, 23);
-            this.btOrdenarEstado.TabIndex = 7;
-            this.btOrdenarEstado.Text = "Estado";
-            this.btOrdenarEstado.UseVisualStyleBackColor = true;
-            // 
-            // btOrdenarNVehiculos
-            // 
-            this.btOrdenarNVehiculos.AutoSize = true;
-            this.btOrdenarNVehiculos.Location = new System.Drawing.Point(479, 38);
-            this.btOrdenarNVehiculos.Name = "btOrdenarNVehiculos";
-            this.btOrdenarNVehiculos.Size = new System.Drawing.Size(94, 23);
-            this.btOrdenarNVehiculos.TabIndex = 8;
-            this.btOrdenarNVehiculos.Text = "Nº de vehículos";
-            this.btOrdenarNVehiculos.UseVisualStyleBackColor = true;
-            // 
-            // btOrdenarImporte
-            // 
-            this.btOrdenarImporte.Location = new System.Drawing.Point(636, 38);
-            this.btOrdenarImporte.Name = "btOrdenarImporte";
-            this.btOrdenarImporte.Size = new System.Drawing.Size(75, 23);
-            this.btOrdenarImporte.TabIndex = 9;
-            this.btOrdenarImporte.Text = "Importe";
-            this.btOrdenarImporte.UseVisualStyleBackColor = true;
             // 
             // btMostrarPresupuesto
             // 
@@ -197,11 +145,6 @@ namespace CapaPresentacionPresupuesto
             this.Controls.Add(this.btMostrarCliente);
             this.Controls.Add(this.btRecorrerP1en1);
             this.Controls.Add(this.btMostrarPresupuesto);
-            this.Controls.Add(this.btOrdenarImporte);
-            this.Controls.Add(this.btOrdenarNVehiculos);
-            this.Controls.Add(this.btOrdenarEstado);
-            this.Controls.Add(this.btOrdenarCliente);
-            this.Controls.Add(this.btOrdenarFechaCreacion);
             this.Controls.Add(this.lboImporte);
             this.Controls.Add(this.lboNVehiculos);
             this.Controls.Add(this.lboEstado);
@@ -223,11 +166,6 @@ namespace CapaPresentacionPresupuesto
         private System.Windows.Forms.ListBox lboEstado;
         private System.Windows.Forms.ListBox lboNVehiculos;
         private System.Windows.Forms.ListBox lboImporte;
-        private System.Windows.Forms.Button btOrdenarFechaCreacion;
-        private System.Windows.Forms.Button btOrdenarCliente;
-        private System.Windows.Forms.Button btOrdenarEstado;
-        private System.Windows.Forms.Button btOrdenarNVehiculos;
-        private System.Windows.Forms.Button btOrdenarImporte;
         private System.Windows.Forms.Button btMostrarPresupuesto;
         private System.Windows.Forms.Button btRecorrerP1en1;
         private System.Windows.Forms.Button btMostrarCliente;

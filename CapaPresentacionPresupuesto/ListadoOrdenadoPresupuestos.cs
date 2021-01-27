@@ -23,6 +23,8 @@ namespace CapaPresentacionPresupuesto
         {
             this.listaPresupuestos = lp;
             
+            InitializeComponent();
+
             BindingSource bindingSource = new BindingSource();
             bindingSource.DataSource = this.listaPresupuestos;
             this.lboFechaCreacion.DataSource = bindingSource;
@@ -37,8 +39,7 @@ namespace CapaPresentacionPresupuesto
             {
                 this.lboImporte.Items.Add(LNPresupuesto.calcularPresupuesto(p));
             }
-            
-            InitializeComponent();
+
             //this.lboFechaCreacion.DataBindings.Add(new Binding("Text", bindingSource, "Date"));
             //this.lboCliente.DataBindings.Add(new Binding("Text", bindingSource, ""));
         }

@@ -130,17 +130,17 @@ namespace CapaPresentacionPresupuesto
             if (mtbDNI.MaskFull)
             {
                 ttDNI.ToolTipTitle = "DNI rechazado - Demasiada información";
-                ttDNI.Show("No puede introducir más información en el campo DNI. Elimine algunos caracteres para poder introducir más datos.", mtbDNI, 120, 90, 5000);
+                ttDNI.Show("No puede introducir más información en el campo DNI. Elimine algunos caracteres para poder introducir más datos.", mtbDNI, 120, 10, 5000);
             }
             else if (e.Position == mtbDNI.Mask.Length)
             {
                 ttDNI.ToolTipTitle = "DNI rechazado - Tamaño alcanzado";
-                ttDNI.Show("No puede añadir más caracteres al final del campo DNI", mtbDNI, 120, 90, 5000);
+                ttDNI.Show("No puede añadir más caracteres al final del campo DNI", mtbDNI, 120, 10, 5000);
             }
             else
             {
                 ttDNI.ToolTipTitle = "DNI rechazado";
-                ttDNI.Show("Solo pueden introducir ocho caracteres numéricos (0-9) seguidos de una letra [a-zA-Z] en el campo DNI.", mtbDNI, 120, 90, 5000);
+                ttDNI.Show("Solo pueden introducir ocho caracteres numéricos (0-9) seguidos de una letra [a-zA-Z] en el campo DNI.", mtbDNI, 120, 10, 5000);
             }
         }
 
