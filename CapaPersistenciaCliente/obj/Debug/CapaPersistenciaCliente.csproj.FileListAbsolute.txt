@@ -25,3 +25,7 @@ C:\Users\zonia\Desktop\TrabajoTOO\CapaPersistenciaCliente\obj\Debug\CapaPersiste
 C:\Users\zonia\Desktop\TrabajoTOO\CapaPersistenciaCliente\obj\Debug\CapaPersistenciaCliente.csproj.CopyComplete
 C:\Users\zonia\Desktop\TrabajoTOO\CapaPersistenciaCliente\obj\Debug\CapaPersistenciaCliente.dll
 C:\Users\zonia\Desktop\TrabajoTOO\CapaPersistenciaCliente\obj\Debug\CapaPersistenciaCliente.pdb
+C:\Users\jugarcca\Desktop\TrabajoTOO\CapaPersistenciaCliente\obj\Debug\CapaPersistenciaCliente.csprojAssemblyReference.cache
+C:\Users\jugarcca\Desktop\TrabajoTOO\CapaPersistenciaCliente\obj\Debug\CapaPersistenciaCliente.csproj.CoreCompileInputs.cache
+C:\Users\jugarcca\Desktop\TrabajoTOO\CapaPersistenciaCliente\obj\Debug\CapaPersistenciaCliente.dll
+C:\Users\jugarcca\Desktop\TrabajoTOO\CapaPersistenciaCliente\obj\Debug\CapaPersistenciaCliente.pdb

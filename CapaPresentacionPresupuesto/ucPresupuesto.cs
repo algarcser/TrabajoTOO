@@ -45,6 +45,10 @@ namespace CapaPresentacionPresupuesto
 
             this.btIntroducirVehiculo.Visible = true;
             this.lboListaVehiculos.Enabled = true;
+            BindingSource bindingSource = new BindingSource();
+            bindingSource.DataSource = this.listaVehiculosCrear;
+            this.lboListaVehiculos.DataSource = bindingSource;
+            this.lboListaVehiculos.DisplayMember = "NBastidor";
             this.btMostrarVehiculo.Visible = true;
 
             this.lbImporte.Visible = false;
@@ -94,7 +98,7 @@ namespace CapaPresentacionPresupuesto
             this.lboListaVehiculos.DataSource = bindingSource;
             // (?) this.lboListaVehiculos.DataBindings.Add(new Binding("DisplayMember", bindingSource, ""))
             this.lboListaVehiculos.SelectionMode = SelectionMode.One;
-            this.lboListaVehiculos.DisplayMember = "nBastidor";
+            this.lboListaVehiculos.DisplayMember = "NBastidor";
             this.btMostrarVehiculo.Visible = true;
 
             this.lbImporte.Visible = true;
@@ -126,8 +130,8 @@ namespace CapaPresentacionPresupuesto
             else
             {
                 vehiculo v = this.lboListaVehiculos.SelectedItem as vehiculo;
-                Console.WriteLine(v.NBastidor);
                 Form mostrarVehiculo = new formularioVehiculo(v.NBastidor, enumObjetivo.Ver);
+                mostrarVehiculo.Show();
                 //mostrar vehículo como en búsqueda vehículo
             }
         }
@@ -135,7 +139,6 @@ namespace CapaPresentacionPresupuesto
         private void btIntroducirVehiculo_Click(object sender, EventArgs e)
         {
             BindingSource bindingSource = new BindingSource();
-
             FormIntroducirNBastidorPresupuesto introducirVehiculo = new FormIntroducirNBastidorPresupuesto("introducir");
             introducirVehiculo.ShowDialog();
             vehiculo v = introducirVehiculo.Vehiculo;
@@ -208,18 +211,18 @@ namespace CapaPresentacionPresupuesto
 
                 if ((vehiculoCorrecto == true) && (continuar ==true))
                 {
-                    List<vehiculo> listaVehiculos = new List<vehiculo>((IEnumerable<vehiculo>)this.lboListaVehiculos.Items);
-                    //si no funciona hacer un foreach
-                    //List<vehiculo> listaVehiculos = new List<vehiculo>();
-                    //foreach (Object o in this.lboListaVehiculos.Items)
-                    //{
-                    //    vehiculo v = (vehiculo)o;
-                    //    listaVehiculos.Add(v);
-                    //}
-                    Presupuesto nuevoPresupuesto = new Presupuesto(DateTime.Now, estado, this.cliente, listaVehiculos);
+                    // ERROR List<vehiculo> listaVehiculos = new List<vehiculo>((IEnumerable<vehiculo>)this.lboListaVehiculos.Items);
+                    /*List<vehiculo> listaVehiculos = new List<vehiculo>();
+                    foreach (Object o in this.lboListaVehiculos.Items)
+                    {
+                        vehiculo v = o as vehiculo;
+                        listaVehiculos.Add(v);
+                    }*/
+                    Presupuesto nuevoPresupuesto = new Presupuesto(DateTime.Now, estado, this.cliente, this.listaVehiculosCrear);
                     LNPresupuesto.INSERT(nuevoPresupuesto);
                     this.presupuesto = nuevoPresupuesto;
                     this.ParentForm.Close();
+                    MessageBox.Show("Presupuesto para " + this.presupuesto.Cliente.getDNI + " creado.", "El presupuesto ha sido creado", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 } 
             }
         }
@@ -255,6 +258,23 @@ namespace CapaPresentacionPresupuesto
                 {
                     this.rbDesestimado.Checked = false;
                 }
+            }
+        }
+
+        private void btQuitarVehiculo_Click(object sender, EventArgs e)
+        {
+            BindingSource bindingSource = new BindingSource();
+
+            if (this.lboListaVehiculos.SelectedItem == null)
+            {
+                MessageBox.Show("Seleccione un vehículo de la lista para quitarlo.", "No ha seleccionado ningún vehículo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                this.listaVehiculosCrear.Remove(this.lboListaVehiculos.SelectedItem as vehiculo);
+                bindingSource.DataSource = this.listaVehiculosCrear;
+                this.lboListaVehiculos.DataSource = bindingSource;
+                this.lboListaVehiculos.DisplayMember = "NBastidor";
             }
         }
     }

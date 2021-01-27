@@ -10,6 +10,8 @@ using System.Windows.Forms;
 using CapaPresentacionVehiculo;
 using LogicaNegocioVehiculo;
 using LogicaModeloVehiculo;
+using LogicaModeloPresupuesto;
+using LogicaNegocioPresupuesto;
 
 namespace CapaPresentacionPresupuesto
 {
@@ -69,6 +71,37 @@ namespace CapaPresentacionPresupuesto
                     if (LNVehiculo.EXISTS(v) == true)
                     {
                         LNVehiculo.READ(v, out this.vehiculo);
+                        List<Presupuesto> listaCribaNBastidor = LNPresupuesto.SELECTALL();
+                        List<Presupuesto> listaCribadaNBastidor = new List<Presupuesto>();
+                        /*
+                        foreach (Presupuesto p in listaCribaNBastidor)
+                        {
+                            if (p.Cliente.getDNI.Equals(mtbDNI.Text) == true)
+                            {
+                                listaCribadaDNI.Add(p);
+                            }
+                        }
+
+                        if (listaCribadaDNI.Count != 0)
+                        {
+                            Form busquedaPresupuestoPorDNI = new FormListadoOrdenadoPresupuestos(listaCribadaDNI);
+                            busquedaPresupuestoPorDNI.Show();
+                            this.Close();
+                        }
+                        else
+                        {
+                            DialogResult result = MessageBox.Show("    ¿Quieres crear uno?    ", "No existe ningún presupuesto para un cliente con ese DNI", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                            if (result == DialogResult.Yes)
+                            {
+                                Form crearPresupuesto = new FormCrearMostrarPresupuesto(LNCliente.readCliente(c3));
+                                crearPresupuesto.Show();
+                                this.Close();
+                            }
+                            else
+                            {
+                                this.Close();
+                            }
+                        }*/
 
                         //COMPLETAR con listado ordenado de presupuestos
 

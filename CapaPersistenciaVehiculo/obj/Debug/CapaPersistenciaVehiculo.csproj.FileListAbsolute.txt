@@ -25,3 +25,12 @@ C:\Users\zonia\Desktop\TrabajoTOO\CapaPersistenciaVehiculo\obj\Debug\CapaPersist
 C:\Users\zonia\Desktop\TrabajoTOO\CapaPersistenciaVehiculo\obj\Debug\CapaPersistenciaVehiculo.csproj.CopyComplete
 C:\Users\zonia\Desktop\TrabajoTOO\CapaPersistenciaVehiculo\obj\Debug\CapaPersistenciaVehiculo.dll
 C:\Users\zonia\Desktop\TrabajoTOO\CapaPersistenciaVehiculo\obj\Debug\CapaPersistenciaVehiculo.pdb
+C:\Users\jugarcca\Desktop\TrabajoTOO\CapaPersistenciaVehiculo\bin\Debug\CapaPersistenciaVehiculo.dll
+C:\Users\jugarcca\Desktop\TrabajoTOO\CapaPersistenciaVehiculo\bin\Debug\CapaPersistenciaVehiculo.pdb
+C:\Users\jugarcca\Desktop\TrabajoTOO\CapaPersistenciaVehiculo\bin\Debug\LogicaModeloVehiculo.dll
+C:\Users\jugarcca\Desktop\TrabajoTOO\CapaPersistenciaVehiculo\bin\Debug\LogicaModeloVehiculo.pdb
+C:\Users\jugarcca\Desktop\TrabajoTOO\CapaPersistenciaVehiculo\obj\Debug\CapaPersistenciaVehiculo.csprojAssemblyReference.cache
+C:\Users\jugarcca\Desktop\TrabajoTOO\CapaPersistenciaVehiculo\obj\Debug\CapaPersistenciaVehiculo.csproj.CoreCompileInputs.cache
+C:\Users\jugarcca\Desktop\TrabajoTOO\CapaPersistenciaVehiculo\obj\Debug\CapaPersistenciaVehiculo.csproj.CopyComplete
+C:\Users\jugarcca\Desktop\TrabajoTOO\CapaPersistenciaVehiculo\obj\Debug\CapaPersistenciaVehiculo.dll
+C:\Users\jugarcca\Desktop\TrabajoTOO\CapaPersistenciaVehiculo\obj\Debug\CapaPersistenciaVehiculo.pdb

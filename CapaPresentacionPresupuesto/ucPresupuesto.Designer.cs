@@ -49,6 +49,7 @@ namespace CapaPresentacionPresupuesto
             this.btAceptar = new System.Windows.Forms.Button();
             this.btCancelar = new System.Windows.Forms.Button();
             this.lbImporte = new System.Windows.Forms.Label();
+            this.btQuitarVehiculo = new System.Windows.Forms.Button();
             this.gbEstado.SuspendLayout();
             this.gbCliente.SuspendLayout();
             this.gbVehiculos.SuspendLayout();
@@ -177,6 +178,7 @@ namespace CapaPresentacionPresupuesto
             // 
             // gbVehiculos
             // 
+            this.gbVehiculos.Controls.Add(this.btQuitarVehiculo);
             this.gbVehiculos.Controls.Add(this.lbListaVehiculos);
             this.gbVehiculos.Controls.Add(this.lboListaVehiculos);
             this.gbVehiculos.Controls.Add(this.btMostrarVehiculo);
@@ -257,6 +259,17 @@ namespace CapaPresentacionPresupuesto
             this.lbImporte.TabIndex = 16;
             this.lbImporte.Text = "Importe:";
             // 
+            // btQuitarVehiculo
+            // 
+            this.btQuitarVehiculo.AutoSize = true;
+            this.btQuitarVehiculo.Location = new System.Drawing.Point(16, 118);
+            this.btQuitarVehiculo.Name = "btQuitarVehiculo";
+            this.btQuitarVehiculo.Size = new System.Drawing.Size(88, 23);
+            this.btQuitarVehiculo.TabIndex = 4;
+            this.btQuitarVehiculo.Text = "Quitar vehiculo";
+            this.btQuitarVehiculo.UseVisualStyleBackColor = true;
+            this.btQuitarVehiculo.Click += new System.EventHandler(this.btQuitarVehiculo_Click);
+            // 
             // ucPresupuesto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -302,5 +315,6 @@ namespace CapaPresentacionPresupuesto
         private System.Windows.Forms.Button btAceptar;
         private System.Windows.Forms.Button btCancelar;
         private System.Windows.Forms.Label lbImporte;
+        private System.Windows.Forms.Button btQuitarVehiculo;
     }
 }

@@ -55,3 +55,22 @@ C:\Users\zonia\Desktop\TrabajoTOO\CapaPresentacionVehiculo\obj\Debug\CapaPresent
 C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\CapaPresentacionVehiculo\obj\Debug\CapaPresentacionVehiculo.Motrar_Todos_Vehiculos.resources
 C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\CapaPresentacionVehiculo\obj\Debug\CapaPresentacionVehiculo.Gestionar_Extra.resources
 C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\CapaPresentacionVehiculo\obj\Debug\CapaPresentacionVehiculo.Motrar_Todos_Vehiculos.resources
+C:\Users\jugarcca\Desktop\TrabajoTOO\CapaPresentacionVehiculo\bin\Debug\CapaPresentacionVehiculo.dll
+C:\Users\jugarcca\Desktop\TrabajoTOO\CapaPresentacionVehiculo\bin\Debug\CapaPresentacionVehiculo.pdb
+C:\Users\jugarcca\Desktop\TrabajoTOO\CapaPresentacionVehiculo\bin\Debug\LogicaModeloVehiculo.dll
+C:\Users\jugarcca\Desktop\TrabajoTOO\CapaPresentacionVehiculo\bin\Debug\LogicaNegocioVehiculo.dll
+C:\Users\jugarcca\Desktop\TrabajoTOO\CapaPresentacionVehiculo\bin\Debug\CapaPersistenciaVehiculo.dll
+C:\Users\jugarcca\Desktop\TrabajoTOO\CapaPresentacionVehiculo\bin\Debug\LogicaModeloVehiculo.pdb
+C:\Users\jugarcca\Desktop\TrabajoTOO\CapaPresentacionVehiculo\bin\Debug\LogicaNegocioVehiculo.pdb
+C:\Users\jugarcca\Desktop\TrabajoTOO\CapaPresentacionVehiculo\bin\Debug\CapaPersistenciaVehiculo.pdb
+C:\Users\jugarcca\Desktop\TrabajoTOO\CapaPresentacionVehiculo\obj\Debug\CapaPresentacionVehiculo.csprojAssemblyReference.cache
+C:\Users\jugarcca\Desktop\TrabajoTOO\CapaPresentacionVehiculo\obj\Debug\CapaPresentacionVehiculo.formularioVehiculo.resources
+C:\Users\jugarcca\Desktop\TrabajoTOO\CapaPresentacionVehiculo\obj\Debug\CapaPresentacionVehiculo.Datos2Mano.resources
+C:\Users\jugarcca\Desktop\TrabajoTOO\CapaPresentacionVehiculo\obj\Debug\CapaPresentacionVehiculo.Gestionar_Extra.resources
+C:\Users\jugarcca\Desktop\TrabajoTOO\CapaPresentacionVehiculo\obj\Debug\CapaPresentacionVehiculo.Motrar_Todos_Vehiculos.resources
+C:\Users\jugarcca\Desktop\TrabajoTOO\CapaPresentacionVehiculo\obj\Debug\CapaPresentacionVehiculo.ObtenerNBastidor.resources
+C:\Users\jugarcca\Desktop\TrabajoTOO\CapaPresentacionVehiculo\obj\Debug\CapaPresentacionVehiculo.csproj.GenerateResource.cache
+C:\Users\jugarcca\Desktop\TrabajoTOO\CapaPresentacionVehiculo\obj\Debug\CapaPresentacionVehiculo.csproj.CoreCompileInputs.cache
+C:\Users\jugarcca\Desktop\TrabajoTOO\CapaPresentacionVehiculo\obj\Debug\CapaPresentacionVehiculo.csproj.CopyComplete
+C:\Users\jugarcca\Desktop\TrabajoTOO\CapaPresentacionVehiculo\obj\Debug\CapaPresentacionVehiculo.dll
+C:\Users\jugarcca\Desktop\TrabajoTOO\CapaPresentacionVehiculo\obj\Debug\CapaPresentacionVehiculo.pdb

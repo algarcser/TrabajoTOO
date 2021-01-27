@@ -63,3 +63,17 @@ C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\CapaPresentacionCliente\obj
 C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\CapaPresentacionCliente\obj\Debug\CapaPresentacionCliente.Listado_de_clientes.resources
 C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\CapaPresentacionCliente\obj\Debug\CapaPresentacionCliente.Properties.Resources.resources
 >>>>>>> Stashed changes
+C:\Users\jugarcca\Desktop\TrabajoTOO\CapaPresentacionCliente\obj\Debug\CapaPresentacionCliente.csprojAssemblyReference.cache
+C:\Users\jugarcca\Desktop\TrabajoTOO\CapaPresentacionCliente\obj\Debug\CapaPresentacionCliente.Alta_Cliente.resources
+C:\Users\jugarcca\Desktop\TrabajoTOO\CapaPresentacionCliente\obj\Debug\CapaPresentacionCliente.Baja_cliente.resources
+C:\Users\jugarcca\Desktop\TrabajoTOO\CapaPresentacionCliente\obj\Debug\CapaPresentacionCliente.Busqueda_alternativa_cliente.resources
+C:\Users\jugarcca\Desktop\TrabajoTOO\CapaPresentacionCliente\obj\Debug\CapaPresentacionCliente.Busqueda_cliente.resources
+C:\Users\jugarcca\Desktop\TrabajoTOO\CapaPresentacionCliente\obj\Debug\CapaPresentacionCliente.Control_alternativo_datos_cliente.resources
+C:\Users\jugarcca\Desktop\TrabajoTOO\CapaPresentacionCliente\obj\Debug\CapaPresentacionCliente.Control_datos_cliente.resources
+C:\Users\jugarcca\Desktop\TrabajoTOO\CapaPresentacionCliente\obj\Debug\CapaPresentacionCliente.Introducir_DNI.resources
+C:\Users\jugarcca\Desktop\TrabajoTOO\CapaPresentacionCliente\obj\Debug\CapaPresentacionCliente.Listado_de_clientes.resources
+C:\Users\jugarcca\Desktop\TrabajoTOO\CapaPresentacionCliente\obj\Debug\CapaPresentacionCliente.Properties.Resources.resources
+C:\Users\jugarcca\Desktop\TrabajoTOO\CapaPresentacionCliente\obj\Debug\CapaPresentacionCliente.csproj.GenerateResource.cache
+C:\Users\jugarcca\Desktop\TrabajoTOO\CapaPresentacionCliente\obj\Debug\CapaPresentacionCliente.csproj.CoreCompileInputs.cache
+C:\Users\jugarcca\Desktop\TrabajoTOO\CapaPresentacionCliente\obj\Debug\CapaPresentacionCliente.dll
+C:\Users\jugarcca\Desktop\TrabajoTOO\CapaPresentacionCliente\obj\Debug\CapaPresentacionCliente.pdb

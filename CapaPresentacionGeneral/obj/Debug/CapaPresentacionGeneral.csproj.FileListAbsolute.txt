@@ -100,3 +100,37 @@ C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\CapaPresentacionGeneral\bin\Deb
 C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\CapaPresentacionGeneral\bin\Debug\CapaPersistenciaPresupuesto.pdb
 C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\CapaPresentacionGeneral\obj\Debug\CapaPresentacionGeneral.FormPrincipal.resources
 C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\CapaPresentacionGeneral\obj\Debug\CapaPresentacionGeneral.exe
+C:\Users\jugarcca\Desktop\TrabajoTOO\CapaPresentacionGeneral\bin\Debug\CapaPresentacionGeneral.exe
+C:\Users\jugarcca\Desktop\TrabajoTOO\CapaPresentacionGeneral\bin\Debug\CapaPresentacionGeneral.pdb
+C:\Users\jugarcca\Desktop\TrabajoTOO\CapaPresentacionGeneral\bin\Debug\CapaPresentacionCliente.dll
+C:\Users\jugarcca\Desktop\TrabajoTOO\CapaPresentacionGeneral\bin\Debug\CapaPresentacionPresupuesto.exe
+C:\Users\jugarcca\Desktop\TrabajoTOO\CapaPresentacionGeneral\bin\Debug\CapaPresentacionVehiculo.dll
+C:\Users\jugarcca\Desktop\TrabajoTOO\CapaPresentacionGeneral\bin\Debug\LogicaModeloPresupuesto.dll
+C:\Users\jugarcca\Desktop\TrabajoTOO\CapaPresentacionGeneral\bin\Debug\LogicaNegocioPresupuesto.dll
+C:\Users\jugarcca\Desktop\TrabajoTOO\CapaPresentacionGeneral\bin\Debug\LogicaModeloCliente.dll
+C:\Users\jugarcca\Desktop\TrabajoTOO\CapaPresentacionGeneral\bin\Debug\LogicaNegocioCliente.dll
+C:\Users\jugarcca\Desktop\TrabajoTOO\CapaPresentacionGeneral\bin\Debug\CapaPersistenciaCliente.dll
+C:\Users\jugarcca\Desktop\TrabajoTOO\CapaPresentacionGeneral\bin\Debug\LogicaModeloVehiculo.dll
+C:\Users\jugarcca\Desktop\TrabajoTOO\CapaPresentacionGeneral\bin\Debug\LogicaNegocioVehiculo.dll
+C:\Users\jugarcca\Desktop\TrabajoTOO\CapaPresentacionGeneral\bin\Debug\CapaPersistenciaPresupuesto.dll
+C:\Users\jugarcca\Desktop\TrabajoTOO\CapaPresentacionGeneral\bin\Debug\CapaPersistenciaVehiculo.dll
+C:\Users\jugarcca\Desktop\TrabajoTOO\CapaPresentacionGeneral\bin\Debug\CapaPresentacionCliente.pdb
+C:\Users\jugarcca\Desktop\TrabajoTOO\CapaPresentacionGeneral\bin\Debug\CapaPresentacionPresupuesto.pdb
+C:\Users\jugarcca\Desktop\TrabajoTOO\CapaPresentacionGeneral\bin\Debug\CapaPresentacionVehiculo.pdb
+C:\Users\jugarcca\Desktop\TrabajoTOO\CapaPresentacionGeneral\bin\Debug\LogicaModeloPresupuesto.pdb
+C:\Users\jugarcca\Desktop\TrabajoTOO\CapaPresentacionGeneral\bin\Debug\LogicaNegocioPresupuesto.pdb
+C:\Users\jugarcca\Desktop\TrabajoTOO\CapaPresentacionGeneral\bin\Debug\LogicaModeloCliente.pdb
+C:\Users\jugarcca\Desktop\TrabajoTOO\CapaPresentacionGeneral\bin\Debug\LogicaNegocioCliente.pdb
+C:\Users\jugarcca\Desktop\TrabajoTOO\CapaPresentacionGeneral\bin\Debug\CapaPersistenciaCliente.pdb
+C:\Users\jugarcca\Desktop\TrabajoTOO\CapaPresentacionGeneral\bin\Debug\LogicaModeloVehiculo.pdb
+C:\Users\jugarcca\Desktop\TrabajoTOO\CapaPresentacionGeneral\bin\Debug\LogicaNegocioVehiculo.pdb
+C:\Users\jugarcca\Desktop\TrabajoTOO\CapaPresentacionGeneral\bin\Debug\CapaPersistenciaPresupuesto.pdb
+C:\Users\jugarcca\Desktop\TrabajoTOO\CapaPresentacionGeneral\bin\Debug\CapaPersistenciaVehiculo.pdb
+C:\Users\jugarcca\Desktop\TrabajoTOO\CapaPresentacionGeneral\obj\Debug\CapaPresentacionGeneral.csprojAssemblyReference.cache
+C:\Users\jugarcca\Desktop\TrabajoTOO\CapaPresentacionGeneral\obj\Debug\CapaPresentacionGeneral.FormPrincipal.resources
+C:\Users\jugarcca\Desktop\TrabajoTOO\CapaPresentacionGeneral\obj\Debug\CapaPresentacionGeneral.Login.resources
+C:\Users\jugarcca\Desktop\TrabajoTOO\CapaPresentacionGeneral\obj\Debug\CapaPresentacionGeneral.csproj.GenerateResource.cache
+C:\Users\jugarcca\Desktop\TrabajoTOO\CapaPresentacionGeneral\obj\Debug\CapaPresentacionGeneral.csproj.CoreCompileInputs.cache
+C:\Users\jugarcca\Desktop\TrabajoTOO\CapaPresentacionGeneral\obj\Debug\CapaPresentacionGeneral.csproj.CopyComplete
+C:\Users\jugarcca\Desktop\TrabajoTOO\CapaPresentacionGeneral\obj\Debug\CapaPresentacionGeneral.exe
+C:\Users\jugarcca\Desktop\TrabajoTOO\CapaPresentacionGeneral\obj\Debug\CapaPresentacionGeneral.pdb

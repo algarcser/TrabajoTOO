@@ -16,3 +16,9 @@ C:\Users\zonia\Desktop\TrabajoTOO\LogicaModeloVehiculo\obj\Debug\LogicaModeloVeh
 C:\Users\zonia\Desktop\TrabajoTOO\LogicaModeloVehiculo\obj\Debug\LogicaModeloVehiculo.dll
 C:\Users\zonia\Desktop\TrabajoTOO\LogicaModeloVehiculo\obj\Debug\LogicaModeloVehiculo.pdb
 C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\LogicaModeloVehiculo\obj\Debug\LogicaModeloVehiculo.csprojAssemblyReference.cache
+C:\Users\jugarcca\Desktop\TrabajoTOO\LogicaModeloVehiculo\bin\Debug\LogicaModeloVehiculo.dll
+C:\Users\jugarcca\Desktop\TrabajoTOO\LogicaModeloVehiculo\bin\Debug\LogicaModeloVehiculo.pdb
+C:\Users\jugarcca\Desktop\TrabajoTOO\LogicaModeloVehiculo\obj\Debug\LogicaModeloVehiculo.csprojAssemblyReference.cache
+C:\Users\jugarcca\Desktop\TrabajoTOO\LogicaModeloVehiculo\obj\Debug\LogicaModeloVehiculo.csproj.CoreCompileInputs.cache
+C:\Users\jugarcca\Desktop\TrabajoTOO\LogicaModeloVehiculo\obj\Debug\LogicaModeloVehiculo.dll
+C:\Users\jugarcca\Desktop\TrabajoTOO\LogicaModeloVehiculo\obj\Debug\LogicaModeloVehiculo.pdb
