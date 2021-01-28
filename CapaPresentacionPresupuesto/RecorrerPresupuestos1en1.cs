@@ -7,13 +7,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using LogicaModeloPresupuesto;
 
 namespace CapaPresentacionPresupuesto
 {
     public partial class FormRecorrerPresupuestos1en1 : Form
     {
-        public FormRecorrerPresupuestos1en1()
+        private List<Presupuesto> listaPresupuestos;
+
+        public FormRecorrerPresupuestos1en1(List<Presupuesto> lp)
         {
+            this.listaPresupuestos = lp;
             InitializeComponent();
         }
     }

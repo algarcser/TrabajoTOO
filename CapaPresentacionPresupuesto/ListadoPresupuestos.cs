@@ -78,7 +78,7 @@ namespace CapaPresentacionPresupuesto
 
         private void btRecorrerP1en1_Click(object sender, EventArgs e)
         {
-            Form recorrerPresupuestos = new FormRecorrerPresupuestos1en1();
+            Form recorrerPresupuestos = new FormRecorrerPresupuestos1en1(this.listaPresupuestos);
             recorrerPresupuestos.Show();
             this.Close();
         }

@@ -45,3 +45,4 @@ C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\CapaPresentacionCliente\obj\Deb
 C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\CapaPresentacionCliente\obj\Debug\CapaPresentacionCliente.dll
 C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\CapaPresentacionCliente\obj\Debug\CapaPresentacionCliente.pdb
 C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\CapaPresentacionCliente\obj\Debug\CapaPresentacionCliente.Recorrido_uno_a_uno.resources
+C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\CapaPresentacionCliente\obj\Debug\CapaPresentacionCliente.Recorrido_uno_a_uno.resources

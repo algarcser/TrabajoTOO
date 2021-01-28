@@ -264,6 +264,7 @@ namespace CapaPresentacionPresupuesto
                     if(LNPresupuesto.INSERT(nuevoPresupuesto) == true)
                     {
                         this.presupuesto = nuevoPresupuesto;
+                        //COMPLETAR this.presupuesto.Cliente.ListaPresupuestos.Add(LNPresupuesto.calcularPresupuesto(this.presupuesto));
                         this.ParentForm.Close();
                         MessageBox.Show("Presupuesto para " + this.presupuesto.Cliente.getDNI + " creado.", "El presupuesto ha sido creado", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }            

@@ -96,35 +96,50 @@ namespace CapaPersistenciaPresupuesto
             public static Presupuesto Convertir(PresupuestoDato presupuestoDato)
             {
                 List<vehiculo> vehiculos = new List<vehiculo>();
-               
-                foreach (vehiculoDato v in presupuestoDato.ListaVehiculos)
+
+                if (presupuestoDato != null)
                 {
-                    vehiculos.Add(CapaPersistenciaVehiculo.conversor.Convertir(v));
+                    foreach (vehiculoDato v in presupuestoDato.ListaVehiculos)
+                    {
+                        vehiculos.Add(CapaPersistenciaVehiculo.conversor.Convertir(v));
+                    }
+
+                    Presupuesto presupuesto = new Presupuesto(presupuestoDato.FechaRealizacion, (EstadoPresupuesto)(int)presupuestoDato.EstadoPresupuesto, CapaPersistenciaCliente.PersistenciaCliente.conversor.Convertir(presupuestoDato.Cliente), vehiculos);
+                    presupuesto.Identificacion = presupuestoDato.Identificacion;
+
+                    return (presupuesto);
                 }
-
-                Presupuesto presupuesto = new Presupuesto(presupuestoDato.FechaRealizacion, (EstadoPresupuesto)(int)presupuestoDato.EstadoPresupuesto, CapaPersistenciaCliente.PersistenciaCliente.conversor.Convertir(presupuestoDato.Cliente), vehiculos);
-                presupuesto.Identificacion = presupuestoDato.Identificacion;
-
-                return (presupuesto);   
+                else
+                {
+                    return (null);
+                }
             }
 
             public static PresupuestoDato Convertir(Presupuesto presupuesto)
             {
                 List<vehiculoDato> vehiculos = new List<vehiculoDato>();
                 
-                foreach (vehiculo v in presupuesto.ListaVehiculos)
+                if (presupuesto != null)
                 {
-                    vehiculos.Add(CapaPersistenciaVehiculo.conversor.Convertir(v));
+                    foreach (vehiculo v in presupuesto.ListaVehiculos)
+                    {
+                        vehiculos.Add(CapaPersistenciaVehiculo.conversor.Convertir(v));
+                    }
+
+                    PresupuestoDato presupuestoDato = new PresupuestoDato(presupuesto.FechaRealizacion, (EstadoPresupuestoDato)(int)presupuesto.EstadoPresupuesto, CapaPersistenciaCliente.PersistenciaCliente.conversor.Convertir(presupuesto.Cliente), vehiculos);
+
+                    if (presupuesto.Identificacion != 0)
+                    {
+                        presupuestoDato.Identificacion = presupuesto.Identificacion;
+                    }
+
+                    return (presupuestoDato);
                 }
-
-                PresupuestoDato presupuestoDato = new PresupuestoDato(presupuesto.FechaRealizacion, (EstadoPresupuestoDato)(int)presupuesto.EstadoPresupuesto, CapaPersistenciaCliente.PersistenciaCliente.conversor.Convertir(presupuesto.Cliente), vehiculos);
-
-                if (presupuesto.Identificacion != 0)
+                else
                 {
-                    presupuestoDato.Identificacion = presupuesto.Identificacion;
+                    return (null);
                 }
-
-                return (presupuestoDato);  
+                  
             }
         }
     }
