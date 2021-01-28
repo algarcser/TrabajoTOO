@@ -23,7 +23,7 @@ namespace LogicaModeloPresupuesto
         public Presupuesto(DateTime fch, EstadoPresupuesto e, Cliente c, List<vehiculo> v)
         {
             this.fechaRealizacion = fch;
-            this.estado = EstadoPresupuesto.creado;
+            this.estado = e;
             this.cliente = c;
             this.vehiculos = v;
         }
@@ -89,6 +89,22 @@ namespace LogicaModeloPresupuesto
             get
             {
                 return (this.vehiculos);
+            }
+        }
+
+        public int NumeroVehiculosPresupuesto
+        {
+            get
+            {
+                return (this.ListaVehiculos.Count);
+            }
+        }
+
+        public string DNIClientePresupuesto
+        {
+            get
+            {
+                return (this.Cliente.getDNI);
             }
         }
     }

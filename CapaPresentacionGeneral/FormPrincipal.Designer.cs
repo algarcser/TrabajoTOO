@@ -47,14 +47,14 @@ namespace CapaPresentacionGeneral
             this.tsmiBPPorVehiculo = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiBPPorEstado = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiMostrarTodos = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiConfiguracion = new System.Windows.Forms.ToolStripMenuItem();
-            this.extrasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.anadirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tssPresupuestos = new System.Windows.Forms.ToolStripSeparator();
             this.tsmiConfiguracionPresupuestos = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiActualizarPresupuestos = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiCambiarEstado = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiModificarPresupuesto = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiEliminarPresupuesto = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiConfiguracion = new System.Windows.Forms.ToolStripMenuItem();
+            this.extrasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.anadirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.msPrincipal.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -198,6 +198,39 @@ namespace CapaPresentacionGeneral
             this.tsmiMostrarTodos.Text = "Mostrar todos";
             this.tsmiMostrarTodos.Click += new System.EventHandler(this.tsmiMostrarTodos_Click);
             // 
+            // tssPresupuestos
+            // 
+            this.tssPresupuestos.Name = "tssPresupuestos";
+            this.tssPresupuestos.Size = new System.Drawing.Size(177, 6);
+            // 
+            // tsmiConfiguracionPresupuestos
+            // 
+            this.tsmiConfiguracionPresupuestos.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmiActualizarPresupuestos,
+            this.tsmiModificarPresupuesto,
+            this.tsmiEliminarPresupuesto});
+            this.tsmiConfiguracionPresupuestos.Name = "tsmiConfiguracionPresupuestos";
+            this.tsmiConfiguracionPresupuestos.Size = new System.Drawing.Size(180, 22);
+            this.tsmiConfiguracionPresupuestos.Text = "Configuración";
+            // 
+            // tsmiActualizarPresupuestos
+            // 
+            this.tsmiActualizarPresupuestos.Name = "tsmiActualizarPresupuestos";
+            this.tsmiActualizarPresupuestos.Size = new System.Drawing.Size(199, 22);
+            this.tsmiActualizarPresupuestos.Text = "Actualizar presupuestos";
+            // 
+            // tsmiModificarPresupuesto
+            // 
+            this.tsmiModificarPresupuesto.Name = "tsmiModificarPresupuesto";
+            this.tsmiModificarPresupuesto.Size = new System.Drawing.Size(199, 22);
+            this.tsmiModificarPresupuesto.Text = "Modificar presupuesto";
+            // 
+            // tsmiEliminarPresupuesto
+            // 
+            this.tsmiEliminarPresupuesto.Name = "tsmiEliminarPresupuesto";
+            this.tsmiEliminarPresupuesto.Size = new System.Drawing.Size(199, 22);
+            this.tsmiEliminarPresupuesto.Text = "Eliminar presupuesto";
+            // 
             // tsmiConfiguracion
             // 
             this.tsmiConfiguracion.Name = "tsmiConfiguracion";
@@ -218,39 +251,6 @@ namespace CapaPresentacionGeneral
             this.anadirToolStripMenuItem.Size = new System.Drawing.Size(109, 22);
             this.anadirToolStripMenuItem.Text = "Anadir";
             this.anadirToolStripMenuItem.Click += new System.EventHandler(this.anadirToolStripMenuItem_Click);
-            // 
-            // tssPresupuestos
-            // 
-            this.tssPresupuestos.Name = "tssPresupuestos";
-            this.tssPresupuestos.Size = new System.Drawing.Size(177, 6);
-            // 
-            // tsmiConfiguracionPresupuestos
-            // 
-            this.tsmiConfiguracionPresupuestos.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsmiActualizarPresupuestos,
-            this.tsmiCambiarEstado,
-            this.tsmiEliminarPresupuesto});
-            this.tsmiConfiguracionPresupuestos.Name = "tsmiConfiguracionPresupuestos";
-            this.tsmiConfiguracionPresupuestos.Size = new System.Drawing.Size(180, 22);
-            this.tsmiConfiguracionPresupuestos.Text = "Configuración";
-            // 
-            // tsmiActualizarPresupuestos
-            // 
-            this.tsmiActualizarPresupuestos.Name = "tsmiActualizarPresupuestos";
-            this.tsmiActualizarPresupuestos.Size = new System.Drawing.Size(199, 22);
-            this.tsmiActualizarPresupuestos.Text = "Actualizar presupuestos";
-            // 
-            // tsmiCambiarEstado
-            // 
-            this.tsmiCambiarEstado.Name = "tsmiCambiarEstado";
-            this.tsmiCambiarEstado.Size = new System.Drawing.Size(199, 22);
-            this.tsmiCambiarEstado.Text = "Cambiar estado";
-            // 
-            // tsmiEliminarPresupuesto
-            // 
-            this.tsmiEliminarPresupuesto.Name = "tsmiEliminarPresupuesto";
-            this.tsmiEliminarPresupuesto.Size = new System.Drawing.Size(199, 22);
-            this.tsmiEliminarPresupuesto.Text = "Eliminar presupuesto";
             // 
             // FormPrincipal
             // 
@@ -296,7 +296,7 @@ namespace CapaPresentacionGeneral
         private System.Windows.Forms.ToolStripSeparator tssPresupuestos;
         private System.Windows.Forms.ToolStripMenuItem tsmiConfiguracionPresupuestos;
         private System.Windows.Forms.ToolStripMenuItem tsmiActualizarPresupuestos;
-        private System.Windows.Forms.ToolStripMenuItem tsmiCambiarEstado;
+        private System.Windows.Forms.ToolStripMenuItem tsmiModificarPresupuesto;
         private System.Windows.Forms.ToolStripMenuItem tsmiEliminarPresupuesto;
     }
 }

@@ -41,6 +41,7 @@ namespace CapaPresentacionPresupuesto
             {
                 vehiculo v = (vehiculo)this.lboVehiculos.SelectedItem;
                 Form mostrarVehiculo = new formularioVehiculo(v.NBastidor, enumObjetivo.Ver);
+                mostrarVehiculo.Show();
             }
         }
     }

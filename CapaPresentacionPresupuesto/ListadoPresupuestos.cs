@@ -30,14 +30,14 @@ namespace CapaPresentacionPresupuesto
             this.lboFechaCreacion.DataSource = bindingSource;
             this.lboFechaCreacion.DisplayMember = "FechaRealizacion";
             this.lboCliente.DataSource = bindingSource;
-            this.lboCliente.DisplayMember = "Cliente.getDNI";
+            this.lboCliente.DisplayMember = "DNIClientePresupuesto";
             this.lboEstado.DataSource = bindingSource;
             this.lboEstado.DisplayMember = "EstadoPresupuesto";
             this.lboNVehiculos.DataSource = bindingSource;
-            this.lboNVehiculos.DisplayMember = "ListaVehiculos";
+            this.lboNVehiculos.DisplayMember = "NumeroVehiculosPresupuesto";
             foreach (Presupuesto p in this.listaPresupuestos)
             {
-                this.lboImporte.Items.Add(LNPresupuesto.calcularPresupuesto(p));
+                this.lboImporte.Items.Add(LNPresupuesto.calcularPresupuesto(p).ToString() + " €");
             }
             this.lboImporte.Enabled = false;
 
@@ -53,7 +53,8 @@ namespace CapaPresentacionPresupuesto
             }
             else
             {
-                Form mostrarCliente = new Busqueda_cliente(this.lboCliente.SelectedItem as Cliente);
+                Presupuesto p = this.lboCliente.SelectedItem as Presupuesto;
+                Form mostrarCliente = new Busqueda_cliente(p.Cliente);
                 mostrarCliente.Show();
             }     
         }
@@ -66,7 +67,10 @@ namespace CapaPresentacionPresupuesto
             }
             else
             {
-                Form mostrarListaVehiculos = new FormMostrarListaVehiculosPresupuesto(this.lboNVehiculos.SelectedItem as List<vehiculo>);
+                List<vehiculo> listaVehiculos = new List<vehiculo>();
+                Presupuesto p = this.lboNVehiculos.SelectedItem as Presupuesto;
+                listaVehiculos = p.ListaVehiculos;
+                Form mostrarListaVehiculos = new FormMostrarListaVehiculosPresupuesto(listaVehiculos);
                 mostrarListaVehiculos.Show();
             }     
         }
@@ -85,8 +89,8 @@ namespace CapaPresentacionPresupuesto
 
         private void btActualizarListado_Click(object sender, EventArgs e)
         {
-            BindingSource bindingSource = new BindingSource(); //COMPLETAR mostrar cuantos lo han hecho (actualizar su estado)
-                                                               //hacer UPDATE de todos en la base de datos
+            BindingSource bindingSource = new BindingSource();
+
             int presupuestosActualizados = 0;
             foreach (Presupuesto p in this.listaPresupuestos)
             {
@@ -98,18 +102,19 @@ namespace CapaPresentacionPresupuesto
                     }
                 }
             }
+            this.lboImporte.Items.Clear();
             bindingSource.DataSource = this.listaPresupuestos;
             this.lboFechaCreacion.DataSource = bindingSource;
             this.lboFechaCreacion.DisplayMember = "FechaRealizacion";
             this.lboCliente.DataSource = bindingSource;
-            this.lboCliente.DisplayMember = "Cliente.getDNI";
+            this.lboCliente.DisplayMember = "DNIClientePresupuesto";
             this.lboEstado.DataSource = bindingSource;
             this.lboEstado.DisplayMember = "EstadoPresupuesto";
             this.lboNVehiculos.DataSource = bindingSource;
-            this.lboNVehiculos.DisplayMember = "ListaVehiculos";
+            this.lboNVehiculos.DisplayMember = "NumeroVehiculosPresupuesto";
             foreach (Presupuesto p in this.listaPresupuestos)
             {
-                this.lboImporte.Items.Add(LNPresupuesto.calcularPresupuesto(p));
+                this.lboImporte.Items.Add(LNPresupuesto.calcularPresupuesto(p).ToString() + " €");
             }
 
             MessageBox.Show("Se han actualizado " + presupuestosActualizados.ToString() + " presupuestos.", "Presupuestos actualizados", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -117,8 +122,11 @@ namespace CapaPresentacionPresupuesto
 
         private void btMostrarPresupuesto_Click(object sender, EventArgs e)
         {
-            Form mostrarPresupuesto = new FormCrearMostrarPresupuesto(this.lboCliente.SelectedItem as Presupuesto, false);
-            mostrarPresupuesto.Show();
+            if(this.lboFechaCreacion.SelectedItem != null)
+            {
+                Form mostrarPresupuesto = new FormCrearMostrarPresupuesto(this.lboFechaCreacion.SelectedItem as Presupuesto, false);
+                mostrarPresupuesto.Show();
+            }      
         }
 
         private void btEliminarPresupuesto_Click(object sender, EventArgs e)
@@ -127,21 +135,22 @@ namespace CapaPresentacionPresupuesto
             DialogResult result = MessageBox.Show("¿Esta seguro de que quiere eliminar el presupuesto seleccionado?", "Va a eliminar un presupuesto", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (result == DialogResult.Yes)
             {
-                if (LNPresupuesto.DELETE(this.lboCliente.SelectedItem as Presupuesto) == true)
+                if (LNPresupuesto.DELETE(this.lboFechaCreacion.SelectedItem as Presupuesto) == true)
                 {
-                    this.listaPresupuestos.Remove(this.lboCliente.SelectedItem as Presupuesto);
+                    this.lboImporte.Items.Clear();
+                    this.listaPresupuestos.Remove(this.lboFechaCreacion.SelectedItem as Presupuesto);
                     bindingSource.DataSource = this.listaPresupuestos;
                     this.lboFechaCreacion.DataSource = bindingSource;
                     this.lboFechaCreacion.DisplayMember = "FechaRealizacion";
                     this.lboCliente.DataSource = bindingSource;
-                    this.lboCliente.DisplayMember = "Cliente.getDNI";
+                    this.lboCliente.DisplayMember = "DNIClientePresupuesto";
                     this.lboEstado.DataSource = bindingSource;
                     this.lboEstado.DisplayMember = "EstadoPresupuesto";
                     this.lboNVehiculos.DataSource = bindingSource;
-                    this.lboNVehiculos.DisplayMember = "ListaVehiculos";
+                    this.lboNVehiculos.DisplayMember = "NumeroVehiculosPresupuesto";
                     foreach (Presupuesto p in this.listaPresupuestos)
                     {
-                        this.lboImporte.Items.Add(LNPresupuesto.calcularPresupuesto(p));
+                        this.lboImporte.Items.Add(LNPresupuesto.calcularPresupuesto(p).ToString() + " €");
                     }
                     MessageBox.Show("El presupuesto seleccionado ha sido eliminado.", "Se ha eliminado un presupuesto", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }

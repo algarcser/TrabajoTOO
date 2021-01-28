@@ -60,7 +60,6 @@ namespace CapaPersistenciaPresupuesto
         {
             DELETEPresupuesto(p);
             INSERTPresupuesto(p);
-
         }
 
         /// <summary>
@@ -69,7 +68,7 @@ namespace CapaPersistenciaPresupuesto
         /// <param name="p"></param>
         public static void DELETEPresupuesto(PresupuestoDato p)
         {
-            BDPresupuesto.Presupuestos.Remove(p);
+            BDPresupuesto.Presupuestos.Remove(p.Identificacion);
         }
 
         /// <summary>
@@ -78,7 +77,14 @@ namespace CapaPersistenciaPresupuesto
         /// <param name="p"></param>
         public static bool EXISTPresupuesto(PresupuestoDato presupuestoDato)
         {          
-            return (BDPresupuesto.Presupuestos.Contains(presupuestoDato.Identificacion));
+            if (presupuestoDato != null)
+            {
+                return (BDPresupuesto.Presupuestos.Contains(presupuestoDato.Identificacion));
+            }
+            else
+            {
+                return (false);
+            }           
         }
 
         public static List<PresupuestoDato> SELECTALLPresupuesto()

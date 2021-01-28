@@ -50,6 +50,7 @@ namespace CapaPresentacionPresupuesto
             this.btAceptar = new System.Windows.Forms.Button();
             this.btCancelar = new System.Windows.Forms.Button();
             this.lbImporte = new System.Windows.Forms.Label();
+            this.tbImporte = new System.Windows.Forms.TextBox();
             this.gbEstado.SuspendLayout();
             this.gbCliente.SuspendLayout();
             this.gbVehiculos.SuspendLayout();
@@ -273,10 +274,19 @@ namespace CapaPresentacionPresupuesto
             this.lbImporte.TabIndex = 16;
             this.lbImporte.Text = "Importe:";
             // 
+            // tbImporte
+            // 
+            this.tbImporte.Location = new System.Drawing.Point(187, 421);
+            this.tbImporte.Name = "tbImporte";
+            this.tbImporte.ReadOnly = true;
+            this.tbImporte.Size = new System.Drawing.Size(100, 20);
+            this.tbImporte.TabIndex = 17;
+            // 
             // ucPresupuesto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.tbImporte);
             this.Controls.Add(this.lbImporte);
             this.Controls.Add(this.btCancelar);
             this.Controls.Add(this.btAceptar);
@@ -319,5 +329,6 @@ namespace CapaPresentacionPresupuesto
         private System.Windows.Forms.Button btCancelar;
         private System.Windows.Forms.Label lbImporte;
         private System.Windows.Forms.Button btQuitarVehiculo;
+        private System.Windows.Forms.TextBox tbImporte;
     }
 }
