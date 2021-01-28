@@ -14,6 +14,7 @@ namespace CapaPresentacionPresupuesto
     public partial class FormRecorrerPresupuestos1en1 : Form
     {
         private List<Presupuesto> listaPresupuestos;
+        private ucPresupuesto mostrarModificarPresupuesto;
 
         public FormRecorrerPresupuestos1en1(List<Presupuesto> lp)
         {
@@ -27,36 +28,28 @@ namespace CapaPresentacionPresupuesto
 
         private void FormRecorrerPresupuestos1en1_Load(object sender, EventArgs e)
         {
-            Control mostrarModificarPresupuesto = new ucPresupuesto(this.listaPresupuestos[Convert.ToInt32(this.bnPresupuestos.PositionItem.Text) - 1], true);
-            this.Controls.Add(mostrarModificarPresupuesto);
+            this.mostrarModificarPresupuesto = new ucPresupuesto(this.listaPresupuestos[Convert.ToInt32(this.bnPresupuestos.PositionItem.Text) - 1], true);
+            this.Controls.Add(this.mostrarModificarPresupuesto);
         }
 
         private void bindingNavigatorMoveNextItem_Click(object sender, EventArgs e)
         {
-            this.Controls.Remove(this.Controls["mostrarModificarPresupuesto"]);
-            Control mostrarModificarPresupuesto = new ucPresupuesto(this.listaPresupuestos[Convert.ToInt32(this.bnPresupuestos.PositionItem.Text) - 1], true);
-            this.Controls.Add(mostrarModificarPresupuesto);
+            this.mostrarModificarPresupuesto.cambiarPresupuesto(this.listaPresupuestos[Convert.ToInt32(this.bnPresupuestos.PositionItem.Text) - 1]);
         }
 
         private void bindingNavigatorMoveLastItem_Click(object sender, EventArgs e)
         {
-            this.Controls.Remove(this.Controls["mostrarModificarPresupuesto"]);
-            Control mostrarModificarPresupuesto = new ucPresupuesto(this.listaPresupuestos[Convert.ToInt32(this.bnPresupuestos.PositionItem.Text) - 1], true);
-            this.Controls.Add(mostrarModificarPresupuesto);
+            this.mostrarModificarPresupuesto.cambiarPresupuesto(this.listaPresupuestos[Convert.ToInt32(this.bnPresupuestos.PositionItem.Text) - 1]);
         }
 
         private void bindingNavigatorMovePreviousItem_Click(object sender, EventArgs e)
         {
-            this.Controls.Remove(this.Controls["mostrarModificarPresupuesto"]);
-            Control mostrarModificarPresupuesto = new ucPresupuesto(this.listaPresupuestos[Convert.ToInt32(this.bnPresupuestos.PositionItem.Text) - 1], true);
-            this.Controls.Add(mostrarModificarPresupuesto);
+            this.mostrarModificarPresupuesto.cambiarPresupuesto(this.listaPresupuestos[Convert.ToInt32(this.bnPresupuestos.PositionItem.Text) - 1]);
         }
 
         private void bindingNavigatorMoveFirstItem_Click(object sender, EventArgs e)
         {
-            this.Controls.Remove(this.Controls["mostrarModificarPresupuesto"]);
-            Control mostrarModificarPresupuesto = new ucPresupuesto(this.listaPresupuestos[Convert.ToInt32(this.bnPresupuestos.PositionItem.Text) - 1], true);
-            this.Controls.Add(mostrarModificarPresupuesto);
+            this.mostrarModificarPresupuesto.cambiarPresupuesto(this.listaPresupuestos[Convert.ToInt32(this.bnPresupuestos.PositionItem.Text) - 1]);
         }
     }
 }

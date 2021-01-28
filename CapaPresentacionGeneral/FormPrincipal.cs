@@ -71,8 +71,15 @@ namespace CapaPresentacionGeneral
 
         private void tsmiBPPorCliente_Click(object sender, EventArgs e)
         {
-            Form busquedaPresupuestosCliente = new FormIntroducirDNIPresupuesto("busqueda");
-            busquedaPresupuestosCliente.Show();
+            if (LNPresupuesto.SELECTALL().Count != 0)
+            {
+                Form busquedaPresupuestosCliente = new FormIntroducirDNIPresupuesto("busqueda");
+                busquedaPresupuestosCliente.Show();
+            }
+            else
+            {
+                MessageBox.Show("Introduce al menos 1 presupuesto para poder usar \"Búsqueda\\Por cliente\"", "No hay ningun presupuesto", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
 
         private void tsmiMostrarTodos_Click(object sender, EventArgs e)
@@ -85,9 +92,7 @@ namespace CapaPresentacionGeneral
             else
             {
                 MessageBox.Show("Introduce al menos 1 presupuesto para poder usar \"Mostrar presupuestos\"", "No hay ningun presupuesto", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            
-            
+            } 
         }
 
         private void anadirToolStripMenuItem_Click(object sender, EventArgs e)
@@ -104,8 +109,64 @@ namespace CapaPresentacionGeneral
 
         private void tsmiBPPorVehiculo_Click(object sender, EventArgs e)
         {
-            Form busquedaPresupuestosVehiculo = new FormIntroducirNBastidorPresupuesto("busqueda");
-            busquedaPresupuestosVehiculo.Show();
+            if (LNPresupuesto.SELECTALL().Count != 0)
+            {
+                Form busquedaPresupuestosVehiculo = new FormIntroducirNBastidorPresupuesto("busqueda");
+                busquedaPresupuestosVehiculo.Show();
+            }
+            else
+            {
+                MessageBox.Show("Introduce al menos 1 presupuesto para poder usar \"Búsqueda\\Por vehículo\"", "No hay ningun presupuesto", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void tsmiBPPorEstado_Click(object sender, EventArgs e)
+        {
+            if (LNPresupuesto.SELECTALL().Count != 0)
+            {
+                Form busquedaPresupuestosEstado = new FormIntroducirEstadoPresupuesto();
+                busquedaPresupuestosEstado.Show();
+            }
+            else
+            {
+                MessageBox.Show("Introduce al menos 1 presupuesto para poder usar \"Búsqueda\\Por estado\"", "No hay ningun presupuesto", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void tsmiModificarPresupuestos_Click(object sender, EventArgs e)
+        {
+            if (LNPresupuesto.SELECTALL().Count != 0)
+            {
+                Form modificarPresupuestos = new FormRecorrerPresupuestos1en1(LNPresupuesto.SELECTALL());
+                modificarPresupuestos.Show();
+            }
+            else
+            {
+                MessageBox.Show("Introduce al menos 1 presupuesto para poder usar \"Configuración\\Modificar presupuestos\"", "No hay ningun presupuesto", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void tsmiActualizarPresupuestos_Click(object sender, EventArgs e)
+        {
+            if (LNPresupuesto.SELECTALL().Count != 0)
+            {
+                int presupuestosActualizados = 0;
+                foreach (Presupuesto p in LNPresupuesto.SELECTALL())
+                {
+                    if (LNPresupuesto.actualizarEstado(p) == true)
+                    {
+                        if (LNPresupuesto.UPDATE(p) == true)
+                        {
+                            presupuestosActualizados++;
+                        }
+                    }
+                }
+                MessageBox.Show("Se han actualizado " + presupuestosActualizados.ToString() + " presupuestos.", "Presupuestos actualizados", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("Introduce al menos 1 presupuesto para poder usar \"Configuración\\Actualizar presupuestos\"", "No hay ningun presupuesto", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
     }
 }
