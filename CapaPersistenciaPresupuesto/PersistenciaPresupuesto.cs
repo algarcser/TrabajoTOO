@@ -15,7 +15,7 @@ namespace CapaPersistenciaPresupuesto
     {
         public static bool INSERT(Presupuesto presupuesto)
         {
-            if (BDPresupuesto.EXISTPresupuesto(conversor.Convertir(presupuesto)) != true)
+            if (BDPresupuesto.EXISTPresupuesto(conversor.Convertir(presupuesto)) == false)
             {
                 BDPresupuesto.INSERTPresupuesto(conversor.Convertir(presupuesto));
                 return (true);
@@ -26,31 +26,49 @@ namespace CapaPersistenciaPresupuesto
             }
         }
 
-        public static void DELETE(Presupuesto presupuesto)
+        //La única forma de eliminar, actualizar y seleccionar un presupuesto de la base de datos, es que este haya salido
+        //de la base de datos habiendo sido introducido
+
+        public static bool DELETE(Presupuesto presupuesto)
         {
-            BDPresupuesto.DELETEPresupuesto(conversor.Convertir(presupuesto));
+            if (BDPresupuesto.EXISTPresupuesto(conversor.Convertir(presupuesto)) == true)
+            {
+                BDPresupuesto.DELETEPresupuesto(conversor.Convertir(presupuesto));
+                return (true);
+            }
+            else
+            {
+                return (false);
+            }
         }
 
 
-        public static void UPDATE(Presupuesto presupuesto)
+        public static bool UPDATE(Presupuesto presupuesto)
         {
-            BDPresupuesto.DELETEPresupuesto(conversor.Convertir(presupuesto));
-            BDPresupuesto.INSERTPresupuesto(conversor.Convertir(presupuesto));
+            if (BDPresupuesto.EXISTPresupuesto(conversor.Convertir(presupuesto)) == true)
+            {
+                BDPresupuesto.UPDATEPresupuesto(conversor.Convertir(presupuesto));
+                return (true);
+            }
+            else 
+            {
+                return (false);
+            }
         }
 
-        public static bool READ(Presupuesto referencia, out Presupuesto presupuesto)
+        public static bool SELECT(Presupuesto referencia, out Presupuesto presupuesto)
         {
             PresupuestoDato auxiliar;
-            bool resultado = BDPresupuesto.SELECTPresupuesto(conversor.Convertir(referencia), out auxiliar);
-            if (resultado)
+            if (BDPresupuesto.SELECTPresupuesto(conversor.Convertir(referencia), out auxiliar) == true)
             {
                 presupuesto = conversor.Convertir(auxiliar);
+                return (true);
             }
             else
             {
                 presupuesto = null;
-            }
-            return (resultado);
+                return (false);
+            }        
         }
 
         public static bool EXIST(Presupuesto referencia)
@@ -62,7 +80,7 @@ namespace CapaPersistenciaPresupuesto
         {
             List<PresupuestoDato> listaPD = BDPresupuesto.SELECTALLPresupuesto();
             List<Presupuesto> listaP = new List<Presupuesto>();
-            if (listaPD != null)
+            if (listaPD.Count != 0)
             {
                 foreach (PresupuestoDato p in listaPD)
                 {
@@ -78,38 +96,35 @@ namespace CapaPersistenciaPresupuesto
             public static Presupuesto Convertir(PresupuestoDato presupuestoDato)
             {
                 List<vehiculo> vehiculos = new List<vehiculo>();
-                if (presupuestoDato != null)
+               
+                foreach (vehiculoDato v in presupuestoDato.ListaVehiculos)
                 {
-                    foreach (vehiculoDato v in presupuestoDato.ListaVehiculos)
-                    {
-                        vehiculos.Add(CapaPersistenciaVehiculo.conversor.Convertir(v));
-                    }
-                    return (new Presupuesto(presupuestoDato.FechaRealizacion, (EstadoPresupuesto)(int)presupuestoDato.EstadoPresupuesto, CapaPersistenciaCliente.PersistenciaCliente.conversor.Convertir(presupuestoDato.Cliente), vehiculos));
-                }else
-                {
-                    return (null);
+                    vehiculos.Add(CapaPersistenciaVehiculo.conversor.Convertir(v));
                 }
 
-                
+                Presupuesto presupuesto = new Presupuesto(presupuestoDato.FechaRealizacion, (EstadoPresupuesto)(int)presupuestoDato.EstadoPresupuesto, CapaPersistenciaCliente.PersistenciaCliente.conversor.Convertir(presupuestoDato.Cliente), vehiculos);
+                presupuesto.Identificacion = presupuestoDato.Identificacion;
+
+                return (presupuesto);   
             }
 
             public static PresupuestoDato Convertir(Presupuesto presupuesto)
             {
                 List<vehiculoDato> vehiculos = new List<vehiculoDato>();
-                if (presupuesto != null)
+                
+                foreach (vehiculo v in presupuesto.ListaVehiculos)
                 {
-                    foreach (vehiculo v in presupuesto.ListaVehiculos)
-                    {
-                        vehiculos.Add(CapaPersistenciaVehiculo.conversor.Convertir(v));
-                    }
-                    return (new PresupuestoDato(presupuesto.FechaRealizacion, (EstadoPresupuestoDato)(int)presupuesto.EstadoPresupuesto, CapaPersistenciaCliente.PersistenciaCliente.conversor.Convertir(presupuesto.Cliente), vehiculos));
-                }
-                else
-                {
-                    return (null);
+                    vehiculos.Add(CapaPersistenciaVehiculo.conversor.Convertir(v));
                 }
 
-                
+                PresupuestoDato presupuestoDato = new PresupuestoDato(presupuesto.FechaRealizacion, (EstadoPresupuestoDato)(int)presupuesto.EstadoPresupuesto, CapaPersistenciaCliente.PersistenciaCliente.conversor.Convertir(presupuesto.Cliente), vehiculos);
+
+                if (presupuesto.Identificacion != 0)
+                {
+                    presupuestoDato.Identificacion = presupuesto.Identificacion;
+                }
+
+                return (presupuestoDato);  
             }
         }
     }

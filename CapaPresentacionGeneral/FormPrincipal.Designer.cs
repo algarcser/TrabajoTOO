@@ -50,6 +50,11 @@ namespace CapaPresentacionGeneral
             this.tsmiConfiguracion = new System.Windows.Forms.ToolStripMenuItem();
             this.extrasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.anadirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tssPresupuestos = new System.Windows.Forms.ToolStripSeparator();
+            this.tsmiConfiguracionPresupuestos = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiActualizarPresupuestos = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiCambiarEstado = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiEliminarPresupuesto = new System.Windows.Forms.ToolStripMenuItem();
             this.msPrincipal.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -142,7 +147,9 @@ namespace CapaPresentacionGeneral
             this.tsmiPresupuestos.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsmiCrearPresupuesto,
             this.tsmiBusquedaPresupuesto,
-            this.tsmiMostrarTodos});
+            this.tsmiMostrarTodos,
+            this.tssPresupuestos,
+            this.tsmiConfiguracionPresupuestos});
             this.tsmiPresupuestos.Name = "tsmiPresupuestos";
             this.tsmiPresupuestos.Size = new System.Drawing.Size(89, 20);
             this.tsmiPresupuestos.Text = "Presupuestos";
@@ -212,6 +219,39 @@ namespace CapaPresentacionGeneral
             this.anadirToolStripMenuItem.Text = "Anadir";
             this.anadirToolStripMenuItem.Click += new System.EventHandler(this.anadirToolStripMenuItem_Click);
             // 
+            // tssPresupuestos
+            // 
+            this.tssPresupuestos.Name = "tssPresupuestos";
+            this.tssPresupuestos.Size = new System.Drawing.Size(177, 6);
+            // 
+            // tsmiConfiguracionPresupuestos
+            // 
+            this.tsmiConfiguracionPresupuestos.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmiActualizarPresupuestos,
+            this.tsmiCambiarEstado,
+            this.tsmiEliminarPresupuesto});
+            this.tsmiConfiguracionPresupuestos.Name = "tsmiConfiguracionPresupuestos";
+            this.tsmiConfiguracionPresupuestos.Size = new System.Drawing.Size(180, 22);
+            this.tsmiConfiguracionPresupuestos.Text = "Configuración";
+            // 
+            // tsmiActualizarPresupuestos
+            // 
+            this.tsmiActualizarPresupuestos.Name = "tsmiActualizarPresupuestos";
+            this.tsmiActualizarPresupuestos.Size = new System.Drawing.Size(199, 22);
+            this.tsmiActualizarPresupuestos.Text = "Actualizar presupuestos";
+            // 
+            // tsmiCambiarEstado
+            // 
+            this.tsmiCambiarEstado.Name = "tsmiCambiarEstado";
+            this.tsmiCambiarEstado.Size = new System.Drawing.Size(199, 22);
+            this.tsmiCambiarEstado.Text = "Cambiar estado";
+            // 
+            // tsmiEliminarPresupuesto
+            // 
+            this.tsmiEliminarPresupuesto.Name = "tsmiEliminarPresupuesto";
+            this.tsmiEliminarPresupuesto.Size = new System.Drawing.Size(199, 22);
+            this.tsmiEliminarPresupuesto.Text = "Eliminar presupuesto";
+            // 
             // FormPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -253,5 +293,10 @@ namespace CapaPresentacionGeneral
         private System.Windows.Forms.ToolStripMenuItem extrasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem anadirToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem verTodosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator tssPresupuestos;
+        private System.Windows.Forms.ToolStripMenuItem tsmiConfiguracionPresupuestos;
+        private System.Windows.Forms.ToolStripMenuItem tsmiActualizarPresupuestos;
+        private System.Windows.Forms.ToolStripMenuItem tsmiCambiarEstado;
+        private System.Windows.Forms.ToolStripMenuItem tsmiEliminarPresupuesto;
     }
 }

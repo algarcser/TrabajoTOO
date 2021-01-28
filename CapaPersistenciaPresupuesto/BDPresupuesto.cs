@@ -77,7 +77,7 @@ namespace CapaPersistenciaPresupuesto
         /// </summary>
         /// <param name="p"></param>
         public static bool EXISTPresupuesto(PresupuestoDato presupuestoDato)
-        {
+        {          
             return (BDPresupuesto.Presupuestos.Contains(presupuestoDato.Identificacion));
         }
 

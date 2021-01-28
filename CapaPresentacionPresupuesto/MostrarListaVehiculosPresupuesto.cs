@@ -19,14 +19,14 @@ namespace CapaPresentacionPresupuesto
         public FormMostrarListaVehiculosPresupuesto(List<vehiculo> lv)
         {
             this.listaVehiculos = lv;
+            InitializeComponent();
             BindingSource bindingSource = new BindingSource();
             bindingSource.DataSource = this.listaVehiculos;
             this.lboVehiculos.DataSource = bindingSource;
             this.lboVehiculos.DisplayMember = "NBastidor";
-            InitializeComponent();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void btCerrar_Click(object sender, EventArgs e)
         {
             this.Close();
         }

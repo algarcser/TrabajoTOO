@@ -77,7 +77,7 @@ namespace CapaPresentacionPresupuesto
 
                         if (listaCribadaDNI.Count != 0)
                         {
-                            Form busquedaPresupuestoPorDNI = new FormListadoOrdenadoPresupuestos(listaCribadaDNI);
+                            Form busquedaPresupuestoPorDNI = new FormListadoPresupuestos(listaCribadaDNI);
                             busquedaPresupuestoPorDNI.Show();
                             this.Close();
                         }else

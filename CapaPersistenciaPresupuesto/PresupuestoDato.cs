@@ -10,7 +10,7 @@ namespace CapaPersistenciaPresupuesto
 {
     public class PresupuestoDato
     {
-        private int ID = 0;
+        private int ID;
         private DateTime fechaRealizacion;
         private EstadoPresupuestoDato estado;
         private ClienteDato cliente;
@@ -23,7 +23,7 @@ namespace CapaPersistenciaPresupuesto
         /// <returns></returns>
         public PresupuestoDato(DateTime fch, EstadoPresupuestoDato e, ClienteDato c, List<vehiculoDato> v)
         {
-            this.ID = this.ID++;
+            this.ID = BDPresupuesto.SELECTALLPresupuesto().Count + 1;
             this.fechaRealizacion = fch;
             this.estado = e;
             this.cliente = c;
@@ -39,6 +39,10 @@ namespace CapaPersistenciaPresupuesto
             get
             {
                 return (this.ID);
+            }
+            set
+            {
+                this.ID = value;
             }
         }
 

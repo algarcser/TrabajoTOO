@@ -79,7 +79,7 @@ namespace CapaPresentacionGeneral
         {
             if (LNPresupuesto.SELECTALL().Count != 0)
             {
-                Form mostrarTodosPresupuestos = new FormListadoOrdenadoPresupuestos(LNPresupuesto.SELECTALL());
+                Form mostrarTodosPresupuestos = new FormListadoPresupuestos(LNPresupuesto.SELECTALL());
                 mostrarTodosPresupuestos.Show();
             }
             else

@@ -32,7 +32,7 @@ namespace CapaPresentacionPresupuesto
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMostrarListaVehiculosPresupuesto));
             this.lboVehiculos = new System.Windows.Forms.ListBox();
             this.btMostrarVehiculo = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btCerrar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lboVehiculos
@@ -54,22 +54,22 @@ namespace CapaPresentacionPresupuesto
             this.btMostrarVehiculo.UseVisualStyleBackColor = true;
             this.btMostrarVehiculo.Click += new System.EventHandler(this.btMostrarVehiculo_Click);
             // 
-            // button2
+            // btCerrar
             // 
-            this.button2.Location = new System.Drawing.Point(111, 165);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Cerrar";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btCerrar.Location = new System.Drawing.Point(111, 165);
+            this.btCerrar.Name = "btCerrar";
+            this.btCerrar.Size = new System.Drawing.Size(75, 23);
+            this.btCerrar.TabIndex = 2;
+            this.btCerrar.Text = "Cerrar";
+            this.btCerrar.UseVisualStyleBackColor = true;
+            this.btCerrar.Click += new System.EventHandler(this.btCerrar_Click);
             // 
             // FormMostrarListaVehiculosPresupuesto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(297, 222);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btCerrar);
             this.Controls.Add(this.btMostrarVehiculo);
             this.Controls.Add(this.lboVehiculos);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -84,6 +84,6 @@ namespace CapaPresentacionPresupuesto
 
         private System.Windows.Forms.ListBox lboVehiculos;
         private System.Windows.Forms.Button btMostrarVehiculo;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btCerrar;
     }
 }

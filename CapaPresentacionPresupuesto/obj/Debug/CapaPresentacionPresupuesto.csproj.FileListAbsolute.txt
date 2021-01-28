@@ -106,7 +106,6 @@ C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\CapaPresentacionPresupuesto
 C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\CapaPresentacionPresupuesto\obj\Debug\CapaPresentacionPresupuesto.csproj.CopyComplete
 C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\CapaPresentacionPresupuesto\obj\Debug\CapaPresentacionPresupuesto.FormCrearMostrarPresupuesto.resources
 C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\CapaPresentacionPresupuesto\obj\Debug\CapaPresentacionPresupuesto.FormIntroducirNBastidorPresupuesto.resources
-C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\CapaPresentacionPresupuesto\obj\Debug\CapaPresentacionPresupuesto.FormListadoOrdenadoPresupuestos.resources
 C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\CapaPresentacionPresupuesto\obj\Debug\CapaPresentacionPresupuesto.FormMostrarListaVehiculosPresupuesto.resources
 C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\CapaPresentacionPresupuesto\obj\Debug\CapaPresentacionPresupuesto.FormRecorrerPresupuestos1en1.resources
 C:\Users\jugarcca\Desktop\TrabajoTOO\CapaPresentacionPresupuesto\bin\Debug\CapaPresentacionPresupuesto.exe
@@ -183,3 +182,4 @@ C:\TrabajoTOO\CapaPresentacionPresupuesto\obj\Debug\CapaPresentacionPresupuesto.
 C:\TrabajoTOO\CapaPresentacionPresupuesto\obj\Debug\CapaPresentacionPresupuesto.csproj.CopyComplete
 C:\TrabajoTOO\CapaPresentacionPresupuesto\obj\Debug\CapaPresentacionPresupuesto.exe
 C:\TrabajoTOO\CapaPresentacionPresupuesto\obj\Debug\CapaPresentacionPresupuesto.pdb
+C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\CapaPresentacionPresupuesto\obj\Debug\CapaPresentacionPresupuesto.FormListadoPresupuestos.resources

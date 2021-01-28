@@ -15,11 +15,11 @@ using CapaPresentacionCliente;
 
 namespace CapaPresentacionPresupuesto
 {
-    public partial class FormListadoOrdenadoPresupuestos : Form
+    public partial class FormListadoPresupuestos : Form
     {
         List<Presupuesto> listaPresupuestos;
 
-        public FormListadoOrdenadoPresupuestos(List<Presupuesto> lp)
+        public FormListadoPresupuestos(List<Presupuesto> lp)
         {
             this.listaPresupuestos = lp;
             
@@ -30,15 +30,16 @@ namespace CapaPresentacionPresupuesto
             this.lboFechaCreacion.DataSource = bindingSource;
             this.lboFechaCreacion.DisplayMember = "FechaRealizacion";
             this.lboCliente.DataSource = bindingSource;
-            this.lboCliente.DisplayMember = "Cliente.DNI";
+            this.lboCliente.DisplayMember = "Cliente.getDNI";
             this.lboEstado.DataSource = bindingSource;
             this.lboEstado.DisplayMember = "EstadoPresupuesto";
             this.lboNVehiculos.DataSource = bindingSource;
-            this.lboEstado.DisplayMember = "ListaVehiculos.Count";
-            foreach (Presupuesto p in LNPresupuesto.SELECTALL())
+            this.lboNVehiculos.DisplayMember = "ListaVehiculos";
+            foreach (Presupuesto p in this.listaPresupuestos)
             {
                 this.lboImporte.Items.Add(LNPresupuesto.calcularPresupuesto(p));
             }
+            this.lboImporte.Enabled = false;
 
             //this.lboFechaCreacion.DataBindings.Add(new Binding("Text", bindingSource, "Date"));
             //this.lboCliente.DataBindings.Add(new Binding("Text", bindingSource, ""));
@@ -52,7 +53,7 @@ namespace CapaPresentacionPresupuesto
             }
             else
             {
-                Form mostrarCliente = new Busqueda_cliente((Cliente)this.lboCliente.SelectedItem);
+                Form mostrarCliente = new Busqueda_cliente(this.lboCliente.SelectedItem as Cliente);
                 mostrarCliente.Show();
             }     
         }
@@ -65,7 +66,7 @@ namespace CapaPresentacionPresupuesto
             }
             else
             {
-                Form mostrarListaVehiculos = new FormMostrarListaVehiculosPresupuesto((List<vehiculo>)this.lboNVehiculos.SelectedItem);
+                Form mostrarListaVehiculos = new FormMostrarListaVehiculosPresupuesto(this.lboNVehiculos.SelectedItem as List<vehiculo>);
                 mostrarListaVehiculos.Show();
             }     
         }
@@ -79,6 +80,23 @@ namespace CapaPresentacionPresupuesto
         {
             Form recorrerPresupuestos = new FormRecorrerPresupuestos1en1();
             recorrerPresupuestos.Show();
+        }
+
+        private void btActualizarListado_Click(object sender, EventArgs e)
+        {
+            BindingSource bindingSource = new BindingSource(); //COMPLETAR mostrar cuantos lo han hecho (actualizar su estado)
+                                                               //hacer UPDATE de todos en la base de datos
+            foreach (Presupuesto p in this.listaPresupuestos)
+            {
+                LNPresupuesto.actualizarEstado(p);
+            }
+            bindingSource.DataSource = this.listaPresupuestos;
+        }
+
+        private void btMostrarPresupuesto_Click(object sender, EventArgs e)
+        {
+            //this.lboCliente.SelectedIndex; el index coincide con el ID (pista) solo en la general no cuando se hace una criba
+            //hay que hacerlo por constructor de identificacion
         }
     }
 }

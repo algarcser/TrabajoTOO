@@ -40,9 +40,9 @@ namespace CapaPresentacionPresupuesto
             // 
             // mtbNBastidor
             // 
-            this.mtbNBastidor.Location = new System.Drawing.Point(118, 68);
+            this.mtbNBastidor.Location = new System.Drawing.Point(123, 68);
             this.mtbNBastidor.Name = "mtbNBastidor";
-            this.mtbNBastidor.Size = new System.Drawing.Size(136, 20);
+            this.mtbNBastidor.Size = new System.Drawing.Size(158, 20);
             this.mtbNBastidor.TabIndex = 0;
             this.mtbNBastidor.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.mtbNBastidor_MaskInputRejected);
             this.mtbNBastidor.KeyDown += new System.Windows.Forms.KeyEventHandler(this.mtbNBastidor_KeyDown);
@@ -50,7 +50,7 @@ namespace CapaPresentacionPresupuesto
             // lbNbastidor
             // 
             this.lbNbastidor.AutoSize = true;
-            this.lbNbastidor.Location = new System.Drawing.Point(33, 72);
+            this.lbNbastidor.Location = new System.Drawing.Point(38, 72);
             this.lbNbastidor.Name = "lbNbastidor";
             this.lbNbastidor.Size = new System.Drawing.Size(77, 13);
             this.lbNbastidor.TabIndex = 1;
@@ -58,7 +58,7 @@ namespace CapaPresentacionPresupuesto
             // 
             // btAceptar
             // 
-            this.btAceptar.Location = new System.Drawing.Point(48, 130);
+            this.btAceptar.Location = new System.Drawing.Point(64, 130);
             this.btAceptar.Name = "btAceptar";
             this.btAceptar.Size = new System.Drawing.Size(75, 23);
             this.btAceptar.TabIndex = 2;
@@ -68,7 +68,7 @@ namespace CapaPresentacionPresupuesto
             // 
             // btCancelar
             // 
-            this.btCancelar.Location = new System.Drawing.Point(163, 130);
+            this.btCancelar.Location = new System.Drawing.Point(179, 130);
             this.btCancelar.Name = "btCancelar";
             this.btCancelar.Size = new System.Drawing.Size(75, 23);
             this.btCancelar.TabIndex = 3;
@@ -85,7 +85,7 @@ namespace CapaPresentacionPresupuesto
             this.AcceptButton = this.btAceptar;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(286, 195);
+            this.ClientSize = new System.Drawing.Size(318, 195);
             this.Controls.Add(this.btCancelar);
             this.Controls.Add(this.btAceptar);
             this.Controls.Add(this.lbNbastidor);

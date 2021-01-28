@@ -48,7 +48,7 @@ namespace CapaPresentacionPresupuesto
                     }
                     else
                     {
-                        DialogResult result = MessageBox.Show("¿Quieres darlo de alta?", "No existe un vehiculo con ese Nº de bastidor", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                        DialogResult result = MessageBox.Show("                 ¿Quieres darlo de alta?                 ", "No existe un vehiculo con ese Nº de bastidor", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                         if (result == DialogResult.Yes)
                         {
                             Form crearVehiculo = new formularioVehiculo(mtbNBastidor.Text, enumObjetivo.Alta);
@@ -70,7 +70,6 @@ namespace CapaPresentacionPresupuesto
                     vehiculoNuevo v = new vehiculoNuevo(mtbNBastidor.Text);
                     if (LNVehiculo.EXISTS(v) == true)
                     {
-                        LNVehiculo.READ(v, out this.vehiculo);
                         List<Presupuesto> listaCribaNBastidor = LNPresupuesto.SELECTALL();
                         List<Presupuesto> listaCribadaNBastidor = new List<Presupuesto>();
                         
@@ -88,7 +87,7 @@ namespace CapaPresentacionPresupuesto
 
                         if (listaCribadaNBastidor.Count != 0)
                         {
-                            Form busquedaPresupuestoPorNBastidor = new FormListadoOrdenadoPresupuestos(listaCribadaNBastidor);
+                            Form busquedaPresupuestoPorNBastidor = new FormListadoPresupuestos(listaCribadaNBastidor);
                             busquedaPresupuestoPorNBastidor.Show();
                             this.Close();
                         }
@@ -100,7 +99,7 @@ namespace CapaPresentacionPresupuesto
                     }
                     else
                     {
-                        DialogResult result = MessageBox.Show("    ¿Quieres introducir otro?    ", "No existe un vehiculo con ese Nº de bastidor", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                        DialogResult result = MessageBox.Show("               ¿Quieres introducir otro?               ", "No existe un vehiculo con ese Nº de bastidor", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                         if (result == DialogResult.Yes)
                         {
                             this.mtbNBastidor.Text = "";

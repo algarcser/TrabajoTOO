@@ -12,7 +12,7 @@ namespace LogicaNegocioPresupuesto
 {
     public class LNPresupuesto
     {
-        public static void actualizarEstado(Presupuesto presupuesto)
+        public static void actualizarEstado(Presupuesto presupuesto) //usar un int para saber cuantos se actualizan
         {
             if ((int)presupuesto.EstadoPresupuesto == 0)
             {
@@ -35,14 +35,14 @@ namespace LogicaNegocioPresupuesto
         
         public static float calcularPresupuesto(Presupuesto presupuesto)
         {
-            double descuento;
+            double descuento = 1;
             if ((int)presupuesto.Cliente.getcategoria == 0)
             {
                 descuento = 1 - 0.05;
             }else if ((int)presupuesto.Cliente.getcategoria == 1)
             {
                 descuento = 1 - 0.1;
-            }else
+            }else if ((int)presupuesto.Cliente.getcategoria == 2)
             {
                 descuento = 1 - 0.15;
             }
@@ -52,8 +52,10 @@ namespace LogicaNegocioPresupuesto
             {
                 precioCoches = precioCoches + v.PVP;
             }
-            
-            return ((float)(precioCoches * descuento));
+            float des = (float)descuento;
+            float precioFinal = precioCoches * des;
+
+            return (precioFinal);
         }
 
         public static bool INSERT(Presupuesto presupuesto)
@@ -72,9 +74,9 @@ namespace LogicaNegocioPresupuesto
             PersistenciaPresupuesto.UPDATE(presupuesto);
         }
 
-        public static bool READ(Presupuesto referencia, out Presupuesto presupuesto)
+        public static bool SELECT(Presupuesto referencia, out Presupuesto presupuesto)
         {
-            return (PersistenciaPresupuesto.READ(referencia, out presupuesto));
+            return (PersistenciaPresupuesto.SELECT(referencia, out presupuesto));
         }
 
         public static bool EXIST(Presupuesto referencia)

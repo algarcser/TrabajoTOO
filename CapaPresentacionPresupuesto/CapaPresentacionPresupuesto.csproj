@@ -64,11 +64,11 @@
     <Compile Include="IntroducirNBastidorPresupuesto.Designer.cs">
       <DependentUpon>IntroducirNBastidorPresupuesto.cs</DependentUpon>
     </Compile>
-    <Compile Include="ListadoOrdenadoPresupuestos.cs">
+    <Compile Include="ListadoPresupuestos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ListadoOrdenadoPresupuestos.Designer.cs">
-      <DependentUpon>ListadoOrdenadoPresupuestos.cs</DependentUpon>
+    <Compile Include="ListadoPresupuestos.Designer.cs">
+      <DependentUpon>ListadoPresupuestos.cs</DependentUpon>
     </Compile>
     <Compile Include="MostrarListaVehiculosPresupuesto.cs">
       <SubType>Form</SubType>
@@ -101,8 +101,8 @@
     <EmbeddedResource Include="IntroducirNBastidorPresupuesto.resx">
       <DependentUpon>IntroducirNBastidorPresupuesto.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ListadoOrdenadoPresupuestos.resx">
-      <DependentUpon>ListadoOrdenadoPresupuestos.cs</DependentUpon>
+    <EmbeddedResource Include="ListadoPresupuestos.resx">
+      <DependentUpon>ListadoPresupuestos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MostrarListaVehiculosPresupuesto.resx">
       <DependentUpon>MostrarListaVehiculosPresupuesto.cs</DependentUpon>

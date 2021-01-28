@@ -11,6 +11,7 @@ using LogicaModeloCliente;
 using LogicaModeloPresupuesto;
 using LogicaModeloVehiculo;
 using LogicaNegocioPresupuesto;
+using LogicaNegocioVehiculo;
 using CapaPresentacionCliente;
 using CapaPresentacionVehiculo;
 
@@ -219,34 +220,29 @@ namespace CapaPresentacionPresupuesto
                         listaVehiculos.Add(v);
                     }*/
                     Presupuesto nuevoPresupuesto = new Presupuesto(DateTime.Now, estado, this.cliente, this.listaVehiculosCrear);
-                    LNPresupuesto.INSERT(nuevoPresupuesto);
-                    this.presupuesto = nuevoPresupuesto;
-                    this.ParentForm.Close();
-                    MessageBox.Show("Presupuesto para " + this.presupuesto.Cliente.getDNI + " creado.", "El presupuesto ha sido creado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    if(LNPresupuesto.INSERT(nuevoPresupuesto) == true)
+                    {
+                        this.presupuesto = nuevoPresupuesto;
+                        this.ParentForm.Close();
+                        MessageBox.Show("Presupuesto para " + this.presupuesto.Cliente.getDNI + " creado.", "El presupuesto ha sido creado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }            
                 } 
             }
         }
 
         private void btCancelar_Click(object sender, EventArgs e)
         {
-            this.ParentForm.FormClosing += ParentForm_FormClosing;
-            this.ParentForm.Close();
-        }
-
-        private void ParentForm_FormClosing(object sender, FormClosingEventArgs e)
-        {
             if (LNPresupuesto.EXIST(this.presupuesto) == false) //crear //COMPLETAR con si el presupuesto de ha creado no mostrar lo siguiente
-                                                  //es decir, hacer existe por cliente en presupuesto (cambiar BD) para busqueda por cliente
-                                                  //hacer existe por nbastidor en presupuesto (cambiar BD) para busqueda por vehiculo
-                                                  //hacer existe por esatdo en presupuesto (cmabiar BD) para busqueda por estado
+                                                                //es decir, hacer existe por cliente en presupuesto (cambiar BD) para busqueda por cliente
+                                                                //hacer existe por nbastidor en presupuesto (cambiar BD) para busqueda por vehiculo
+                                                                //hacer existe por esatdo en presupuesto (cmabiar BD) para busqueda por estado
             {
                 DialogResult result = MessageBox.Show("¿Quieres salir sin terminar el presupuesto?", "No se ha completado el presupuesto", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                if (result == DialogResult.No)
+                if (result == DialogResult.Yes)
                 {
-                    e.Cancel = true;
+                    this.ParentForm.Close();
                 }
             }
-            throw new NotImplementedException();
         }
 
         private void rbDesestimado_CheckedChanged(object sender, EventArgs e)
@@ -271,6 +267,11 @@ namespace CapaPresentacionPresupuesto
             }
             else
             {
+                if (MessageBox.Show("¿Deseas quitarlo también de la base de datos?", "Dar de baja vehículo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    LNVehiculo.DELETE(this.lboListaVehiculos.SelectedItem as vehiculo);
+                }
+                
                 this.listaVehiculosCrear.Remove(this.lboListaVehiculos.SelectedItem as vehiculo);
                 bindingSource.DataSource = this.listaVehiculosCrear;
                 this.lboListaVehiculos.DataSource = bindingSource;

@@ -22,35 +22,25 @@ namespace LogicaModeloPresupuesto
         /// <returns></returns>
         public Presupuesto(DateTime fch, EstadoPresupuesto e, Cliente c, List<vehiculo> v)
         {
-            this.ID = this.ID++;
             this.fechaRealizacion = fch;
             this.estado = EstadoPresupuesto.creado;
             this.cliente = c;
             this.vehiculos = v;
         }
-
-        public Presupuesto(Cliente c)
+        public Presupuesto(int n)
         {
-            this.cliente = c;
-        }
-        public Presupuesto(vehiculo v)
-        {
-            this.vehiculos.Add(v);
-        }
-        public Presupuesto(EstadoPresupuesto e)
-        {
-            this.estado = e;
+            this.ID = n;
         }
 
-        /// <summary>
-        /// It returns the ID.
-        /// </summary>
-        /// <returns></returns>
         public int Identificacion
         {
             get
             {
                 return (this.ID);
+            }
+            set
+            {
+                this.ID = value;
             }
         }
 
