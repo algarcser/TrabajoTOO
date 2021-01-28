@@ -26,10 +26,10 @@ namespace CapaPresentacionPresupuesto
             this.Text = "Crear presupuesto";
         }
 
-        public FormCrearMostrarPresupuesto(Presupuesto p) //mostrar
+        public FormCrearMostrarPresupuesto(Presupuesto p, bool mod) //mostrar y mostrar modificando (para 1en1), depende del bool
         {
             this.presupuesto = p;
-            ucPresupuesto mostrarPresupuesto = new ucPresupuesto(this.presupuesto);
+            ucPresupuesto mostrarPresupuesto = new ucPresupuesto(this.presupuesto, mod);
             this.Controls.Add(mostrarPresupuesto);
             InitializeComponent();
             this.Text = "Mostrar presupuesto";

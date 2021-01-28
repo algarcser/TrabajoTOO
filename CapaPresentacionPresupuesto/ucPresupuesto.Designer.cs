@@ -42,6 +42,7 @@ namespace CapaPresentacionPresupuesto
             this.tbNombre = new System.Windows.Forms.TextBox();
             this.tbDNI = new System.Windows.Forms.TextBox();
             this.gbVehiculos = new System.Windows.Forms.GroupBox();
+            this.btQuitarVehiculo = new System.Windows.Forms.Button();
             this.lbListaVehiculos = new System.Windows.Forms.Label();
             this.lboListaVehiculos = new System.Windows.Forms.ListBox();
             this.btMostrarVehiculo = new System.Windows.Forms.Button();
@@ -49,7 +50,6 @@ namespace CapaPresentacionPresupuesto
             this.btAceptar = new System.Windows.Forms.Button();
             this.btCancelar = new System.Windows.Forms.Button();
             this.lbImporte = new System.Windows.Forms.Label();
-            this.btQuitarVehiculo = new System.Windows.Forms.Button();
             this.gbEstado.SuspendLayout();
             this.gbCliente.SuspendLayout();
             this.gbVehiculos.SuspendLayout();
@@ -98,6 +98,7 @@ namespace CapaPresentacionPresupuesto
             this.rbCreado.TabIndex = 0;
             this.rbCreado.Text = "Creado";
             this.rbCreado.UseVisualStyleBackColor = true;
+            this.rbCreado.CheckedChanged += new System.EventHandler(this.rbCreado_CheckedChanged);
             // 
             // rbAceptado
             // 
@@ -108,6 +109,7 @@ namespace CapaPresentacionPresupuesto
             this.rbAceptado.TabIndex = 2;
             this.rbAceptado.Text = "Aceptado";
             this.rbAceptado.UseVisualStyleBackColor = true;
+            this.rbAceptado.CheckedChanged += new System.EventHandler(this.rbAceptado_CheckedChanged);
             // 
             // rbPendiente
             // 
@@ -118,6 +120,7 @@ namespace CapaPresentacionPresupuesto
             this.rbPendiente.TabIndex = 1;
             this.rbPendiente.Text = "Pendiente";
             this.rbPendiente.UseVisualStyleBackColor = true;
+            this.rbPendiente.CheckedChanged += new System.EventHandler(this.rbPendiente_CheckedChanged);
             // 
             // gbCliente
             // 
@@ -190,6 +193,17 @@ namespace CapaPresentacionPresupuesto
             this.gbVehiculos.TabStop = false;
             this.gbVehiculos.Text = "Vehículos";
             // 
+            // btQuitarVehiculo
+            // 
+            this.btQuitarVehiculo.AutoSize = true;
+            this.btQuitarVehiculo.Location = new System.Drawing.Point(16, 118);
+            this.btQuitarVehiculo.Name = "btQuitarVehiculo";
+            this.btQuitarVehiculo.Size = new System.Drawing.Size(88, 23);
+            this.btQuitarVehiculo.TabIndex = 4;
+            this.btQuitarVehiculo.Text = "Quitar vehiculo";
+            this.btQuitarVehiculo.UseVisualStyleBackColor = true;
+            this.btQuitarVehiculo.Click += new System.EventHandler(this.btQuitarVehiculo_Click);
+            // 
             // lbListaVehiculos
             // 
             this.lbListaVehiculos.AutoSize = true;
@@ -258,17 +272,6 @@ namespace CapaPresentacionPresupuesto
             this.lbImporte.Size = new System.Drawing.Size(64, 16);
             this.lbImporte.TabIndex = 16;
             this.lbImporte.Text = "Importe:";
-            // 
-            // btQuitarVehiculo
-            // 
-            this.btQuitarVehiculo.AutoSize = true;
-            this.btQuitarVehiculo.Location = new System.Drawing.Point(16, 118);
-            this.btQuitarVehiculo.Name = "btQuitarVehiculo";
-            this.btQuitarVehiculo.Size = new System.Drawing.Size(88, 23);
-            this.btQuitarVehiculo.TabIndex = 4;
-            this.btQuitarVehiculo.Text = "Quitar vehiculo";
-            this.btQuitarVehiculo.UseVisualStyleBackColor = true;
-            this.btQuitarVehiculo.Click += new System.EventHandler(this.btQuitarVehiculo_Click);
             // 
             // ucPresupuesto
             // 

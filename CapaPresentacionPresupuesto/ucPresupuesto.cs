@@ -23,6 +23,7 @@ namespace CapaPresentacionPresupuesto
         private Cliente cliente;
         private List<vehiculo> listaVehiculosCrear = new List<vehiculo>();
         private Presupuesto presupuesto;
+        bool modificar;
 
         public ucPresupuesto(Cliente c) //crear
         {
@@ -45,6 +46,7 @@ namespace CapaPresentacionPresupuesto
             this.rbDesestimado.AutoCheck = true;
 
             this.btIntroducirVehiculo.Visible = true;
+            this.btQuitarVehiculo.Visible = true;
             this.lboListaVehiculos.Enabled = true;
             BindingSource bindingSource = new BindingSource();
             bindingSource.DataSource = this.listaVehiculosCrear;
@@ -58,9 +60,10 @@ namespace CapaPresentacionPresupuesto
             this.btCancelar.Visible = true;
         }
 
-        public ucPresupuesto(Presupuesto p) //mostrar
+        public ucPresupuesto(Presupuesto p, bool mod) //mostrar
         {
             this.presupuesto = p;
+            this.modificar = mod;
             
             InitializeComponent();
 
@@ -73,7 +76,20 @@ namespace CapaPresentacionPresupuesto
             this.tbNombre.Text = presupuesto.Cliente.getNombre;
             this.btMostrarCliente.Visible = true;
 
-            this.gbEstado.Enabled = false;
+            if (this.modificar == true) //para el recorrido 1 a 1
+            {
+                this.listaVehiculosCrear = this.presupuesto.ListaVehiculos;
+                this.gbEstado.Enabled = true;
+                this.btIntroducirVehiculo.Visible = true;
+                this.btQuitarVehiculo.Visible = true;
+            }
+            else //para el mostrar presupuesto
+            {
+                this.gbEstado.Enabled = false;
+                this.btIntroducirVehiculo.Visible = false;
+                this.btQuitarVehiculo.Visible = false;
+            }
+            
             LNPresupuesto.actualizarEstado(presupuesto);
             if ((int)presupuesto.EstadoPresupuesto == 0)
             {
@@ -87,17 +103,16 @@ namespace CapaPresentacionPresupuesto
             {
                 this.rbDesestimado.Checked = true;
             }
-            else
+            else if ((int)presupuesto.EstadoPresupuesto == 3)
             {
                 this.rbPendiente.Checked = true;
             }
 
-            this.btIntroducirVehiculo.Visible = false;
+            
             this.lboListaVehiculos.Enabled = true;
             BindingSource bindingSource = new BindingSource();
             bindingSource.DataSource = presupuesto.ListaVehiculos;
             this.lboListaVehiculos.DataSource = bindingSource;
-            // (?) this.lboListaVehiculos.DataBindings.Add(new Binding("DisplayMember", bindingSource, ""))
             this.lboListaVehiculos.SelectionMode = SelectionMode.One;
             this.lboListaVehiculos.DisplayMember = "NBastidor";
             this.btMostrarVehiculo.Visible = true;
@@ -140,15 +155,41 @@ namespace CapaPresentacionPresupuesto
         private void btIntroducirVehiculo_Click(object sender, EventArgs e)
         {
             BindingSource bindingSource = new BindingSource();
-            FormIntroducirNBastidorPresupuesto introducirVehiculo = new FormIntroducirNBastidorPresupuesto("introducir");
-            introducirVehiculo.ShowDialog();
-            vehiculo v = introducirVehiculo.Vehiculo;
-            if (v != null)
+            if (this.modificar == true)
             {
-                this.listaVehiculosCrear.Add(v);
-                bindingSource.DataSource = this.listaVehiculosCrear;
-                this.lboListaVehiculos.DataSource = bindingSource;
-                this.lboListaVehiculos.DisplayMember = "NBastidor";
+                DialogResult result = MessageBox.Show("¿Esta seguro de que quiere introducir un coche nuevo en el presupuesto?", "Va a modificar el presupuesto", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (result == DialogResult.Yes)
+                {
+                    FormIntroducirNBastidorPresupuesto introducirVehiculo = new FormIntroducirNBastidorPresupuesto("introducir");
+                    introducirVehiculo.ShowDialog();
+                    vehiculo v = introducirVehiculo.Vehiculo;
+                    if (v != null)
+                    {
+                        this.listaVehiculosCrear.Add(v);
+                        bindingSource.DataSource = this.listaVehiculosCrear;
+                        this.lboListaVehiculos.DataSource = bindingSource;
+                        this.lboListaVehiculos.DisplayMember = "NBastidor";
+                        
+                        if (LNPresupuesto.cambiarListaVehiculos(this.presupuesto, this.listaVehiculosCrear) == true)
+                        {
+                            this.lbImporte.Text = "Importe: " + LNPresupuesto.calcularPresupuesto(this.presupuesto).ToString() + " €";
+                            MessageBox.Show("Se ha cambiado la lista de vehículos del presupuesto.", "Presupuesto actualizado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                    }
+                }
+            }
+            else
+            {
+                FormIntroducirNBastidorPresupuesto introducirVehiculo = new FormIntroducirNBastidorPresupuesto("introducir");
+                introducirVehiculo.ShowDialog();
+                vehiculo v = introducirVehiculo.Vehiculo;
+                if (v != null)
+                {
+                    this.listaVehiculosCrear.Add(v);
+                    bindingSource.DataSource = this.listaVehiculosCrear;
+                    this.lboListaVehiculos.DataSource = bindingSource;
+                    this.lboListaVehiculos.DisplayMember = "NBastidor";
+                }
             }
             //mostrar ObtenerNBastidor.cs, si existe se añade a la lista, si no se abre dar de alta vehículo
             //JUNTO TODO SU PROCESO,tras darlo de alta se introduce en la lista
@@ -247,14 +288,66 @@ namespace CapaPresentacionPresupuesto
 
         private void rbDesestimado_CheckedChanged(object sender, EventArgs e)
         {
-            if (this.rbDesestimado.Checked == true)
+            if (this.presupuesto == null) //crear
             {
-                DialogResult result1 = MessageBox.Show("¿Esta seguro de que el estado del presupuesto es desestimado?", "Esta creando un presupuesto desestimado", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-                if (result1 == DialogResult.No)
+                if (this.rbDesestimado.Checked == true)
                 {
-                    this.rbDesestimado.Checked = false;
+                    DialogResult result1 = MessageBox.Show("¿Esta seguro de que el estado del presupuesto es desestimado?", "Esta creando un presupuesto desestimado", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                    if (result1 == DialogResult.No)
+                    {
+                        this.rbDesestimado.Checked = false;
+                    }
                 }
             }
+            else if ((this.presupuesto.EstadoPresupuesto != EstadoPresupuesto.desestimado) && (this.modificar == true))
+            {
+                EstadoPresupuesto estado = EstadoPresupuesto.creado;
+
+                if (this.rbCreado.Checked == true)
+                {
+                    estado = EstadoPresupuesto.creado;
+                }
+                else if (this.rbAceptado.Checked == true)
+                {
+                    estado = EstadoPresupuesto.aceptado;
+                }
+                else if (this.rbDesestimado.Checked == true)
+                {
+                    estado = EstadoPresupuesto.desestimado;
+                }
+                else if (this.rbPendiente.Checked == true)
+                {
+                    estado = EstadoPresupuesto.pendiente;
+                }
+
+                DialogResult result1 = MessageBox.Show("¿Esta seguro de que quiere cambiar estado del presupuesto a " + estado.ToString() + "?", "Esta cambiando el estado del presupuesto", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (result1 == DialogResult.Yes)
+                {
+                    if (LNPresupuesto.cambiarEstado(this.presupuesto, estado) == true)
+                    {
+                        MessageBox.Show("Se ha cambiado el estado del presupuesto a " + estado.ToString() + ".", "Presupuesto actualizado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
+                else if (result1 == DialogResult.No)
+                {
+                    if ((int)presupuesto.EstadoPresupuesto == 0)
+                    {
+                        this.rbCreado.Checked = true;
+                    }
+                    else if ((int)presupuesto.EstadoPresupuesto == 1)
+                    {
+                        this.rbAceptado.Checked = true;
+                    }
+                    else if ((int)presupuesto.EstadoPresupuesto == 2)
+                    {
+                        this.rbDesestimado.Checked = true;
+                    }
+                    else if ((int)presupuesto.EstadoPresupuesto == 3)
+                    {
+                        this.rbPendiente.Checked = true;
+                    }
+                }
+            }          
         }
 
         private void btQuitarVehiculo_Click(object sender, EventArgs e)
@@ -267,15 +360,206 @@ namespace CapaPresentacionPresupuesto
             }
             else
             {
-                if (MessageBox.Show("¿Deseas quitarlo también de la base de datos?", "Dar de baja vehículo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                if (modificar == true)
                 {
-                    LNVehiculo.DELETE(this.lboListaVehiculos.SelectedItem as vehiculo);
+                    if (presupuesto.ListaVehiculos.Count == 1)
+                    {
+                        MessageBox.Show("No puede dejar un presupuesto sin vehículos, añada otro y para después eliminar el seleccionado.", "Solo hay un vehículo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        DialogResult result = MessageBox.Show("¿Esta seguro de que quiere cambiar la lista de vehículos del presupuesto?", "Esta cambiando la lista de vehículos del presupuesto", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                        if (result == DialogResult.Yes)
+                        {
+                            if (MessageBox.Show("¿Deseas quitarlo también de la base de datos?", "Dar de baja vehículo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                            {
+                                LNVehiculo.DELETE(this.lboListaVehiculos.SelectedItem as vehiculo);
+                            }
+
+                            this.listaVehiculosCrear.Remove(this.lboListaVehiculos.SelectedItem as vehiculo);
+                            bindingSource.DataSource = this.listaVehiculosCrear;
+                            this.lboListaVehiculos.DataSource = bindingSource;
+                            this.lboListaVehiculos.DisplayMember = "NBastidor";
+
+                            if (LNPresupuesto.cambiarListaVehiculos(this.presupuesto, this.listaVehiculosCrear) == true)
+                            {
+                                this.lbImporte.Text = "Importe: " + LNPresupuesto.calcularPresupuesto(this.presupuesto).ToString() + " €";
+                                MessageBox.Show("Se ha cambiado la lista de vehículos del presupuesto.", "Presupuesto actualizado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            }
+                        }
+                    }  
                 }
-                
-                this.listaVehiculosCrear.Remove(this.lboListaVehiculos.SelectedItem as vehiculo);
-                bindingSource.DataSource = this.listaVehiculosCrear;
-                this.lboListaVehiculos.DataSource = bindingSource;
-                this.lboListaVehiculos.DisplayMember = "NBastidor";
+                else
+                {
+                    if (MessageBox.Show("¿Deseas quitarlo también de la base de datos?", "Dar de baja vehículo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    {
+                        LNVehiculo.DELETE(this.lboListaVehiculos.SelectedItem as vehiculo);
+                    }
+
+                    this.listaVehiculosCrear.Remove(this.lboListaVehiculos.SelectedItem as vehiculo);
+                    bindingSource.DataSource = this.listaVehiculosCrear;
+                    this.lboListaVehiculos.DataSource = bindingSource;
+                    this.lboListaVehiculos.DisplayMember = "NBastidor";
+                }             
+            }
+        }
+
+        private void rbCreado_CheckedChanged(object sender, EventArgs e)
+        {
+            if ((this.cliente == null) && (this.presupuesto.EstadoPresupuesto != EstadoPresupuesto.pendiente) && (this.modificar == true))
+            {
+                EstadoPresupuesto estado = EstadoPresupuesto.creado;
+
+                if (this.rbCreado.Checked == true)
+                {
+                    estado = EstadoPresupuesto.creado;
+                }
+                else if (this.rbAceptado.Checked == true)
+                {
+                    estado = EstadoPresupuesto.aceptado;
+                }
+                else if (this.rbDesestimado.Checked == true)
+                {
+                    estado = EstadoPresupuesto.desestimado;
+                }
+                else if (this.rbPendiente.Checked == true)
+                {
+                    estado = EstadoPresupuesto.pendiente;
+                }
+
+                DialogResult result1 = MessageBox.Show("¿Esta seguro de que quiere cambiar estado del presupuesto a " + estado.ToString() + "?", "Esta cambiando el estado del presupuesto", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (result1 == DialogResult.Yes)
+                {
+                    if (LNPresupuesto.cambiarEstado(this.presupuesto, estado) == true)
+                    {
+                        MessageBox.Show("Se ha cambiado el estado del presupuesto a " + estado.ToString() + ".", "Presupuesto actualizado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
+                else if (result1 == DialogResult.No)
+                {
+                    if ((int)presupuesto.EstadoPresupuesto == 0)
+                    {
+                        this.rbCreado.Checked = true;
+                    }
+                    else if ((int)presupuesto.EstadoPresupuesto == 1)
+                    {
+                        this.rbAceptado.Checked = true;
+                    }
+                    else if ((int)presupuesto.EstadoPresupuesto == 2)
+                    {
+                        this.rbDesestimado.Checked = true;
+                    }
+                    else if ((int)presupuesto.EstadoPresupuesto == 3)
+                    {
+                        this.rbPendiente.Checked = true;
+                    }
+                }
+            }
+        }
+
+        private void rbPendiente_CheckedChanged(object sender, EventArgs e)
+        {
+            if ((this.cliente == null) && (this.presupuesto.EstadoPresupuesto != EstadoPresupuesto.pendiente) && (this.modificar == true))
+            {
+                EstadoPresupuesto estado = EstadoPresupuesto.creado;
+
+                if (this.rbCreado.Checked == true)
+                {
+                    estado = EstadoPresupuesto.creado;
+                }
+                else if (this.rbAceptado.Checked == true)
+                {
+                    estado = EstadoPresupuesto.aceptado;
+                }
+                else if (this.rbDesestimado.Checked == true)
+                {
+                    estado = EstadoPresupuesto.desestimado;
+                }
+                else if (this.rbPendiente.Checked == true)
+                {
+                    estado = EstadoPresupuesto.pendiente;
+                }
+
+                DialogResult result1 = MessageBox.Show("¿Esta seguro de que quiere cambiar estado del presupuesto a " + estado.ToString() + "?", "Esta cambiando el estado del presupuesto", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (result1 == DialogResult.Yes)
+                {
+                    if (LNPresupuesto.cambiarEstado(this.presupuesto, estado) == true)
+                    {
+                        MessageBox.Show("Se ha cambiado el estado del presupuesto a " + estado.ToString() + ".", "Presupuesto actualizado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
+                else if (result1 == DialogResult.No)
+                {
+                    if ((int)presupuesto.EstadoPresupuesto == 0)
+                    {
+                        this.rbCreado.Checked = true;
+                    }
+                    else if ((int)presupuesto.EstadoPresupuesto == 1)
+                    {
+                        this.rbAceptado.Checked = true;
+                    }
+                    else if ((int)presupuesto.EstadoPresupuesto == 2)
+                    {
+                        this.rbDesestimado.Checked = true;
+                    }
+                    else if ((int)presupuesto.EstadoPresupuesto == 3)
+                    {
+                        this.rbPendiente.Checked = true;
+                    }
+                }
+            }
+        }
+
+        private void rbAceptado_CheckedChanged(object sender, EventArgs e)
+        {
+            if ((this.cliente == null) && (this.presupuesto.EstadoPresupuesto != EstadoPresupuesto.aceptado) && (this.modificar == true))
+            {
+                EstadoPresupuesto estado = EstadoPresupuesto.creado;
+
+                if (this.rbCreado.Checked == true)
+                {
+                    estado = EstadoPresupuesto.creado;
+                }
+                else if (this.rbAceptado.Checked == true)
+                {
+                    estado = EstadoPresupuesto.aceptado;
+                }
+                else if (this.rbDesestimado.Checked == true)
+                {
+                    estado = EstadoPresupuesto.desestimado;
+                }
+                else if (this.rbPendiente.Checked == true)
+                {
+                    estado = EstadoPresupuesto.pendiente;
+                }
+
+                DialogResult result1 = MessageBox.Show("¿Esta seguro de que quiere cambiar estado del presupuesto a " + estado.ToString() + "?", "Esta cambiando el estado del presupuesto", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (result1 == DialogResult.Yes)
+                {
+                    if (LNPresupuesto.cambiarEstado(this.presupuesto, estado) == true)
+                    {
+                        MessageBox.Show("Se ha cambiado el estado del presupuesto a " + estado.ToString() + ".", "Presupuesto actualizado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
+                else if (result1 == DialogResult.No)
+                {
+                    if ((int)presupuesto.EstadoPresupuesto == 0)
+                    {
+                        this.rbCreado.Checked = true;
+                    }
+                    else if ((int)presupuesto.EstadoPresupuesto == 1)
+                    {
+                        this.rbAceptado.Checked = true;
+                    }
+                    else if ((int)presupuesto.EstadoPresupuesto == 2)
+                    {
+                        this.rbDesestimado.Checked = true;
+                    }
+                    else if ((int)presupuesto.EstadoPresupuesto == 3)
+                    {
+                        this.rbPendiente.Checked = true;
+                    }
+                }
             }
         }
     }

@@ -80,23 +80,72 @@ namespace CapaPresentacionPresupuesto
         {
             Form recorrerPresupuestos = new FormRecorrerPresupuestos1en1();
             recorrerPresupuestos.Show();
+            this.Close();
         }
 
         private void btActualizarListado_Click(object sender, EventArgs e)
         {
             BindingSource bindingSource = new BindingSource(); //COMPLETAR mostrar cuantos lo han hecho (actualizar su estado)
                                                                //hacer UPDATE de todos en la base de datos
+            int presupuestosActualizados = 0;
             foreach (Presupuesto p in this.listaPresupuestos)
             {
-                LNPresupuesto.actualizarEstado(p);
+                if (LNPresupuesto.actualizarEstado(p) == true)
+                {
+                    if (LNPresupuesto.UPDATE(p) == true)
+                    {
+                        presupuestosActualizados++;
+                    }
+                }
             }
             bindingSource.DataSource = this.listaPresupuestos;
+            this.lboFechaCreacion.DataSource = bindingSource;
+            this.lboFechaCreacion.DisplayMember = "FechaRealizacion";
+            this.lboCliente.DataSource = bindingSource;
+            this.lboCliente.DisplayMember = "Cliente.getDNI";
+            this.lboEstado.DataSource = bindingSource;
+            this.lboEstado.DisplayMember = "EstadoPresupuesto";
+            this.lboNVehiculos.DataSource = bindingSource;
+            this.lboNVehiculos.DisplayMember = "ListaVehiculos";
+            foreach (Presupuesto p in this.listaPresupuestos)
+            {
+                this.lboImporte.Items.Add(LNPresupuesto.calcularPresupuesto(p));
+            }
+
+            MessageBox.Show("Se han actualizado " + presupuestosActualizados.ToString() + " presupuestos.", "Presupuestos actualizados", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void btMostrarPresupuesto_Click(object sender, EventArgs e)
         {
-            //this.lboCliente.SelectedIndex; el index coincide con el ID (pista) solo en la general no cuando se hace una criba
-            //hay que hacerlo por constructor de identificacion
+            Form mostrarPresupuesto = new FormCrearMostrarPresupuesto(this.lboCliente.SelectedItem as Presupuesto, false);
+            mostrarPresupuesto.Show();
+        }
+
+        private void btEliminarPresupuesto_Click(object sender, EventArgs e)
+        {
+            BindingSource bindingSource = new BindingSource();
+            DialogResult result = MessageBox.Show("¿Esta seguro de que quiere eliminar el presupuesto seleccionado?", "Va a eliminar un presupuesto", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (result == DialogResult.Yes)
+            {
+                if (LNPresupuesto.DELETE(this.lboCliente.SelectedItem as Presupuesto) == true)
+                {
+                    this.listaPresupuestos.Remove(this.lboCliente.SelectedItem as Presupuesto);
+                    bindingSource.DataSource = this.listaPresupuestos;
+                    this.lboFechaCreacion.DataSource = bindingSource;
+                    this.lboFechaCreacion.DisplayMember = "FechaRealizacion";
+                    this.lboCliente.DataSource = bindingSource;
+                    this.lboCliente.DisplayMember = "Cliente.getDNI";
+                    this.lboEstado.DataSource = bindingSource;
+                    this.lboEstado.DisplayMember = "EstadoPresupuesto";
+                    this.lboNVehiculos.DataSource = bindingSource;
+                    this.lboNVehiculos.DisplayMember = "ListaVehiculos";
+                    foreach (Presupuesto p in this.listaPresupuestos)
+                    {
+                        this.lboImporte.Items.Add(LNPresupuesto.calcularPresupuesto(p));
+                    }
+                    MessageBox.Show("El presupuesto seleccionado ha sido eliminado.", "Se ha eliminado un presupuesto", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
         }
     }
 }

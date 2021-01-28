@@ -12,27 +12,35 @@ namespace LogicaNegocioPresupuesto
 {
     public class LNPresupuesto
     {
-        public static void actualizarEstado(Presupuesto presupuesto) //usar un int para saber cuantos se actualizan
+        public static bool actualizarEstado(Presupuesto presupuesto) //usar un int para saber cuantos se actualizan
         {
             if ((int)presupuesto.EstadoPresupuesto == 0)
             {
                 if(DateTime.Today.Subtract(presupuesto.FechaRealizacion).Days > 15)
                 {
                     Presupuesto auxiliar = new Presupuesto(presupuesto.FechaRealizacion, EstadoPresupuesto.desestimado, presupuesto.Cliente, presupuesto.ListaVehiculos);
-                    DELETE(presupuesto);
-                    INSERT(auxiliar);
+                    auxiliar.Identificacion = presupuesto.Identificacion;
+                    UPDATE(auxiliar);
+                    return (true);
                 }
             }
+            return (false);
         }
 
-        public static void venderCoche(Presupuesto presupuesto)
+        public static bool cambiarEstado(Presupuesto presupuesto, EstadoPresupuesto estado) //usar un presupuesto que ya exista y haya sido sacado de la BD
         {
-            Presupuesto auxiliar = new Presupuesto(presupuesto.FechaRealizacion, EstadoPresupuesto.aceptado, presupuesto.Cliente, presupuesto.ListaVehiculos);
-            DELETE(presupuesto);
-            INSERT(auxiliar);
+            Presupuesto auxiliar = new Presupuesto(presupuesto.FechaRealizacion, estado, presupuesto.Cliente, presupuesto.ListaVehiculos);
+            auxiliar.Identificacion = presupuesto.Identificacion;
+            return (UPDATE(auxiliar));
         }
 
-        
+        public static bool cambiarListaVehiculos(Presupuesto presupuesto, List<vehiculo> listaVehiculos) //usar un presupuesto que ya exista y haya sido sacado de la BD
+        {
+            Presupuesto auxiliar = new Presupuesto(presupuesto.FechaRealizacion, presupuesto.EstadoPresupuesto, presupuesto.Cliente, listaVehiculos);
+            auxiliar.Identificacion = presupuesto.Identificacion;
+            return (UPDATE(auxiliar));
+        }
+
         public static float calcularPresupuesto(Presupuesto presupuesto)
         {
             double descuento = 1;
@@ -63,15 +71,15 @@ namespace LogicaNegocioPresupuesto
             return (PersistenciaPresupuesto.INSERT(presupuesto));
         }
 
-        public static void DELETE(Presupuesto presupuesto)
+        public static bool DELETE(Presupuesto presupuesto)
         {
-            PersistenciaPresupuesto.DELETE(presupuesto);
+            return (PersistenciaPresupuesto.DELETE(presupuesto));
         }
 
 
-        public static void UPDATE(Presupuesto presupuesto)
+        public static bool UPDATE(Presupuesto presupuesto)
         {
-            PersistenciaPresupuesto.UPDATE(presupuesto);
+            return (PersistenciaPresupuesto.UPDATE(presupuesto));
         }
 
         public static bool SELECT(Presupuesto referencia, out Presupuesto presupuesto)

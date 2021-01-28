@@ -213,6 +213,7 @@ namespace CapaPresentacionPresupuesto
             this.btEliminarPresupuesto.TabIndex = 23;
             this.btEliminarPresupuesto.Text = "Eliminar presupuesto";
             this.btEliminarPresupuesto.UseVisualStyleBackColor = true;
+            this.btEliminarPresupuesto.Click += new System.EventHandler(this.btEliminarPresupuesto_Click);
             // 
             // FormListadoPresupuestos
             // 
