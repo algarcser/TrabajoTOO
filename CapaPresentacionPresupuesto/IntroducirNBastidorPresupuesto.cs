@@ -82,20 +82,19 @@ namespace CapaPresentacionPresupuesto
                                     listaCribadaNBastidor.Add(p);
                                 }
                             }
-                            
                         }
 
                         if (listaCribadaNBastidor.Count != 0)
                         {
                             Form busquedaPresupuestoPorNBastidor = new FormListadoPresupuestos(listaCribadaNBastidor);
                             busquedaPresupuestoPorNBastidor.Show();
-                            this.Close();
                         }
                         else
                         {
-                            DialogResult result = MessageBox.Show("No existe ningún presupuesto para cliente con un vehículo con ese Nº de bastidor.", "No existe ningún presupuesto para ese Nº de bastidor", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            this.Close();
+                            DialogResult result = MessageBox.Show("No existe ningún presupuesto para un cliente con un vehículo con ese Nº de bastidor.", "No existe ningún presupuesto para ese Nº de bastidor", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
+
+                        this.Close();
                     }
                     else
                     {
