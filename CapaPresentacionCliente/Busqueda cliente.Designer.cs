@@ -28,16 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.control_datos_cliente1 = new CapaPresentacionCliente.Control_datos_cliente();
             this.button1 = new System.Windows.Forms.Button();
+            this.control_datos_cliente1 = new CapaPresentacionCliente.Control_datos_cliente();
             this.SuspendLayout();
-            // 
-            // control_datos_cliente1
-            // 
-            this.control_datos_cliente1.Location = new System.Drawing.Point(-1, -2);
-            this.control_datos_cliente1.Name = "control_datos_cliente1";
-            this.control_datos_cliente1.Size = new System.Drawing.Size(273, 235);
-            this.control_datos_cliente1.TabIndex = 0;
             // 
             // button1
             // 
@@ -48,6 +41,13 @@
             this.button1.Text = "Aceptar";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // control_datos_cliente1
+            // 
+            this.control_datos_cliente1.Location = new System.Drawing.Point(-1, -2);
+            this.control_datos_cliente1.Name = "control_datos_cliente1";
+            this.control_datos_cliente1.Size = new System.Drawing.Size(273, 235);
+            this.control_datos_cliente1.TabIndex = 0;
             // 
             // Busqueda_cliente
             // 
@@ -63,8 +63,7 @@
         }
 
         #endregion
-
-        private Control_datos_cliente control_datos_cliente1;
         private System.Windows.Forms.Button button1;
+        private Control_datos_cliente control_datos_cliente1;
     }
 }
