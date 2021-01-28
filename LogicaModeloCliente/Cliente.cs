@@ -13,6 +13,8 @@ namespace LogicaModeloCliente
         private string DNI;
         private CategoriaCliente categoria;
         private int tlfno;
+        private List<float> importes;
+
         public Cliente(string nombre, string apellidos, string DNI, CategoriaCliente categoria, int tlfno)
         {
             this.nombre = nombre;
@@ -90,6 +92,19 @@ namespace LogicaModeloCliente
                 return this.tlfno;
             }
             
+        }
+
+        public List<float> Importes
+        {
+            get
+            {
+                return this.importes;
+            }
+
+            set
+            {
+                this.importes = value;
+            }
         }
 
         public override bool Equals(object cliente)
