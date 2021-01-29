@@ -11,6 +11,7 @@ using LogicaModeloCliente;
 using LogicaModeloPresupuesto;
 using LogicaModeloVehiculo;
 using LogicaNegocioPresupuesto;
+using LogicaNegocioCliente;
 using CapaPresentacionCliente;
 
 namespace CapaPresentacionPresupuesto
@@ -54,8 +55,15 @@ namespace CapaPresentacionPresupuesto
             else
             {
                 Presupuesto p = this.lboCliente.SelectedItem as Presupuesto;
-                Form mostrarCliente = new Busqueda_cliente(p.Cliente);
-                mostrarCliente.Show();
+                if (LNCliente.existeCliente(p.Cliente) == true)
+                {
+                    Form mostrarCliente = new Busqueda_cliente(p.Cliente);
+                    mostrarCliente.Show();
+                }
+                else
+                {
+                    MessageBox.Show("El cliente ha sido eliminado de la base de datos, por lo que no se puede mostrar.", "No se puede mostrar cliente", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }     
         }
 

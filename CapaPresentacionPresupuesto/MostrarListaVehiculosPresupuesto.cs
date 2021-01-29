@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using LogicaNegocioVehiculo;
 using LogicaModeloVehiculo;
 using CapaPresentacionVehiculo;
 
@@ -40,8 +41,15 @@ namespace CapaPresentacionPresupuesto
             else
             {
                 vehiculo v = (vehiculo)this.lboVehiculos.SelectedItem;
-                Form mostrarVehiculo = new formularioVehiculo(v.NBastidor, enumObjetivo.Ver);
-                mostrarVehiculo.Show();
+                if (LNVehiculo.EXISTS(v) == true)
+                {
+                    Form mostrarVehiculo = new formularioVehiculo(v.NBastidor, enumObjetivo.Ver);
+                    mostrarVehiculo.Show();
+                }
+                else
+                {
+                    MessageBox.Show("El vehículo ha sido eliminado de la base de datos, por lo que no se puede mostrar.", "No se puede mostrar el vehículo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
     }

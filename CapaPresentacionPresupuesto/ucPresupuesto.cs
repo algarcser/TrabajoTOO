@@ -177,13 +177,27 @@ namespace CapaPresentacionPresupuesto
         {
             if (this.cliente == null)
             {
-                Form mostrarCliente = new Busqueda_cliente(this.presupuesto.Cliente);
-                mostrarCliente.Show();
+                if (LNCliente.existeCliente(this.presupuesto.Cliente) == true)
+                {
+                    Form mostrarCliente = new Busqueda_cliente(this.presupuesto.Cliente);
+                    mostrarCliente.Show();
+                }
+                else
+                {
+                    MessageBox.Show("El cliente ha sido eliminado de la base de datos, por lo que no se puede mostrar.", "No se puede mostrar cliente", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }   
             }
             else
             {
-                Form mostrarCliente = new Busqueda_cliente(this.cliente);
-                mostrarCliente.Show();
+                if (LNCliente.existeCliente(this.cliente) == true)
+                {
+                    Form mostrarCliente = new Busqueda_cliente(this.cliente);
+                    mostrarCliente.Show();
+                }
+                else
+                {
+                    MessageBox.Show("El cliente ha sido eliminado de la base de datos, por lo que no se puede mostrar.", "No se puede mostrar cliente", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
 
@@ -196,8 +210,15 @@ namespace CapaPresentacionPresupuesto
             else
             {
                 vehiculo v = this.lboListaVehiculos.SelectedItem as vehiculo;
-                Form mostrarVehiculo = new formularioVehiculo(v.NBastidor, enumObjetivo.Ver);
-                mostrarVehiculo.Show();
+                if (LNVehiculo.EXISTS(v) == true)
+                {            
+                    Form mostrarVehiculo = new formularioVehiculo(v.NBastidor, enumObjetivo.Ver);
+                    mostrarVehiculo.Show();
+                }
+                else
+                {
+                    MessageBox.Show("El vehículo ha sido eliminado de la base de datos, por lo que no se puede mostrar.", "No se puede mostrar el vehículo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
                 //mostrar vehículo como en búsqueda vehículo
             }
         }
