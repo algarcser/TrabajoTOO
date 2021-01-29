@@ -12,6 +12,7 @@ using LogicaModeloPresupuesto;
 using LogicaModeloVehiculo;
 using LogicaNegocioPresupuesto;
 using LogicaNegocioVehiculo;
+using LogicaNegocioCliente;
 using CapaPresentacionCliente;
 using CapaPresentacionVehiculo;
 
@@ -310,13 +311,15 @@ namespace CapaPresentacionPresupuesto
                         listaVehiculos.Add(v);
                     }*/
                     Presupuesto nuevoPresupuesto = new Presupuesto(DateTime.Now, estado, this.cliente, this.listaVehiculosCrear);
-                    if(LNPresupuesto.INSERT(nuevoPresupuesto) == true)
+
+                    List<float> listaImportes = nuevoPresupuesto.Cliente.Importes;
+                    listaImportes.Add(LNPresupuesto.calcularPresupuesto(nuevoPresupuesto));
+                    nuevoPresupuesto.Cliente.Importes = listaImportes;
+                    LNCliente.updateCliente(nuevoPresupuesto.Cliente);
+                    
+                    if (LNPresupuesto.INSERT(nuevoPresupuesto) == true)
                     {
                         this.presupuesto = nuevoPresupuesto;
-                        List<float> listaImportes = new List<float>();
-                        listaImportes = this.presupuesto.Cliente.Importes;
-                        listaImportes.Add(LNPresupuesto.calcularPresupuesto(this.presupuesto));
-                        this.presupuesto.Cliente.Importes = listaImportes;
                         this.ParentForm.Close();
                         MessageBox.Show("Presupuesto para " + this.presupuesto.Cliente.getDNI + " creado.", "El presupuesto ha sido creado", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }            
@@ -414,7 +417,7 @@ namespace CapaPresentacionPresupuesto
 
                             if (LNPresupuesto.cambiarListaVehiculos(this.presupuesto, this.listaVehiculosModificar) == true)
                             {
-                                this.lbImporte.Text = "Importe: " + LNPresupuesto.calcularPresupuesto(this.presupuesto).ToString() + " €";
+                                this.tbImporte.Text = LNPresupuesto.calcularPresupuesto(this.presupuesto).ToString() + " €";
                                 MessageBox.Show("Se ha cambiado la lista de vehículos del presupuesto.", "Presupuesto actualizado", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             }
                         }
