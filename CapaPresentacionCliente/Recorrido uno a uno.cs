@@ -24,7 +24,7 @@ namespace CapaPresentacionCliente
             bindingSource_Clientes.DataSource = LNCliente.SELECT_ALL();
 
             this.bindingNavigator1.BindingSource = bindingSource_Clientes;
-
+            /*
             Object o = this.bindingNavigator1.BindingSource.Current;
 
             if(o is Cliente)
@@ -34,13 +34,33 @@ namespace CapaPresentacionCliente
                 this.textBox3.Text = ((Cliente) o).getApellidos;
                 this.textBox4.Text = Convert.ToString(LNCliente.sumaImportes((Cliente) o)) ;
             }
-
+            */
 
         }
 
         private void btSalir_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void bindingNavigatorMoveNextItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bindingNavigatorMovePreviousItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bindingNavigatorMoveLastItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bindingNavigatorMoveFirstItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
