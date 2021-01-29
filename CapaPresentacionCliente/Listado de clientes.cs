@@ -28,15 +28,15 @@ namespace CapaPresentacionCliente
 
             this.listBoxDNI.DataSource = bindingSource_Clientes;
             this.listBoxDNI.SelectionMode = SelectionMode.None;
-            this.listBoxDNI.DisplayMember = "DNI";
+            this.listBoxDNI.DisplayMember = "getDNI";
 
             this.listBoxNombre.DataSource = bindingSource_Clientes;
             this.listBoxNombre.SelectionMode = SelectionMode.None;
-            this.listBoxNombre.DisplayMember = "Nombre";
+            this.listBoxNombre.DisplayMember = "getNombre";
 
             this.listBoxImporte.DataSource = bindingSource_Clientes;
             this.listBoxImporte.SelectionMode = SelectionMode.None;
-            this.listBoxImporte.DisplayMember = "Importe";
+            this.listBoxImporte.DisplayMember = "importeTotal";
 
         }
 
@@ -48,56 +48,56 @@ namespace CapaPresentacionCliente
 
             this.listBoxDNI.DataSource = bindingSource_Clientes;
             this.listBoxDNI.SelectionMode = SelectionMode.None;
-            this.listBoxDNI.DisplayMember = "DNI";
+            this.listBoxDNI.DisplayMember = "getDNI";
 
             this.listBoxNombre.DataSource = bindingSource_Clientes;
             this.listBoxNombre.SelectionMode = SelectionMode.None;
-            this.listBoxNombre.DisplayMember = "Nombre";
+            this.listBoxNombre.DisplayMember = "getNombre";
 
             this.listBoxImporte.DataSource = bindingSource_Clientes;
             this.listBoxImporte.SelectionMode = SelectionMode.None;
-            this.listBoxImporte.DisplayMember = "Importe";
+            this.listBoxImporte.DisplayMember = "importeTotal";
 
         }
 
         private void btNombre_Click(object sender, EventArgs e)
         {
-            List<Cliente> listaOrdNombre = LNCliente.SELECT_ALL().OrderBy((x) => x.getNombre).ToList();
+            listaOrd = LNCliente.SELECT_ALL().OrderBy((x) => x.getNombre).ToList();
             bindingSource_Clientes = new BindingSource();
             bindingSource_Clientes.DataSource = listaOrd;
 
             this.listBoxDNI.DataSource = bindingSource_Clientes;
             this.listBoxDNI.SelectionMode = SelectionMode.None;
-            this.listBoxDNI.DisplayMember = "DNI";
+            this.listBoxDNI.DisplayMember = "getDNI";
 
             this.listBoxNombre.DataSource = bindingSource_Clientes;
             this.listBoxNombre.SelectionMode = SelectionMode.None;
-            this.listBoxNombre.DisplayMember = "Nombre";
+            this.listBoxNombre.DisplayMember = "getNombre";
 
             this.listBoxImporte.DataSource = bindingSource_Clientes;
             this.listBoxImporte.SelectionMode = SelectionMode.None;
-            this.listBoxImporte.DisplayMember = "Importe";
+            this.listBoxImporte.DisplayMember = "importeTotal";
 
         }
 
         private void btImporte_Click(object sender, EventArgs e)
         {
-            
-            List<Cliente> listaOrdImporte = LNCliente.SELECT_ALL().OrderBy((x) => LNCliente.sumaImportes(x)).ToList();
+
+            listaOrd = LNCliente.SELECT_ALL().OrderBy((x) => LNCliente.sumaImportes(x)).ToList();
             bindingSource_Clientes = new BindingSource();
             bindingSource_Clientes.DataSource = listaOrd;
 
             this.listBoxDNI.DataSource = bindingSource_Clientes;
             this.listBoxDNI.SelectionMode = SelectionMode.None;
-            this.listBoxDNI.DisplayMember = "DNI";
+            this.listBoxDNI.DisplayMember = "getDNI";
 
             this.listBoxNombre.DataSource = bindingSource_Clientes;
             this.listBoxNombre.SelectionMode = SelectionMode.None;
-            this.listBoxNombre.DisplayMember = "Nombre";
+            this.listBoxNombre.DisplayMember = "getNombre";
 
             this.listBoxImporte.DataSource = bindingSource_Clientes;
             this.listBoxImporte.SelectionMode = SelectionMode.None;
-            this.listBoxImporte.DisplayMember = "Importe";
+            this.listBoxImporte.DisplayMember = "importeTotal";
 
         }
 

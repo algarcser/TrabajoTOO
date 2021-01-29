@@ -107,6 +107,19 @@ namespace LogicaModeloCliente
             }
         }
 
+        public string importeTotal
+        {
+            get
+            {
+                float result = 0;
+                foreach(float elem in Importes)
+                {
+                    result += elem;
+                }
+                return result + " €";
+            }
+        }
+
         public override bool Equals(object cliente)
         {
             if (cliente == null)

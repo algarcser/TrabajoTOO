@@ -10,8 +10,6 @@ namespace LogicaNegocioCliente
 {
     public class LNCliente
     {
-        //private Comercial comercial;
-
         public static bool altaCliente(Cliente c)
         {
             Console.WriteLine("La LNCliente ha metido un cliente con el dni " + c.getDNI);

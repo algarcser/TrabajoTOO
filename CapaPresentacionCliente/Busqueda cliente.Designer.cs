@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Busqueda_cliente));
             this.button1 = new System.Windows.Forms.Button();
             this.control_alternativo_datos_cliente1 = new CapaPresentacionCliente.Control_alternativo_datos_cliente();
             this.SuspendLayout();
@@ -56,6 +57,7 @@
             this.ClientSize = new System.Drawing.Size(274, 317);
             this.Controls.Add(this.control_alternativo_datos_cliente1);
             this.Controls.Add(this.button1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Busqueda_cliente";
             this.Text = "Busqueda_cliente";
             this.ResumeLayout(false);

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Baja_cliente));
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.control_alternativo_datos_cliente1 = new CapaPresentacionCliente.Control_alternativo_datos_cliente();
@@ -68,6 +69,7 @@
             this.Controls.Add(this.control_alternativo_datos_cliente1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Baja_cliente";
             this.Text = "Baja_cliente";
             this.ResumeLayout(false);

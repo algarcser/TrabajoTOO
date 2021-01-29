@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Listado_de_clientes));
             this.listBoxDNI = new System.Windows.Forms.ListBox();
             this.listBoxNombre = new System.Windows.Forms.ListBox();
             this.listBoxImporte = new System.Windows.Forms.ListBox();
@@ -113,6 +114,7 @@
             this.Controls.Add(this.listBoxImporte);
             this.Controls.Add(this.listBoxNombre);
             this.Controls.Add(this.listBoxDNI);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Listado_de_clientes";
             this.Text = "Listado_de_clientes";
             this.ResumeLayout(false);

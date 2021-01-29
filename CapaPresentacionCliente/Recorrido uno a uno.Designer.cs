@@ -262,6 +262,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.bindingNavigator1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Recorrido_uno_a_uno";
             this.Text = "Recorrido_uno_a_uno";
             this.Load += new System.EventHandler(this.Recorrido_uno_a_uno_Load);
