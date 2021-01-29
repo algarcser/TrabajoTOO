@@ -12,13 +12,24 @@ using LogicaNegocioCliente;
 
 namespace CapaPresentacionCliente
 {
+    /// <summary>
+    /// Control que incluye el dni, nombre, apellidos, telefono y categoria, es usado para los clientes
+    /// </summary>
     public partial class Control_alternativo_datos_cliente : UserControl
     {
+        /// <summary>
+        /// Cosntructor del control
+        /// </summary>
         public Control_alternativo_datos_cliente()
         {
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Los siguientes metodos son getters y setters de las textboxes y radiobuttons del control
+        /// </summary>
+        /// <returns></returns>
+        /// 
         public String getDNI()
         {
             return this.textBox1.Text;
@@ -33,6 +44,7 @@ namespace CapaPresentacionCliente
         {
             return this.textBox2.Text;
         }
+
         public void setNombre(string nom)
         {
             this.textBox2.Text = nom;
@@ -59,6 +71,7 @@ namespace CapaPresentacionCliente
 
         public CategoriaCliente getCategoria()
         {
+            //Se consigue la categoria de la que es un cliente segun el boton circular que esta marcado
             if (this.radioButton1.Checked == true)
             {
                 return CategoriaCliente.A;
@@ -90,6 +103,11 @@ namespace CapaPresentacionCliente
 
         }
 
+       /// <summary>
+       /// Los sigueintes metodos devuelven si los radiobuttons estan seleccionados o no
+       /// </summary>
+       /// <returns></returns>
+       /// 
         public bool getAchecked()
         {
             return this.radioButton1.Checked;
@@ -105,6 +123,12 @@ namespace CapaPresentacionCliente
             return this.radioButton3.Checked;
         }
 
+
+        /// <summary>
+        /// Los siguientes metodos son ponen de las textboxes a solo lectura, o si son radioButons, los deshabilita para que no se puedan seleccionar
+        /// </summary>
+        /// <returns></returns>
+        /// 
         public void DNI_readOnly(bool b)
         {
             this.textBox1.ReadOnly = b;

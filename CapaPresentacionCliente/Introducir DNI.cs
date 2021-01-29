@@ -17,14 +17,27 @@ namespace CapaPresentacionCliente
     {
         String accion;
 
+        /// <summary>
+        /// Constructor del form
+        /// </summary>
+        /// <param name="accion"></param>
         public Introducir_DNI(string accion)
         {
             InitializeComponent();
             this.accion = accion;
         }
+
+        /// <summary>
+        /// Accion que ocurre al pulsar sobre el boton aceptar
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btAceptar_Click_1(object sender, EventArgs e)
         {
+            // Si la mascara del dni esta compelta, se llama a alta, baja o busqueda (dependiendo de lo que se ha solicitado hacer)
+
             if (maskedTextBox1.MaskFull) {
+                // Si no existe el cliente se abre el form para dar de alta, y si existe te da la opcion de introducir otro dni
                 if (this.accion.Equals("alta"))
                 {
                     if (!LogicaNegocioCliente.LNCliente.existeCliente(new LogicaModeloCliente.Cliente(this.maskedTextBox1.Text)))
@@ -55,6 +68,7 @@ namespace CapaPresentacionCliente
                 }
                 else if (this.accion.Equals("baja"))
                 {
+                    // Si existe el cliente se abre el form para dar de baja, y si no existe te da la opcion de introducir otro dni
                     if (LogicaNegocioCliente.LNCliente.existeCliente(new LogicaModeloCliente.Cliente(this.maskedTextBox1.Text)))
                     {
                         Cliente c = new Cliente(this.maskedTextBox1.Text);
@@ -80,6 +94,9 @@ namespace CapaPresentacionCliente
                         MessageBox.Show("error");
                     }
                 }
+
+                // Este es el codigo para lo que era el metodo de busqueda anterior a que el cliente cambiara de idea y decidiera poner otro
+
                 //else if (this.accion.Equals("busqueda"))
                 //{
                 //    if (LogicaNegocioCliente.LNCliente.existeCliente(new LogicaModeloCliente.Cliente(this.maskedTextBox1.Text)))
@@ -114,6 +131,11 @@ namespace CapaPresentacionCliente
             
         }
 
+        /// <summary>
+        /// Mensajes del tooltip por si no se cumplen las normas de la mascara
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         void maskedTextBox1_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
         {
             if (maskedTextBox1.MaskFull)
@@ -133,17 +155,32 @@ namespace CapaPresentacionCliente
             }
         }
 
+        /// <summary>
+        /// Evento que esconde el tooltip si se presiona una tecla
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         void maskedTextBox1_KeyDown(object sender, KeyEventArgs e)
         {
             // The balloon tip is visible for five seconds; if the user types any data before it disappears, collapse it ourselves.
             toolTip1.Hide(maskedTextBox1);
         }
 
+        /// <summary>
+        /// Accion que ocurre al pulsar sobre el boton cancelar
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btCancelar_Click_1(object sender, EventArgs e)
         {
             this.Close();
         }
 
+        /// <summary>
+        /// Inicializa la mascara al cargar el Form 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Introducir_DNI_Load_1(object sender, EventArgs e)
         {
             maskedTextBox1.Mask = ">00000000L";

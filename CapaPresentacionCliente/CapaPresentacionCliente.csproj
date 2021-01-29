@@ -73,12 +73,6 @@
     <Compile Include="Control alternativo datos cliente.Designer.cs">
       <DependentUpon>Control alternativo datos cliente.cs</DependentUpon>
     </Compile>
-    <Compile Include="Control datos cliente.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Control datos cliente.Designer.cs">
-      <DependentUpon>Control datos cliente.cs</DependentUpon>
-    </Compile>
     <Compile Include="Control final cliente.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -125,9 +119,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Control alternativo datos cliente.resx">
       <DependentUpon>Control alternativo datos cliente.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Control datos cliente.resx">
-      <DependentUpon>Control datos cliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Control final cliente.resx">
       <DependentUpon>Control final cliente.cs</DependentUpon>
