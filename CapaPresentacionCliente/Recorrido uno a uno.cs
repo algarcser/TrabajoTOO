@@ -32,10 +32,15 @@ namespace CapaPresentacionCliente
                 this.textBox1.Text = ((Cliente) o).getDNI;
                 this.textBox2.Text = ((Cliente) o).getNombre;
                 this.textBox3.Text = ((Cliente) o).getApellidos;
-                //this.textBox4.Text = ((Cliente) o). ;
+                this.textBox4.Text = Convert.ToString(LNCliente.sumaImportes((Cliente) o)) ;
             }
 
 
+        }
+
+        private void btSalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

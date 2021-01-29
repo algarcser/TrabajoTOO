@@ -11,6 +11,7 @@ using CapaPresentacionVehiculo;
 using CapaPresentacionPresupuesto;
 using LogicaNegocioPresupuesto;
 using LogicaModeloPresupuesto;
+using CapaPresentacionCliente;
 
 namespace CapaPresentacionGeneral
 {
@@ -167,6 +168,18 @@ namespace CapaPresentacionGeneral
             {
                 MessageBox.Show("Introduce al menos 1 presupuesto para poder usar \"Configuración\\Actualizar presupuestos\"", "No hay ningun presupuesto", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+        }
+
+        private void mostrarTodosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form listado = new CapaPresentacionCliente.Listado_de_clientes();
+            listado.Show();
+        }
+
+        private void recorridoUnoAUnoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form recorrido = new CapaPresentacionCliente.Recorrido_uno_a_uno();
+            recorrido.Show();
         }
     }
 }

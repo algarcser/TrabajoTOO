@@ -13,7 +13,7 @@ namespace LogicaModeloCliente
         private string DNI;
         private CategoriaCliente categoria;
         private int tlfno;
-        private List<float> importes;
+        private List<float> importes = new List<float>();
 
         public Cliente(string nombre, string apellidos, string DNI, CategoriaCliente categoria, int tlfno)
         {

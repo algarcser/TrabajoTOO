@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using LogicaNegocioCliente;
 using LogicaModeloCliente;
 
+
 namespace CapaPresentacionCliente
 {
     public partial class Listado_de_clientes : Form
@@ -45,7 +46,12 @@ namespace CapaPresentacionCliente
             {
                 listBoxDNI.Items.Add(cl.getDNI);
                 listBoxNombre.Items.Add(cl.getNombre);
-                //listBoxDNI.Items.Add(   Importe del cliente??   );
+                float importeTotal = 0;
+                foreach(float elem in cl.Importes)
+                {
+                    importeTotal += elem;
+                }
+                listBoxImporte.Items.Add(importeTotal);
             }
 
         }
@@ -60,14 +66,22 @@ namespace CapaPresentacionCliente
             {
                 listBoxDNI.Items.Add(cl.getDNI);
                 listBoxNombre.Items.Add(cl.getNombre);
-                //listBoxDNI.Items.Add(   Importe del cliente??   );
+                float importeTotal = 0;
+                foreach (float elem in cl.Importes)
+                {
+                    importeTotal += elem;
+                }
+                listBoxImporte.Items.Add(importeTotal);
+                
             }
         }
 
         private void btImporte_Click(object sender, EventArgs e)
         {
-            /*
-            List<Cliente> listaOrdImporte = LNCliente.SELECT_ALL().OrderBy((x) => x. IMPORTE DEL CLIENTE???  ).ToList();
+            
+
+
+            List<Cliente> listaOrdImporte = LNCliente.SELECT_ALL().OrderBy((x) => LNCliente.sumaImportes(x)).ToList();
             listBoxDNI.Items.Clear();
             listBoxNombre.Items.Clear();
             listBoxImporte.Items.Clear();
@@ -75,9 +89,14 @@ namespace CapaPresentacionCliente
             {
                 listBoxDNI.Items.Add(cl.getDNI);
                 listBoxNombre.Items.Add(cl.getNombre);
-                //listBoxDNI.Items.Add(   Importe del cliente??   );
+                float importeTotal = 0;
+                foreach (float elem in cl.Importes)
+                {
+                    importeTotal += elem;
+                }
+                listBoxImporte.Items.Add(importeTotal);
             }
-            */
+            
         }
 
         private void btCerrar_Click(object sender, EventArgs e)

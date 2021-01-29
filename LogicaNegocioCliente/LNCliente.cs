@@ -44,5 +44,16 @@ namespace LogicaNegocioCliente
             return PersistenciaCliente.SELECT_ALL();
         }
 
+        public static float sumaImportes(Cliente c)
+        {
+            float importeTotal = 0;
+
+            foreach (float elem in c.Importes)
+            {
+                importeTotal += elem;
+            }
+            return importeTotal;
+        }
+
     }
 }
