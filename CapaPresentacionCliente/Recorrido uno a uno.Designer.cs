@@ -264,6 +264,7 @@
             this.Controls.Add(this.bindingNavigator1);
             this.Name = "Recorrido_uno_a_uno";
             this.Text = "Recorrido_uno_a_uno";
+            this.Load += new System.EventHandler(this.Recorrido_uno_a_uno_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).EndInit();
             this.bindingNavigator1.ResumeLayout(false);
             this.bindingNavigator1.PerformLayout();

@@ -16,6 +16,8 @@ namespace CapaPresentacionCliente
 {
     public partial class Recorrido_uno_a_uno : Form
     {
+        List<Cliente> listClientes;
+
         public Recorrido_uno_a_uno()
         {
             InitializeComponent();
@@ -24,17 +26,7 @@ namespace CapaPresentacionCliente
             bindingSource_Clientes.DataSource = LNCliente.SELECT_ALL();
 
             this.bindingNavigator1.BindingSource = bindingSource_Clientes;
-            /*
-            Object o = this.bindingNavigator1.BindingSource.Current;
-
-            if(o is Cliente)
-            {
-                this.textBox1.Text = ((Cliente) o).getDNI;
-                this.textBox2.Text = ((Cliente) o).getNombre;
-                this.textBox3.Text = ((Cliente) o).getApellidos;
-                this.textBox4.Text = Convert.ToString(LNCliente.sumaImportes((Cliente) o)) ;
-            }
-            */
+            listClientes = LNCliente.SELECT_ALL();
 
         }
 
@@ -45,22 +37,56 @@ namespace CapaPresentacionCliente
 
         private void bindingNavigatorMoveNextItem_Click(object sender, EventArgs e)
         {
+            Cliente c = listClientes[Convert.ToInt32(this.bindingNavigator1.PositionItem.Text) - 1];
+
+            this.textBox1.Text = c.getDNI;
+            this.textBox2.Text = c.getNombre;
+            this.textBox3.Text = c.getApellidos;
+            this.textBox4.Text = Convert.ToString(LNCliente.sumaImportes(c));
 
         }
 
         private void bindingNavigatorMovePreviousItem_Click(object sender, EventArgs e)
         {
+            Cliente c = listClientes[Convert.ToInt32(this.bindingNavigator1.PositionItem.Text) - 1];
+
+            this.textBox1.Text = c.getDNI;
+            this.textBox2.Text = c.getNombre;
+            this.textBox3.Text = c.getApellidos;
+            this.textBox4.Text = Convert.ToString(LNCliente.sumaImportes(c));
 
         }
 
         private void bindingNavigatorMoveLastItem_Click(object sender, EventArgs e)
         {
+            Cliente c = listClientes[Convert.ToInt32(this.bindingNavigator1.PositionItem.Text) - 1];
+
+            this.textBox1.Text = c.getDNI;
+            this.textBox2.Text = c.getNombre;
+            this.textBox3.Text = c.getApellidos;
+            this.textBox4.Text = Convert.ToString(LNCliente.sumaImportes(c));
 
         }
 
         private void bindingNavigatorMoveFirstItem_Click(object sender, EventArgs e)
         {
+            Cliente c = listClientes[Convert.ToInt32(this.bindingNavigator1.PositionItem.Text) - 1];
 
+            this.textBox1.Text = c.getDNI;
+            this.textBox2.Text = c.getNombre;
+            this.textBox3.Text = c.getApellidos;
+            this.textBox4.Text = Convert.ToString(LNCliente.sumaImportes(c));
+
+        }
+
+        private void Recorrido_uno_a_uno_Load(object sender, EventArgs e)
+        {
+            Cliente c = listClientes[Convert.ToInt32(this.bindingNavigator1.PositionItem.Text) - 1];
+
+            this.textBox1.Text = c.getDNI;
+            this.textBox2.Text = c.getNombre;
+            this.textBox3.Text = c.getApellidos;
+            this.textBox4.Text = Convert.ToString(LNCliente.sumaImportes(c));
         }
     }
 }
