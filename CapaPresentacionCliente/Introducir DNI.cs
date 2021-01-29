@@ -24,113 +24,112 @@ namespace CapaPresentacionCliente
         }
         private void btAceptar_Click_1(object sender, EventArgs e)
         {
-            maskedTextBox1.Mask = "00000000L";
-            maskedTextBox1.MaskInputRejected += new MaskInputRejectedEventHandler(maskedTextBox1_MaskInputRejected);
-            maskedTextBox1.KeyDown += new KeyEventHandler(maskedTextBox1_KeyDown);
-
-            if (this.accion.Equals("alta"))
-            {
-                if (!LogicaNegocioCliente.LNCliente.existeCliente(new LogicaModeloCliente.Cliente(this.maskedTextBox1.Text)))
+            if (maskedTextBox1.MaskFull) {
+                if (this.accion.Equals("alta"))
                 {
-                    Cliente c = new Cliente(this.maskedTextBox1.Text);
-                    Console.WriteLine(this.maskedTextBox1.Text);
-                    Form altaCliente = new Alta_Cliente(c);
-                    altaCliente.Show();
-                    this.Close();
-
-                }
-                else if(LogicaNegocioCliente.LNCliente.existeCliente(new LogicaModeloCliente.Cliente(this.maskedTextBox1.Text)))
-                {
-                    DialogResult result = MessageBox.Show("Quieres introducir otro?", "Ya existe un cliente con ese DNI", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
-                    if (result == DialogResult.Yes)
+                    if (!LogicaNegocioCliente.LNCliente.existeCliente(new LogicaModeloCliente.Cliente(this.maskedTextBox1.Text)))
                     {
-                        this.maskedTextBox1.Text = "";
+                        Cliente c = new Cliente(this.maskedTextBox1.Text);
+                        Console.WriteLine(this.maskedTextBox1.Text);
+                        Form altaCliente = new Alta_Cliente(c);
+                        altaCliente.Show();
+                        this.Close();
+
+                    }
+                    else if (LogicaNegocioCliente.LNCliente.existeCliente(new LogicaModeloCliente.Cliente(this.maskedTextBox1.Text)))
+                    {
+                        DialogResult result = MessageBox.Show("Quieres introducir otro?", "Ya existe un cliente con ese DNI", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                        if (result == DialogResult.Yes)
+                        {
+                            this.maskedTextBox1.Text = "";
+                        }
+                        else
+                        {
+                            this.Close();
+                        }
                     }
                     else
                     {
-                        this.Close();
+                        MessageBox.Show("error");
                     }
                 }
-                else
+                else if (this.accion.Equals("baja"))
                 {
-                    MessageBox.Show("error");
-                }
-            }
-            else if (this.accion.Equals("baja"))
-            {
-                if (LogicaNegocioCliente.LNCliente.existeCliente(new LogicaModeloCliente.Cliente(this.maskedTextBox1.Text)))
-                {
-                    Cliente c = new Cliente(this.maskedTextBox1.Text);
-                    Form bajaCliente = new Baja_cliente(c);
-                    bajaCliente.Show();
-                    this.Close();
-                }
-                else if (!LogicaNegocioCliente.LNCliente.existeCliente(new LogicaModeloCliente.Cliente(this.maskedTextBox1.Text)))
-                {
-                    Console.WriteLine(this.maskedTextBox1.Text);
-                    DialogResult result = MessageBox.Show("Quieres introducir otro?", "No existe un cliente con ese DNI", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
-                    if (result == DialogResult.Yes)
+                    if (LogicaNegocioCliente.LNCliente.existeCliente(new LogicaModeloCliente.Cliente(this.maskedTextBox1.Text)))
                     {
-                        this.maskedTextBox1.Text = "";
+                        Cliente c = new Cliente(this.maskedTextBox1.Text);
+                        Form bajaCliente = new Baja_cliente(c);
+                        bajaCliente.Show();
+                        this.Close();
+                    }
+                    else if (!LogicaNegocioCliente.LNCliente.existeCliente(new LogicaModeloCliente.Cliente(this.maskedTextBox1.Text)))
+                    {
+                        Console.WriteLine(this.maskedTextBox1.Text);
+                        DialogResult result = MessageBox.Show("Quieres introducir otro?", "No existe un cliente con ese DNI", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                        if (result == DialogResult.Yes)
+                        {
+                            this.maskedTextBox1.Text = "";
+                        }
+                        else
+                        {
+                            this.Close();
+                        }
                     }
                     else
                     {
-                        this.Close();
+                        MessageBox.Show("error");
                     }
                 }
-                else
-                {
-                    MessageBox.Show("error");
-                }
+                //else if (this.accion.Equals("busqueda"))
+                //{
+                //    if (LogicaNegocioCliente.LNCliente.existeCliente(new LogicaModeloCliente.Cliente(this.maskedTextBox1.Text)))
+                //    {
+                //        Cliente c;
+                //        c = CapaPersistenciaCliente.PersistenciaCliente.READ(new LogicaModeloCliente.Cliente(this.maskedTextBox1.Text));
+
+                //        Form datosAlternativoCliente = new Busqueda_alternativa_cliente(c);
+                //        datosAlternativoCliente.Show();
+
+                //        this.Close();
+                //    }
+                //    else if (!LogicaNegocioCliente.LNCliente.existeCliente(new LogicaModeloCliente.Cliente(this.maskedTextBox1.Text)))
+                //    {
+                //        DialogResult result = MessageBox.Show("Quieres introducir otro?", "No existe un cliente con ese DNI", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                //        if (result == DialogResult.Yes)
+                //        {
+                //            this.maskedTextBox1.Text = "";
+                //        }
+                //        else
+                //        {
+                //            this.Close();
+                //        }
+                //    }
+                //    else
+                //    {
+                //        MessageBox.Show("error");
+                //    }
+                //}
+                else { }
             }
-            //else if (this.accion.Equals("busqueda"))
-            //{
-            //    if (LogicaNegocioCliente.LNCliente.existeCliente(new LogicaModeloCliente.Cliente(this.maskedTextBox1.Text)))
-            //    {
-            //        Cliente c;
-            //        c = CapaPersistenciaCliente.PersistenciaCliente.READ(new LogicaModeloCliente.Cliente(this.maskedTextBox1.Text));
-
-            //        Form datosAlternativoCliente = new Busqueda_alternativa_cliente(c);
-            //        datosAlternativoCliente.Show();
-
-            //        this.Close();
-            //    }
-            //    else if (!LogicaNegocioCliente.LNCliente.existeCliente(new LogicaModeloCliente.Cliente(this.maskedTextBox1.Text)))
-            //    {
-            //        DialogResult result = MessageBox.Show("Quieres introducir otro?", "No existe un cliente con ese DNI", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
-            //        if (result == DialogResult.Yes)
-            //        {
-            //            this.maskedTextBox1.Text = "";
-            //        }
-            //        else
-            //        {
-            //            this.Close();
-            //        }
-            //    }
-            //    else
-            //    {
-            //        MessageBox.Show("error");
-            //    }
-            //}
-            else { }
+            
         }
 
         void maskedTextBox1_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
         {
             if (maskedTextBox1.MaskFull)
             {
-                toolTip1.ToolTipTitle = "Input Rejected - Too Much Data";
-                toolTip1.Show("You cannot enter any more data into the date field. Delete some characters in order to insert more data.", maskedTextBox1, 0, -20, 5000);
+                toolTip1.ToolTipTitle = "DNI rechazado - Demasiada información";
+                toolTip1.Show("No puede introducir más información en el campo DNI. Elimine algunos caracteres para poder introducir más datos.", maskedTextBox1, 120, 10, 5000);
             }
             else if (e.Position == maskedTextBox1.Mask.Length)
             {
-                toolTip1.ToolTipTitle = "Input Rejected - End of Field";
-                toolTip1.Show("You cannot add extra characters to the end of this date field.", maskedTextBox1, 0, -20, 5000);
+                toolTip1.ToolTipTitle = "DNI rechazado - Tamaño alcanzado";
+                toolTip1.Show("No puede añadir más caracteres al final del campo DNI", maskedTextBox1, 120, 10, 5000);
             }
             else
             {
-                toolTip1.ToolTipTitle = "Input Rejected";
-                toolTip1.Show("You can only add numeric characters (0-9) into this date field.", maskedTextBox1, 0, -20, 5000);
+                toolTip1.ToolTipTitle = "DNI rechazado";
+                toolTip1.Show("Solo pueden introducir ocho caracteres numéricos (0-9) seguidos de una letra [a-zA-Z] en el campo DNI.", maskedTextBox1, 120, 10, 5000);
             }
         }
 
@@ -145,6 +144,11 @@ namespace CapaPresentacionCliente
             this.Close();
         }
 
-
+        private void Introducir_DNI_Load_1(object sender, EventArgs e)
+        {
+            maskedTextBox1.Mask = ">00000000L";
+            maskedTextBox1.MaskInputRejected += new MaskInputRejectedEventHandler(maskedTextBox1_MaskInputRejected);
+            maskedTextBox1.KeyDown += new KeyEventHandler(maskedTextBox1_KeyDown);
+        }
     }
 }

@@ -83,6 +83,7 @@
             this.Controls.Add(this.btAceptar);
             this.Name = "Introducir_DNI";
             this.Text = "Introducir_DNI";
+            this.Load += new System.EventHandler(this.Introducir_DNI_Load_1);
             this.ResumeLayout(false);
             this.PerformLayout();
 
