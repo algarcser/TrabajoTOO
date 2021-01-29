@@ -28,9 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.control_alternativo_datos_cliente1 = new CapaPresentacionCliente.Control_alternativo_datos_cliente();
+            this.control_alternativo_datos_cliente1 = new CapaPresentacionCliente.Control_final_cliente();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.SuspendLayout();
             // 
             // button1
@@ -55,21 +57,22 @@
             // 
             // control_alternativo_datos_cliente1
             // 
-            this.control_alternativo_datos_cliente1.Location = new System.Drawing.Point(-2, 2);
+            this.control_alternativo_datos_cliente1.Location = new System.Drawing.Point(12, 12);
             this.control_alternativo_datos_cliente1.Name = "control_alternativo_datos_cliente1";
-            this.control_alternativo_datos_cliente1.Size = new System.Drawing.Size(279, 274);
+            this.control_alternativo_datos_cliente1.Size = new System.Drawing.Size(259, 264);
             this.control_alternativo_datos_cliente1.TabIndex = 3;
             // 
             // Alta_Cliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(277, 314);
+            this.ClientSize = new System.Drawing.Size(281, 314);
             this.Controls.Add(this.control_alternativo_datos_cliente1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Name = "Alta_Cliente";
             this.Text = "Alta_Cliente";
+            this.Load += new System.EventHandler(this.Alta_Cliente_Load);
             this.ResumeLayout(false);
 
         }
@@ -77,6 +80,7 @@
         #endregion
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
-        private Control_alternativo_datos_cliente control_alternativo_datos_cliente1;
+        private Control_final_cliente control_alternativo_datos_cliente1;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

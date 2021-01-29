@@ -79,6 +79,12 @@
     <Compile Include="Control datos cliente.Designer.cs">
       <DependentUpon>Control datos cliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="Control final cliente.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control final cliente.Designer.cs">
+      <DependentUpon>Control final cliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="Introducir DNI.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -122,6 +128,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Control datos cliente.resx">
       <DependentUpon>Control datos cliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control final cliente.resx">
+      <DependentUpon>Control final cliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Introducir DNI.resx">
       <DependentUpon>Introducir DNI.cs</DependentUpon>
