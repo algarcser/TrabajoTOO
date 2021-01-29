@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace LogicaModeloCliente
 {
+    /// <summary>
+    /// Esta es la clase cliente de mas alto nivel
+    /// </summary>
     public class Cliente
     {
         private string nombre;
@@ -15,6 +18,14 @@ namespace LogicaModeloCliente
         private int tlfno;
         private List<float> importes = new List<float>();
 
+        /// <summary>
+        /// Constructor del cliente
+        /// </summary>
+        /// <param name="nombre"></param>
+        /// <param name="apellidos"></param>
+        /// <param name="DNI"></param>
+        /// <param name="categoria"></param>
+        /// <param name="tlfno"></param>
         public Cliente(string nombre, string apellidos, string DNI, CategoriaCliente categoria, int tlfno)
         {
             this.nombre = nombre;
@@ -32,7 +43,7 @@ namespace LogicaModeloCliente
         }
 
         /// <summary>
-        /// It returns the name of the client
+        /// Devuelve el nombre del cliente
         /// </summary>
         /// <returns></returns>
         public String getNombre
@@ -45,7 +56,7 @@ namespace LogicaModeloCliente
         }
 
         /// <summary>
-        /// It returns the surnames of the client
+        /// Devuelve los apellidos del cliente
         /// </summary>
         /// <returns></returns>
         public String getApellidos
@@ -57,7 +68,7 @@ namespace LogicaModeloCliente
         }
 
         /// <summary>
-        /// It returns the DNI of the client
+        /// Devuelve el DNI del cliente
         /// </summary>
         /// <returns></returns>
         public String getDNI
@@ -69,7 +80,7 @@ namespace LogicaModeloCliente
 
 
         /// <summary>
-        /// It returns the cathegory of the client
+        /// Devuelve la categoria del cliente
         /// </summary>
         /// <returns></returns>
         public CategoriaCliente getcategoria
@@ -82,7 +93,7 @@ namespace LogicaModeloCliente
         }
 
         /// <summary>
-        /// It returns the telephone number of the client
+        /// Devuelve el numero de telefono del cliente
         /// </summary>
         /// <returns></returns>
         public int getTlfno
@@ -94,6 +105,10 @@ namespace LogicaModeloCliente
             
         }
 
+        /// <summary>
+        /// el get devuelve una lista de importes del cliente
+        /// el set asigna una lista de importes a la actual
+        /// </summary>
         public List<float> Importes
         {
             get
@@ -107,6 +122,9 @@ namespace LogicaModeloCliente
             }
         }
 
+        /// <summary>
+        /// devuelve la suma de todos los importes de la lista de importes del cliente
+        /// </summary>
         public string importeTotal
         {
             get
@@ -120,6 +138,11 @@ namespace LogicaModeloCliente
             }
         }
 
+        /// <summary>
+        /// Calcula si dos clientes son iguales
+        /// </summary>
+        /// <param name="clienteDato"></param>
+        /// <returns></returns>
         public override bool Equals(object cliente)
         {
             if (cliente == null)

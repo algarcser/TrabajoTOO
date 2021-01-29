@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace CapaPersistenciaCliente
 {
+    /// <summary>
+    /// Esta es la clase cliente de bajo nivel
+    /// </summary>
     public class ClienteDato
     {
         private string nombre;
@@ -14,6 +17,14 @@ namespace CapaPersistenciaCliente
         private CategoriaClienteDato categoria;
         private int tlfno;
 
+        /// <summary>
+        /// Constructor del cliente
+        /// </summary>
+        /// <param name="nombre"></param>
+        /// <param name="apellidos"></param>
+        /// <param name="DNI"></param>
+        /// <param name="categoria"></param>
+        /// <param name="tlfno"></param>
         public ClienteDato(string nombre, string apellidos, string DNI, CategoriaClienteDato categoria, int tlfno)      
         {
             this.nombre = nombre;
@@ -25,7 +36,7 @@ namespace CapaPersistenciaCliente
 
 
         /// <summary>
-        /// It returns the name of the client
+        /// Devuelve el nombre del cliente
         /// </summary>
         /// <returns></returns>
         public String getNombre
@@ -38,7 +49,7 @@ namespace CapaPersistenciaCliente
         }
 
         /// <summary>
-        /// It returns the surnames of the client
+        /// Devuelve los apellidos del cliente
         /// </summary>
         /// <returns></returns>
         public String getApellidos
@@ -50,7 +61,7 @@ namespace CapaPersistenciaCliente
         }
 
         /// <summary>
-        /// It returns the DNI of the client
+        /// Devuelve el DNI del cliente
         /// </summary>
         /// <returns></returns>
         public String getDNI
@@ -63,7 +74,7 @@ namespace CapaPersistenciaCliente
         }
 
         /// <summary>
-        /// It returns the cathegory of the client
+        /// Devuelve la categoria del cliente
         /// </summary>
         /// <returns></returns>
         public CategoriaClienteDato getcategoria
@@ -76,7 +87,7 @@ namespace CapaPersistenciaCliente
         }
 
         /// <summary>
-        /// It returns the telephone number of the client
+        /// Devuelve el numero de telefono del cliente
         /// </summary>
         /// <returns></returns>
         public int getTlfno
@@ -88,6 +99,11 @@ namespace CapaPersistenciaCliente
             
         }
 
+        /// <summary>
+        /// Calcula si dos clientes son iguales
+        /// </summary>
+        /// <param name="clienteDato"></param>
+        /// <returns></returns>
         public override bool Equals(object clienteDato)
         {
             if (clienteDato == null)

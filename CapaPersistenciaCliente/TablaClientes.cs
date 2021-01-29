@@ -20,7 +20,7 @@ namespace CapaPersistenciaCliente
         /// </summary>
         protected override string GetKeyForItem(ClienteDato item)
         {
-            // In this example, the key is the DNI
+            // En este ejemplo, la clave es el dni
             return item.getDNI;
         }
 
