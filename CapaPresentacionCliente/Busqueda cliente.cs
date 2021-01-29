@@ -14,9 +14,16 @@ namespace CapaPresentacionCliente
 {
     public partial class Busqueda_cliente : Form
     {
+        /// <summary>
+        /// Contructor del form
+        /// </summary>
+        /// <param name="c"></param>
         public Busqueda_cliente(Cliente c)
         {
             InitializeComponent();
+
+            //Se ponen los controles a solo lectura y se introducen los datos de un cliente que se pasa por parametro
+
             this.control_alternativo_datos_cliente1.DNI_readOnly(true);
             this.control_alternativo_datos_cliente1.nombre_readOnly(true);
             this.control_alternativo_datos_cliente1.apellidos_readOnly(true);
@@ -36,6 +43,11 @@ namespace CapaPresentacionCliente
 
         }
 
+        /// <summary>
+        ///  Accion que ocurre al hacer click sobre el boton aceptar 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();

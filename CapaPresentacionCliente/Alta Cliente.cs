@@ -14,37 +14,50 @@ namespace CapaPresentacionCliente
 {
     public partial class Alta_Cliente : Form
     {
+        /// <summary>
+        /// Constructor del formulario
+        /// </summary>
+        /// <param name="c"></param>
         public Alta_Cliente(Cliente c)
         {
             InitializeComponent();
+            //se pone el DNI en solo lectura
             this.control_final_cliente1.DNI_readOnly(true);
             this.control_final_cliente1.setDNI(c.getDNI);
 
         }
 
+        /// <summary>
+        /// Accion que ocurre al hacer click sobre el boton aceptar 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button1_Click(object sender, EventArgs e)
         {
-            if (this.control_final_cliente1.getMaskedTextBox1().MaskFull)
-            {
-                if ((this.control_final_cliente1.getNombre() == "") || (this.control_final_cliente1.getApellidos() == "") || (this.control_final_cliente1.getTelefono() == "") || ((!this.control_final_cliente1.getAchecked()) && (!this.control_final_cliente1.getBchecked()) && (!this.control_final_cliente1.getCchecked())))
-                {
-                    MessageBox.Show("Debes rellenar todos los campos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-                else
-                {
-                    Cliente cl = new Cliente(this.control_final_cliente1.getNombre(), this.control_final_cliente1.getApellidos(), this.control_final_cliente1.getDNI(), this.control_final_cliente1.getCategoria(), int.Parse(this.control_final_cliente1.getTelefono()));
-                    Console.WriteLine("El AltaCliente justo despues de crear el cliente tiene el dni " + this.control_final_cliente1.getDNI());
-                    Console.WriteLine("El cl tiene dni " + cl.getDNI);
-                    if (LNCliente.altaCliente(cl))
-                    {
-                        MessageBox.Show("Alta de cliente confirmado  " + this.control_final_cliente1.getDNI());
-                    }
+            //Se comprobrueba si todos los campos estan completos, si lo estan se añade el cliente y sale un emnsaje de confirmacion
 
-                    this.Close();
-                }
+            if ((this.control_final_cliente1.getNombre() == "") || (this.control_final_cliente1.getApellidos() == "") || (!this.control_final_cliente1.getMaskedTextBox1().MaskFull) || ((!this.control_final_cliente1.getAchecked()) && (!this.control_final_cliente1.getBchecked()) && (!this.control_final_cliente1.getCchecked())))
+            {
+                MessageBox.Show("Debes rellenar todos los campos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            
-        }
+            else
+            {
+                Cliente cl = new Cliente(this.control_final_cliente1.getNombre(), this.control_final_cliente1.getApellidos(), this.control_final_cliente1.getDNI(), this.control_final_cliente1.getCategoria(), int.Parse(this.control_final_cliente1.getTelefono()));
+                if (LNCliente.altaCliente(cl))
+                {
+                    MessageBox.Show("Alta de cliente confirmado");
+                }
+
+                this.Close();
+            }
+  
+        }   
+        
+        /// <summary>
+        /// Mensajes del tooltip por si no se cumplen las normas de la mascara
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         void maskedTextBox1_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
         {
             if (this.control_final_cliente1.getMaskedTextBox1().MaskFull)
@@ -64,17 +77,32 @@ namespace CapaPresentacionCliente
             }
         }
 
+        /// <summary>
+        /// Evento que esconde el tooltip si se presiona una tecla
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         void maskedTextBox1_KeyDown(object sender, KeyEventArgs e)
         {
             // The balloon tip is visible for five seconds; if the user types any data before it disappears, collapse it ourselves.
             toolTip1.Hide(this.control_final_cliente1.getMaskedTextBox1());
         }
 
+        /// <summary>
+        /// Accion que ocurre al hacer click sobre el boton cancelar
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button2_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
+        /// <summary>
+        /// Inicializa la mascara al cargar el Form
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Alta_Cliente_Load(object sender, EventArgs e)
         {
             this.control_final_cliente1.getMaskedTextBox1().Mask = ">000000000";

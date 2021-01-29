@@ -15,11 +15,15 @@ namespace CapaPresentacionCliente
     public partial class Baja_cliente : Form
     {
         Cliente clBuscado;
-
+        /// <summary>
+        /// Constructor del form
+        /// </summary>
+        /// <param name="c"></param>
         public Baja_cliente(Cliente c)
         {
             InitializeComponent();
 
+            //Se ponen los controles a solo lectura y se introducen los datos de un cliente que se pasa por parametro
 
             this.control_alternativo_datos_cliente1.DNI_readOnly(true);
             this.control_alternativo_datos_cliente1.nombre_readOnly(true);
@@ -39,8 +43,14 @@ namespace CapaPresentacionCliente
             this.control_alternativo_datos_cliente1.setTfno(clBuscado.getTlfno.ToString());
         }
 
+        /// <summary>
+        /// Accion que ocurre al hacer click sobre el boton aceptar 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button1_Click(object sender, EventArgs e)
         {
+            // Se elimina un cliente y sale el mensaje de confirmacion
             DialogResult result = MessageBox.Show("Está seguro que desea dar de baja a este cliente?", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
             if (result == DialogResult.Yes)
             {
@@ -54,6 +64,11 @@ namespace CapaPresentacionCliente
             }
         }
 
+        /// <summary>
+        ///  Accion que ocurre al hacer click sobre el boton cancelar 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button2_Click(object sender, EventArgs e)
         {
             this.Close();
