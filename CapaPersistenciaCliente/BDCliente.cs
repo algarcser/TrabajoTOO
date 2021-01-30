@@ -32,6 +32,7 @@ namespace CapaPersistenciaCliente
         }
 
         /// <summary>
+        /// PRE: No introducir un cliente ya existente
         ///  Dado un cliente, lo introduce en la BD
         /// </summary>
         /// <param name="c"></param>
@@ -70,6 +71,7 @@ namespace CapaPersistenciaCliente
         }
 
         /// <summary>
+        /// PRE: Introducir un cliente que exista
         /// Elimina un cliente de la BD
         /// </summary>
         /// <param name="c"></param>
