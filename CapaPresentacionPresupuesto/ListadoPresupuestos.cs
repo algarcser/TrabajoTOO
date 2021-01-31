@@ -16,10 +16,16 @@ using CapaPresentacionCliente;
 
 namespace CapaPresentacionPresupuesto
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public partial class FormListadoPresupuestos : Form
     {
         List<Presupuesto> listaPresupuestos;
 
+        /// <summary>
+        /// 
+        /// </summary>
         public FormListadoPresupuestos(List<Presupuesto> lp)
         {
             this.listaPresupuestos = lp;
@@ -46,6 +52,9 @@ namespace CapaPresentacionPresupuesto
             //this.lboCliente.DataBindings.Add(new Binding("Text", bindingSource, ""));
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
         private void btMostrarCliente_Click(object sender, EventArgs e)
         {
             if (this.lboCliente.SelectedItem == null)
@@ -67,6 +76,9 @@ namespace CapaPresentacionPresupuesto
             }     
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
         private void btMostrarListaVehiculos_Click(object sender, EventArgs e)
         {
             if (this.lboNVehiculos.SelectedItem == null)
@@ -83,11 +95,17 @@ namespace CapaPresentacionPresupuesto
             }     
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
         private void btCerrar_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
         private void btRecorrerP1en1_Click(object sender, EventArgs e)
         {
             Form recorrerPresupuestos = new FormRecorrerPresupuestos1en1(this.listaPresupuestos);
@@ -95,6 +113,9 @@ namespace CapaPresentacionPresupuesto
             this.Close();
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
         private void btActualizarListado_Click(object sender, EventArgs e)
         {
             BindingSource bindingSource = new BindingSource();
@@ -128,6 +149,9 @@ namespace CapaPresentacionPresupuesto
             MessageBox.Show("Se han actualizado " + presupuestosActualizados.ToString() + " presupuestos.", "Presupuestos actualizados", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
         private void btMostrarPresupuesto_Click(object sender, EventArgs e)
         {
             if(this.lboFechaCreacion.SelectedItem != null)
@@ -137,6 +161,9 @@ namespace CapaPresentacionPresupuesto
             }      
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
         private void btEliminarPresupuesto_Click(object sender, EventArgs e)
         {
             BindingSource bindingSource = new BindingSource();

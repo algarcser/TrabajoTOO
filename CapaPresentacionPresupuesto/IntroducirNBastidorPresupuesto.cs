@@ -15,17 +15,26 @@ using LogicaNegocioPresupuesto;
 
 namespace CapaPresentacionPresupuesto
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public partial class FormIntroducirNBastidorPresupuesto : Form
     {
         private string accion; //acciones busqueda(mostrar) por vehículo e introducir(crear) vehiculo
         private vehiculo vehiculo;
 
+        /// <summary>
+        /// 
+        /// </summary>
         public FormIntroducirNBastidorPresupuesto(string ac)
         {
             this.accion = ac;
             InitializeComponent();
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
         public vehiculo Vehiculo
         {
             get
@@ -34,6 +43,9 @@ namespace CapaPresentacionPresupuesto
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
         private void btAceptar_Click(object sender, EventArgs e)
         {
             if (mtbNBastidor.MaskFull)
@@ -116,13 +128,17 @@ namespace CapaPresentacionPresupuesto
             }
         }
 
-
-
+        /// <summary>
+        /// 
+        /// </summary>
         private void btCancelar_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
         private void IntroducirNBastidorPresupuesto_Load(object sender, EventArgs e)
         {
             mtbNBastidor.Mask = ">AAAAAAAAAAAAAAAAA";
@@ -131,6 +147,9 @@ namespace CapaPresentacionPresupuesto
             mtbNBastidor.KeyDown += new KeyEventHandler(mtbNBastidor_KeyDown);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
         private void mtbNBastidor_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
         {
             if (mtbNBastidor.MaskFull)
@@ -150,6 +169,9 @@ namespace CapaPresentacionPresupuesto
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
         private void mtbNBastidor_KeyDown(object sender, KeyEventArgs e)
         {
             ttNBastidor.Hide(mtbNBastidor);

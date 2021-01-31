@@ -12,13 +12,22 @@ using LogicaNegocioPresupuesto;
 
 namespace CapaPresentacionPresupuesto
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public partial class FormIntroducirEstadoPresupuesto : Form
     {
+        /// <summary>
+        /// 
+        /// </summary>
         public FormIntroducirEstadoPresupuesto()
         {
             InitializeComponent();
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
         private void btAceptar_Click(object sender, EventArgs e)
         {
             List<Presupuesto> listaCribaNBastidor = LNPresupuesto.SELECTALL();
@@ -54,6 +63,9 @@ namespace CapaPresentacionPresupuesto
             this.Close();
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
         private void btCancelar_Click(object sender, EventArgs e)
         {
             this.Close();

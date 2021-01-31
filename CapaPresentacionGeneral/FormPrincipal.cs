@@ -15,28 +15,47 @@ using CapaPresentacionCliente;
 
 namespace CapaPresentacionGeneral
 {
+    /// <summary>
+    /// Formulario principal de la aplicación.
+    /// </summary>
     public partial class FormPrincipal : Form
     {
         private string usuario;
+
+        /// <summary>
+        /// Constructor del formulario.
+        /// PRE: requiere string usuario.
+        /// POST:
+        /// </summary>
         public FormPrincipal(string usuario)
         {
             this.usuario = usuario;
             InitializeComponent();
-            
+
+            this.Text = "Concesionario Pepérez® - v1.0.19012021" + "  -  Usuario: " + this.usuario;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
         private void tsmiAltaCliente_Click(object sender, EventArgs e)
         {
             Form intrDNI = new CapaPresentacionCliente.Introducir_DNI("alta");
             intrDNI.Show();
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
         private void tsmiBajaCliente_Click(object sender, EventArgs e)
         {
             Form intrDNI = new CapaPresentacionCliente.Introducir_DNI("baja");
             intrDNI.Show();
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
         private void tsmiBusquedaCliente_Click(object sender, EventArgs e)
         {
             //Form intrDNI = new CapaPresentacionCliente.Introducir_DNI("busqueda");
@@ -46,30 +65,45 @@ namespace CapaPresentacionGeneral
             busquedaCliente.Show();
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
         private void tsmiAltaVehiculo_Click(object sender, EventArgs e)
         {
             Form obtenerNBastidor = new ObtenerNBastidor( enumObjetivo.Alta );
             obtenerNBastidor.Show();
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
         private void tsmiBusquedaVehiculo_Click(object sender, EventArgs e)
         {
             Form obtenerNBastidor = new ObtenerNBastidor( enumObjetivo.Ver );
             obtenerNBastidor.Show();
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
         private void bajaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Form obtenerNBastidor = new ObtenerNBastidor( enumObjetivo.Baja );
             obtenerNBastidor.Show();
         }
 
+        /// <summary>
+        /// Evento que accede a la función Crear presupuesto por medio de un DNI de Cliente.
+        /// </summary>
         private void tsmiCrearPresupuesto_Click(object sender, EventArgs e)
         {
             Form crearPresupuesto = new FormIntroducirDNIPresupuesto("crear");
             crearPresupuesto.Show();
         }
 
+        /// <summary>
+        /// Evento que permite buscar presupuestos por DNI del Cliente.
+        /// </summary>
         private void tsmiBPPorCliente_Click(object sender, EventArgs e)
         {
             if (LNPresupuesto.SELECTALL().Count != 0)
@@ -83,6 +117,9 @@ namespace CapaPresentacionGeneral
             }
         }
 
+        /// <summary>
+        /// Evento que permite Mostrar un listado completo de presupuestos con diversas funciones
+        /// </summary>
         private void tsmiMostrarTodos_Click(object sender, EventArgs e)
         {
             if (LNPresupuesto.SELECTALL().Count != 0)
@@ -96,18 +133,27 @@ namespace CapaPresentacionGeneral
             } 
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
         private void anadirToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Gestionar_Extra alta_extra = new Gestionar_Extra();
             alta_extra.Show();
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
         private void verTodosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Motrar_Todos_Vehiculos mostrar_todos_vehiculos = new Motrar_Todos_Vehiculos();
             mostrar_todos_vehiculos.Show();
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
         private void tsmiBPPorVehiculo_Click(object sender, EventArgs e)
         {
             if (LNPresupuesto.SELECTALL().Count != 0)
@@ -121,6 +167,9 @@ namespace CapaPresentacionGeneral
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
         private void tsmiBPPorEstado_Click(object sender, EventArgs e)
         {
             if (LNPresupuesto.SELECTALL().Count != 0)
@@ -134,6 +183,9 @@ namespace CapaPresentacionGeneral
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
         private void tsmiModificarPresupuestos_Click(object sender, EventArgs e)
         {
             if (LNPresupuesto.SELECTALL().Count != 0)
@@ -147,6 +199,9 @@ namespace CapaPresentacionGeneral
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
         private void tsmiActualizarPresupuestos_Click(object sender, EventArgs e)
         {
             if (LNPresupuesto.SELECTALL().Count != 0)
@@ -170,12 +225,18 @@ namespace CapaPresentacionGeneral
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
         private void mostrarTodosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Form listado = new CapaPresentacionCliente.Listado_de_clientes();
             listado.Show();
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
         private void recorridoUnoAUnoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Form recorrido = new CapaPresentacionCliente.Recorrido_uno_a_uno();

@@ -11,13 +11,22 @@ using System.Windows.Forms;
 
 namespace CapaPresentacionGeneral
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public partial class Login : Form
     {
+        /// <summary>
+        /// 
+        /// </summary>
         public Login()
         {
             InitializeComponent();
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
         private void cbMostrarContraseña_CheckedChanged(object sender, EventArgs e)
         {
             if (this.cbMostrarContraseña.Checked == true)
@@ -29,14 +38,17 @@ namespace CapaPresentacionGeneral
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
         private void btEntrar_Click(object sender, EventArgs e)
         {
             if ((this.tbContraseña.Text == "admin") && (this.tbUsuario.Text == "admin"))
             {
                 Form nuevo = new FormPrincipal(this.tbUsuario.Text);
+                this.Owner = nuevo;
                 this.Hide();
                 nuevo.Show();
-                this.Close();
             }else
             {
                 MessageBox.Show("Introduzca el usuario y contraseña de nuevo correctamente.", "Usuario y/o contraseña incorrectos", MessageBoxButtons.OK, MessageBoxIcon.Error);

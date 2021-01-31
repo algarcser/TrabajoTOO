@@ -19,17 +19,25 @@ using CapaPresentacionVehiculo;
 
 namespace CapaPresentacionPresupuesto
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public partial class ucPresupuesto : UserControl
     {
         private Cliente cliente;
         private List<vehiculo> listaVehiculosCrear = new List<vehiculo>();
         private List<vehiculo> listaVehiculosModificar = new List<vehiculo>();
+        private string comercial
         private Presupuesto presupuesto;
-        bool modificar;
+        private bool modificar;
 
-        public ucPresupuesto(Cliente c) //crear
+        /// <summary>
+        /// 
+        /// </summary>
+        public ucPresupuesto(Cliente c, string comercial) //crear
         {
             this.cliente = c;
+            this.comercial = comercial;
             
             InitializeComponent();
 
@@ -63,6 +71,9 @@ namespace CapaPresentacionPresupuesto
             this.btCancelar.Visible = true;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
         public ucPresupuesto(Presupuesto p, bool mod) //mostrar
         {
             this.presupuesto = p;
@@ -132,8 +143,11 @@ namespace CapaPresentacionPresupuesto
             this.tbImporte.Text = LNPresupuesto.calcularPresupuesto(this.presupuesto).ToString() + " €";
             this.btAceptar.Visible = true;
             this.btCancelar.Visible = false;
-        } 
+        }
 
+        /// <summary>
+        /// 
+        /// </summary>
         public void cambiarPresupuesto (Presupuesto p) //solo para modificar
         {
             if ((this.modificar == true) && (p != null))
@@ -172,7 +186,10 @@ namespace CapaPresentacionPresupuesto
                 this.tbImporte.Text = LNPresupuesto.calcularPresupuesto(this.presupuesto).ToString() + " €";
             }          
         }
-        
+
+        /// <summary>
+        /// 
+        /// </summary>
         private void btMostrarCliente_Click(object sender, EventArgs e)
         {
             if (this.cliente == null)
@@ -201,6 +218,9 @@ namespace CapaPresentacionPresupuesto
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
         private void btMostrarVehiculo_Click(object sender, EventArgs e)
         {
             if (this.lboListaVehiculos.SelectedItem == null)
@@ -223,6 +243,9 @@ namespace CapaPresentacionPresupuesto
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
         private void btIntroducirVehiculo_Click(object sender, EventArgs e)
         {
             BindingSource bindingSource = new BindingSource();
@@ -266,6 +289,9 @@ namespace CapaPresentacionPresupuesto
             //JUNTO TODO SU PROCESO,tras darlo de alta se introduce en la lista
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
         private void btAceptar_Click(object sender, EventArgs e)
         {
             if (this.cliente == null) //mostrar
@@ -332,6 +358,7 @@ namespace CapaPresentacionPresupuesto
                         listaVehiculos.Add(v);
                     }*/
                     Presupuesto nuevoPresupuesto = new Presupuesto(DateTime.Now, estado, this.cliente, this.listaVehiculosCrear);
+                    nuevoPresupuesto.Comercial = this.comercial;
 
                     List<float> listaImportes = nuevoPresupuesto.Cliente.Importes;
                     listaImportes.Add(LNPresupuesto.calcularPresupuesto(nuevoPresupuesto));
@@ -348,6 +375,9 @@ namespace CapaPresentacionPresupuesto
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
         private void btCancelar_Click(object sender, EventArgs e)
         {
             if (LNPresupuesto.EXIST(this.presupuesto) == false) //crear //COMPLETAR con si el presupuesto de ha creado no mostrar lo siguiente
@@ -363,6 +393,9 @@ namespace CapaPresentacionPresupuesto
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
         private void rbDesestimado_CheckedChanged(object sender, EventArgs e)
         {
             if (this.presupuesto == null) //crear
@@ -410,6 +443,9 @@ namespace CapaPresentacionPresupuesto
             }          
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
         private void btQuitarVehiculo_Click(object sender, EventArgs e)
         {
             BindingSource bindingSource = new BindingSource();
@@ -454,6 +490,9 @@ namespace CapaPresentacionPresupuesto
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
         private void rbCreado_CheckedChanged(object sender, EventArgs e)
         {
             if ((this.cliente == null) && (this.presupuesto.EstadoPresupuesto != EstadoPresupuesto.creado) && (this.modificar == true) && (this.rbCreado.Checked == true))
@@ -490,6 +529,9 @@ namespace CapaPresentacionPresupuesto
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
         private void rbPendiente_CheckedChanged(object sender, EventArgs e)
         {
             if ((this.cliente == null) && (this.presupuesto.EstadoPresupuesto != EstadoPresupuesto.pendiente) && (this.modificar == true) && (this.rbPendiente.Checked == true))
@@ -526,6 +568,9 @@ namespace CapaPresentacionPresupuesto
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
         private void rbAceptado_CheckedChanged(object sender, EventArgs e)
         {
             if ((this.cliente == null) && (this.presupuesto.EstadoPresupuesto != EstadoPresupuesto.aceptado) && (this.modificar == true) && (this.rbAceptado.Checked == true))

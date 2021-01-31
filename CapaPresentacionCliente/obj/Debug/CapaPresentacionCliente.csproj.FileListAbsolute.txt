@@ -34,7 +34,6 @@ C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\CapaPresentacionCliente\obj\Deb
 C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\CapaPresentacionCliente\obj\Debug\CapaPresentacionCliente.Busqueda_alternativa_cliente.resources
 C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\CapaPresentacionCliente\obj\Debug\CapaPresentacionCliente.Busqueda_cliente.resources
 C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\CapaPresentacionCliente\obj\Debug\CapaPresentacionCliente.Control_alternativo_datos_cliente.resources
-C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\CapaPresentacionCliente\obj\Debug\CapaPresentacionCliente.Control_datos_cliente.resources
 C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\CapaPresentacionCliente\obj\Debug\CapaPresentacionCliente.Introducir_DNI.resources
 C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\CapaPresentacionCliente\obj\Debug\CapaPresentacionCliente.Listado_de_clientes.resources
 C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\CapaPresentacionCliente\obj\Debug\CapaPresentacionCliente.Properties.Resources.resources
@@ -46,3 +45,4 @@ C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\CapaPresentacionCliente\obj\Deb
 C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\CapaPresentacionCliente\obj\Debug\CapaPresentacionCliente.Recorrido_uno_a_uno.resources
 C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\CapaPresentacionCliente\obj\Debug\CapaPresentacionCliente.Recorrido_uno_a_uno.resources
 C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\CapaPresentacionCliente\obj\Debug\CapaPresentacionCliente.Control_final_cliente.resources
+C:\Users\JUAN DANIEL\Documents\GitHub\TrabajoTOO\CapaPresentacionCliente\obj\Debug\CapaPresentacionCliente.Control_final_cliente.resources

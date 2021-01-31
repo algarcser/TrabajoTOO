@@ -12,20 +12,29 @@ using LogicaModeloPresupuesto;
 
 namespace CapaPresentacionPresupuesto
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public partial class FormCrearMostrarPresupuesto : Form
     {
         private Cliente cliente;
         private Presupuesto presupuesto;
 
-        public FormCrearMostrarPresupuesto(Cliente c) //crear
+        /// <summary>
+        /// 
+        /// </summary>
+        public FormCrearMostrarPresupuesto(Cliente c, string comercial) //crear
         {
             this.cliente = c;
-            ucPresupuesto crearPresupuesto = new ucPresupuesto(this.cliente);
+            ucPresupuesto crearPresupuesto = new ucPresupuesto(this.cliente, comercial);
             this.Controls.Add(crearPresupuesto);
             InitializeComponent();
             this.Text = "Crear presupuesto";
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
         public FormCrearMostrarPresupuesto(Presupuesto p, bool mod) //mostrar y mostrar modificando (para 1en1), depende del bool
         {
             this.presupuesto = p;

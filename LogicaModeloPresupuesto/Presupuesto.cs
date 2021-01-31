@@ -8,18 +8,23 @@ using LogicaModeloVehiculo;
 
 namespace LogicaModeloPresupuesto
 {
+    /// <summary>
+    /// Clase que trabaja con el exterior.
+    /// </summary>
     public class Presupuesto
     {
-        private int ID = 0;
-        private DateTime fechaRealizacion;
-        private EstadoPresupuesto estado;
-        private Cliente cliente;
-        private List<vehiculo> vehiculos;
+        private int ID = 0; //Identificación del presupuesto, es 0 si no viene de la BD, por lo atnto no válido, ya que en la BD todas las Identificaciones son > 1.
+        private DateTime fechaRealizacion; //Fecha de realización junto con hora de la creación del presupuesto.
+        private EstadoPresupuesto estado; //Esatdo del presupuesto.
+        private Cliente cliente; //Cliente asociado al presupuesto.
+        private List<vehiculo> vehiculos; //Lista de vhículos asociada al presupuesto.
+        private string comercial; //comercial asociado al presupuesto, solo puede habe run comercial por aplicación abierta.
 
         /// <summary>
-        /// It is the constructor of the class.
+        /// Constructor de Presupuesto.
+        /// PRE: Requiere DateTime fch, EstadoPresupuesto e, Cliente c y List<vehiculo> v.
+        /// POST:
         /// </summary>
-        /// <returns></returns>
         public Presupuesto(DateTime fch, EstadoPresupuesto e, Cliente c, List<vehiculo> v)
         {
             this.fechaRealizacion = fch;
@@ -27,11 +32,20 @@ namespace LogicaModeloPresupuesto
             this.cliente = c;
             this.vehiculos = v;
         }
+
+        /// <summary>
+        /// Constructor de Presupuesto por medio de ID.
+        /// PRE: Requiere int n;
+        /// POST:
+        /// </summary>
         public Presupuesto(int n)
         {
             this.ID = n;
         }
 
+        /// <summary>
+        /// Propiedad get/set de la clase del atributo int ID.
+        /// </summary>
         public int Identificacion
         {
             get
@@ -45,9 +59,23 @@ namespace LogicaModeloPresupuesto
         }
 
         /// <summary>
-        /// It returns the hour/date the budget was established.
+        /// Propiedad get/set de la clase del atributo string comercial.
         /// </summary>
-        /// <returns></returns>
+        public string Comercial
+        {
+            get
+            {
+                return (this.comercial);
+            }
+            set
+            {
+                this.comercial = value;
+            }
+        }
+
+        /// <summary>
+        /// Propiedad get de la clase del atributo DateTime fechaRealizacion.
+        /// </summary>
         public DateTime FechaRealizacion
         {
             get
@@ -57,9 +85,8 @@ namespace LogicaModeloPresupuesto
         }
 
         /// <summary>
-        /// It returns the state of the budget.
+        /// Propiedad get de la clase del atributo EstadoPresupuestoDato estado.
         /// </summary>
-        /// <returns></returns>
         public EstadoPresupuesto EstadoPresupuesto
         {
             get
@@ -69,9 +96,8 @@ namespace LogicaModeloPresupuesto
         }
 
         /// <summary>
-        /// It returns the client associated with the budget.
+        /// Propiedad get de la clase del atributo Cliente cliente.
         /// </summary>
-        /// <returns></returns>
         public Cliente Cliente
         {
             get
@@ -81,9 +107,8 @@ namespace LogicaModeloPresupuesto
         }
 
         /// <summary>
-        /// It returns the list of vehicles associated with the budget.
+        /// Propiedad get de la clase del atributo List<vehiculos> vehiculos.
         /// </summary>
-        /// <returns></returns>
         public List<vehiculo> ListaVehiculos
         {
             get
@@ -92,6 +117,9 @@ namespace LogicaModeloPresupuesto
             }
         }
 
+        /// <summary>
+        /// Propiedad get de la clase que devuleve el número de vehículos asociados a un Presupuesto.
+        /// </summary>
         public int NumeroVehiculosPresupuesto
         {
             get
@@ -100,6 +128,9 @@ namespace LogicaModeloPresupuesto
             }
         }
 
+        /// <summary>
+        /// Propiedad get de la clase que devuleve el DNI del cliente asociado a un Presupuesto.
+        /// </summary>
         public string DNIClientePresupuesto
         {
             get

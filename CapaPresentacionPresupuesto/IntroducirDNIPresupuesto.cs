@@ -15,16 +15,25 @@ using LogicaNegocioPresupuesto;
 
 namespace CapaPresentacionPresupuesto
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public partial class FormIntroducirDNIPresupuesto : Form
     {
         private string accion; //acciones busqueda(mostrar) por cliente y crear presupuesto
 
+        /// <summary>
+        /// 
+        /// </summary>
         public FormIntroducirDNIPresupuesto(string ac)
         {
             this.accion = ac;
             InitializeComponent();
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
         private void btAceptar_Click(object sender, EventArgs e)
         {
             if (mtbDNI.MaskFull)
@@ -117,6 +126,9 @@ namespace CapaPresentacionPresupuesto
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
         private void FormIntroducirDNIPresupuesto_Load(object sender, EventArgs e)
         {
             mtbDNI.Mask = ">00000000L";
@@ -125,6 +137,9 @@ namespace CapaPresentacionPresupuesto
             mtbDNI.KeyDown += new KeyEventHandler(mtbDNI_KeyDown);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
         private void mtbDNI_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
         {
             if (mtbDNI.MaskFull)
@@ -144,11 +159,17 @@ namespace CapaPresentacionPresupuesto
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
         private void mtbDNI_KeyDown(object sender, KeyEventArgs e)
         {
             ttDNI.Hide(mtbDNI);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
         private void btCancelar_Click(object sender, EventArgs e)
         {
             this.Close();

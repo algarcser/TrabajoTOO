@@ -8,19 +8,24 @@ using CapaPersistenciaCliente;
 
 namespace CapaPersistenciaPresupuesto
 {
+    /// <summary>
+    /// Clase que trabaja directamente con la BDPresupuesto, es el tipo de dato que se almacena en la BD.
+    /// </summary>
     public class PresupuestoDato
     {
-        private int ID;
-        private DateTime fechaRealizacion;
-        private EstadoPresupuestoDato estado;
-        private ClienteDato cliente;
-        private List<vehiculoDato> vehiculos;
+        private int ID; //Identificacion del presupuesto.
+        private DateTime fechaRealizacion; //Fecha de realización junto con hora de la creación del presupuesto.
+        private EstadoPresupuestoDato estado; //Esatdo del presupuesto.
+        private ClienteDato cliente; //Cliente asociado al presupuesto.
+        private List<vehiculoDato> vehiculos; //Lista de vhículos asociada al presupuesto.
+        private string comercial; //comercial asociado al presupuesto, solo puede habe run comercial por aplicación abierta.
 
 
         /// <summary>
-        /// It is the constructor of the class.
+        /// Constructor de PresupuestoDato.
+        /// PRE: Requiere DateTime fch, EstadoPresupuestoDato e, ClienteDato c y List<vehiculoDato> v.
+        /// POST:
         /// </summary>
-        /// <returns></returns>
         public PresupuestoDato(DateTime fch, EstadoPresupuestoDato e, ClienteDato c, List<vehiculoDato> v)
         {
             this.ID = BDPresupuesto.SELECTALLPresupuesto().Count + 1;
@@ -31,9 +36,8 @@ namespace CapaPersistenciaPresupuesto
         }
 
         /// <summary>
-        /// It returns the ID.
+        /// Propiedad get/set de la clase del atributo int ID.
         /// </summary>
-        /// <returns></returns>
         public int Identificacion
         {
             get
@@ -47,9 +51,23 @@ namespace CapaPersistenciaPresupuesto
         }
 
         /// <summary>
-        /// It returns the hour/date the budget was established.
+        /// Propiedad get/set de la clase del atributo string comercial.
         /// </summary>
-        /// <returns></returns>
+        public string Comercial
+        {
+            get
+            {
+                return (this.comercial);
+            }
+            set
+            {
+                this.comercial = value;
+            }
+        }
+
+        /// <summary>
+        /// Propiedad get de la clase del atributo DateTime fechaRealizacion.
+        /// </summary>
         public DateTime FechaRealizacion
         {
             get
@@ -59,9 +77,8 @@ namespace CapaPersistenciaPresupuesto
         }
 
         /// <summary>
-        /// It returns the state of the budget.
+        /// Propiedad get de la clase del atributo EstadoPresupuestoDato estado.
         /// </summary>
-        /// <returns></returns>
         public EstadoPresupuestoDato EstadoPresupuesto
         {
             get
@@ -71,9 +88,8 @@ namespace CapaPersistenciaPresupuesto
         }
 
         /// <summary>
-        /// It returns the client associated with the budget.
+        /// Propiedad get de la clase del atributo Cliente cliente.
         /// </summary>
-        /// <returns></returns>
         public ClienteDato Cliente
         {
             get
@@ -83,9 +99,8 @@ namespace CapaPersistenciaPresupuesto
         }
 
         /// <summary>
-        /// It returns the list of vehicles associated with the budget.
+        /// Propiedad get de la clase del atributo List<vehiculos> vehiculos.
         /// </summary>
-        /// <returns></returns>
         public List<vehiculoDato> ListaVehiculos
         {
             get

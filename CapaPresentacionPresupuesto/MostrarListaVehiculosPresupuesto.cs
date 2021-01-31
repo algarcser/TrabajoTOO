@@ -13,10 +13,16 @@ using CapaPresentacionVehiculo;
 
 namespace CapaPresentacionPresupuesto
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public partial class FormMostrarListaVehiculosPresupuesto : Form
     {
         List<vehiculo> listaVehiculos;
 
+        /// <summary>
+        /// 
+        /// </summary>
         public FormMostrarListaVehiculosPresupuesto(List<vehiculo> lv)
         {
             this.listaVehiculos = lv;
@@ -27,11 +33,17 @@ namespace CapaPresentacionPresupuesto
             this.lboVehiculos.DisplayMember = "NBastidor";
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
         private void btCerrar_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
         private void btMostrarVehiculo_Click(object sender, EventArgs e)
         {
             if (this.lboVehiculos.SelectedItem == null)
