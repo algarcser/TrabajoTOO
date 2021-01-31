@@ -102,7 +102,7 @@ namespace CapaPresentacionGeneral
         }
 
         /// <summary>
-        /// Evento que permite buscar presupuestos por DNI del Cliente.
+        /// Evento que permite buscar presupuestos asociados a un Cliente por su DNI, si existe algún presupuesto.
         /// </summary>
         private void tsmiBPPorCliente_Click(object sender, EventArgs e)
         {
@@ -118,7 +118,7 @@ namespace CapaPresentacionGeneral
         }
 
         /// <summary>
-        /// Evento que permite Mostrar un listado completo de presupuestos con diversas funciones
+        /// Evento que permite Mostrar un listado completo de presupuestos con diversas funciones si existe al menos 1 Presupuesto en la BD.
         /// </summary>
         private void tsmiMostrarTodos_Click(object sender, EventArgs e)
         {
@@ -152,7 +152,7 @@ namespace CapaPresentacionGeneral
         }
 
         /// <summary>
-        /// 
+        /// Evento que permite buscar presupuestos asociados a un Nº de bastidor de un vehículo, si existe algún presupuesto.
         /// </summary>
         private void tsmiBPPorVehiculo_Click(object sender, EventArgs e)
         {
@@ -168,7 +168,7 @@ namespace CapaPresentacionGeneral
         }
 
         /// <summary>
-        /// 
+        /// Evento que permite buscar presupuestos de un tipo o tipos de estados determinados, si existe algún presupuesto.
         /// </summary>
         private void tsmiBPPorEstado_Click(object sender, EventArgs e)
         {
@@ -184,7 +184,7 @@ namespace CapaPresentacionGeneral
         }
 
         /// <summary>
-        /// 
+        /// Evento que permite modificar los presupuestos creados en cuanto a estado y vehículos recorriendo 1 por 1, si existe algún presupuesto.
         /// </summary>
         private void tsmiModificarPresupuestos_Click(object sender, EventArgs e)
         {
@@ -200,7 +200,8 @@ namespace CapaPresentacionGeneral
         }
 
         /// <summary>
-        /// 
+        /// Evento que actualiza todos los presupuestos con estado creado a desestimado si han pasado más de 15 días y te indica cuántos
+        /// se han actualizado, si existe algún presupuesto.
         /// </summary>
         private void tsmiActualizarPresupuestos_Click(object sender, EventArgs e)
         {
