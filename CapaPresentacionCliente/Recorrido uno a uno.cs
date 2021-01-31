@@ -51,7 +51,7 @@ namespace CapaPresentacionCliente
         /// <param name="e"></param>
         private void bindingNavigatorMoveNextItem_Click(object sender, EventArgs e)
         {
-            //Se crea un cliente cogiendo de la lista de clientes el que está en la posicion actual en el form, y se asignan sus componentes a las textBoxes
+            // Se crea un cliente cogiendo de la lista de clientes el que está en la posicion actual en el form, y se asignan sus componentes a las textBoxes
             Cliente c = listClientes[Convert.ToInt32(this.bindingNavigator1.PositionItem.Text) - 1];
 
             this.textBox1.Text = c.getDNI;
@@ -68,7 +68,7 @@ namespace CapaPresentacionCliente
         /// <param name="e"></param>
         private void bindingNavigatorMovePreviousItem_Click(object sender, EventArgs e)
         {
-            //Se crea un cliente cogiendo de la lista de clientes el que está en la posicion actual en el form, y se asignan sus componentes a las textBoxes
+            // Se crea un cliente cogiendo de la lista de clientes el que está en la posicion actual en el form, y se asignan sus componentes a las textBoxes
             Cliente c = listClientes[Convert.ToInt32(this.bindingNavigator1.PositionItem.Text) - 1];
 
             this.textBox1.Text = c.getDNI;
@@ -85,7 +85,7 @@ namespace CapaPresentacionCliente
         /// <param name="e"></param>
         private void bindingNavigatorMoveLastItem_Click(object sender, EventArgs e)
         {
-            //Se crea un cliente cogiendo de la lista de clientes el que está en la posicion actual en el form, y se asignan sus componentes a las textBoxes
+            // Se crea un cliente cogiendo de la lista de clientes el que está en la posicion actual en el form, y se asignan sus componentes a las textBoxes
             Cliente c = listClientes[Convert.ToInt32(this.bindingNavigator1.PositionItem.Text) - 1];
 
             this.textBox1.Text = c.getDNI;
@@ -102,7 +102,7 @@ namespace CapaPresentacionCliente
         /// <param name="e"></param>
         private void bindingNavigatorMoveFirstItem_Click(object sender, EventArgs e)
         {
-            //Se crea un cliente cogiendo de la lista de clientes el que está en la posicion actual en el form, y se asignan sus componentes a las textBoxes
+            // Se crea un cliente cogiendo de la lista de clientes el que está en la posicion actual en el form, y se asignan sus componentes a las textBoxes
             Cliente c = listClientes[Convert.ToInt32(this.bindingNavigator1.PositionItem.Text) - 1];
 
             this.textBox1.Text = c.getDNI;
@@ -119,13 +119,20 @@ namespace CapaPresentacionCliente
         /// <param name="e"></param>
         private void Recorrido_uno_a_uno_Load(object sender, EventArgs e)
         {
-            //Se crea un cliente cogiendo de la lista de clientes el que está en la posicion actual en el form, y se asignan sus componentes a las textBoxes
-            Cliente c = listClientes[Convert.ToInt32(this.bindingNavigator1.PositionItem.Text) - 1];
+            List<Cliente> list = LNCliente.SELECT_ALL();
 
-            this.textBox1.Text = c.getDNI;
-            this.textBox2.Text = c.getNombre;
-            this.textBox3.Text = c.getApellidos;
-            this.textBox4.Text = Convert.ToString(LNCliente.sumaImportes(c));
+            // Se crea un cliente cogiendo de la lista de clientes el que está en la posicion actual en el form, y se asignan sus componentes a las textBoxes
+            // Si la lista está vacia no se muestra nada
+            if(list.Count()>0)
+            {
+                Cliente c = listClientes[Convert.ToInt32(this.bindingNavigator1.PositionItem.Text) - 1];
+
+                this.textBox1.Text = c.getDNI;
+                this.textBox2.Text = c.getNombre;
+                this.textBox3.Text = c.getApellidos;
+                this.textBox4.Text = Convert.ToString(LNCliente.sumaImportes(c));
+            }
+            
         }
     }
 }

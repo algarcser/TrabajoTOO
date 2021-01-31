@@ -26,3 +26,4 @@ C:\TrabajoTOO\LogicaModeloVehiculo\bin\Debug\LogicaModeloVehiculo.pdb
 C:\TrabajoTOO\LogicaModeloVehiculo\obj\Debug\LogicaModeloVehiculo.csproj.CoreCompileInputs.cache
 C:\TrabajoTOO\LogicaModeloVehiculo\obj\Debug\LogicaModeloVehiculo.dll
 C:\TrabajoTOO\LogicaModeloVehiculo\obj\Debug\LogicaModeloVehiculo.pdb
+C:\Users\victo\OneDrive\Documentos\GitHub\TrabajoTOO\LogicaModeloVehiculo\obj\Debug\LogicaModeloVehiculo.csprojAssemblyReference.cache

@@ -36,7 +36,8 @@ namespace CapaPresentacionGeneral
         }
 
         /// <summary>
-        /// 
+        /// Evento que permite dar de alta a un cliente, pasándole un form de introduccion de DNI, 
+        /// para asegurarse de no existe ya, sino pide introducir otro
         /// </summary>
         private void tsmiAltaCliente_Click(object sender, EventArgs e)
         {
@@ -45,7 +46,8 @@ namespace CapaPresentacionGeneral
         }
 
         /// <summary>
-        /// 
+        /// Evento que permite dar de baja a un cliente, pasándole un form de introduccion de DNI,
+        /// para asegurarse de que ya existe, sino pide introducir otro
         /// </summary>
         private void tsmiBajaCliente_Click(object sender, EventArgs e)
         {
@@ -54,15 +56,39 @@ namespace CapaPresentacionGeneral
         }
 
         /// <summary>
-        /// 
+        /// Evento que permite realizar la busqueda de un cliente, teniendo un comboBox que permite elegir 
+        /// entre los clientes existentes por su DNI
         /// </summary>
         private void tsmiBusquedaCliente_Click(object sender, EventArgs e)
         {
+            // La version comentada es la version antigua de busqueda, antes de que se pidiera 
+            // realizar la otra nueva que viene tras ella
+
             //Form intrDNI = new CapaPresentacionCliente.Introducir_DNI("busqueda");
             //intrDNI.Show();
 
             Form busquedaCliente = new CapaPresentacionCliente.Busqueda_alternativa_cliente();
             busquedaCliente.Show();
+        }
+
+        /// <summary>
+        /// Evento que muestra todos los clientes por partes en tres listas diferentes, cada una con un dato del cliente,
+        /// teniendo DNI, nombre e importe de su presupuesto, puediendo ordenarlos por cada campo haciendo click
+        /// en el boton correspondiente
+        /// </summary>
+        private void mostrarTodosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form listado = new CapaPresentacionCliente.Listado_de_clientes();
+            listado.Show();
+        }
+
+        /// <summary>
+        /// Muestra todos los clientes, pero uno a uno, puediendose mover con las flechas para ver los demas clientes
+        /// </summary>
+        private void recorridoUnoAUnoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form recorrido = new CapaPresentacionCliente.Recorrido_uno_a_uno();
+            recorrido.Show();
         }
 
         /// <summary>
@@ -226,22 +252,6 @@ namespace CapaPresentacionGeneral
             }
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        private void mostrarTodosToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Form listado = new CapaPresentacionCliente.Listado_de_clientes();
-            listado.Show();
-        }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        private void recorridoUnoAUnoToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Form recorrido = new CapaPresentacionCliente.Recorrido_uno_a_uno();
-            recorrido.Show();
-        }
     }
 }
