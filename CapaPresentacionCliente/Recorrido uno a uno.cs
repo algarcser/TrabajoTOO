@@ -57,7 +57,7 @@ namespace CapaPresentacionCliente
             this.textBox1.Text = c.getDNI;
             this.textBox2.Text = c.getNombre;
             this.textBox3.Text = c.getApellidos;
-            this.textBox4.Text = Convert.ToString(LNCliente.sumaImportes(c));
+            this.textBox4.Text = c.importeTotal;
 
         }
 
@@ -74,7 +74,7 @@ namespace CapaPresentacionCliente
             this.textBox1.Text = c.getDNI;
             this.textBox2.Text = c.getNombre;
             this.textBox3.Text = c.getApellidos;
-            this.textBox4.Text = Convert.ToString(LNCliente.sumaImportes(c));
+            this.textBox4.Text = c.importeTotal;
 
         }
 
@@ -91,7 +91,7 @@ namespace CapaPresentacionCliente
             this.textBox1.Text = c.getDNI;
             this.textBox2.Text = c.getNombre;
             this.textBox3.Text = c.getApellidos;
-            this.textBox4.Text = Convert.ToString(LNCliente.sumaImportes(c));
+            this.textBox4.Text = c.importeTotal;
 
         }
 
@@ -108,7 +108,7 @@ namespace CapaPresentacionCliente
             this.textBox1.Text = c.getDNI;
             this.textBox2.Text = c.getNombre;
             this.textBox3.Text = c.getApellidos;
-            this.textBox4.Text = Convert.ToString(LNCliente.sumaImportes(c));
+            this.textBox4.Text = c.importeTotal;
 
         }
 
@@ -130,7 +130,7 @@ namespace CapaPresentacionCliente
                 this.textBox1.Text = c.getDNI;
                 this.textBox2.Text = c.getNombre;
                 this.textBox3.Text = c.getApellidos;
-                this.textBox4.Text = Convert.ToString(LNCliente.sumaImportes(c));
+                this.textBox4.Text = c.importeTotal;
             }
             
         }
