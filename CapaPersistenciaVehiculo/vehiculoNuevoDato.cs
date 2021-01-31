@@ -29,7 +29,10 @@ namespace CapaPersistenciaVehiculo
 
 
 
-
+        /// <summary>
+        /// funcion para anadir un extra a un vehiculo nuevo dato, se lo anade a la lista asociada
+        /// </summary>
+        /// <param name="extra"> extra a anadir</param>
         internal void AddExtra(extraDato extra)
         {
             if (! BDExtras.Exists(extra))

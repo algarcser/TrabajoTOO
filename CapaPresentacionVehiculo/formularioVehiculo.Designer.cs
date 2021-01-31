@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formularioVehiculo));
             this.label_NBastidor = new System.Windows.Forms.Label();
             this.label_Marca = new System.Windows.Forms.Label();
             this.label_Modelo = new System.Windows.Forms.Label();
@@ -201,6 +202,7 @@
             this.Controls.Add(this.label_Modelo);
             this.Controls.Add(this.label_Marca);
             this.Controls.Add(this.label_NBastidor);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "formularioVehiculo";
             this.Text = "Alta de vehiculo";
             this.groupBox_tipo.ResumeLayout(false);

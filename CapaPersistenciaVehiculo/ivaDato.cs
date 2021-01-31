@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CapaPersistenciaVehiculo
 {
-    public enum ivaDato
+    internal enum ivaDato
     {
         cocheNuevo, cocheSegundaMano
     }

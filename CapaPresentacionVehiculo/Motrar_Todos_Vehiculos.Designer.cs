@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Motrar_Todos_Vehiculos));
             this.label_NBastidor = new System.Windows.Forms.Label();
             this.label_Modelo = new System.Windows.Forms.Label();
             this.label_Marca = new System.Windows.Forms.Label();
@@ -182,6 +183,7 @@
             this.Controls.Add(this.label_Marca);
             this.Controls.Add(this.label_Modelo);
             this.Controls.Add(this.label_NBastidor);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Motrar_Todos_Vehiculos";
             this.Text = "Motrar_Todos_Vehiculos";
             this.ResumeLayout(false);

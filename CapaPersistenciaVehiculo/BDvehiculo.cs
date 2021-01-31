@@ -11,8 +11,15 @@ namespace CapaPersistenciaVehiculo
 
         private static TablaVehiculo vehiculos;
 
-        //private static TablaExtras extras;
+        /// <summary>
+        /// constructor
+        /// </summary>
         private BDvehiculo() { }
+
+        /// <summary>
+        /// funcion que devuelve la tabla de vehiculos
+        /// si no esta creada la crea y devuele una referencia a esta
+        /// </summary>
         private static TablaVehiculo Vehiculos
         {
             get
@@ -24,16 +31,22 @@ namespace CapaPersistenciaVehiculo
         }
 
         /// <summary>
-        /// 
+        /// funcion que incluue un nuevo vehiculo en la tabla de vehiculos
         /// </summary>
-        /// <param name="c"></param>
+        /// <param name="c">vehiculo que se quiere introducir</param>
         internal static void INSERTVehiculo(vehiculoDato c)
         {
             BDvehiculo.Vehiculos.Add(c);
         }
 
 
-
+        /// <summary>
+        /// funcion para leer la informacion de un vehiculo. 
+        /// este vehiculo corresponde a aquel se sea igual al vehiculo de referencia pasado
+        /// </summary>
+        /// <param name="referencia"> vehiculos de referencia</param>
+        /// <param name="vehiculoDato"> vehiculos el cual se quiere guardar el resultado de la busqueda</param>
+        /// <returns>devuelve true si la busqueda ha tenido exito, devuelve falso en caso contrario</returns>
         internal static bool SELECTVehiculo(vehiculoDato referencia, out vehiculoDato vehiculoDato)
         {
 
@@ -50,7 +63,7 @@ namespace CapaPersistenciaVehiculo
         }
 
         /// <summary>
-        /// 
+        /// funcion para actualizar los datos de un vehiculo
         /// </summary>
         /// <param name="c"></param>
         internal static void UPDATEVehiculo(vehiculoDato c)

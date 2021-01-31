@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CapaPersistenciaVehiculo
 {
-    public class vehiculoDato
+    internal abstract class vehiculoDato
     {
         private string nBastidor;
         private string marca;
@@ -16,7 +16,16 @@ namespace CapaPersistenciaVehiculo
         private ivaDato iva;
 
 
-        public vehiculoDato(string nBastidor, string marca, string modelo, float potencia, float precioRecomendado, ivaDato iva)
+        /// <summary>
+        /// constructor para un vehculo
+        /// </summary>
+        /// <param name="nBastidor"> numero de bastidor de un vehiculo</param>
+        /// <param name="marca">marca de un coche</param>
+        /// <param name="modelo"> modelo para un coche</param>
+        /// <param name="potencia"> potencia del coche</param>
+        /// <param name="precioRecomendado"> precio recomendado del coche</param>
+        /// <param name="iva"> iva de un coche</param>
+        internal vehiculoDato(string nBastidor, string marca, string modelo, float potencia, float precioRecomendado, ivaDato iva)
         {
             this.nBastidor = nBastidor;
             this.marca = marca;
@@ -30,7 +39,7 @@ namespace CapaPersistenciaVehiculo
         /// <summary>
         /// get, devuelve el numero de bastidor
         /// </summary>
-        public string NBastidor
+        internal string NBastidor
         {
             get
             {
@@ -38,6 +47,10 @@ namespace CapaPersistenciaVehiculo
             }
         }
 
+        /// <summary>
+        /// refefinicion de hashcode de un vehiculo
+        /// </summary>
+        /// <returns>devuelve 0</returns>
         public override int GetHashCode()
         {
             return 0;
@@ -46,7 +59,7 @@ namespace CapaPersistenciaVehiculo
         /// <summary>
         /// get: devuelve la marca
         /// </summary>
-        public string Marca
+        internal string Marca
         {
             get
             {
@@ -57,7 +70,7 @@ namespace CapaPersistenciaVehiculo
         /// <summary>
         /// get: delvuelve el modelo
         /// </summary>
-        public string Modelo
+        internal string Modelo
         {
             get
             {
@@ -69,7 +82,7 @@ namespace CapaPersistenciaVehiculo
         /// <summary>
         /// get: devuelve la potencia
         /// </summary>
-        public float Potencia
+        internal float Potencia
         {
             get
             {
@@ -81,7 +94,7 @@ namespace CapaPersistenciaVehiculo
         /// <summary>
         /// get: devuelve el precio recomendado
         /// </summary>
-        public virtual float PrecioRecomendado
+        internal virtual float PrecioRecomendado
         {
             get
             {
@@ -92,7 +105,7 @@ namespace CapaPersistenciaVehiculo
         /// <summary>
         /// get: devuelve el iva
         /// </summary>
-        public ivaDato Iva
+        internal ivaDato Iva
         {
             get
             {
@@ -100,6 +113,11 @@ namespace CapaPersistenciaVehiculo
             }
         }
 
+        /// <summary>
+        /// redefinicino del equals de un vehiculo dato, dos vehiculos son iguales sin sus numero de bastidor coinciden
+        /// </summary>
+        /// <param name="vehiculoDato"> referencia del vehiculo a comparar con</param>
+        /// <returns> devuelve true si sus numero de bastidor so iguales, y falso en caso contrario</returns>
         public override bool Equals(object vehiculoDato)
         {
             if (vehiculoDato == null)

@@ -7,9 +7,13 @@ using System.Collections.ObjectModel;
 
 namespace CapaPersistenciaVehiculo
 {
-    public class TablaVehiculo : KeyedCollection<string, vehiculoDato>
+    internal class TablaVehiculo : KeyedCollection<string, vehiculoDato>
     {
-
+        /// <summary>
+        /// redefinicion de la clave para un vehiculo dato
+        /// </summary>
+        /// <param name="vehiculoDato"> vehiculo dato para calcular la clave</param>
+        /// <returns> devuelve la clave para un vehiculo dato</returns>
         protected override string GetKeyForItem(vehiculoDato vehiculoDato)
         {
 

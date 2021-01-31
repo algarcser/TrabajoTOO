@@ -19,6 +19,13 @@ namespace CapaPresentacionVehiculo
         private enumObjetivo objetivo;
 
 
+        /// <summary>
+        /// constructor de un formulario vehiculo
+        /// En comportamiento del formulario depende de la intencion que se quiera, para solo mostrar, no se puede cambiar los datos. 
+        /// Para introducir, se pueden rellenar los camposy para dar de baja solo se muestran los datos
+        /// </summary>
+        /// <param name="nBastidor"> representa el numero de basditor del coche que se quiere hacer una operacion sobre ello</param>
+        /// <param name="objetivo"> representa el objetivo para el cual se ha creado este formulario</param>
         public formularioVehiculo(string nBastidor, enumObjetivo objetivo)
         {
             InitializeComponent();
@@ -43,6 +50,13 @@ namespace CapaPresentacionVehiculo
             
         }
 
+        /// <summary>
+        /// funcion que define como funciona el boton check
+        /// si este boton se lecciona, aparece una lista de extras que se cargan desde la base de datos
+        /// en el caso de que se deseleccione entonces, se dejara de mostrar tal lista
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void radioButton_nuevo_CheckedChanged(object sender, EventArgs e)
         {
             if ((this.radioButton_nuevo.Checked == true) && (this.objetivo == enumObjetivo.Alta))
@@ -71,6 +85,13 @@ namespace CapaPresentacionVehiculo
 
         }
 
+
+        /// <summary>
+        /// define como se comprota el aceptar
+        /// en el caso de que se acepte, se comprueban que todos los datos del vehiculos hayan sido leidos correctamte, se procede a crear al vehiculo nuevo especificado y se introduce en la base de datos
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button_aceptar_Click(object sender, EventArgs e)
         {
             if (this.Lectura_Correcta())  // comprobamos que todos los campos han sido rellenados correctamente
@@ -112,11 +133,26 @@ namespace CapaPresentacionVehiculo
             }
         }
 
+
+        /// <summary>
+        /// define el comportamiento del boton cerra cuando se clica
+        /// se cierra el formulario
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button_cancelar_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
+
+        /// <summary>
+        /// define el comportamiento del boton coche segunda mano
+        /// si se clica, contonces se muestra la informacion de un coche de segunda mano
+        /// si se deselecciona, entonces desaparece tal informacion
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void radioButton_2mano_CheckedChanged(object sender, EventArgs e)
         {
 
@@ -133,11 +169,22 @@ namespace CapaPresentacionVehiculo
             
         }
 
+
+        /// <summary>
+        /// fucncion que devuelve cierto si toda la informacion necesaria sobre el vehiculo, ha sido introducida de forma correcta
+        /// devuelve falso en caso contrario
+        /// </summary>
+        /// <returns>devuelve cierto si toda la informacion necesaria sobre el vehiculo, ha sido introducida de forma correcta
+        /// devuelve falso en caso contrario</returns>
         private bool Lectura_Correcta()
         {
             return ( this.textBox_Modelo.Text != "") && (this.textBox_Marca.Text != "") && (this.textBox_Potencia.Text != "") && (this.textBox_PrecioRecomendado.Text != "");
         }
 
+        /// <summary>
+        /// funcion que selecciona el vehiculo cuyo numero de bastidor se corresponde con el pasado al formulario. 
+        /// y carga la informacion en los campos de texto correspondientes y la muestra por pantalla. 
+        /// </summary>
         private void cargar_Vehiculo()
         {
             vehiculo auxiliar;
@@ -208,6 +255,12 @@ namespace CapaPresentacionVehiculo
             this.button_aceptar.Visible = false;
         }
 
+
+        /// <summary>
+        ///  funcion que controla que los caracteres introducidos en el el campo de texto del precio recomendado, sea un numero real
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void textBox_PrecioRecomendado_KeyPress(object sender, KeyPressEventArgs e)
         {
             // allows 0-9, backspace, and decimal
@@ -225,6 +278,12 @@ namespace CapaPresentacionVehiculo
             }
         }
 
+
+        /// <summary>
+        /// funcion que controla que la informacion que se introduce en el campo de potencia sea solo un numero
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void textBox_Potencia_KeyPress(object sender, KeyPressEventArgs e)
         {
             // allows 0-9, backspace

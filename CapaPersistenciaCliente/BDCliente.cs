@@ -16,6 +16,7 @@ namespace CapaPersistenciaCliente
         /// <summary>
         /// Constructor vacio de la BD
         /// </summary>
+        /// 
         private BDCliente() { }
 
         /// <summary>

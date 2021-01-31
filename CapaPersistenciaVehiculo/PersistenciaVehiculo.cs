@@ -11,7 +11,12 @@ namespace CapaPersistenciaVehiculo
     public static class PersistenciaVehiculo
     {
 
-
+        /// <summary>
+        /// funcion que anade un vehiculos a la base de datos
+        /// </summary>
+        /// <param name="vehiculo"> representacion de vehiculo a insertar</param>
+        /// <returns> si no existe un vehiculo igual lo anade a la base de datos y devuelve true
+        /// en caso contrario no lo anade y devuelve falso</returns>
         public static bool INSERT(vehiculo vehiculo)
         {
             if (!BDvehiculo.Exists(conversor.Convertir(vehiculo)))
@@ -25,18 +30,31 @@ namespace CapaPersistenciaVehiculo
             }
         }
 
+        /// <summary>
+        /// funcion que elimina de la base de dato de vehiculo el vehiculo pasado igual
+        /// </summary>
+        /// <param name="vehiculo"> representacion del vehiculo </param>
         public static void DELETE(vehiculo vehiculo)
         {
             BDvehiculo.DELETEVehiculo(conversor.Convertir(vehiculo));
         }
 
-
+        /// <summary>
+        /// funcion que actualiza el vehiculo igual que haya en la base de datos
+        /// </summary>
+        /// <param name="vehiculo"> representacion del vehiculo</param>
         public static void UPDATE(vehiculo vehiculo)
         {
             BDvehiculo.DELETEVehiculo(conversor.Convertir(vehiculo));
             BDvehiculo.INSERTVehiculo(conversor.Convertir(vehiculo));
         }
 
+        /// <summary>
+        /// funcion que lee un vehiculo de la base de datos que sea igual a la referencia pasada, los datos de la salida se guardan el parametro de salida
+        /// </summary>
+        /// <param name="referencia"> vehiculo de referencia, </param>
+        /// <param name="vehiculo"> vehiculo de salida donde se guarda el resultado de la busqueda</param>
+        /// <returns> devuevel true si la busqueda ha sido correcta y devuelve false en caso contrario</returns>
         public static bool READ(vehiculo referencia, out vehiculo vehiculo)
         {
             vehiculoDato auxiliar;
@@ -52,12 +70,20 @@ namespace CapaPersistenciaVehiculo
             return resultado;
         }
 
-
+        /// <summary>
+        /// funcion que comprueba si existe un vehiculo igual a la referencia en la base de datos
+        /// </summary>
+        /// <param name="referencia"> vehiculo de referencia</param>
+        /// <returns> devuelve true en el caso de que haya un vehiculo igual a la referencia en la base de datos, y devuelve falso en caso contrario</returns>
         public static bool EXISTS(vehiculo referencia)
         {
             return BDvehiculo.Exists(conversor.Convertir(referencia));
         }
 
+        /// <summary>
+        /// funcion que devuelve toda la lista de vehiculos que haya en la base de datos
+        /// </summary>
+        /// <returns>devuele una lista que contiene todos los vehiculos de la base de datos</returns>
         public static List<vehiculo> SELECT_ALL()
         {
             List<vehiculo> vehiculos = new List<vehiculo>();
@@ -73,6 +99,12 @@ namespace CapaPersistenciaVehiculo
 
     public static class conversor
     {
+
+        /// <summary>
+        /// convierte un vehivulo dato en un vehiculo, que tenga los mismo parametros
+        /// </summary>
+        /// <param name="vehiculoDato"> vehiculo dato a convertir</param>
+        /// <returns> devuelve un vehiculo dato que tenga la misma informacion</returns>
         public static vehiculo Convertir(vehiculoDato vehiculoDato)
         {
 
@@ -108,6 +140,11 @@ namespace CapaPersistenciaVehiculo
             
         }
 
+        /// <summary>
+        /// funcion que converte un vehiculo en un vehiculo dato que tenga los mismos datos
+        /// </summary>
+        /// <param name="vehiculo">representacion del vehiculo</param>
+        /// <returns> vehiculo dato que tiene la misma informacion que el vehiculo pasado</returns>
         public static vehiculoDato Convertir(vehiculo vehiculo)
         {
             ivaDato auxiliar_iva_dato;
@@ -142,11 +179,21 @@ namespace CapaPersistenciaVehiculo
 
         }
 
+        /// <summary>
+        /// funcion que convierte un extradato en un dato con la misma informacion
+        /// </summary>
+        /// <param name="extraDato">extrado a convertir</param>
+        /// <returns> dato convertido</returns>
         public static extra Convertir(extraDato extraDato)
         {
             return new extra(extraDato.Id, extraDato.Descripcion, extraDato.Precio);
         }
 
+        /// <summary>
+        /// funcion para convertir un extra en un extradato con la misma informacion
+        /// </summary>
+        /// <param name="extra"> referencia al extra a convertir</param>
+        /// <returns> extradao convertido</returns>
         public static extraDato Convertir(extra extra)
         {
             return new extraDato(extra.Id, extra.Descripcion, extra.Precio);

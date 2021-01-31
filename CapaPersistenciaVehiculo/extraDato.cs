@@ -12,14 +12,25 @@ namespace CapaPersistenciaVehiculo
         private string descripcion;
         private float precio;
 
-        public extraDato(int id, string descripcion, float precio)
+
+        /// <summary>
+        /// constructor de extraDAto
+        /// </summary>
+        /// <param name="id"> representa la id del extra dato</param>
+        /// <param name="descripcion"> representa la descripcion del extra dato</param>
+        /// <param name="precio"> representa el precio que tiene asociado tal extra dato</param>
+        internal extraDato(int id, string descripcion, float precio)
         {
             this.id = id;
             this.descripcion = descripcion;
             this.precio = precio;
         }
 
-        public extraDato(int id)
+        /// <summary>
+        /// constructor de extra dato, con solo la id
+        /// </summary>
+        /// <param name="id"> representa la id del extra dato</param>
+        internal extraDato(int id)
         {
             this.id = id;
             this.descripcion = "";
@@ -29,7 +40,7 @@ namespace CapaPersistenciaVehiculo
         /// <summary>
         /// get: devuelve descripcion
         /// </summary>
-        public string Descripcion
+        internal string Descripcion
         {
             get
             {
@@ -37,7 +48,10 @@ namespace CapaPersistenciaVehiculo
             }
         }
 
-        public int Id
+        /// <summary>
+        /// get: devuelve la id asociada al extra dato
+        /// </summary>
+        internal int Id
         {
             get
             {
@@ -46,6 +60,10 @@ namespace CapaPersistenciaVehiculo
         }
 
 
+        /// <summary>
+        /// redefinicion del hascode de un extra dato
+        /// </summary>
+        /// <returns> devuevle 0</returns>
         public override int GetHashCode()
         {
             return 0;
@@ -54,7 +72,7 @@ namespace CapaPersistenciaVehiculo
         /// <summary>
         /// get: devuelve precio
         /// </summary>
-        public float Precio
+        internal float Precio
         {
             get
             {

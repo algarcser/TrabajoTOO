@@ -16,7 +16,15 @@ namespace LogicaModeloVehiculo
         private float precioRecomendado;
         private iva iva;
 
-
+        /// <summary>
+        /// constructor de un vehiculo
+        /// </summary>
+        /// <param name="nBastidor">representa el numero de bastidor de un coche</param>
+        /// <param name="marca">representa la marca de un coche</param>
+        /// <param name="modelo"> representa el modelo de un coche</param>
+        /// <param name="potencia"> representa la potencia de ese coche</param>
+        /// <param name="precioRecomendado"> representa el precio que se recomienda de partida para ese coche</param>
+        /// <param name="iva">representa el iva de un coche</param>
         public vehiculo(string nBastidor, string marca, string modelo, float potencia, float precioRecomendado, iva iva)
         {
             this.nBastidor = nBastidor;
@@ -27,6 +35,12 @@ namespace LogicaModeloVehiculo
             this.iva = iva;
         }
 
+
+
+        /// <summary>
+        /// construcor de un coche con solo el num de bastidor
+        /// </summary>
+        /// <param name="nBastidor"> representa el numero de bastidor de un coche</param>
         public vehiculo(string nBastidor)
         {
             this.nBastidor = nBastidor;
@@ -113,6 +127,9 @@ namespace LogicaModeloVehiculo
             }
         }
 
+        /// <summary>
+        /// get: devuelve una cadena, si el coche es creado como cocheNuevo, devuelve una cade vehiculo nuevo, en caso contrario, si es de tipo vehiculo2Mano, devuelve vehiculo 2 mano como cadena
+        /// </summary>
         public string Tipo
         {
             get
@@ -128,11 +145,22 @@ namespace LogicaModeloVehiculo
             }
         }
 
+
+        /// <summary>
+        /// funcion que redefine el comportamiento de to string para vehiculos
+        /// </summary>
+        /// <returns>devuelve una cadena que consiste en el numero de bastidor  mas la marca el modelo la potencia y su precio recomendado </returns>
         public override string ToString()
         {
             return this.nBastidor.ToString() + "" + this.marca.ToString() + "" + this.modelo.ToString() + "" + this.potencia.ToString() + "" + this.precioRecomendado.ToString() + "" + this.iva.ToString();
         }
 
+
+        /// <summary>
+        /// refininicion del metodo equals
+        /// </summary>
+        /// <param name="vehiculo"> vehiculos con el que estamos comparando</param>
+        /// <returns> devuelve true si los numero de bastidores de los vehiculos coinciden, devuelve falso en caso contrario</returns>
         public override bool Equals(object vehiculo)
         {
             if ( vehiculo == null) {

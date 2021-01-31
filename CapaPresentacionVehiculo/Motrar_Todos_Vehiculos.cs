@@ -13,6 +13,11 @@ namespace CapaPresentacionVehiculo
 {
     public partial class Motrar_Todos_Vehiculos : Form
     {
+
+        /// <summary>
+        /// constructor de mostrar todos los vehiculos
+        /// carga todos los datos de la base de datos de vehiculos y los muestras en la listas correspondientes
+        /// </summary>
         public Motrar_Todos_Vehiculos()
         {
             InitializeComponent();

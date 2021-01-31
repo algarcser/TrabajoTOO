@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Gestionar_Extra));
             this.label_descripcion = new System.Windows.Forms.Label();
             this.label_precio = new System.Windows.Forms.Label();
             this.textBox_descripcion = new System.Windows.Forms.TextBox();
@@ -100,6 +101,7 @@
             this.Controls.Add(this.textBox_descripcion);
             this.Controls.Add(this.label_precio);
             this.Controls.Add(this.label_descripcion);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Gestionar_Extra";
             this.Text = "introducir un extra";
             this.ResumeLayout(false);

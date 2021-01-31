@@ -7,8 +7,14 @@ using System.Collections.ObjectModel;
 
 namespace CapaPersistenciaVehiculo
 {
-    class Tabla_VehiculoNuevo_Extras : KeyedCollection<string, vehiculoNuevo_Extra_Dato>
+    internal class Tabla_VehiculoNuevo_Extras : KeyedCollection<string, vehiculoNuevo_Extra_Dato>
     {
+
+        /// <summary>
+        /// redefinicion de la clave para un vehiculo nuevo extra dato
+        /// </summary>
+        /// <param name="vehiculoNuevo_Extra_Dato"></param>
+        /// <returns> devuelve un string que es la clave un un vehiculo extra dato</returns>
         protected override string GetKeyForItem(vehiculoNuevo_Extra_Dato vehiculoNuevo_Extra_Dato)
         {
 

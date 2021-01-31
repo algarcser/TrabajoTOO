@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ObtenerNBastidor));
             this.button_aceptar = new System.Windows.Forms.Button();
             this.button_cancelar = new System.Windows.Forms.Button();
             this.maskedTextBox_NBastidor = new System.Windows.Forms.MaskedTextBox();
@@ -76,6 +77,7 @@
             this.Controls.Add(this.button_cancelar);
             this.Controls.Add(this.button_aceptar);
             this.Controls.Add(this.maskedTextBox_NBastidor);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ObtenerNBastidor";
             this.Text = "Introducir el numero de bastidor";
             this.Load += new System.EventHandler(this.ObtenerNBastidor_Load);
