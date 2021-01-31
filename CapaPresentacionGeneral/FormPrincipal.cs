@@ -92,7 +92,7 @@ namespace CapaPresentacionGeneral
         }
 
         /// <summary>
-        /// 
+        /// obtiene un numero de bastidor y si no esta en la base de datos, y si no hay un vehiculo en la base de datos entonces pide los datos para crear un vehiculo, y lo introduce en la base de datos
         /// </summary>
         private void tsmiAltaVehiculo_Click(object sender, EventArgs e)
         {
@@ -101,7 +101,7 @@ namespace CapaPresentacionGeneral
         }
 
         /// <summary>
-        /// 
+        /// obrtiene el numero de bastidor, y si existe un vehiculo en la base de datos iguales, entonces muestra sus datos por pantalla
         /// </summary>
         private void tsmiBusquedaVehiculo_Click(object sender, EventArgs e)
         {
@@ -110,7 +110,7 @@ namespace CapaPresentacionGeneral
         }
 
         /// <summary>
-        /// 
+        /// muestra el formulario para obtener un numero de bastidor de un vehiculo, si este existe en la base de datos, lo elimina y muestra sus datos por pantalla
         /// </summary>
         private void bajaToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -169,7 +169,7 @@ namespace CapaPresentacionGeneral
         }
 
         /// <summary>
-        /// 
+        /// muestra todos los vehiculos en un form
         /// </summary>
         private void verTodosToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -252,6 +252,15 @@ namespace CapaPresentacionGeneral
             }
         }
 
-
+        /// <summary>
+        /// muestra uno por uno todos los vehiculos almacenados
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void mostrarUnoPorUnoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Recorrido_1_a_1 mostrar1a1 = new Recorrido_1_a_1();
+            mostrar1a1.Show();
+        }
     }
 }
