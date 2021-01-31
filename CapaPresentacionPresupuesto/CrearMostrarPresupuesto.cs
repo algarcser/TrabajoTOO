@@ -13,15 +13,18 @@ using LogicaModeloPresupuesto;
 namespace CapaPresentacionPresupuesto
 {
     /// <summary>
-    /// 
+    /// Formulario con doble constructor para una doble funcionalidad, te permite crear un presupuesto o mostrar un presupuesto por medio
+    /// del control de usuario ucPresupuesto. Es decir, esto solo sirve para mostrar el grueso de ucPresupuesto.
     /// </summary>
     public partial class FormCrearMostrarPresupuesto : Form
     {
-        private Cliente cliente;
-        private Presupuesto presupuesto;
+        private Cliente cliente; //Cliente necesario para crear un presupuesto, pasado desde IntroducirDNIPresupuesto.
+        private Presupuesto presupuesto; //Presupuesto necesario apra mostrar un presupuesto, pasado desde ListadoPresupuestos.
 
         /// <summary>
-        /// 
+        /// Contructor del formulario para crear un Presupuesto por medio de ucPresupuesto.
+        /// PRE: Requiere Cliente c y string comercial.
+        /// POST:
         /// </summary>
         public FormCrearMostrarPresupuesto(Cliente c, string comercial) //crear
         {
@@ -33,29 +36,17 @@ namespace CapaPresentacionPresupuesto
         }
 
         /// <summary>
-        /// 
+        /// Contructor del formulario para mostrar un Presupuesto por medio de ucPresupuesto.
+        /// PRE: Requiere presupuesto p.
+        /// POST:
         /// </summary>
-        public FormCrearMostrarPresupuesto(Presupuesto p, bool mod) //mostrar y mostrar modificando (para 1en1), depende del bool
+        public FormCrearMostrarPresupuesto(Presupuesto p) //mostrar
         {
             this.presupuesto = p;
-            ucPresupuesto mostrarPresupuesto = new ucPresupuesto(this.presupuesto, mod);
+            ucPresupuesto mostrarPresupuesto = new ucPresupuesto(this.presupuesto, false); //Opción mod en false, porque este formualrio solo es para mostrar o crear un presupuesto, no para modificarlo.
             this.Controls.Add(mostrarPresupuesto);
             InitializeComponent();
             this.Text = "Mostrar presupuesto";
         }
-
-        /*private void FormCrearMostrarPresupuesto_Load(object sender, EventArgs e)
-        {
-            if (this.presupuesto == null) //crear cliente != null
-            {
-                ucPresupuesto crearPresupuesto = new ucPresupuesto(this.cliente);
-                this.Controls.Add(crearPresupuesto);
-            }
-            else //mostrar pesupuesto cliente == null
-            {
-                ucPresupuesto mostrarPresupuesto = new ucPresupuesto(this.presupuesto);
-                this.Controls.Add(mostrarPresupuesto);
-            }    
-        }*/
     }
 }

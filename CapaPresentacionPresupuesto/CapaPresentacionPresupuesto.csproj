@@ -82,6 +82,11 @@
     <Compile Include="MostrarListaVehiculosPresupuesto.Designer.cs">
       <DependentUpon>MostrarListaVehiculosPresupuesto.cs</DependentUpon>
     </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="RecorrerPresupuestos1en1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -115,6 +120,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MostrarListaVehiculosPresupuesto.resx">
       <DependentUpon>MostrarListaVehiculosPresupuesto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="RecorrerPresupuestos1en1.resx">
       <DependentUpon>RecorrerPresupuestos1en1.cs</DependentUpon>

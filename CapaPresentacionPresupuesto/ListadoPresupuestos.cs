@@ -17,14 +17,18 @@ using CapaPresentacionCliente;
 namespace CapaPresentacionPresupuesto
 {
     /// <summary>
-    /// 
+    /// Formulario que te muestra el listado de presupuestos que hayas pasado, ya sea el resultado de una búsqueda o todo los presupuestos.
+    /// También te permite mostrar la lista de vehículos, el cliente, el presupuesto individualmente, el presupuesto en un recorrido,
+    /// eliminar un presupuesto mostrado respecto la BD, actualziar los presupuestos de la lista respecto la BD...
     /// </summary>
     public partial class FormListadoPresupuestos : Form
     {
-        List<Presupuesto> listaPresupuestos;
+        List<Presupuesto> listaPresupuestos; //listado de presupuestos a mostrar.
 
         /// <summary>
-        /// 
+        /// Constructor del formulario.
+        /// PRE: Requeire List<Presupuesto> lp.
+        /// POST:
         /// </summary>
         public FormListadoPresupuestos(List<Presupuesto> lp)
         {
@@ -47,13 +51,10 @@ namespace CapaPresentacionPresupuesto
                 this.lboImporte.Items.Add(LNPresupuesto.calcularPresupuesto(p).ToString() + " €");
             }
             this.lboImporte.Enabled = false;
-
-            //this.lboFechaCreacion.DataBindings.Add(new Binding("Text", bindingSource, "Date"));
-            //this.lboCliente.DataBindings.Add(new Binding("Text", bindingSource, ""));
         }
 
         /// <summary>
-        /// 
+        /// Evento que te permite mostrar la información completa del cliente asociado al presupuesto seleccionado, si lo has seleccionado.
         /// </summary>
         private void btMostrarCliente_Click(object sender, EventArgs e)
         {
@@ -77,7 +78,7 @@ namespace CapaPresentacionPresupuesto
         }
 
         /// <summary>
-        /// 
+        /// Evento que te permite mostrar la lista de vehiculos del presupuetso selecionado llamando al formulario MostrarListaVehiculosPresupuesto.
         /// </summary>
         private void btMostrarListaVehiculos_Click(object sender, EventArgs e)
         {
@@ -96,7 +97,7 @@ namespace CapaPresentacionPresupuesto
         }
 
         /// <summary>
-        /// 
+        /// Evento que te permite cerrar el formulario cuando hayas terminado.
         /// </summary>
         private void btCerrar_Click(object sender, EventArgs e)
         {
@@ -104,7 +105,7 @@ namespace CapaPresentacionPresupuesto
         }
 
         /// <summary>
-        /// 
+        /// Evento qeu te permite acceder a la modificación en tiempo real de los presupuestos de la lista, recorreindolos de 1 en 1.
         /// </summary>
         private void btRecorrerP1en1_Click(object sender, EventArgs e)
         {
@@ -114,7 +115,7 @@ namespace CapaPresentacionPresupuesto
         }
 
         /// <summary>
-        /// 
+        /// Evento que actualiza el listado de estado creado a desestimado si han pasado más de 15 días.
         /// </summary>
         private void btActualizarListado_Click(object sender, EventArgs e)
         {
@@ -150,19 +151,19 @@ namespace CapaPresentacionPresupuesto
         }
 
         /// <summary>
-        /// 
+        /// Evento que te permite mostrar el presupuesto seleccionado individualmente.
         /// </summary>
         private void btMostrarPresupuesto_Click(object sender, EventArgs e)
         {
             if(this.lboFechaCreacion.SelectedItem != null)
             {
-                Form mostrarPresupuesto = new FormCrearMostrarPresupuesto(this.lboFechaCreacion.SelectedItem as Presupuesto, false);
+                Form mostrarPresupuesto = new FormCrearMostrarPresupuesto(this.lboFechaCreacion.SelectedItem as Presupuesto);
                 mostrarPresupuesto.Show();
             }      
         }
 
         /// <summary>
-        /// 
+        /// Evento que te permite eliminar de la BD el presupuesto seleccionado avisandote de ello.
         /// </summary>
         private void btEliminarPresupuesto_Click(object sender, EventArgs e)
         {

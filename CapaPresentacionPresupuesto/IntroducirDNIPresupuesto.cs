@@ -16,15 +16,19 @@ using LogicaNegocioPresupuesto;
 namespace CapaPresentacionPresupuesto
 {
     /// <summary>
-    /// Formulario com
+    /// Formulario con doble funcionaldiad, permite usarlo para crear un presupuesto o para realizar una búsqueda por DNI de presupuestos.
+    /// Este incluye una máscara que te obliga a poner el DNI de forma correcta y compeltamente, si no te avisa con MessageBox o una ToolTip
+    /// en forma de Ballon.
     /// </summary>
     public partial class FormIntroducirDNIPresupuesto : Form
     {
-        private string accion; //acciones busqueda(mostrar) por cliente y crear presupuesto
-        private string comercial;
+        private string accion; //acciones: busqueda(mostrar) por cliente y crear presupuesto,
+        private string comercial; //comercial qeu usa la aplicación.
 
         /// <summary>
-        /// 
+        /// Constructor del ofrmulario.
+        /// PRE: Requiere string ac y string comercial.
+        /// POST:
         /// </summary>
         public FormIntroducirDNIPresupuesto(string ac, string comercial)
         {
@@ -34,7 +38,8 @@ namespace CapaPresentacionPresupuesto
         }
 
         /// <summary>
-        /// 
+        /// Evento que te perimite buscar presupuestos por el DNI de un Cliente mostrandote despues una lista completa, o crear un presupuesto
+        /// a partir del DNI de un Cliente.
         /// </summary>
         private void btAceptar_Click(object sender, EventArgs e)
         {
@@ -105,8 +110,6 @@ namespace CapaPresentacionPresupuesto
                                 this.Close();
                             }
                         }
-                        
-                        //COMPLETAR con listado ordenado de presupuestos
                     }
                     else
                     {
@@ -129,7 +132,7 @@ namespace CapaPresentacionPresupuesto
         }
 
         /// <summary>
-        /// 
+        /// Evento que carga la máscara y lanza los eventos de esta.
         /// </summary>
         private void FormIntroducirDNIPresupuesto_Load(object sender, EventArgs e)
         {
@@ -140,7 +143,7 @@ namespace CapaPresentacionPresupuesto
         }
 
         /// <summary>
-        /// 
+        /// Si la mascara falla te muestra diferentes ToolTip Ballon dependiendo de la causa del fallo.
         /// </summary>
         private void mtbDNI_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
         {
@@ -162,7 +165,8 @@ namespace CapaPresentacionPresupuesto
         }
 
         /// <summary>
-        /// 
+        /// Evento que cuando la tecla este sobre la MaskedTextBox hace que el ToolTip ballon desaparezca durando menos de los 5 segundos
+        /// especificados.
         /// </summary>
         private void mtbDNI_KeyDown(object sender, KeyEventArgs e)
         {
@@ -170,7 +174,7 @@ namespace CapaPresentacionPresupuesto
         }
 
         /// <summary>
-        /// 
+        /// Evento que te permite cancelar la operación cerrando el formualrio.
         /// </summary>
         private void btCancelar_Click(object sender, EventArgs e)
         {

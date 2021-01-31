@@ -16,15 +16,18 @@ using LogicaNegocioPresupuesto;
 namespace CapaPresentacionPresupuesto
 {
     /// <summary>
-    /// 
+    /// Formulario que te permite realizar una busqeuda de presupuestos por Nº de bastidor o Introducir un vehículo, tanto para modificar
+    /// como para crear un presupuesto.
     /// </summary>
     public partial class FormIntroducirNBastidorPresupuesto : Form
     {
         private string accion; //acciones busqueda(mostrar) por vehículo e introducir(crear) vehiculo
-        private vehiculo vehiculo;
+        private vehiculo vehiculo; //vehiculo asociado a introducir vehículo.
 
         /// <summary>
-        /// 
+        /// Constructor del formualrio.
+        /// PRE: Requiere string ac, solo válido si es introducir o busqueda.
+        /// POST:
         /// </summary>
         public FormIntroducirNBastidorPresupuesto(string ac)
         {
@@ -33,7 +36,7 @@ namespace CapaPresentacionPresupuesto
         }
 
         /// <summary>
-        /// 
+        /// Propiedad del formualrio que te devuelve el vehiculo que se ha introducido.
         /// </summary>
         public vehiculo Vehiculo
         {
@@ -44,7 +47,8 @@ namespace CapaPresentacionPresupuesto
         }
 
         /// <summary>
-        /// 
+        /// Evento que te permite realizar la búsqeuda o  introducir un vehículo existente en la BD en un presupuesto, ya sea para crear o
+        /// modificar. SI no existe te redirige a darlo de alta.
         /// </summary>
         private void btAceptar_Click(object sender, EventArgs e)
         {
@@ -129,7 +133,7 @@ namespace CapaPresentacionPresupuesto
         }
 
         /// <summary>
-        /// 
+        /// Evento que te permite cancelar la operación a realizar.
         /// </summary>
         private void btCancelar_Click(object sender, EventArgs e)
         {
@@ -137,7 +141,7 @@ namespace CapaPresentacionPresupuesto
         }
 
         /// <summary>
-        /// 
+        /// Evento que carga la máscara y lanza los eventos de esta.
         /// </summary>
         private void IntroducirNBastidorPresupuesto_Load(object sender, EventArgs e)
         {
@@ -148,7 +152,7 @@ namespace CapaPresentacionPresupuesto
         }
 
         /// <summary>
-        /// 
+        /// Si la mascara falla te muestra diferentes ToolTip Ballon dependiendo de la causa del fallo.
         /// </summary>
         private void mtbNBastidor_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
         {
@@ -170,7 +174,8 @@ namespace CapaPresentacionPresupuesto
         }
 
         /// <summary>
-        /// 
+        /// Evento que cuando la tecla este sobre la MaskedTextBox hace que el ToolTip ballon desaparezca durando menos de los 5 segundos
+        /// especificados.
         /// </summary>
         private void mtbNBastidor_KeyDown(object sender, KeyEventArgs e)
         {

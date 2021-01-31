@@ -8,7 +8,7 @@ using System.Windows.Forms;
 namespace CapaPresentacionPresupuesto
 {
     /// <summary>
-    /// 
+    /// Punto de entrada de CapaPresenatcionPresupuesto para pruebas de sus formualrios.
     /// </summary>
     static class Program
     {

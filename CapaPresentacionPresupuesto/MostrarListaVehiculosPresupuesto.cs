@@ -14,14 +14,17 @@ using CapaPresentacionVehiculo;
 namespace CapaPresentacionPresupuesto
 {
     /// <summary>
-    /// 
+    /// Formulario que te permite mostrar la lista de vehiculos de un presupuesto caundo estas viendo el listado completo de presupuestos en
+    /// ListadoPresupuestos.
     /// </summary>
     public partial class FormMostrarListaVehiculosPresupuesto : Form
     {
-        List<vehiculo> listaVehiculos;
+        List<vehiculo> listaVehiculos; //lista de vhículos a mostrar
 
         /// <summary>
-        /// 
+        /// Constructor del formulario.
+        /// PRE:
+        /// POST: Requeire List<vehiculo> lv.
         /// </summary>
         public FormMostrarListaVehiculosPresupuesto(List<vehiculo> lv)
         {
@@ -34,7 +37,7 @@ namespace CapaPresentacionPresupuesto
         }
 
         /// <summary>
-        /// 
+        /// Evento que permite cerrar el formulario caundo hayas termiando de ver la lista.
         /// </summary>
         private void btCerrar_Click(object sender, EventArgs e)
         {
@@ -42,7 +45,7 @@ namespace CapaPresentacionPresupuesto
         }
 
         /// <summary>
-        /// 
+        /// Evento que te permite mostrar el vehículo seleccionado de la ListBox si es que has selecionado uno, si no te avisa.
         /// </summary>
         private void btMostrarVehiculo_Click(object sender, EventArgs e)
         {

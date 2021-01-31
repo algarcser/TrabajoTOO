@@ -10,7 +10,7 @@ namespace CapaPresentacionGeneral
     static class Program
     {
         /// <summary>
-        /// Punto de entrada principal para la aplicación.
+        /// Punto de entrada de CapaPresenatcionGenreal para pruebas de sus formualrios.
         /// </summary>
         [STAThread]
         static void Main()

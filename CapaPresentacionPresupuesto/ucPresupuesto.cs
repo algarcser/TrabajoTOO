@@ -20,19 +20,24 @@ using CapaPresentacionVehiculo;
 namespace CapaPresentacionPresupuesto
 {
     /// <summary>
-    /// 
+    /// Control de usuario con multifuncionalidad, permite mostrar, modificar y crear un Presupuesto a traves de los distintos Form.
+    /// Cambiando la visibilidad o el comportamiento de sus controles. Es el núcleo que hace funcionar presupuesto.
+    /// En modificar Presupuesto cada cambio que hagas en directo, se aplicara automaticament al presupuesto en la BD, dándote advertencias
+    /// de ello, claro esta.
     /// </summary>
     public partial class ucPresupuesto : UserControl
     {
-        private Cliente cliente;
-        private List<vehiculo> listaVehiculosCrear = new List<vehiculo>();
-        private List<vehiculo> listaVehiculosModificar = new List<vehiculo>();
-        private string comercial;
-        private Presupuesto presupuesto;
-        private bool modificar;
+        private Cliente cliente; //Cliente asociado al presupuesto que no sea null indica que estamos creando un Presupuesto.
+        private List<vehiculo> listaVehiculosCrear = new List<vehiculo>(); //Lista de vehículos que se asocia al presupuesto a la hora de crearlo.
+        private List<vehiculo> listaVehiculosModificar = new List<vehiculo>(); //Lista de vehículos con la que se modifica el presupuesto.
+        private string comercial; //Comercial asociado al presupuetso y usuario de la aplicación.
+        private Presupuesto presupuesto; //Presupuesto que no es null indica que estamos mostrando o mostrando y modificando un presupuesto.
+        private bool modificar; //bool que indica si se modifica se modifica el presupuesto cuando se muestra o no (true o false).
 
         /// <summary>
-        /// 
+        /// Constructor de ucPresupuesto, para crear un presupuesto.
+        /// PRE: Requiere Cliente c y string comercial.
+        /// POST:
         /// </summary>
         public ucPresupuesto(Cliente c, string comercial) //crear
         {
@@ -72,7 +77,9 @@ namespace CapaPresentacionPresupuesto
         }
 
         /// <summary>
-        /// 
+        /// Constructor de ucPresupuesto, para mostrar o mostrar y modificar un presupuesto.
+        /// PRE: Requiere Presupuesto p y bool mod.
+        /// POST:
         /// </summary>
         public ucPresupuesto(Presupuesto p, bool mod) //mostrar
         {
@@ -89,8 +96,8 @@ namespace CapaPresentacionPresupuesto
             this.tbNombre.ReadOnly = true;
             this.tbNombre.Text = this.presupuesto.Cliente.getNombre;
             this.btMostrarCliente.Visible = true;
-
-            if (this.modificar == true) //para el recorrido 1 a 1
+            //cambio en los controles dependiendo de que se modifique o no el presupuesto
+            if (this.modificar == true) //para el recorrido 1 a 1 donde se modifica
             {
                 this.listaVehiculosModificar = this.presupuesto.ListaVehiculos;
                 this.gbEstado.Enabled = true;
@@ -146,7 +153,9 @@ namespace CapaPresentacionPresupuesto
         }
 
         /// <summary>
-        /// 
+        /// Método que en el recorrido de 1 a 1 permite cambiar el presupuesto qeu se muestra y se modifica junto con el BindingNavigator.
+        /// PRE: Requiere Presupuesto p no null.
+        /// POST:
         /// </summary>
         public void cambiarPresupuesto (Presupuesto p) //solo para modificar
         {
@@ -188,11 +197,11 @@ namespace CapaPresentacionPresupuesto
         }
 
         /// <summary>
-        /// 
+        /// Evento que te permite mostrar la información completa de un cliente mostrando o creando un Presupuesto.
         /// </summary>
         private void btMostrarCliente_Click(object sender, EventArgs e)
         {
-            if (this.cliente == null)
+            if (this.cliente == null) //mostrar
             {
                 if (LNCliente.existeCliente(this.presupuesto.Cliente) == true)
                 {
@@ -204,7 +213,7 @@ namespace CapaPresentacionPresupuesto
                     MessageBox.Show("El cliente ha sido eliminado de la base de datos, por lo que no se puede mostrar.", "No se puede mostrar cliente", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }   
             }
-            else
+            else //crear
             {
                 if (LNCliente.existeCliente(this.cliente) == true)
                 {
@@ -219,7 +228,7 @@ namespace CapaPresentacionPresupuesto
         }
 
         /// <summary>
-        /// 
+        /// Evento que te permite mostrar el vehículo seleccionado de la ListBox, si lo ahs seleccionado, tanto mostrando como creando un Presupuesto.
         /// </summary>
         private void btMostrarVehiculo_Click(object sender, EventArgs e)
         {
@@ -239,17 +248,17 @@ namespace CapaPresentacionPresupuesto
                 {
                     MessageBox.Show("El vehículo ha sido eliminado de la base de datos, por lo que no se puede mostrar.", "No se puede mostrar el vehículo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-                //mostrar vehículo como en búsqueda vehículo
             }
         }
 
         /// <summary>
-        /// 
+        /// Evento que te permite introducir un vehículo por medio de IntroducirNBastidorPresupuesto cuando creas o modificas un presupuesto si
+        /// existe en la BD, y si no te da la opción de darlo de alta antes de introducirlo en la ListBox.
         /// </summary>
         private void btIntroducirVehiculo_Click(object sender, EventArgs e)
         {
             BindingSource bindingSource = new BindingSource();
-            if (this.modificar == true)
+            if (this.modificar == true) //modificando
             {
                 DialogResult result = MessageBox.Show("¿Esta seguro de que quiere introducir un vehículo nuevo en el presupuesto?", "Va a modificar la lista de vehículos del presupuesto", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                 if (result == DialogResult.Yes)
@@ -272,7 +281,7 @@ namespace CapaPresentacionPresupuesto
                     }
                 }
             }
-            else
+            else //creando
             {
                 FormIntroducirNBastidorPresupuesto introducirVehiculo = new FormIntroducirNBastidorPresupuesto("introducir");
                 introducirVehiculo.ShowDialog();
@@ -285,12 +294,11 @@ namespace CapaPresentacionPresupuesto
                     this.lboListaVehiculos.DisplayMember = "NBastidor";
                 }
             }
-            //mostrar ObtenerNBastidor.cs, si existe se añade a la lista, si no se abre dar de alta vehículo
-            //JUNTO TODO SU PROCESO,tras darlo de alta se introduce en la lista
         }
 
         /// <summary>
-        /// 
+        /// Evento que te permite cerra el formulario si ya has dejado de modificar o mostrar el presupuesto o crear el presupuesto. Para
+        /// crear un presupuetso va revisando ciertos requerimientos, indicandote si falla alguno en cualqueir caso.
         /// </summary>
         private void btAceptar_Click(object sender, EventArgs e)
         {
@@ -350,13 +358,6 @@ namespace CapaPresentacionPresupuesto
 
                 if ((vehiculoCorrecto == true) && (continuar ==true))
                 {
-                    // ERROR List<vehiculo> listaVehiculos = new List<vehiculo>((IEnumerable<vehiculo>)this.lboListaVehiculos.Items);
-                    /*List<vehiculo> listaVehiculos = new List<vehiculo>();
-                    foreach (Object o in this.lboListaVehiculos.Items)
-                    {
-                        vehiculo v = o as vehiculo;
-                        listaVehiculos.Add(v);
-                    }*/
                     Presupuesto nuevoPresupuesto = new Presupuesto(DateTime.Now, estado, this.cliente, this.listaVehiculosCrear);
                     nuevoPresupuesto.Comercial = this.comercial;
 
@@ -376,14 +377,11 @@ namespace CapaPresentacionPresupuesto
         }
 
         /// <summary>
-        /// 
+        /// Evento que te permite cancelar la creación de un presupuesto cerranod el formulario y te avisa anets de proceder.
         /// </summary>
         private void btCancelar_Click(object sender, EventArgs e)
         {
-            if (LNPresupuesto.EXIST(this.presupuesto) == false) //crear //COMPLETAR con si el presupuesto de ha creado no mostrar lo siguiente
-                                                                //es decir, hacer existe por cliente en presupuesto (cambiar BD) para busqueda por cliente
-                                                                //hacer existe por nbastidor en presupuesto (cambiar BD) para busqueda por vehiculo
-                                                                //hacer existe por esatdo en presupuesto (cmabiar BD) para busqueda por estado
+            if (LNPresupuesto.EXIST(this.presupuesto) == false)
             {
                 DialogResult result = MessageBox.Show("¿Quieres salir sin terminar el presupuesto?", "No se ha completado el presupuesto", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (result == DialogResult.Yes)
@@ -394,7 +392,8 @@ namespace CapaPresentacionPresupuesto
         }
 
         /// <summary>
-        /// 
+        /// Evento que sirve para indicarte qeu estas creando un formulario directamente desestimado y para avisarte de que vas a cambiar 
+        /// a ese estado cuando estas modificando un presupuesto.
         /// </summary>
         private void rbDesestimado_CheckedChanged(object sender, EventArgs e)
         {
@@ -444,7 +443,8 @@ namespace CapaPresentacionPresupuesto
         }
 
         /// <summary>
-        /// 
+        /// Evento qeu te permite quitar un vehiculo de la Lista de vehículos del presupuesto cuando lo estas creanod, o cuando lo estas
+        /// modificando si es que queda al menos más de un vehículo en las Lista.
         /// </summary>
         private void btQuitarVehiculo_Click(object sender, EventArgs e)
         {
@@ -456,13 +456,13 @@ namespace CapaPresentacionPresupuesto
             }
             else
             {
-                if (modificar == true)
+                if (modificar == true) //modificar
                 {
                     if (this.presupuesto.ListaVehiculos.Count == 1)
                     {
                         MessageBox.Show("No puede dejar un presupuesto sin vehículos, añada otro y para después eliminar el seleccionado.", "Solo hay un vehículo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
-                    else
+                    else //crear
                     {
                         DialogResult result = MessageBox.Show("¿Esta seguro de que quiere eliminar un vehículo del presupuesto?", "Va a modificar la lista de vehículos del presupuesto", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                         if (result == DialogResult.Yes)
@@ -491,7 +491,7 @@ namespace CapaPresentacionPresupuesto
         }
 
         /// <summary>
-        /// 
+        /// Evento que sirve para avisarte de que vas a cambiar a ese estado cuando estas modificando un presupuesto, y te advierte de ello.
         /// </summary>
         private void rbCreado_CheckedChanged(object sender, EventArgs e)
         {
@@ -530,7 +530,7 @@ namespace CapaPresentacionPresupuesto
         }
 
         /// <summary>
-        /// 
+        /// Evento que sirve para avisarte de que vas a cambiar a ese estado cuando estas modificando un presupuesto, y te advierte de ello.
         /// </summary>
         private void rbPendiente_CheckedChanged(object sender, EventArgs e)
         {
@@ -569,7 +569,7 @@ namespace CapaPresentacionPresupuesto
         }
 
         /// <summary>
-        /// 
+        /// Evento que sirve para avisarte de que vas a cambiar a ese estado cuando estas modificando un presupuesto, y te advierte de ello.
         /// </summary>
         private void rbAceptado_CheckedChanged(object sender, EventArgs e)
         {

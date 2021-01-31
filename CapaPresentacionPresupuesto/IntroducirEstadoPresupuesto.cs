@@ -13,12 +13,13 @@ using LogicaNegocioPresupuesto;
 namespace CapaPresentacionPresupuesto
 {
     /// <summary>
-    /// 
+    /// Formualrio que te permite realizar una busqeuda de presupuestos por un esatdo o varios a la evz, para después derivarlos a
+    /// ListadaoPresupuestos para ver todos de forma clara.
     /// </summary>
     public partial class FormIntroducirEstadoPresupuesto : Form
     {
         /// <summary>
-        /// 
+        /// Constructor del formualrio.
         /// </summary>
         public FormIntroducirEstadoPresupuesto()
         {
@@ -26,7 +27,8 @@ namespace CapaPresentacionPresupuesto
         }
 
         /// <summary>
-        /// 
+        /// Evento que realiza la criba de presupuestos y te redirige a ListadoPresupuestos, si existen presupuestos de ese tipo o si
+        /// si has seleccionado algún estado, si no te avisa.
         /// </summary>
         private void btAceptar_Click(object sender, EventArgs e)
         {
@@ -64,7 +66,7 @@ namespace CapaPresentacionPresupuesto
         }
 
         /// <summary>
-        /// 
+        /// Evento que te permite cerrar el fromulario apra cancelar la operación.
         /// </summary>
         private void btCancelar_Click(object sender, EventArgs e)
         {
