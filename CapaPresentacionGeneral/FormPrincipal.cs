@@ -97,7 +97,7 @@ namespace CapaPresentacionGeneral
         /// </summary>
         private void tsmiCrearPresupuesto_Click(object sender, EventArgs e)
         {
-            Form crearPresupuesto = new FormIntroducirDNIPresupuesto("crear");
+            Form crearPresupuesto = new FormIntroducirDNIPresupuesto("crear", this.usuario);
             crearPresupuesto.Show();
         }
 
@@ -108,7 +108,7 @@ namespace CapaPresentacionGeneral
         {
             if (LNPresupuesto.SELECTALL().Count != 0)
             {
-                Form busquedaPresupuestosCliente = new FormIntroducirDNIPresupuesto("busqueda");
+                Form busquedaPresupuestosCliente = new FormIntroducirDNIPresupuesto("busqueda", this.usuario);
                 busquedaPresupuestosCliente.Show();
             }
             else

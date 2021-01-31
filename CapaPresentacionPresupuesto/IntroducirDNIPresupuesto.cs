@@ -16,18 +16,20 @@ using LogicaNegocioPresupuesto;
 namespace CapaPresentacionPresupuesto
 {
     /// <summary>
-    /// 
+    /// Formulario com
     /// </summary>
     public partial class FormIntroducirDNIPresupuesto : Form
     {
         private string accion; //acciones busqueda(mostrar) por cliente y crear presupuesto
+        private string comercial;
 
         /// <summary>
         /// 
         /// </summary>
-        public FormIntroducirDNIPresupuesto(string ac)
+        public FormIntroducirDNIPresupuesto(string ac, string comercial)
         {
             this.accion = ac;
+            this.comercial = comercial;
             InitializeComponent();
         }
 
@@ -43,7 +45,7 @@ namespace CapaPresentacionPresupuesto
                     Cliente c1 = new Cliente(mtbDNI.Text);
                     if (LNCliente.existeCliente(c1) == true)
                     {
-                        Form crearPresupuesto = new FormCrearMostrarPresupuesto(LNCliente.readCliente(c1));
+                        Form crearPresupuesto = new FormCrearMostrarPresupuesto(LNCliente.readCliente(c1), this.comercial);
                         crearPresupuesto.Show();
                         this.Close();
                     }
@@ -57,7 +59,7 @@ namespace CapaPresentacionPresupuesto
                             crearCliente.ShowDialog();
                             if (LNCliente.existeCliente(c2) == true)
                             {
-                                Form crearPresupuesto = new FormCrearMostrarPresupuesto(LNCliente.readCliente(c2));
+                                Form crearPresupuesto = new FormCrearMostrarPresupuesto(LNCliente.readCliente(c2), this.comercial);
                                 crearPresupuesto.Show();
                                 this.Close();
                             }
@@ -94,7 +96,7 @@ namespace CapaPresentacionPresupuesto
                             DialogResult result = MessageBox.Show("    ¿Quieres crear uno?    ", "No existe ningún presupuesto para un cliente con ese DNI", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
                             if (result == DialogResult.Yes)
                             {
-                                Form crearPresupuesto = new FormCrearMostrarPresupuesto(LNCliente.readCliente(c3));
+                                Form crearPresupuesto = new FormCrearMostrarPresupuesto(LNCliente.readCliente(c3), this.comercial);
                                 crearPresupuesto.Show();
                                 this.Close();
                             }

@@ -27,7 +27,7 @@ namespace CapaPresentacionPresupuesto
         private Cliente cliente;
         private List<vehiculo> listaVehiculosCrear = new List<vehiculo>();
         private List<vehiculo> listaVehiculosModificar = new List<vehiculo>();
-        private string comercial
+        private string comercial;
         private Presupuesto presupuesto;
         private bool modificar;
 
