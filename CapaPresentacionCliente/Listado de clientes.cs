@@ -108,7 +108,7 @@ namespace CapaPresentacionCliente
         {
             // La vinculacion pasa a hacerse sobre una lista ordenada por el importe total
 
-            listaOrd = LNCliente.SELECT_ALL().OrderBy((x) => LNCliente.sumaImportes(x)).ToList();
+            listaOrd = LNCliente.SELECT_ALL().OrderBy((x) => x.importeTotal).ToList();
             bindingSource_Clientes = new BindingSource();
             bindingSource_Clientes.DataSource = listaOrd;
 
