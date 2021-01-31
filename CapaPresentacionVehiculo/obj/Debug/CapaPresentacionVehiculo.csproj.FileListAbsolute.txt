@@ -93,3 +93,5 @@ C:\TrabajoTOO\CapaPresentacionVehiculo\obj\Debug\CapaPresentacionVehiculo.csproj
 C:\TrabajoTOO\CapaPresentacionVehiculo\obj\Debug\CapaPresentacionVehiculo.csproj.CopyComplete
 C:\TrabajoTOO\CapaPresentacionVehiculo\obj\Debug\CapaPresentacionVehiculo.dll
 C:\TrabajoTOO\CapaPresentacionVehiculo\obj\Debug\CapaPresentacionVehiculo.pdb
+C:\Users\zonia\Desktop\TrabajoTOO\CapaPresentacionVehiculo\obj\Debug\CapaPresentacionVehiculo.Recorrido_1_a_1.resources
+C:\Users\zonia\Desktop\TrabajoTOO\CapaPresentacionVehiculo\obj\Debug\CapaPresentacionVehiculo.Properties.Resources.resources

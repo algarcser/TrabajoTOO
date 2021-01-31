@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CapaPersistenciaVehiculo
 {
-    internal abstract class vehiculoDato
+    public abstract class vehiculoDato
     {
         private string nBastidor;
         private string marca;
